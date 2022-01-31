@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: docs/task_mnode_ssh_management.html 
+summary: 您可以使用 REST API UI 在管理节点上禁用，启用或确定 SSH 支持连接功能的状态。 
+keywords: netapp, mnode, management node, ssh, disable, enable, rest api 
+---
+= 在管理节点上管理 SSH 功能
+
+
+[role="lead"]
+您可以使用 REST API 在管理节点（ mNode ）上禁用，重新启用或确定 SSH 功能的状态。提供的 SSH 功能 link:task_mnode_enable_remote_support_connections.html["NetApp 支持远程支持通道（ RST ）会话访问"] 默认情况下，在运行管理服务 2.18 或更高版本的管理节点上处于禁用状态。
+
+.您需要什么？ #8217 ；将需要什么
+* * 集群管理员权限 * ：您对存储集群拥有管理员权限。
+* * Element 软件 * ：集群运行的是 NetApp Element 软件 11.3 或更高版本。
+* * 管理节点 * ：您已部署运行 11.3 或更高版本的管理节点。
+* * 管理服务更新 * ：您已更新 https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab["管理服务包"] 到 2.17 版。
+
+
+之后，您可以执行以下任一任务 link:task_mnode_api_get_authorizationtouse.html["身份验证"]：
+
+* <<Disable or enable the SSH capability on the management node>>
+* <<Determine status of the SSH capability on the management node>>
+
+
+
+
+== 在管理节点上禁用或启用 SSH 功能
+
+您可以在管理节点上禁用或重新启用 SSH 功能。提供的 SSH 功能 link:task_mnode_enable_remote_support_connections.html["NetApp 支持远程支持通道（ RST ）会话访问"] 默认情况下，在运行管理服务 2.18 或更高版本的管理节点上处于禁用状态。禁用 SSH 不会终止或断开与管理节点的现有 SSH 客户端会话。如果禁用 SSH 并选择稍后重新启用它，则可以使用同一 API 来执行此操作。
+
+对于管理服务 2.18 或更高版本：
+
+[listing]
+----
+curl -k -X PUT "https://<<ManagementNodeIP>/mnode/2/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer ${TOKEN}"
+----
+对于管理服务 2.17 或更早版本：
+
+[listing]
+----
+curl -X PUT "https://<ManagementNodeIP>/mnode/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer ${TOKEN}"
+----
+
+NOTE: 您可以找到 API 命令使用的承载 ` $ ｛ token ｝` link:task_mnode_api_get_authorizationtouse.html["授权"]。承载 ` $ ｛ token ｝` 位于 cURL 响应中。
+
+.REST API UI 步骤
+. 输入管理节点 IP 地址并后跟 ` /mnode/` 来访问管理节点 API 服务的 REST API UI ：
++
+[listing]
+----
+https://<ManagementNodeIP>/mnode/
+----
+. 选择 * 授权 * 并完成以下操作：
++
+.. 输入集群用户名和密码。
+.. 输入客户端 ID `mnode-client` 。
+.. 选择 * 授权 * 以开始会话。
+.. 关闭窗口。
+
+
+. 从 REST API UI 中，选择 * PUT settings​ /ssh* 。
++
+.. 单击 * 试用 * 。
+.. 将 * 已启用 * 参数设置为 `false` 以禁用 SSH ，或将 `true` 以重新启用先前已禁用的 SSH 功能。
+.. 单击 * 执行 * 。
+
+
+
+
+
+
+== 确定管理节点上 SSH 功能的状态
+
+您可以使用管理节点服务 API 确定是否在管理节点上启用了 SSH 功能。在运行管理服务 2.18 或更高版本的管理节点上， SSH 默认处于禁用状态。
+
+对于管理服务 2.18 或更高版本：
+
+[listing]
+----
+curl -k -X PUT "https://<<ManagementNodeIP>/mnode/2/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer ${TOKEN}"
+----
+对于管理服务 2.17 或更早版本：
+
+[listing]
+----
+curl -X PUT "https://<ManagementNodeIP>/mnode/settings/ssh?enabled=<false/true>" -H  "accept: application/json" -H  "Authorization: Bearer ${TOKEN}"
+----
+
+NOTE: 您可以找到 API 命令使用的承载 ` $ ｛ token ｝` link:task_mnode_api_get_authorizationtouse.html["授权"]。承载 ` $ ｛ token ｝` 位于 cURL 响应中。
+
+.REST API UI 步骤
+. 输入管理节点 IP 地址并后跟 ` /mnode/` 来访问管理节点 API 服务的 REST API UI ：
++
+[listing]
+----
+https://<ManagementNodeIP>/mnode/
+----
+. 选择 * 授权 * 并完成以下操作：
++
+.. 输入集群用户名和密码。
+.. 输入客户端 ID `mnode-client` 。
+.. 选择 * 授权 * 以开始会话。
+.. 关闭窗口。
+
+
+. 从 REST API UI 中，选择 * 获取 settings​ /ssh* 。
++
+.. 单击 * 试用 * 。
+.. 单击 * 执行 * 。
+
+
+
+
+[discrete]
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/vcp/index.html["适用于 vCenter Server 的 NetApp Element 插件"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI 资源页面"^]
+
