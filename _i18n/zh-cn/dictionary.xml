@@ -73,23 +73,14 @@
   <block id="c358b5521e8437392d0fa4c159039303" category="paragraph">在收到 NetApp HCI 硬件之前，请确保您已完成 NetApp 专业服务提供的部署前工作簿中的检查清单项。本文档全面列出了为成功部署 NetApp HCI 而准备网络和环境所需完成的任务。</block>
   <block id="9eb3c7aec83c8289ef1d3a85d1fd7b05" category="paragraph">以下是要求和部署前任务的链接：</block>
   <block id="7375651611f00991b648b4a9ae04736e" category="inline-link-macro">网络端口要求</block>
-  <block id="5f70af06b964fe55348da040bbd6f654" category="list-text"><block ref="5f70af06b964fe55348da040bbd6f654" category="inline-link-macro-rx"></block></block>
   <block id="06d1ccbf55777bbc9268c7c72a9d02b2" category="inline-link-macro">网络和交换机要求</block>
-  <block id="cda2f05a3dfb7eb063d3fa2c3508ceaa" category="list-text"><block ref="cda2f05a3dfb7eb063d3fa2c3508ceaa" category="inline-link-macro-rx"></block></block>
   <block id="17c9373309d774de1364173b0ca500f4" category="inline-link-macro">网络缆线要求</block>
-  <block id="bf7fcc947879006874ef7754e2c1729b" category="list-text"><block ref="bf7fcc947879006874ef7754e2c1729b" category="inline-link-macro-rx"></block></block>
   <block id="39198ba53dbea43870b0e41110ca135f" category="inline-link-macro">IP 地址要求</block>
-  <block id="9f306e2eb34d03d729f093e37b26b1e6" category="list-text"><block ref="9f306e2eb34d03d729f093e37b26b1e6" category="inline-link-macro-rx"></block></block>
   <block id="5dd57c2a315d3af44c2eb40eefc47111" category="inline-link-macro">网络配置：</block>
-  <block id="6a693ac9011489051dbc274cb853be6a" category="list-text"><block ref="6a693ac9011489051dbc274cb853be6a" category="inline-link-macro-rx"></block></block>
   <block id="910bc6aecf05f95f12c1b61bfdeb180d" category="inline-link-macro">DNS 和计时要求</block>
-  <block id="1beb346f289cc339ec8c06713d72ffa7" category="list-text"><block ref="1beb346f289cc339ec8c06713d72ffa7" category="inline-link-macro-rx"></block></block>
   <block id="6b2019a31feeec476725deff1e79ed78" category="inline-link-macro">环境要求</block>
-  <block id="ed9c5ff9f6090055d1eb04b07fc0d82e" category="list-text"><block ref="ed9c5ff9f6090055d1eb04b07fc0d82e" category="inline-link-macro-rx"></block></block>
   <block id="9077d0c626c6abe8e5c94e742b66762a" category="inline-link-macro">保护域</block>
-  <block id="9c0ed03da62dab26bda1caef12d05030" category="list-text"><block ref="9c0ed03da62dab26bda1caef12d05030" category="inline-link-macro-rx"></block></block>
   <block id="6bc3cc5c8a1df1f098ef6e35a878f98e" category="inline-link-macro">见证双节点存储集群的节点资源要求</block>
-  <block id="fe6a9612bed54055a31776927ecf79fc" category="list-text"><block ref="fe6a9612bed54055a31776927ecf79fc" category="inline-link-macro-rx"></block></block>
   <block id="acc25bb29912a0eb99591d6397d5e11d" category="list-text"><block ref="acc25bb29912a0eb99591d6397d5e11d" category="inline-link-rx"></block></block>
   <block id="a881a0468246e93ae6e2c5bccd78758e" category="inline-link">适用于 vCenter Server 的 NetApp Element 插件</block>
   <block id="7cf5cffc3745b8348cdcfb1c3d0d472f" category="list-text"><block ref="7cf5cffc3745b8348cdcfb1c3d0d472f" category="inline-link-rx"></block></block>
@@ -919,7 +910,6 @@
   <block id="a25577f98a416c68537ba5d36173b3cd" category="paragraph">从 NetApp HCI 1.8 开始，您可以设置一个包含两个存储节点的存储集群。</block>
   <block id="169529280d59fa19257685252a99970c" category="inline-link">NetApp HCI 1.8 发行说明</block>
   <block id="b85bb4664dc2035fb8f04e60d3206424" category="list-text">您可以使用某些类型的节点来构成双节点存储集群。请参见<block ref="6fe76529472a52e5056e058b90349b40" category="inline-link-rx"></block>。</block>
-  <block id="0072d89e723f74b716de02a6ad74dc61" category="admonition">双节点集群中的存储节点必须为相同型号类型。</block>
   <block id="99e3fe6b1b0d4b6123b3de5cb0f80ae6" category="list-text">双节点存储集群最适合工作负载不依赖于大容量和高性能要求的小型部署。</block>
   <block id="23b7b2dd0ee19144ebd9f156459bbb9f" category="list-text">除了两个存储节点之外，一个双节点存储集群还包括两个 * NetApp HCI 见证节点 * 。</block>
   <block id="5e44c9f9fb6609015e92611ca9985429" category="inline-link-macro">见证节点。</block>
@@ -6110,4 +6100,17 @@
   <block id="a310588c148d934b9b30c31802d4a30b" category="sidebar">NetApp 社区</block>
   <block id="213686afc3803be7caa09348765467fe" category="sidebar">如何获取帮助</block>
   <block id="389672366ff11f72a82c5c495b9b5159" category="sidebar">NetApp HCI 1.8 文档</block>
+  <block id="6f4f02cb0bd29a3049ddeee395d21373" category="list-text"><block ref="6f4f02cb0bd29a3049ddeee395d21373" category="inline-link-macro-rx"></block></block>
+  <block id="d05f0358394ea81c12e954fa285913b7" category="list-text"><block ref="d05f0358394ea81c12e954fa285913b7" category="inline-link-macro-rx"></block></block>
+  <block id="8a522fe0bbb068785db1d7e6a6f8472e" category="list-text"><block ref="8a522fe0bbb068785db1d7e6a6f8472e" category="inline-link-macro-rx"></block></block>
+  <block id="e8bf7f625ad636980aeec45657ed5a6e" category="list-text"><block ref="e8bf7f625ad636980aeec45657ed5a6e" category="inline-link-macro-rx"></block></block>
+  <block id="56ce1be606d2b59357622e9e0ce1a50a" category="list-text"><block ref="56ce1be606d2b59357622e9e0ce1a50a" category="inline-link-macro-rx"></block></block>
+  <block id="bba585390add115b473af2e7549e0a5f" category="list-text"><block ref="bba585390add115b473af2e7549e0a5f" category="inline-link-macro-rx"></block></block>
+  <block id="e6fe46816496c4c9ce609ed474f0b900" category="list-text"><block ref="e6fe46816496c4c9ce609ed474f0b900" category="inline-link-macro-rx"></block></block>
+  <block id="62b04af8c4282f934d228f5334940b4f" category="list-text"><block ref="62b04af8c4282f934d228f5334940b4f" category="inline-link-macro-rx"></block></block>
+  <block id="f6a8ca908309208ad5959a4430ffc844" category="list-text"><block ref="f6a8ca908309208ad5959a4430ffc844" category="inline-link-macro-rx"></block></block>
+  <block id="c6c8ddff59bb9e0ae4d31df7879ae4db" category="admonition">在双节点集群中，存储节点仅限于具有 480 GB 和 960 GB 驱动器的节点，并且节点的型号类型必须相同。</block>
+  <block id="cf79b57edb2dfa983d325f942bfbd38f" category="inline-link-macro">双节点存储集群</block>
+  <block id="a52e4bad07801720393fbbf29b7b6106" category="paragraph">NetApp HCI 仅支持双节点存储集群中的特定存储节点型号。有关详细信息，请参见 <block ref="80bd6fa8d6a6ded3ab311d7c2cccd46d" category="inline-link-macro-rx"></block> 或适用于您的 NetApp HCI 版本的发行说明。</block>
+  <block id="a4660721cf97657e05d3cb886c11d311" category="admonition">对于双节点存储集群部署，存储节点类型仅限于具有 480 GB 和 960 GB 驱动器的节点。</block>
 </blocks>

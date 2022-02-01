@@ -20,15 +20,15 @@ keywords: netapp, hci, deployment, requirements
 
 以下是要求和部署前任务的链接：
 
-* link:hci_prereqs_required_network_ports.html["网络端口要求"^]
-* link:hci_prereqs_network_switch.html["网络和交换机要求"^]
-* link:hci_prereqs_network_cables.html["网络缆线要求"^]
-* link:hci_prereqs_ip_address.html["IP 地址要求"^]
-* link:hci_prereqs_network_configuration.html["网络配置："^]
-* link:hci_prereqs_timekeeping.html["DNS 和计时要求"^]
-* link:hci_prereqs_environmental.html["环境要求"^]
-* link:hci_prereqs_protection_domains.html["保护域"^]
-* link:hci_prereqs_witness_nodes.html["见证双节点存储集群的节点资源要求"^]
+* link:hci_prereqs_required_network_ports.html["网络端口要求"]
+* link:hci_prereqs_network_switch.html["网络和交换机要求"]
+* link:hci_prereqs_network_cables.html["网络缆线要求"]
+* link:hci_prereqs_ip_address.html["IP 地址要求"]
+* link:hci_prereqs_network_configuration.html["网络配置："]
+* link:hci_prereqs_timekeeping.html["DNS 和计时要求"]
+* link:hci_prereqs_environmental.html["环境要求"]
+* link:hci_prereqs_protection_domains.html["保护域"]
+* link:hci_prereqs_witness_nodes.html["见证双节点存储集群的节点资源要求"]
 
 
 [discrete]

@@ -29,7 +29,10 @@ NOTE: 将支持 FIPS 驱动器加密的存储节点添加到存储集群不会�
 
 NOTE: 根据节点硬件配置， H410S 存储节点可能会显示在清单列表中，并标记为 H300S ， H500S 或 H700S 存储节点。
 
-NetApp HCI 仅支持双节点或三节点存储集群中的特定存储节点型号。有关详细信息，请参见适用于您的 NetApp HCI 版本的发行说明。
+NetApp HCI 仅支持双节点存储集群中的特定存储节点型号。有关详细信息，请参见 link:concept_hci_clusters.html#two-node-storage-clusters["双节点存储集群"] 或适用于您的 NetApp HCI 版本的发行说明。
+
+
+NOTE: 对于双节点存储集群部署，存储节点类型仅限于具有 480 GB 和 960 GB 驱动器的节点。
 
 
 
