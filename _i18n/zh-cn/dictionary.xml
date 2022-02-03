@@ -3642,15 +3642,8 @@
   <block id="b8cff0b41605e83e8a12999dd0a4ca92" category="list-text"><block ref="bd241c643056b4027f18f8f059752b73" category="inline-xref-macro-rx"></block></block>
   <block id="a312c7f516ce1d78e2fb8c261a270383" category="section-title">使用 NetApp Hybrid Cloud Control UI 升级存储固件</block>
   <block id="f650a00f1e40f26bd9259f0a248e5104" category="paragraph">您可以使用 NetApp Hybrid Cloud Control UI 升级集群中存储节点的固件。</block>
-  <block id="3e81eb7123722a55b4d898791fc5b952" category="inline-link">适用于 NetApp HCI 存储集群的存储固件包</block>
-  <block id="d3fccb96e9630930233f6e21170d01a5" category="list-text"><block ref="d3fccb96e9630930233f6e21170d01a5" category="inline-link-rx"></block></block>
-  <block id="938ddcb01ec68dc1fc8dad09ace7e9e9" category="inline-link">适用于运行 Element 软件的 SolidFire 存储集群的存储固件包</block>
-  <block id="50513643afe65606b9ac298f01eb6a9e" category="list-text"><block ref="50513643afe65606b9ac298f01eb6a9e" category="inline-link-rx"></block></block>
   <block id="021194ed35c1ca85c5ddd9daaf8630c3" category="admonition">每个存储节点的升级过程大约需要 30 分钟。如果要将 Element 存储集群升级到版本 2.76 以上的存储固件，则只有在将新固件写入节点后，各个存储节点才会在升级期间重新启动。</block>
   <block id="0f6bc4ce9d2b661b3ddf7ce94d0f6a04" category="inline-link-macro">查看清单</block>
-  <block id="eceda0cdf1589165b4484bc703197bd7" category="admonition">* 存储 * 选项卡列出了安装过程中的存储集群。如果 NetApp Hybrid Cloud Control 无法访问某个集群，则该集群将不会显示在 * 升级 * 页面上。如果您的集群运行的是 Element 12.0 或更高版本，则会看到为这些集群列出的当前固件包版本。如果一个集群中的节点具有不同的固件版本，或者升级过程中，您将在 * 当前固件包版本 * 列中看到 * 多个 * 。您可以单击 * 多个 * 导航到 * 节点 * 页面以比较固件版本。如果所有集群运行的 Element 版本均早于 12.0 ，则您将看不到有关固件包版本号的任何信息。此信息也可从 * 节点 * 页面获得。请参见 <block ref="4d8bfbcb84a29a1601595359b67752e6" category="inline-link-macro-rx"></block>。如果集群是最新的且 / 或没有可用的升级软件包，则不会显示 * 元素 * 和 * 仅固件 * 选项卡。在升级过程中，也不会显示这些选项卡。如果显示的是 * 元素 * 选项卡，而不是 * 仅固件 * 选项卡，则表示没有可用的固件包。</block>
-  <block id="b15bfc9c899fd8b0ecabbaf97c7f3fe6" category="list-text">单击要升级的集群旁边的下拉箭头。</block>
-  <block id="10aa57934a97f3c1d6c33f0e6a13648e" category="list-text">单击 * 仅固件 * ，然后从可用的升级版本中进行选择。</block>
   <block id="929933851dc2ac970fff1ef0a8351b29" category="paragraph">成功上传并验证文件后，将显示一条屏幕消息。验证可能需要几分钟时间。如果在此阶段离开浏览器窗口，则会保留文件上传。升级完成后，您可以下载日志。有关各种升级状态更改的信息，请参见 <block ref="963ffe23b927e51707381f60a050d9f4" category="inline-xref-macro-rx"></block>。</block>
   <block id="79767150703c682eb62b32792815ff4b" category="cell">集群已升级到最新可用 Element 版本，或者固件已升级到最新版本。</block>
   <block id="5d1b774bcdd716279a4e1f6c45c21ae4" category="cell">如果 NetApp Hybrid Cloud Control 无法通过外部连接访问联机软件存储库，则会显示此状态，而不是显示 * 可用版本 * 。如果存储服务 API 返回的升级状态不在可能升级状态的枚举列表中，则也会显示此状态。</block>
@@ -6113,4 +6106,29 @@
   <block id="cf79b57edb2dfa983d325f942bfbd38f" category="inline-link-macro">双节点存储集群</block>
   <block id="a52e4bad07801720393fbbf29b7b6106" category="paragraph">NetApp HCI 仅支持双节点存储集群中的特定存储节点型号。有关详细信息，请参见 <block ref="80bd6fa8d6a6ded3ab311d7c2cccd46d" category="inline-link-macro-rx"></block> 或适用于您的 NetApp HCI 版本的发行说明。</block>
   <block id="a4660721cf97657e05d3cb886c11d311" category="admonition">对于双节点存储集群部署，存储节点类型仅限于具有 480 GB 和 960 GB 驱动器的节点。</block>
+  <block id="0b012f0f130a45a29cb100381b8d8a18" category="inline-link">已下载存储固件包</block>
+  <block id="2860f82003378d24e87a2b07d470efff" category="list-text">如果您的管理节点未连接到 Internet ，则表示您已连接到 Internet<block ref="91eecee6b4dd8708a7b3c9904156a5c7" category="inline-link-rx"></block>。</block>
+  <block id="9c47e71a015bd93b8e8980c012bb680d" category="admonition">* 存储 * 选项卡列出了安装过程中的存储集群。如果 NetApp Hybrid Cloud Control 无法访问某个集群，则该集群将不会显示在 * 升级 * 页面上。如果您的集群运行的是 Element 12.0 或更高版本，则会看到为这些集群列出的当前固件包版本。如果一个集群中的节点具有不同的固件版本，或者升级过程中，您将在 * 当前固件包版本 * 列中看到 * 多个 * 。您可以选择 * 多个 * 以导航到 * 节点 * 页面以比较固件版本。如果所有集群运行的 Element 版本均早于 12.0 ，则您将看不到有关固件包版本号的任何信息。此信息也可从 * 节点 * 页面获得。请参见 <block ref="4d8bfbcb84a29a1601595359b67752e6" category="inline-link-macro-rx"></block>。如果集群是最新的且 / 或没有可用的升级软件包，则不会显示 * 元素 * 和 * 仅固件 * 选项卡。在升级过程中，也不会显示这些选项卡。如果显示的是 * 元素 * 选项卡，而不是 * 仅固件 * 选项卡，则表示没有可用的固件包。</block>
+  <block id="c2478fbc134086873c832f9086152247" category="list-text">选择要升级的集群旁边的下拉箭头。</block>
+  <block id="e0d814d8ce005e1e08731f39dc4cff27" category="list-text">选择 * 仅固件 * ，然后从可用的升级版本中进行选择。</block>
+  <block id="c132ec9989c2f6d64865e3b80e0712f9" category="list-text">选择 * 开始升级 * 。</block>
+  <block id="308f16f303adc416b27b236c19797514" category="list-text">选择 * 浏览 * 上传您下载的升级软件包。</block>
+  <block id="f76e2d71fed64d3d330676219cae9131" category="cell">您可以选择暂停升级。根据升级过程的状态，暂停操作可能会成功或失败。您将看到一个 UI 提示，要求您确认暂停操作。要确保集群在暂停升级之前处于安全位置，可能需要长达两个小时才能完全暂停升级操作。要恢复升级，请选择 * 恢复 * 。</block>
+  <block id="ed226233e95079cc1be83a4449d31733" category="cell">您已暂停升级。选择 * 恢复 * 以恢复此过程。</block>
+  <block id="26783b13c35f4845ca30d151f29a8ddc" category="cell">升级期间发生错误。您可以下载错误日志并将其发送给 NetApp 支持部门。解决此错误后，您可以返回到页面并选择 * 恢复 * 。恢复升级时，进度条会后退几分钟，而系统会运行运行状况检查并检查升级的当前状态。</block>
+  <block id="61214cfb6a926a925ab3821e2ebbd117" category="paragraph">如果驱动器或节点在升级期间发生故障， Element UI 将显示集群故障。升级过程不会继续到下一个节点，而是等待集群故障解决。UI 中的进度条显示升级正在等待集群故障解决。在此阶段，在 UI 中选择 * 暂停 * 将不起作用，因为升级会等待集群运行正常。您需要联系 NetApp 支持部门以协助进行故障调查。</block>
+  <block id="b6f51b7ab15b080c34c59d2e9b1f52d4" category="list-text">此问题在三小时后仍然存在，并且升级状态显示 * 错误 * 并显示红色横幅。解决问题后，您可以通过选择 * 恢复 * 来恢复升级。</block>
+  <block id="132a5b6da037e3c0aba1107add99cd58" category="list-text">从 REST API UI 中，选择 * 获取​ / packages​ / 远程 - repository​ / 连接 * 。</block>
+  <block id="bd91bfdcf4a916f6b8c00c25da13251b" category="list-text">从 REST API UI 中，选择 * 获取 /packages* 。</block>
+  <block id="382035476e13882c8f8e0dcfdc354d1b" category="list-text">从 REST API UI 中，选择 * POST /packages* 。</block>
+  <block id="8a125bba55a89fe2c1f9771882004ba9" category="list-text">选择 * 浏览 * 并选择升级软件包。</block>
+  <block id="a0dd363faeb9019db31f5243f2c10eec" category="list-text">选择 * 执行 * 以启动上传。</block>
+  <block id="f5d6bbe2a4e6d412319b803483fd216a" category="list-text">从 REST API UI 中，选择 * GET​ /v í packages​ / ｛ id ｝​ /status* 。</block>
+  <block id="93b4a05212a39278601d11fa340625e6" category="list-text">选择 * 执行 * 以启动状态请求。</block>
+  <block id="7de818cebb1468349f1e1f3ddb44ba79" category="list-text">从 REST API UI 中，选择 * 获取 /installations * 。</block>
+  <block id="a39e5af88d4289fbe8fb5eaa22153d4e" category="list-text">选择 * POST /upgrades* 。</block>
+  <block id="0f76cacbdbaf6f24679b10adeaf51365" category="list-text">选择 * 执行 * 以启动升级。</block>
+  <block id="6e64c79081c3ef151e7d323b1b9a51e4" category="list-text">选择 * 获取​ /upgrades/｛ upgradeId ｝ * 。</block>
+  <block id="a8d9449a5d657b5f3b81cbcb493fc001" category="list-text">解决集群问题后，如果需要，请重新进行身份验证，然后选择 * PUT ​ /upgrades/｛ upgradeId ｝ * 。</block>
+  <block id="86eda75a7f9a428040647949a600637f" category="list-text">如果需要，请重新进行身份验证并选择 * PUT ​ /upgrades/｛ upgradeId ｝ * 。</block>
 </blocks>
