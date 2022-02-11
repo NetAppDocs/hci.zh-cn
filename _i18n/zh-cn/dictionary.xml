@@ -535,8 +535,6 @@
   <block id="cd7b2f0814db99464baac1222444932f" category="list-text"><block ref="cbfedbfc47267d0d76c848bfa4f73e5d" category="inline-xref-macro-rx"></block></block>
   <block id="e670d2fb8156448df75370f7ae287641" category="list-text"><block ref="71021130b09fed32ac7e7ab601988045" category="inline-xref-macro-rx"></block></block>
   <block id="5bf2236fb0d245894b988f96a0ff32f6" category="section-title">下载 ISO 或 OVA 并部署虚拟机</block>
-  <block id="9ef29b07a9471b76befac230a9b4cb4d" category="list-text">从 NetApp 支持站点下载适用于您的安装的 OVA 或 ISO ：</block>
-  <block id="92028a00ef6a1b5ea32043c430086fe5" category="paragraph">Element 软件：<block ref="b69a88c11707735c9407be5e45510286" category="inline-link-rx"></block>NetApp HCI ：<block ref="03b5dbe7faa112201cf462a361fed457" category="inline-link-rx"></block></block>
   <block id="752442a884ebb7f25f7dd8d65f6a5431" category="list-text">单击 * 下载最新版本 * 并接受 EULA 。</block>
   <block id="9fd5f1f79bb7ead4a7bdb1a4e6b94825" category="list-text">选择要下载的管理节点映像。</block>
   <block id="b8ccf40afa6e3a195a8f4d93c8daa17d" category="list-text">如果您下载了 OVA ，请按照以下步骤操作：</block>
@@ -640,11 +638,6 @@
   <block id="40b6b042e91d765e0955c9bd57051567" category="admonition">在升级到版本 2.76 之前，请确保检查当前的 ESXi 驱动程序版本。如果此驱动程序已过期，请先升级此驱动程序。然后，将计算节点的计算固件升级到版本 2.76 。请访问 <block ref="325436a4e666ed53574c87eb30870a4b" category="inline-link-macro-rx"></block> 有关更新计算节点驱动程序的说明，其中包括 ESXi 驱动程序。</block>
   <block id="e335575a2edc0f1a0a3fb7b76918fa94" category="paragraph">虽然 NetApp 部署引擎 1.8P1 不部署 ESXi 7.0 版，但支持将 ESXi 7.0 作为自安装或手动升级选项。手动安装或升级主机操作系统时， NetApp 无法控制这些操作系统的驱动程序和固件。</block>
   <block id="2d694ffc8438215748ab404c27b90c4a" category="section-title">下载计算固件包 2.76</block>
-  <block id="6dd74001120be10211b1aa60f90e3a86" category="paragraph">要下载计算固件包，请执行以下操作：</block>
-  <block id="ad39e5da85569c96dc672b1696606668" category="inline-link">NetApp HCI 下载页面</block>
-  <block id="72a4e8a8d8dd6c15c91456b347cdaecd" category="list-text">转至<block ref="be72cb0bd16989c2b15b94fd94435862" category="inline-link-rx"></block>。</block>
-  <block id="7ee3f483a8b1581c03314542ded657ce" category="list-text">从下拉列表中选择 * 计算固件捆绑包 * 。</block>
-  <block id="05ff9017ade4661d59fe98b0a98d68de" category="list-text">单击 * 执行 * 。</block>
   <block id="eaca9680a0a2978b1ede83548674ce9a" category="inline-link-macro">更新计算节点固件</block>
   <block id="88402acd6adc8f35fd75e79c7e3689a6" category="paragraph">请访问 <block ref="152b2065cdaf1a8e1f54648b1920938d" category="inline-link-macro-rx"></block> 有关更新计算节点固件的说明。</block>
   <block id="71cff4f5e7236447a14d42c7cff9dd55" category="section-title">已解决安全漏洞</block>
@@ -1197,11 +1190,7 @@
   <block id="18efefbb7dfc549a016b6c88a83bd60d" category="admonition">如果您要将 H610S 系列节点升级到 Element 12.3.x ，并且此节点运行的 Element 版本早于 11.8 ，则需要执行其他升级步骤（<block ref="705f7add14cc7784392a1a0405b32daa" category="inline-xref-macro-rx"></block>）。如果您运行的是 Element 11.8 或更高版本，则不需要执行其他升级步骤（第 2 阶段）。</block>
   <block id="1a1c6d70aec56ed56fdc5c3ac8162a8b" category="section-title">使用 NetApp Hybrid Cloud Control UI 升级 Element 存储</block>
   <block id="a544a5293c147dec832e983a6fbad504" category="paragraph">您可以使用 NetApp Hybrid Cloud Control UI 升级存储集群。</block>
-  <block id="f3a2134df5c7151ff064042a424a4b6f" category="list-text">如果您的管理节点未连接到 Internet ，则您已从相关位置下载此软件包：</block>
   <block id="358a3ff6d008d52e4a816f3c9f4d8d5f" category="inline-link">适用于 NetApp HCI 存储集群的 NetApp HCI 软件包</block>
-  <block id="579fd310dd6393c99694f665c7c50306" category="list-text"><block ref="579fd310dd6393c99694f665c7c50306" category="inline-link-rx"></block></block>
-  <block id="106cc5a0e6a0bb3c0776b3ba8fb64337" category="inline-link">适用于 SolidFire 存储集群的 Element 软件升级包（ .tar.gz ）</block>
-  <block id="49e349363aad0972c82ddaf25dd30f70" category="list-text"><block ref="49e349363aad0972c82ddaf25dd30f70" category="inline-link-rx"></block></block>
   <block id="dd76252ea7a50def2a98f218cb1505b4" category="inline-link">知识库文章</block>
   <block id="2882996895673f16b2fcf0cabfb994f1" category="admonition">有关使用 NetApp Hybrid Cloud Control 升级存储集群时的潜在问题及其解决方法，请参见<block ref="385c83615df1d77fbf0bae3f06fabb3d" category="inline-link-rx"></block>。</block>
   <block id="7fad05c5548f9989eaee59a54633305a" category="admonition">对于非 H610S 平台，每个节点的升级过程大约需要 30 分钟。</block>
@@ -1261,8 +1250,6 @@
   <block id="92c655ce479b4404b3a51afa0527fd9b" category="list-text">在响应中，复制并保存软件包 ID ，以供后续步骤使用。</block>
   <block id="4276657b06044ce75b41dc80b78f9b3c" category="list-text">将存储升级软件包下载到可供管理节点访问的设备：</block>
   <block id="4876c936414c8b50876cdff810c036bd" category="inline-link">下载页面</block>
-  <block id="415cb4bf7c588f5a1b0f9a06d2d7b2ea" category="list-text">对于 NetApp HCI 系统，请转到 NetApp HCI 软件<block ref="39ca4e6b406fcf4593246b3140c7aff0" category="inline-link-rx"></block> 并下载最新的存储节点映像。</block>
-  <block id="607c1bd0deb119c7e67b4b2a5d245512" category="list-text">对于 SolidFire 存储系统，请转至 Element 软件<block ref="155be7eafcbb6c5a6f06740bcc09e590" category="inline-link-rx"></block> 并下载最新的存储节点映像。</block>
   <block id="ca9b271bda1fd83c0839a53fe115bfdb" category="list-text">将存储升级软件包上传到管理节点：</block>
   <block id="830365f182a61ee2daba9b06b6d1a11a" category="list-text">在 REST API UI 中，单击 * 发布 /packages* 。</block>
   <block id="c9cfa08b31f744b7b9dd1bd038f411f2" category="list-text">单击 * 浏览 * 并选择升级软件包。</block>
@@ -1314,10 +1301,7 @@
   <block id="59176eee36815639c56b916d1ee6d2b9" category="list-text">NetApp 支持部门已确定需要暂时中止升级，以便在三小时内采取更正措施。支持人员将使用 API 中止升级。</block>
   <block id="e0cac02c93ade1b7ecc2eb64907171a8" category="admonition">在更新节点时中止集群升级可能会导致驱动器异常地从节点中删除。如果驱动器被异常删除，则在升级期间重新添加驱动器需要 NetApp 支持部门手动干预。节点执行固件更新或更新后同步活动可能需要较长时间。如果升级进度似乎停滞，请联系 NetApp 支持部门以获得帮助。</block>
   <block id="f7cb949e38e4d529492a7a05aae8a9db" category="section-title">使用 HealthTools 升级已连接站点上的 Element 软件</block>
-  <block id="8d65b7b2ed44a2a1faf7d2e3d5c800fb" category="list-text">下载存储升级软件包：</block>
   <block id="2d95a5cefb4bb26e6c4f585e36b7dd0a" category="admonition">要升级 Element 存储软件，您需要最新版本的 HealthTools 。</block>
-  <block id="be6c10c148aba95e72e65d9fb2f1a8b1" category="list-text">对于 NetApp HCI 系统，请转到 NetApp HCI 软件<block ref="39ca4e6b406fcf4593246b3140c7aff0" category="inline-link-rx"></block> 并将最新的存储节点映像下载到非管理节点设备。</block>
-  <block id="51d3a80c5861fe71e2445bfa6ba794ce" category="list-text">对于 SolidFire 存储系统，请转至 Element 软件<block ref="155be7eafcbb6c5a6f06740bcc09e590" category="inline-link-rx"></block> 并将最新的存储节点映像下载到非管理节点设备。</block>
   <block id="0ec4573ec12f9825d509316cd1dca61c" category="list-text">将 ISO 文件复制到可访问位置（如 /tmp ）的管理节点。</block>
   <block id="f2c453451cde52ee9d2593c6e63274eb" category="paragraph">上传 ISO 文件时，请确保文件名不会更改，否则后续步骤将失败。</block>
   <block id="897472b951e965022b0064dfc63a0f4a" category="list-text">* 可选 * ：在升级之前，将 ISO 从管理节点下载到集群节点。</block>
@@ -1337,10 +1321,8 @@
   <block id="d91b070c7f8d6b290722e056d7aff9ce" category="paragraph">请参见以下成功升级示例摘录。升级事件可用于监控升级进度。</block>
   <block id="503d85929978f593abfff70c30d833a9" category="section-title">使用 HealthTools 升级非公开站点上的 Element 软件</block>
   <block id="dda57880ebc4e427f14795d16b1ee0ad" category="paragraph">您可以使用 HealthTools 工具套件在没有外部连接的非公开站点上更新 NetApp Element 软件。</block>
-  <block id="2b5e85b8ce0299e9e27f21c8824f30ae" category="list-text">对于 NetApp HCI 系统，请转到 NetApp HCI 软件<block ref="39ca4e6b406fcf4593246b3140c7aff0" category="inline-link-rx"></block>。对于 SolidFire 存储系统，请转至 Element 软件<block ref="155be7eafcbb6c5a6f06740bcc09e590" category="inline-link-rx"></block>。</block>
   <block id="33ff5a5d635fbe38905932dd4b045967" category="list-text">选择正确的软件版本并将最新的存储节点映像下载到非管理节点计算机。</block>
   <block id="a6c9e3a7671c1fd9d7328c3be5d107b5" category="inline-link">JSON 文件</block>
-  <block id="78499c447f897d64f28fd17af8d321bd" category="list-text">下载此<block ref="d176f80cb3ec646dbc2753dff6840737" category="inline-link-rx"></block> <block ref="53034c8197fc6f1049d26569a56db918" category="inline-link-rx"></block> 从 NetApp 支持站点的非管理节点计算机上，将其重命名为 `metadata 。 json` 。</block>
   <block id="d862ce84c0cf2ec154f546bffc1c8204" category="list-text">将此 ISO 文件复制到管理节点中可访问的位置，例如 ` /tmp` 。</block>
   <block id="22e106a3b8f9362d811fda2079e6b8db" category="admonition">例如，您可以使用 SCP 来执行此操作。上传 ISO 文件时，请确保文件名不会更改，否则后续步骤将失败。</block>
   <block id="1ef2f7a3b01bf7110273e9236fe54c5f" category="list-text">运行 `sfupdate-healthtools` 命令：</block>
@@ -3184,8 +3166,6 @@
   <block id="97badad042e3a18dd496d204994f3a2f" category="admonition">如果 eth0 无法路由到 SVIP ，则永久性卷可能需要额外的网络适配器。在 iSCSI 存储网络上配置一个新的网络适配器，以便配置永久性卷。</block>
   <block id="2759cbca8a5572fe6fdc10d347df91c2" category="list-text">存储节点正在运行 Element 11.3 或更高版本。</block>
   <block id="1a6ffd97834fd7495156f52f3058e50b" category="list-text">使用 SSH 或控制台访问登录到管理节点虚拟机。</block>
-  <block id="231afe47f3f37d3808096b36c28b4ded" category="inline-link">Element</block>
-  <block id="b64b1e098957e1ed710f09dc7aa6b162" category="list-text">下载的管理节点 ISO<block ref="60d1b63b51cb88758e890cf18a0d4bbe" category="inline-link-rx"></block> 或<block ref="f1879511a555e2a34b95f4c0f58472cf" category="inline-link-rx"></block> 从 NetApp 支持站点到管理节点虚拟机的软件。</block>
   <block id="e097e26564fa470c938b5aa9cb375497" category="admonition">此 ISO 的名称类似于 `solidfire-fdva-&lt;element release&gt;-px-XX.X.x.XXXX.iso`</block>
   <block id="f077979ddc9a2f599964924e1fd96e46" category="list-text">对下载的文件运行 md5sum 以检查下载的完整性，并将输出与 NetApp NetApp HCI 支持站点或 Element 软件上提供的输出进行比较，如以下示例所示：</block>
   <block id="4e82f8cfbdbaab82d0c8c7e65d59b756" category="paragraph">`sudo md5sum -b &lt;path to ISO&gt;/solidfire-fdva-&lt;element release&gt;-supx-XX.X.XXXX.iso`</block>
@@ -3649,9 +3629,6 @@
   <block id="5d1b774bcdd716279a4e1f6c45c21ae4" category="cell">如果 NetApp Hybrid Cloud Control 无法通过外部连接访问联机软件存储库，则会显示此状态，而不是显示 * 可用版本 * 。如果存储服务 API 返回的升级状态不在可能升级状态的枚举列表中，则也会显示此状态。</block>
   <block id="3aff5fc3a8e8d7210a56cf227b42a6e8" category="section-title">使用 NetApp Hybrid Cloud Control API 升级存储固件</block>
   <block id="fa296e9495ac8602647feef1c1f92880" category="list-text">在响应中，复制并保存固件包 ID ，以供后续步骤使用。</block>
-  <block id="80fe4da3626b6e144a938323af2aed96" category="list-text">将存储固件升级包下载到可供管理节点访问的设备：</block>
-  <block id="901441bb27b73eb2ff8f44c00bbe83c3" category="list-text">对于 NetApp HCI 系统，请转到 NetApp HCI 软件<block ref="39ca4e6b406fcf4593246b3140c7aff0" category="inline-link-rx"></block> 并下载最新的存储固件映像。</block>
-  <block id="b16473cb7fe43704f1ae3446e90ce31a" category="list-text">对于 SolidFire 存储系统，请转至 Element 软件<block ref="155be7eafcbb6c5a6f06740bcc09e590" category="inline-link-rx"></block> 并下载最新的存储固件映像。</block>
   <block id="3d849e77fb6435c594cb34aff5254c7a" category="list-text">将存储固件升级软件包上传到管理节点：</block>
   <block id="cbba2755a405305c04008eba28b81066" category="list-text">在 * id* 中输入上一步复制的固件包 ID 。</block>
   <block id="3982b15a7d8608c803ba0fea915a806a" category="list-text">找到安装资产 ID ：</block>
@@ -5170,7 +5147,6 @@
   <block id="d4be170f87bc9401bba5a07b9dd9805b" category="cell">* 。 3.96.07*</block>
   <block id="14be6d273e32a2283d6e17da8c060734" category="cell">* 。 4.64.07*</block>
   <block id="c101d269b2f79196170287cd58ab9856" category="cell">14.23.1020</block>
-  <block id="58f4d6ea25d126e4e42a5bb544c8b41d" category="paragraph">下载计算节点固件包：</block>
   <block id="f70279c42ea9516972bdb4dcc00c94e4" category="cell">PE-10306</block>
   <block id="e8d14920b6b17f407e2a0e08e071e88c" category="cell">在 Element 11.8 存储节点上升级 BMC 软件时， BMC 用户凭据将丢失。</block>
   <block id="0fc6ef66826a84d522e4803b7732376d" category="cell">CSESF-26</block>
@@ -6106,8 +6082,6 @@
   <block id="cf79b57edb2dfa983d325f942bfbd38f" category="inline-link-macro">双节点存储集群</block>
   <block id="a52e4bad07801720393fbbf29b7b6106" category="paragraph">NetApp HCI 仅支持双节点存储集群中的特定存储节点型号。有关详细信息，请参见 <block ref="80bd6fa8d6a6ded3ab311d7c2cccd46d" category="inline-link-macro-rx"></block> 或适用于您的 NetApp HCI 版本的发行说明。</block>
   <block id="a4660721cf97657e05d3cb886c11d311" category="admonition">对于双节点存储集群部署，存储节点类型仅限于具有 480 GB 和 960 GB 驱动器的节点。</block>
-  <block id="0b012f0f130a45a29cb100381b8d8a18" category="inline-link">已下载存储固件包</block>
-  <block id="2860f82003378d24e87a2b07d470efff" category="list-text">如果您的管理节点未连接到 Internet ，则表示您已连接到 Internet<block ref="91eecee6b4dd8708a7b3c9904156a5c7" category="inline-link-rx"></block>。</block>
   <block id="9c47e71a015bd93b8e8980c012bb680d" category="admonition">* 存储 * 选项卡列出了安装过程中的存储集群。如果 NetApp Hybrid Cloud Control 无法访问某个集群，则该集群将不会显示在 * 升级 * 页面上。如果您的集群运行的是 Element 12.0 或更高版本，则会看到为这些集群列出的当前固件包版本。如果一个集群中的节点具有不同的固件版本，或者升级过程中，您将在 * 当前固件包版本 * 列中看到 * 多个 * 。您可以选择 * 多个 * 以导航到 * 节点 * 页面以比较固件版本。如果所有集群运行的 Element 版本均早于 12.0 ，则您将看不到有关固件包版本号的任何信息。此信息也可从 * 节点 * 页面获得。请参见 <block ref="4d8bfbcb84a29a1601595359b67752e6" category="inline-link-macro-rx"></block>。如果集群是最新的且 / 或没有可用的升级软件包，则不会显示 * 元素 * 和 * 仅固件 * 选项卡。在升级过程中，也不会显示这些选项卡。如果显示的是 * 元素 * 选项卡，而不是 * 仅固件 * 选项卡，则表示没有可用的固件包。</block>
   <block id="c2478fbc134086873c832f9086152247" category="list-text">选择要升级的集群旁边的下拉箭头。</block>
   <block id="e0d814d8ce005e1e08731f39dc4cff27" category="list-text">选择 * 仅固件 * ，然后从可用的升级版本中进行选择。</block>
@@ -6131,4 +6105,21 @@
   <block id="6e64c79081c3ef151e7d323b1b9a51e4" category="list-text">选择 * 获取​ /upgrades/｛ upgradeId ｝ * 。</block>
   <block id="a8d9449a5d657b5f3b81cbcb493fc001" category="list-text">解决集群问题后，如果需要，请重新进行身份验证，然后选择 * PUT ​ /upgrades/｛ upgradeId ｝ * 。</block>
   <block id="86eda75a7f9a428040647949a600637f" category="list-text">如果需要，请重新进行身份验证并选择 * PUT ​ /upgrades/｛ upgradeId ｝ * 。</block>
+  <block id="2caa79e72de1ebc3a96da19b6a92c451" category="list-text">从下载适用于您的安装的 OVA 或 ISO<block ref="4844a5a06bc8e1ed86ef9bb2a86e549e" category="inline-link-rx"></block> NetApp 支持站点上的页面：</block>
+  <block id="28891145b6c39ff95afbdf5c47061837" category="inline-link">NetApp HCI 计算固件包</block>
+  <block id="ad20855a10bcb28bd96d1134e8e2d09e" category="paragraph">要下载计算固件包，请转到<block ref="9e726c85d19808fe7c4afbfe8514b543" category="inline-link-rx"></block> 页面。</block>
+  <block id="68baec1bded108851f5cb6cb9332b5fb" category="paragraph">如果您的管理节点未连接到 Internet ，则表示您已下载<block ref="f0f7b836568f7e533a3947b76da1a20e" category="inline-link-rx"></block>。</block>
+  <block id="1551e888ab5308b8b3157b61a9afa28c" category="paragraph">对于 NetApp HCI 系统，请转到 NetApp HCI 软件<block ref="6b16bb0b4b0be4862f98f84f9683318e" category="inline-link-rx"></block> 并下载最新的存储节点映像。</block>
+  <block id="4f05ad42d37ba064812b10f3a7a7c448" category="list-text">下载存储升级软件包。对于 NetApp HCI 系统，请转到 NetApp HCI 软件<block ref="6b16bb0b4b0be4862f98f84f9683318e" category="inline-link-rx"></block> 并将最新的存储节点映像下载到非管理节点设备。</block>
+  <block id="5e16870e97cd7494312cfcaccde66101" category="list-text">对于 NetApp HCI 系统，请转到 NetApp HCI 软件<block ref="6b16bb0b4b0be4862f98f84f9683318e" category="inline-link-rx"></block>。</block>
+  <block id="cabc168d31fc4c314cb500b86813e131" category="list-text">下载此<block ref="747556e0149f6188670059abaeb4fd3e" category="inline-link-rx"></block> <block ref="53034c8197fc6f1049d26569a56db918" category="inline-link-rx"></block> 从 NetApp 支持站点的非管理节点计算机上，将其重命名为 `metadata 。 json` 。</block>
+  <block id="83e648796d8c15021f306aae3dd3d686" category="list-text">下载的管理节点 ISO<block ref="4844a5a06bc8e1ed86ef9bb2a86e549e" category="inline-link-rx"></block> 从 NetApp 支持站点到管理节点虚拟机。</block>
+  <block id="2e6c3e131d0b66465caec32d003e1958" category="list-text">下载的管理节点 ISO<block ref="60d1b63b51cb88758e890cf18a0d4bbe" category="inline-link-rx"></block> 从 NetApp 支持站点到管理节点虚拟机。</block>
+  <block id="6f0fdd346038a9e820296de3d9746c93" category="inline-link">已下载 NetApp HCI 存储集群的存储固件包</block>
+  <block id="68591212ccf64f918a02a9a99d9b17cb" category="paragraph">如果您的管理节点未连接到 Internet ，则表示您已连接到 Internet<block ref="aafe992914552d0a3aa0655fa1abc52d" category="inline-link-rx"></block>。</block>
+  <block id="34c8eaed7bf9fcb94a9fec8fc99e01f5" category="inline-link">Element 软件存储固件捆绑包页面</block>
+  <block id="4c22618bec261776093bb20f43db4da2" category="list-text">将最新的存储固件升级软件包下载到可供管理节点访问的设备；转到<block ref="6c480cd9e53c4fa50830a2dbc4709412" category="inline-link-rx"></block> 并下载最新的存储固件映像。</block>
+  <block id="cb0ff683af4927c8b141ca4fdd047e6f" category="list-text">从下载适用于您的安装的 OVA 或 ISO<block ref="b6552e9fe421f9ef58cbc1fac1e87c10" category="inline-link-rx"></block> 页面。</block>
+  <block id="fb9dbde245c31e55deba5a52e39161b7" category="inline-link">NetApp HCI 计算固件包</block>
+  <block id="5867a9249c217b0fd396efc0b056c46a" category="paragraph">要下载计算固件包，请转到<block ref="47afcbf58f4f7c048fb68385f91a8522" category="inline-link-rx"></block> 页面。</block>
 </blocks>

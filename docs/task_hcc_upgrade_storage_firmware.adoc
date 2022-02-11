@@ -46,9 +46,7 @@ NOTE: 有关适用于您的硬件的固件和驱动程序固件的完整列表�
 
 您可以使用 NetApp Hybrid Cloud Control UI 升级集群中存储节点的固件。
 
-.您需要什么？ #8217 ；将需要什么
-* 如果您的管理节点未连接到 Internet ，则表示您已连接到 Internet https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/Storage_Firmware_Bundle["已下载存储固件包"^]。
-
+如果您的管理节点未连接到 Internet ，则表示您已连接到 Internet https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/Storage_Firmware_Bundle["已下载 NetApp HCI 存储集群的存储固件包"^]。
 
 
 CAUTION: 有关使用 NetApp Hybrid Cloud Control 升级存储集群时的潜在问题及其解决方法，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control["知识库文章"^]。
@@ -204,12 +202,7 @@ https://<ManagementNodeIP>/package-repository/1/
 
 
 | 您的管理节点位于不具有外部连接的非公开站点中。  a| 
-.. 将存储固件升级包下载到可供管理节点访问的设备：
-+
-*** 对于 NetApp HCI 系统，请转到 NetApp HCI 软件 https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["下载页面"] 并下载最新的存储固件映像。
-*** 对于 SolidFire 存储系统，请转至 Element 软件 https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["下载页面"] 并下载最新的存储固件映像。
-
-
+.. 将最新的存储固件升级软件包下载到可供管理节点访问的设备；转到 https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/Storage_Firmware_Bundle["Element 软件存储固件捆绑包页面"^] 并下载最新的存储固件映像。
 .. 将存储固件升级软件包上传到管理节点：
 +
 ... 在管理节点上打开管理节点 REST API UI ：

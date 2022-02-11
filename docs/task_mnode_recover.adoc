@@ -52,10 +52,7 @@ keywords: netapp, element, management node, mnode, disaster recovery, redeploy, 
 
 == 下载 ISO 或 OVA 并部署虚拟机
 
-. 从 NetApp 支持站点下载适用于您的安装的 OVA 或 ISO ：
-+
-Element 软件： https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab[]NetApp HCI ：
-
+. 从下载适用于您的安装的 OVA 或 ISO https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI"^] NetApp 支持站点上的页面：
 +
 .. 单击 * 下载最新版本 * 并接受 EULA 。
 .. 选择要下载的管理节点映像。

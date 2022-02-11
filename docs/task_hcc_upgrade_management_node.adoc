@@ -73,7 +73,7 @@ NOTE: 如果 eth0 无法路由到 SVIP ，则永久性卷可能需要额外的�
 
 .步骤
 . 使用 SSH 或控制台访问登录到管理节点虚拟机。
-. 下载的管理节点 ISO https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI"] 或 从 NetApp 支持站点到管理节点虚拟机的软件。
+. 下载的管理节点 ISO https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI"^] 从 NetApp 支持站点到管理节点虚拟机。
 +
 
 NOTE: 此 ISO 的名称类似于 `solidfire-fdva-<element release>-px-XX.X.x.XXXX.iso`
@@ -172,7 +172,7 @@ NOTE: 如果 eth0 无法路由到 SVIP ，则永久性卷可能需要额外的�
 
 
 . 使用 SSH 或控制台访问登录到管理节点虚拟机。
-. 下载的管理节点 ISO https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI"] 或 从 NetApp 支持站点到管理节点虚拟机的软件。
+. 下载的管理节点 ISO https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI"] 从 NetApp 支持站点到管理节点虚拟机。
 +
 
 NOTE: 此 ISO 的名称类似于 `solidfire-fdva-<element release>-px-XX.X.x.XXXX.iso`
@@ -271,7 +271,7 @@ NOTE: 如果 eth0 无法路由到 SVIP ，则永久性卷可能需要额外的�
 
 
 . 使用 SSH 或控制台访问登录到管理节点虚拟机。
-. 下载的管理节点 ISO https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI"] 或 从 NetApp 支持站点到管理节点虚拟机的软件。
+. 下载的管理节点 ISO https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI"] 从 NetApp 支持站点到管理节点虚拟机。
 +
 
 NOTE: 此 ISO 的名称类似于 `solidfire-fdva-<element release>-px-XX.X.x.XXXX.iso`
@@ -370,7 +370,7 @@ NOTE: 如果 eth0 无法路由到 SVIP ，则永久性卷可能需要额外的�
 
 
 . 使用 SSH 或控制台访问登录到管理节点虚拟机。
-. 下载的管理节点 ISO https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI"] 或 从 NetApp 支持站点到管理节点虚拟机的软件。
+. 下载的管理节点 ISO https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI"] 从 NetApp 支持站点到管理节点虚拟机。
 +
 
 NOTE: 此 ISO 的名称类似于 `solidfire-fdva-<element release>-px-XX.X.x.XXXX.iso`
