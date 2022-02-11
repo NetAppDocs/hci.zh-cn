@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: docs/task_hcc_upgrade_management_node.html 
-summary: 在 NetApp HCI 或 SolidFire 存储系统升级过程中，您可以升级管理节点。 
+summary: 在 NetApp HCI 系统升级过程中，您可以升级管理节点。 
 keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, 10, 11.0, 11.1, 11.3, 11.5, 11.7, 12.0, 12.2, 12.3, 12.3.1, 12.3.2, 12.3.x 
 ---
 = 升级管理节点
@@ -73,7 +73,7 @@ NOTE: 如果 eth0 无法路由到 SVIP ，则永久性卷可能需要额外的�
 
 .步骤
 . 使用 SSH 或控制台访问登录到管理节点虚拟机。
-. 下载的管理节点 ISO https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI"^] 从 NetApp 支持站点到管理节点虚拟机。
+. 下载 https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["管理节点 ISO"^] 将 NetApp HCI 从 NetApp 支持站点连接到管理节点虚拟机。
 +
 
 NOTE: 此 ISO 的名称类似于 `solidfire-fdva-<element release>-px-XX.X.x.XXXX.iso`
@@ -172,7 +172,7 @@ NOTE: 如果 eth0 无法路由到 SVIP ，则永久性卷可能需要额外的�
 
 
 . 使用 SSH 或控制台访问登录到管理节点虚拟机。
-. 下载的管理节点 ISO https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI"] 从 NetApp 支持站点到管理节点虚拟机。
+. 下载 https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["管理节点 ISO"^] 将 NetApp HCI 从 NetApp 支持站点连接到管理节点虚拟机。
 +
 
 NOTE: 此 ISO 的名称类似于 `solidfire-fdva-<element release>-px-XX.X.x.XXXX.iso`
@@ -271,7 +271,7 @@ NOTE: 如果 eth0 无法路由到 SVIP ，则永久性卷可能需要额外的�
 
 
 . 使用 SSH 或控制台访问登录到管理节点虚拟机。
-. 下载的管理节点 ISO https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI"] 从 NetApp 支持站点到管理节点虚拟机。
+. 下载 https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["管理节点 ISO"^] 将 NetApp HCI 从 NetApp 支持站点连接到管理节点虚拟机。
 +
 
 NOTE: 此 ISO 的名称类似于 `solidfire-fdva-<element release>-px-XX.X.x.XXXX.iso`
@@ -370,7 +370,7 @@ NOTE: 如果 eth0 无法路由到 SVIP ，则永久性卷可能需要额外的�
 
 
 . 使用 SSH 或控制台访问登录到管理节点虚拟机。
-. 下载的管理节点 ISO https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI"] 从 NetApp 支持站点到管理节点虚拟机。
+. 下载 https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["管理节点 ISO"^] 将 NetApp HCI 从 NetApp 支持站点连接到管理节点虚拟机。
 +
 
 NOTE: 此 ISO 的名称类似于 `solidfire-fdva-<element release>-px-XX.X.x.XXXX.iso`
@@ -470,7 +470,7 @@ sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pvm <mvip for persistent
 ----
 
 
-. （对于使用适用于 vCenter Server 的 NetApp Element 插件的所有 NetApp HCI 安装和 SolidFire 全闪存存储安装）按照中的步骤更新 12.3.x 管理节点上的 vCenter 插件 link:task_vcp_upgrade_plugin.html["升级适用于 vCenter Server 的 Element 插件"] 主题。
+. （对于使用适用于 vCenter Server 的 NetApp Element 插件的所有 NetApp HCI 安装）按照中的步骤更新 12.3.x 管理节点上的 vCenter 插件 link:task_vcp_upgrade_plugin.html["升级适用于 vCenter Server 的 Element 插件"] 主题。
 . 使用管理节点 API 查找安装的资产 ID ：
 +
 .. 从浏览器登录到管理节点 REST API UI ：
@@ -484,46 +484,46 @@ sudo /sf/packages/mnode/upgrade-mnode -mu <mnode user> -pvm <mvip for persistent
 ----
 https://<ManagementNodeIP>/inventory/1/
 ----
-.. 单击 * 授权 * 并完成以下操作：
+.. 选择 * 授权 * 并完成以下操作：
 +
 ... 输入集群用户名和密码。
 ... 输入客户端 ID `mnode-client` 。
-... 单击 * 授权 * 开始会话。
+... 选择 * 授权 * 以开始会话。
 ... 关闭窗口。
 
 
-.. 在 REST API UI 中，单击 * 获取​ /Installations * 。
-.. 单击 * 试用 * 。
-.. 单击 * 执行 * 。
+.. 从 REST API UI 中，选择 * 获取​ /Installations * 。
+.. 选择 * 试用 * 。
+.. 选择 * 执行 * 。
 .. 从代码 200 响应正文中，复制安装的 `id` 。
 +
 您的安装具有在安装或升级期间创建的基本资产配置。
 
 
 
-. 如果您安装了 NetApp HCI ，请在 vSphere 中找到计算节点的硬件标记：
+. 在 vSphere 中找到计算节点的硬件标记：
 +
 .. 在 vSphere Web Client 导航器中选择主机。
-.. 单击 * 监控 * 选项卡，然后单击 * 硬件运行状况 * 。
+.. 选择 * 监控 * 选项卡，然后选择 * 硬件运行状况 * 。
 .. 列出了节点 BIOS 制造商和型号。复制并保存 `tag` 的值，以供后续步骤使用。
 
 
-. 将用于 HCI 监控（仅限 NetApp HCI 安装）和混合云控制（适用于所有安装）的 vCenter 控制器资产添加到管理节点的已知资产中：
+. 将用于 HCI 监控和 Hybrid Cloud Control 的 vCenter 控制器资产添加到管理节点的已知资产中：
 +
-.. 单击 * 发布 /assets/ ｛ asset_id ｝ /controllers* 以添加控制器子资产。
-.. 单击 * 试用 * 。
+.. 选择 * POST /assets/ ｛ asset_id ｝ /controllers* 以添加控制器子资产。
+.. 选择 * 试用 * 。
 .. 在 * asset_id* 字段中输入复制到剪贴板的父基本资产 ID 。
 .. 输入类型为 `vCenter` 和 vCenter 凭据的所需有效负载值。
-.. 单击 * 执行 * 。
+.. 选择 * 执行 * 。
 
 
-. （仅限 NetApp HCI ）将计算节点资产添加到管理节点的已知资产：
+. 将计算节点资产添加到管理节点的已知资产：
 +
-.. 单击 * 发布 /assets/ ｛ asset_id ｝ /compute-nodes* 以添加计算节点子资产以及计算节点资产的凭据。
-.. 单击 * 试用 * 。
+.. 选择 * POST /assets/ ｛ asset_id ｝ /compute-nodes* 以使用计算节点资产的凭据添加计算节点子资产。
+.. 选择 * 试用 * 。
 .. 在 * asset_id* 字段中输入复制到剪贴板的父基本资产 ID 。
 .. 在有效负载中，输入 " 型号 " 选项卡中定义的所需有效负载值。输入 `ESXi Host` as `type` ，然后粘贴您在上一步中为 `hardware_tag` 保存的硬件标记。
-.. 单击 * 执行 * 。
+.. 选择 * 执行 * 。
 
 
 
@@ -546,8 +546,8 @@ https://<ManagementNodeIP>/inventory/1/
 https://<mNode 11.1 IP address>:9443
 ----
 . 在 vSphere 中，选择 * NetApp Element Configuration* > * mNode Settings* 。（在较旧版本中，顶级菜单为 * NetApp SolidFire Configuration* 。）
-. 单击 * 操作 * > * 清除 * 。
-. 要进行确认，请单击 * 是 * 。mNode Status 字段应报告 Not Configured 。
+. 选择 * 操作 * > * 清除 * 。
+. 要确认，请选择 * 是 * 。mNode Status 字段应报告 Not Configured 。
 +
 
 NOTE: 首次转到 * mNode Settings* 选项卡时， mNode Status 字段可能会显示为 * 未配置 * ，而不是预期的 * 启动 * ；您可能无法选择 * 操作 * > * 清除 * 。刷新浏览器。mNode Status 字段最终将显示 * 启动 * 。
@@ -564,11 +564,11 @@ https://<mNode 11.1 IP address>:9443
 
 NOTE: 默认密码为 SolidFire` 。要设置新密码，必须提供此密码。
 
-. 单击 * vCenter 插件注册 * 选项卡。
+. 选择 * vCenter 插件注册 * 选项卡。
 . 选择 * 更新插件 * 。
-. 输入所需的值。完成后，单击 * 更新 * 。
+. 输入所需的值。完成后，选择 * 更新 * 。
 . 登录到 vSphere 并选择 * NetApp Element Configuration* > * mNode Settings* 。
-. 单击 * 操作 * > * 配置 * 。
+. 选择 * 操作 * > * 配置 * 。
 . 提供管理节点 IP 地址，管理节点用户 ID （用户名为 `admin` ），您在注册实用程序的 * QoSSIOC Service Management* 选项卡上设置的密码以及 vCenter 用户 ID 和密码。
 +
 在 vSphere 中， "mNode Settings* " 选项卡应将 mNode 状态显示为 "*UP" ，表示管理节点 11.1 已注册到 vCenter 。
@@ -657,17 +657,17 @@ sudo systemctl restart sfcollector
 ----
 https://<ManagementNodeIP>/mnode
 ----
-. 单击 * 授权 * 并完成以下操作：
+. 选择 * 授权 * 并完成以下操作：
 +
 .. 输入集群用户名和密码。
 .. 如果尚未填充值，请将客户端 ID 输入为 `mnode-client` 。
-.. 单击 * 授权 * 开始会话。
+.. 选择 * 授权 * 以开始会话。
 
 
-. 在 REST API UI 中，单击 * POST /services/reuse-auth* 。
-. 单击 * 试用 * 。
+. 从 REST API UI 中，选择 * POST /services/reuse-auth* 。
+. 选择 * 试用 * 。
 . 对于 * load_images* 参数，选择 `true` 。
-. 单击 * 执行 * 。
+. 选择 * 执行 * 。
 +
 响应正文指示重新配置成功。
 

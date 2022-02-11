@@ -44,15 +44,15 @@ NOTE: 如果您有多个双节点存储集群配置，每个配置都在各自�
 https://<ManagementNodeIP>/hcc
 ----
 . 通过提供存储集群管理员凭据登录到 NetApp Hybrid Cloud Control 。
-. 单击界面右上角附近的 * 升级 * 。
+. 选择靠近接口右上角的 * 升级 * 。
 . 在 * 升级 * 页面上，选择 * 计算固件 * 选项卡。
-. 单击运行状况检查 image:hcc_healthcheck_icon.png["图标。"] 对于要检查升级准备情况的集群。
-. 在 * 计算运行状况检查 * 页面上，单击 * 运行状况检查 * 。
+. 选择运行状况检查 image:hcc_healthcheck_icon.png["图标。"] 对于要检查升级准备情况的集群。
+. 在 * 计算运行状况检查 * 页面上，选择 * 运行状况检查 * 。
 . 如果出现问题，此页面将提供一个报告。执行以下操作：
 +
 .. 转至为每个问题描述列出的特定知识库文章，或者执行指定的补救措施。
 .. 如果指定了 KB ，请完成相关知识库文章中所述的过程。
-.. 解决集群问题后，单击 * 重新运行运行状况检查 * 。
+.. 解决集群问题后，选择 * 重新运行运行状况检查 * 。
 
 
 
@@ -74,21 +74,21 @@ https://<ManagementNodeIP>/hcc
 ----
 https://<ManagementNodeIP>/inventory/1/
 ----
-.. 单击 * 授权 * 并完成以下操作：
+.. 选择 * 授权 * 并完成以下操作：
 +
 ... 输入集群用户名和密码。
 ... 如果尚未填充值，请将客户端 ID 输入为 `mnode-client` 。
-... 单击 * 授权 * 开始会话。
+... 选择 * 授权 * 以开始会话。
 
 
-.. 在 REST API UI 中，单击 * 获取​ /Installations * 。
-.. 单击 * 试用 * 。
-.. 单击 * 执行 * 。
+.. 从 REST API UI 中，选择 * 获取​ /Installations * 。
+.. 选择 * 试用 * 。
+.. 选择 * 执行 * 。
 .. 从代码 200 响应正文中，复制您计划用于运行状况检查的安装的 ` "id"` 。
-.. 在 REST API UI 中，单击 * 获取​ / installations​ / ｛ id ｝ * 。
-.. 单击 * 试用 * 。
+.. 从 REST API UI 中，选择 * 获取​ / installations​ / ｛ id ｝ * 。
+.. 选择 * 试用 * 。
 .. 输入安装 ID 。
-.. 单击 * 执行 * 。
+.. 选择 * 执行 * 。
 .. 从代码 200 响应正文中，复制以下各项的 ID ：
 +
 ... 集群 ID （` "clusterID"` ）
@@ -132,15 +132,15 @@ https://<ManagementNodeIP>/inventory/1/
 ----
 https://<ManagementNodeIP>/vcenter/1/
 ----
-.. 单击 * 授权 * 并完成以下操作：
+.. 选择 * 授权 * 并完成以下操作：
 +
 ... 输入集群用户名和密码。
 ... 如果尚未填充值，请将客户端 ID 输入为 `mnode-client` 。
-... 单击 * 授权 * 开始会话。
+... 选择 * 授权 * 以开始会话。
 
 
-.. 单击 * 发布 / compute​ / ｛ controller_ID ｝​ /health-checks* 。
-.. 单击 * 试用 * 。
+.. 选择 * 发布 / compute​ / ｛ controller_ID ｝​ /health-checks* 。
+.. 选择 * 试用 * 。
 .. 在 * 控制器 ID * 参数字段中输入您从上一步复制的 ` "controllerId"` 。
 .. 在有效负载中，输入您从上一步复制的 ` clusterid"` 值作为 ` "cluster"` 值，然后删除 ` "nodes"` 参数。
 +
@@ -150,7 +150,7 @@ https://<ManagementNodeIP>/vcenter/1/
   "cluster": "domain-1"
 }
 ----
-.. 单击 * 执行 * 对集群运行状况检查。
+.. 选择 * 执行 * 可对集群运行状况检查。
 +
 代码 200 响应会提供一个 ` "resourcesLink"` URL ，并附加任务 ID ，用于确认运行状况检查结果。
 
@@ -175,10 +175,10 @@ https://<ManagementNodeIP>/vcenter/1/
 ----
 https://<ManagementNodeIP>/vcenter/1/
 ----
-.. 单击 * 获取 compute​ /tasks/ ｛ task_id ｝ * 。
-.. 单击 * 试用 * 。
+.. 选择 * 获取 compute​ 任务 / ｛ task_id ｝ * 。
+.. 选择 * 试用 * 。
 .. 在 `task_id` 参数字段中，输入 * post /t compute​ /｛ controller_ID ｝​ /health-checks* code 200 响应中 ` "resource"` URL 的任务 ID 部分。
-.. 单击 * 执行 * 。
+.. 选择 * 执行 * 。
 .. 如果返回的 `s状态` 指示计算节点运行状况存在问题，请执行以下操作：
 +
 ... 转至为每个问题描述列出的特定知识库文章（`KbLink` ）或执行指定的补救措施。
@@ -202,16 +202,16 @@ https://<ManagementNodeIP>/vcenter/1/
 | 检查问题描述 | 节点 / 集群 | 需要执行的操作才能解决 | 有关操作步骤的知识库文章 
 
 
-| DRS 是否已启用且完全自动化？ | 集群 | 打开 DRS 并确保其完全自动化。 | link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/How_to_enable_DRS_in_vSphere["请参见此知识库文章"]。注意：如果您拥有标准许可，请将 ESXi 主机置于维护模式并忽略此运行状况检查失败警告。 
+| DRS 是否已启用且完全自动化？ | 集群 | 打开 DRS 并确保其完全自动化。 | link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/How_to_enable_DRS_in_vSphere["请参见此知识库文章"^]。注意：如果您拥有标准许可，请将 ESXi 主机置于维护模式并忽略此运行状况检查失败警告。 
 
 
-| 是否已在 vSphere 中禁用 DPM ？ | 集群 | 关闭分布式电源管理。 | link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/How_to_disable_DPM_in_VMware_vCenter["请参见此知识库文章"]。 
+| 是否已在 vSphere 中禁用 DPM ？ | 集群 | 关闭分布式电源管理。 | link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/How_to_disable_DPM_in_VMware_vCenter["请参见此知识库文章"^]。 
 
 
-| 是否已在 vSphere 中禁用 HA 允许控制？ | 集群 | 关闭 HA 允许控制。 | link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_control_enable_HA_admission_in_vSphere["请参见此知识库文章"]。 
+| 是否已在 vSphere 中禁用 HA 允许控制？ | 集群 | 关闭 HA 允许控制。 | link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_control_enable_HA_admission_in_vSphere["请参见此知识库文章"^]。 
 
 
-| 是否为集群中主机上的虚拟机启用了 FT ？ | Node | 在任何受影响的虚拟机上暂停容错。 | link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_suspend_fault_tolerance_on_virtual_machines_in_a_vSphere_cluster["请参见此知识库文章"]。 
+| 是否为集群中主机上的虚拟机启用了 FT ？ | Node | 在任何受影响的虚拟机上暂停容错。 | link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_suspend_fault_tolerance_on_virtual_machines_in_a_vSphere_cluster["请参见此知识库文章"^]。 
 
 
 | vCenter 中是否存在集群的严重警报？ | 集群 | 启动 vSphere 并解决和 / 或确认任何警报，然后再继续。 | 不需要 KB 即可解析问题描述。 
@@ -250,16 +250,16 @@ https://<ManagementNodeIP>/vcenter/1/
 | ESXi 主机是否已正确映射到硬件主机（ BMC ）？ | Node | ESXi 主机未正确映射到基板管理控制器（ BMC ）。更正 ESXi 主机和硬件主机之间的映射。 | 不需要 KB 即可解析问题描述。请参见 link:task_hcc_edit_bmc_info.html["本文"] 有关详细信息 ... 
 
 
-| 集群中见证节点的状态是什么？已确定的见证节点均未启动且正在运行。 | Node | 见证节点未在备用 ESXi 主机上运行。打开备用 ESXi 主机上的见证节点，然后重新运行运行运行状况检查。* HCI 安装中必须始终运行一个见证节点 * 。 | https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_resolve_witness_node_issues_prior_to_upgrading_compute_nodes["请参见此知识库文章"] 
+| 集群中见证节点的状态是什么？已确定的见证节点均未启动且正在运行。 | Node | 见证节点未在备用 ESXi 主机上运行。打开备用 ESXi 主机上的见证节点，然后重新运行运行运行状况检查。* HCI 安装中必须始终运行一个见证节点 * 。 | https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_resolve_witness_node_issues_prior_to_upgrading_compute_nodes["请参见此知识库文章"^] 
 
 
-| 集群中见证节点的状态是什么？此见证节点已启动且正在此 ESXi 主机上运行，并且备用见证节点未启动且未运行。 | Node | 见证节点未在备用 ESXi 主机上运行。打开备用 ESXi 主机上的见证节点。准备好升级此 ESXi 主机后，关闭此 ESXi 主机上运行的见证节点，然后重新运行运行运行状况检查。* HCI 安装中必须始终运行一个见证节点 * 。 | https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_resolve_witness_node_issues_prior_to_upgrading_compute_nodes["请参见此知识库文章"] 
+| 集群中见证节点的状态是什么？此见证节点已启动且正在此 ESXi 主机上运行，并且备用见证节点未启动且未运行。 | Node | 见证节点未在备用 ESXi 主机上运行。打开备用 ESXi 主机上的见证节点。准备好升级此 ESXi 主机后，关闭此 ESXi 主机上运行的见证节点，然后重新运行运行运行状况检查。* HCI 安装中必须始终运行一个见证节点 * 。 | https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_resolve_witness_node_issues_prior_to_upgrading_compute_nodes["请参见此知识库文章"^] 
 
 
-| 集群中见证节点的状态是什么？见证节点已启动且正在此 ESXi 主机上运行，备用节点已启动，但正在同一 ESXi 主机上运行。 | Node | 这两个见证节点均在此 ESXi 主机上运行。将一个见证节点重新定位到备用 ESXi 主机。准备好升级此 ESXi 主机后，关闭此 ESXi 主机上剩余的见证节点，然后重新运行运行运行状况检查。* HCI 安装中必须始终运行一个见证节点 * 。 | https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_resolve_witness_node_issues_prior_to_upgrading_compute_nodes["请参见此知识库文章"] 
+| 集群中见证节点的状态是什么？见证节点已启动且正在此 ESXi 主机上运行，备用节点已启动，但正在同一 ESXi 主机上运行。 | Node | 这两个见证节点均在此 ESXi 主机上运行。将一个见证节点重新定位到备用 ESXi 主机。准备好升级此 ESXi 主机后，关闭此 ESXi 主机上剩余的见证节点，然后重新运行运行运行状况检查。* HCI 安装中必须始终运行一个见证节点 * 。 | https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_resolve_witness_node_issues_prior_to_upgrading_compute_nodes["请参见此知识库文章"^] 
 
 
-| 集群中见证节点的状态是什么？见证节点已启动且正在此 ESXi 主机上运行，备用见证节点已启动且正在另一个 ESXi 主机上运行。 | Node | 此 ESXi 主机上正在本地运行见证节点。准备好升级此 ESXi 主机后，请仅关闭此 ESXi 主机上的见证节点，然后重新运行运行运行状况检查。* HCI 安装中必须始终运行一个见证节点 * 。 | https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_resolve_witness_node_issues_prior_to_upgrading_compute_nodes["请参见此知识库文章"] 
+| 集群中见证节点的状态是什么？见证节点已启动且正在此 ESXi 主机上运行，备用见证节点已启动且正在另一个 ESXi 主机上运行。 | Node | 此 ESXi 主机上正在本地运行见证节点。准备好升级此 ESXi 主机后，请仅关闭此 ESXi 主机上的见证节点，然后重新运行运行运行状况检查。* HCI 安装中必须始终运行一个见证节点 * 。 | https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_resolve_witness_node_issues_prior_to_upgrading_compute_nodes["请参见此知识库文章"^] 
 |===
 [discrete]
 == 了解更多信息

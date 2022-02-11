@@ -19,14 +19,14 @@ IMPORTANT: Element 软件 12.3.2 是可使用 NetApp HealthTools 升级到的最
 +
 NetApp Hybrid Cloud Control 升级在早期的服务包版本中不可用。
 
-* 您已下载最新版本的 https://mysupport.netapp.com/site/products/all/details/element-healthtools/downloads-tab["HealthTools"] 并将安装文件复制到管理节点。
+* 您已下载最新版本的 https://mysupport.netapp.com/site/products/all/details/element-healthtools/downloads-tab["HealthTools"^] 并将安装文件复制到管理节点。
 +
 
 TIP: 您可以运行 `sfupdate-healthtools -v` 命令来检查本地安装的 HealthTools 版本。
 
 * 要对非公开站点使用 HealthTools ，您需要执行以下附加步骤：
 +
-** 下载 link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740["JSON 文件"] 从 NetApp 支持站点的非管理节点计算机上，将其重命名为 `metadata 。 json` 。
+** 下载 link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740["JSON 文件"^] 从 NetApp 支持站点的非管理节点计算机上，将其重命名为 `metadata 。 json` 。
 ** 在非公开站点上启动并运行管理节点。
 
 

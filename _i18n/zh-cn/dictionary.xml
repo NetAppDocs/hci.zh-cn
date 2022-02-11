@@ -1166,7 +1166,6 @@
   <block id="a1c6e7e95c797346381866e156460cb0" category="paragraph">在生产环境中，您应以滚动方式更新 NetApp HCI 安装中集群中的计算节点；一个节点一个节点，一个节点一个节点。NetApp Hybrid Cloud Control 中的 API 可为单个计算节点编排整体计算节点固件升级过程，包括运行运行状况检查，将计算节点上的 ESXi 置于维护状态以及重新启动计算节点以应用固件升级。Ansible 角色提供了一个选项，用于为一组计算节点或整个集群编排固件升级。</block>
   <block id="39e0115b52067ca373c2974cabbedb66" category="inline-link">GitHub 上的 NetApp Ansible 存储库</block>
   <block id="5c43103944569fd8012409d26d35ae27" category="paragraph">要开始使用，请导航到<block ref="800625a9fb0814935e48340d0d4931ee" category="inline-link-rx"></block> 并下载 `NAR_compute_nodes_firmware_upgrades` 角色和文档。</block>
-  <block id="a80ea9fd147150be225676ffc95c2334" category="summary">在 NetApp HCI 或 SolidFire 系统升级过程中，您可以升级 NetApp Element 软件。</block>
   <block id="c4d41483c4ebb2063097b14712424742" category="doc">升级 Element 软件</block>
   <block id="b62290ff53a518e59ca66a10ffbbe80f" category="paragraph">要升级 NetApp Element 软件，您可以使用 NetApp 混合云控制 UI ， REST API 或 HealthTools 工具套件。Element 软件升级期间会禁止某些操作，例如添加和删除节点，添加和删除驱动器以及与启动程序，卷访问组和虚拟网络等关联的命令。</block>
   <block id="af97413bfe0fcaebbe8c8bbf7a552c1e" category="list-text">* 管理员权限 * ：您拥有执行升级的存储集群管理员权限。</block>
@@ -1196,24 +1195,18 @@
   <block id="7fad05c5548f9989eaee59a54633305a" category="admonition">对于非 H610S 平台，每个节点的升级过程大约需要 30 分钟。</block>
   <block id="76dc87fa8de1da44ac9cde3fec3cb965" category="list-text">打开 Web 浏览器并浏览到管理节点的 IP 地址：</block>
   <block id="d64a6336a39c9f27c33956f187d79c87" category="list-text">通过提供存储集群管理员凭据登录到 NetApp Hybrid Cloud Control 。</block>
-  <block id="c05fe698f8669174e3b992a2e903801f" category="list-text">单击界面右上角附近的 * 升级 * 。</block>
   <block id="8d2b20731c568a1d9a02267e5d20edb7" category="list-text">在 * 升级 * 页面上，选择 * 存储 * 。</block>
   <block id="eced5161fd4b5a5d98480da44ccabc87" category="paragraph">* 存储 * 选项卡列出了安装过程中的存储集群。如果 NetApp Hybrid Cloud Control 无法访问某个集群，则该集群将不会显示在 * 升级 * 页面上。</block>
   <block id="f1bd2e17b5412e4b45851ad42541f684" category="list-text">从以下选项中进行选择，并执行一组适用于您的集群的步骤：</block>
   <block id="042b4c254a65c4222ecfd8eda19de8fb" category="cell">您的管理节点具有外部连接。</block>
-  <block id="ea81e0987d30e98ecdb1930382fb8b88" category="list-text">单击要升级的集群旁边的下拉箭头，然后从 * 元素 * 选项卡下的可用升级版本中进行选择。</block>
-  <block id="b0d7c43db7977807029a542ec00848b5" category="list-text">单击 * 开始升级 * 。</block>
   <block id="b9088c022e9648ce7ddea6e6d4a7d2a2" category="admonition">升级期间， * 升级状态 * 会发生更改，以反映此过程的状态。它也会根据您执行的操作而发生更改，例如暂停升级或升级返回错误。请参见 <block ref="963ffe23b927e51707381f60a050d9f4" category="inline-xref-macro-rx"></block>。</block>
   <block id="1c1f68c70e4604204e19388cd8dedfa2" category="admonition">在升级过程中，您可以退出此页面，稍后再返回此页面以继续监控进度。如果集群行已折叠，则此页面不会动态更新状态和当前版本。必须展开集群行才能更新此表，您也可以刷新此页面。</block>
   <block id="f7c462da794bbac0b6cb931507af8070" category="paragraph">升级完成后，您可以下载日志。</block>
   <block id="8fce94dc58f1bdc7de438659f9a9a00b" category="cell">您的管理节点位于不具有外部连接的非公开站点中。</block>
-  <block id="64af008841326ef1992e7dfa61e6838e" category="list-text">单击 * 浏览 * 上传已下载的升级软件包。</block>
   <block id="9f3e44fdaf4628028bd071e9fdf42636" category="list-text">等待上传完成。进度条会显示上传状态。</block>
   <block id="4109e9de1e5e5e6a88e7ab1943736894" category="admonition">如果您离开浏览器窗口，则文件上传将丢失。</block>
   <block id="effc57e6ad213336e96f00439b792658" category="paragraph">成功上传并验证文件后，将显示一条屏幕消息。验证可能需要几分钟时间。如果在此阶段离开浏览器窗口，则会保留文件上传。</block>
   <block id="2b96c3916188bec9de822541d9cf623f" category="cell">您要升级运行的 Element 版本早于 11.8 的 H610S 集群。</block>
-  <block id="77dc0583e73681935b1b313654009c0a" category="list-text">单击要升级的集群旁边的下拉箭头，然后从可用的升级版本中进行选择。</block>
-  <block id="2319902fb47ba4de53acdd271735eea6" category="list-text">单击 * 开始升级 * 。升级完成后， UI 将提示您执行此过程的第 2 阶段。</block>
   <block id="2351c1e27093e71da7b231f5059cc476" category="list-text">完成中所需的其他步骤（第 2 阶段）<block ref="f89d7bc8c94108aeb49b4fdeac4ce106" category="inline-link-rx"></block>，并在用户界面中确认您已完成第 2 阶段。</block>
   <block id="d215420632f75acd5be40e1f61fad92e" category="paragraph">升级完成后，您可以下载日志。有关各种升级状态更改的信息，请参见 <block ref="963ffe23b927e51707381f60a050d9f4" category="inline-xref-macro-rx"></block>。</block>
   <block id="d3e7182b84a940e7db18b7fb84516b9d" category="section-title">升级状态更改</block>
@@ -1226,11 +1219,8 @@
   <block id="c9413dd7682a45da9ecc9efa8cea47d7" category="cell">正在进行中</block>
   <block id="b28a77ac58f4aaa651a37dfc7eaa6a5b" category="cell">正在升级。进度条会显示升级状态。屏幕上的消息还会显示节点级别的故障，并在升级过程中显示集群中每个节点的节点 ID 。您可以使用 Element UI 或适用于 vCenter Server 的 NetApp Element 插件 UI 监控每个节点的状态。</block>
   <block id="1c0bfd3d5057a65664221d4c93d2b215" category="cell">升级暂停</block>
-  <block id="5e30bdb4b7ba3fe0d8457b62eda44845" category="cell">您可以选择暂停升级。根据升级过程的状态，暂停操作可能会成功或失败。您将看到一个 UI 提示，要求您确认暂停操作。要确保集群在暂停升级之前处于安全位置，可能需要长达两个小时才能完全暂停升级操作。要恢复升级，请单击 * 恢复 * 。</block>
   <block id="e99180abf47a8b3a856e0bcb2656990a" category="cell">已暂停</block>
-  <block id="a5b32657c9bfe9ac9575ad737ca080f2" category="cell">您已暂停升级。单击 * 恢复 * 以恢复此过程。</block>
   <block id="902b0d55fddef6f8d651fe1035b7d4bd" category="cell">error</block>
-  <block id="ecb776e2fa7dc6d1ecf3a51baff6f86b" category="cell">升级期间发生错误。您可以下载错误日志并将其发送给 NetApp 支持部门。解决此错误后，您可以返回到页面，然后单击 * 恢复 * 。恢复升级时，进度条会后退几分钟，而系统会运行运行状况检查并检查升级的当前状态。</block>
   <block id="6fc59d6889d5ac60b02946bb6b8b8898" category="cell">无法检测</block>
   <block id="25026455f4896275dc71ea344eae7273" category="inline-link-macro">代理配置：</block>
   <block id="583f3e650ef38070d35da27a89c06904" category="cell">如果 NetApp Hybrid Cloud Control 无法通过外部连接访问联机软件存储库，则会显示此状态，而不是显示 * 可用版本 * 。如果您已建立外部连接，但仍看到此消息，请检查 <block ref="6ff9e66037288034fea8427eccd4ef4c" category="inline-link-macro-rx"></block>。</block>
@@ -1243,22 +1233,14 @@
   <block id="a6ed38b882eb2bb18669e728ffb1f93a" category="list-text">在管理节点上打开管理节点 REST API UI ：</block>
   <block id="4cf730cc1f866d2057be98ddf272d32e" category="list-text">单击 * 授权 * 并完成以下操作：</block>
   <block id="85bb06226f2384b478691f49e53204fc" category="list-text">关闭授权窗口。</block>
-  <block id="b9526e0922b97e2493776d81c53a182a" category="list-text">从 REST API UI 中，单击 * 获取​ /m ü packages​ /remote-repository​ /connection* 。</block>
   <block id="7ac2eb4e7073a0bed37085ee1d0656de" category="list-text">如果返回代码 200 ，请转至下一步。如果未连接到远程存储库，请建立连接或使用非公开站点选项。</block>
   <block id="ecd4792b2445292557fc3b37de2cda15" category="list-text">查找升级软件包 ID ：</block>
-  <block id="5cfd0f3085aaff01ae90ec4baedc6280" category="list-text">在 REST API UI 中，单击 * 获取 /packages* 。</block>
   <block id="92c655ce479b4404b3a51afa0527fd9b" category="list-text">在响应中，复制并保存软件包 ID ，以供后续步骤使用。</block>
-  <block id="4276657b06044ce75b41dc80b78f9b3c" category="list-text">将存储升级软件包下载到可供管理节点访问的设备：</block>
   <block id="4876c936414c8b50876cdff810c036bd" category="inline-link">下载页面</block>
   <block id="ca9b271bda1fd83c0839a53fe115bfdb" category="list-text">将存储升级软件包上传到管理节点：</block>
-  <block id="830365f182a61ee2daba9b06b6d1a11a" category="list-text">在 REST API UI 中，单击 * 发布 /packages* 。</block>
-  <block id="c9cfa08b31f744b7b9dd1bd038f411f2" category="list-text">单击 * 浏览 * 并选择升级软件包。</block>
-  <block id="3481b4b80b9e3a443b7cba659809071d" category="list-text">单击 * 执行 * 以启动上传。</block>
   <block id="e81c071d4e9f69ab45651ea4cb8be73c" category="list-text">在响应中，复制并保存软件包 ID （` "id"` ）以供后续步骤使用。</block>
   <block id="bda887a56a8d04dcb170e9898f3843b3" category="list-text">验证上传状态。</block>
-  <block id="fa2f8a7fb1af644c64d7622fd47ca86a" category="list-text">在 REST API UI 中，单击 * GET​ /v í packages​ / ｛ id ｝​ /status* 。</block>
   <block id="ec1ddc98a355dba89ef5b1ccc291885d" category="list-text">在 * id * 中输入上一步复制的软件包 ID 。</block>
-  <block id="8bf5993955b0b8622b93b837c91d81fe" category="list-text">单击 * 执行 * 以启动状态请求。</block>
   <block id="b0b65da42828ba058318330a013c3e29" category="paragraph">完成后，此响应会将 `state` 指示为 `Success` 。</block>
   <block id="65e3827c3b16db30418ea863dfbb70b2" category="list-text">找到存储集群 ID ：</block>
   <block id="d8a529bb2e8cb17b42fbbd746b707f68" category="list-text">在 REST API UI 中，单击 * 获取 /installations * 。</block>
@@ -1268,24 +1250,19 @@
   <block id="b3e42cab03f3258e266289a5cb473b26" category="list-text">在此响应中，复制并保存要升级的集群的存储集群 ID （` "id"` ），以便日后使用。</block>
   <block id="57d1363358ed907b2a8b4e6fd33958af" category="list-text">运行存储升级：</block>
   <block id="22987ed21eb820a9aeef354b7bb062c3" category="list-text">在管理节点上打开存储 REST API UI ：</block>
-  <block id="e98adf76044f14eaf17a9c91a89cd1e2" category="list-text">单击 * POST /upgrades* 。</block>
   <block id="3d73d8aacfb24ab8d9ebf63f85cc923a" category="list-text">在参数字段中输入升级软件包 ID 。</block>
   <block id="a80a2e215168c9bb8d1d7b0e32021251" category="list-text">在参数字段中输入存储集群 ID 。</block>
   <block id="488b3707934837436e2251dfc1801c6c" category="paragraph">有效负载应类似于以下示例：</block>
-  <block id="789918b07758ce5d60fb98a099904d59" category="list-text">单击 * 执行 * 以启动升级。</block>
   <block id="e06c90593ff7801dfefdc10b4aa3b913" category="paragraph">响应应指示状态为 `initializing` ：</block>
   <block id="64d520399f18fcab905348b4fd8838b4" category="list-text">复制响应中的升级 ID （` "upgradeId"` ）。</block>
   <block id="74937fca75155543e64fe89fc070f1d1" category="list-text">验证升级进度和结果：</block>
-  <block id="90232ddd36429406a75d02f72c5d2508" category="list-text">单击 * 获取​ /upgrades/｛ upgradeId ｝ * 。</block>
   <block id="3209d89b1ac6561bdc8db3c1f4f25799" category="list-text">在 * 升级 Id* 中输入上一步中的升级 ID 。</block>
   <block id="c338903f3a062adc25e2d4c1eb2c35c8" category="list-text">如果在升级期间出现问题或存在特殊要求，请执行以下操作之一：</block>
   <block id="9439376d1f9eb896483283efdb64281b" category="cell">您需要更正响应正文中出现的 `failedHealthChecks` 消息导致的集群运行状况问题。</block>
   <block id="51ea75317980f6158432ce49ef5cceec" category="list-text">转至为每个问题描述列出的特定知识库文章，或者执行指定的补救措施。</block>
   <block id="b4a0479be3c9adaef04f603fcfc17102" category="list-text">如果指定了 KB ，请完成相关知识库文章中所述的过程。</block>
-  <block id="e0a974ed061ce7c5412604f9ffd0d7f1" category="list-text">解决集群问题后，如果需要，请重新进行身份验证，然后单击 * 放置​ /upgrades/｛ upgradeId ｝ * 。</block>
   <block id="c3b2d48205919d9b80e19bd9010720cc" category="list-text">在请求正文中输入 ` action" ： "resume"` 。</block>
   <block id="15e4b27c3ddbd4f6284b6fb714f764c3" category="cell">由于维护窗口正在关闭或其他原因，您需要暂停升级。</block>
-  <block id="0e135e088b43aa91704312a156edb200" category="list-text">如果需要，请重新进行身份验证，然后单击 * PUT ​ /upgrades/｛ upgradeId ｝ * 。</block>
   <block id="0f449201481f814f1674b02766850303" category="list-text">在请求正文中输入 ` action" ： "pause"` 。</block>
   <block id="ecfc48ecc069bce7a3654faa3d90f6ba" category="cell">如果要升级运行的 Element 版本早于 11.8 的 H610S 集群，则会在响应正文中看到状态 `finishedNeedsAck` 。您需要对每个 H610S 存储节点执行其他升级步骤（第 2 阶段）。</block>
   <block id="8d00e90838fe38374a95fae1a5bd94ba" category="list-text">请参见 <block ref="3d9982c2d057e73df2291b5532839d41" category="inline-xref-macro-rx"></block> 并完成每个节点的过程。</block>
@@ -1294,10 +1271,8 @@
   <block id="05e1370c6bc841bbf10001b3bec41c0e" category="paragraph">在升级期间，如果未遇到任何错误，则 `stStatus` 会指示 `Running` 。升级每个节点后， `step` 值将更改为 `NodeFinished` 。</block>
   <block id="78cd54a4d18290c804697177cdb2c7d2" category="paragraph">当 `Percent` 值为 `100` 且 `state` 指示 `finished` 时，升级已成功完成。</block>
   <block id="4aa7e58f0a7559374030bc4b4edc1666" category="section-title">使用 NetApp Hybrid Cloud Control 升级失败时会发生什么情况</block>
-  <block id="040af7d9887fb746157cd389ac859b84" category="paragraph">如果驱动器或节点在升级期间发生故障， Element UI 将显示集群故障。升级过程不会继续到下一个节点，而是等待集群故障解决。UI 中的进度条显示升级正在等待集群故障解决。在此阶段，单击 UI 中的 * 暂停 * 将不起作用，因为升级会等待集群运行正常。您需要联系 NetApp 支持部门以协助进行故障调查。</block>
   <block id="1cf53d88c6420f1bec01b7ed2be5647b" category="paragraph">NetApp Hybrid Cloud Control 具有预先设置的三小时等待时间，在此期间可能会发生以下情况之一：</block>
   <block id="dc10d6ac703c7987da8e206f17bfba19" category="list-text">集群故障将在三小时内得到解决，升级将继续进行。在这种情况下，您无需执行任何操作。</block>
-  <block id="3cd1832a1bc7290b328be55ee5bd9b15" category="list-text">此问题在三小时后仍然存在，并且升级状态显示 * 错误 * 并显示红色横幅。问题解决后，您可以单击 * 恢复 * 来恢复升级。</block>
   <block id="59176eee36815639c56b916d1ee6d2b9" category="list-text">NetApp 支持部门已确定需要暂时中止升级，以便在三小时内采取更正措施。支持人员将使用 API 中止升级。</block>
   <block id="e0cac02c93ade1b7ecc2eb64907171a8" category="admonition">在更新节点时中止集群升级可能会导致驱动器异常地从节点中删除。如果驱动器被异常删除，则在升级期间重新添加驱动器需要 NetApp 支持部门手动干预。节点执行固件更新或更新后同步活动可能需要较长时间。如果升级进度似乎停滞，请联系 NetApp 支持部门以获得帮助。</block>
   <block id="f7cb949e38e4d529492a7a05aae8a9db" category="section-title">使用 HealthTools 升级已连接站点上的 Element 软件</block>
@@ -1737,10 +1712,7 @@
   <block id="4946e18fada664601bd87ab0e6b0c461" category="admonition">如果您有多个双节点存储集群配置，每个配置都在各自的 vCenter 中，则见证节点运行状况检查可能无法准确报告。因此，在准备升级 ESXi 主机时，只能关闭要升级的 ESXi 主机上的见证节点。您必须以备用方式关闭见证节点，以确保在 NetApp HCI 安装中始终运行一个见证节点。</block>
   <block id="807a82eaa952baafdd118220e7bd9abc" category="list-text">在 * 升级 * 页面上，选择 * 计算固件 * 选项卡。</block>
   <block id="baec6461b0d69dde1b861aefbe375d8a" category="inline-image-macro">图标。</block>
-  <block id="1d7f9233eaf459ab8773ffdc120f9299" category="list-text">单击运行状况检查 <block ref="121ad3230a694a5231762b0ae438963f" category="inline-image-macro-rx" type="image"></block> 对于要检查升级准备情况的集群。</block>
-  <block id="07dde9ecde11ddff0e6d3adeb5912040" category="list-text">在 * 计算运行状况检查 * 页面上，单击 * 运行状况检查 * 。</block>
   <block id="9dd06da7bba13199d2ce351ef71c8f81" category="list-text">如果出现问题，此页面将提供一个报告。执行以下操作：</block>
-  <block id="51e0b5f7cd91462d8704ed2fbefc7c23" category="list-text">解决集群问题后，单击 * 重新运行运行状况检查 * 。</block>
   <block id="8406008ec259132ca12aa6e40ba20fdc" category="paragraph">运行状况检查完成且无错误后，集群中的计算节点便可进行升级。请参见 <block ref="b3955269ff6e22f4641a814b8bc4ad1a" category="inline-link-macro-rx"></block> 以继续。</block>
   <block id="ba4923c590566e20d57f9e97c49c2ff8" category="section-title">在升级固件之前，请使用 API 运行计算节点运行状况检查</block>
   <block id="1c0df4b7a2bfcb9621c59f147066e174" category="paragraph">您可以使用 REST API 验证集群中的计算节点是否已做好升级准备。运行状况检查可验证升级不存在任何障碍，例如 ESXi 主机问题或其他 vSphere 问题。您需要对环境中的每个计算集群运行计算节点运行状况检查。</block>
@@ -1749,22 +1721,18 @@
   <block id="65c8e9fe3474b804ceb1cd31970c8897" category="list-text">如果尚未填充值，请将客户端 ID 输入为 `mnode-client` 。</block>
   <block id="092f6d73fb496611eabb3ef3d72d6956" category="list-text">在 REST API UI 中，单击 * 获取​ /Installations * 。</block>
   <block id="c5465f7c051351da994753292e14797a" category="list-text">从代码 200 响应正文中，复制您计划用于运行状况检查的安装的 ` "id"` 。</block>
-  <block id="5b821a129372830acc2e53cbb3e1c7ef" category="list-text">在 REST API UI 中，单击 * 获取​ / installations​ / ｛ id ｝ * 。</block>
   <block id="4b043557ff89a62c08b09b8f16a23974" category="list-text">输入安装 ID 。</block>
   <block id="8c886ce84885c8a2721f65882f2d383b" category="list-text">从代码 200 响应正文中，复制以下各项的 ID ：</block>
   <block id="632a4698933b6d6b19cf1a1a388ad19d" category="list-text">集群 ID （` "clusterID"` ）</block>
   <block id="85d9602053913aad1469d6bdd1eb5122" category="list-text">控制器 ID （` "controllerId"` ）</block>
   <block id="9341fa848dbf3c45d93ddb4bcd4f87b7" category="list-text">对集群中的计算节点运行状况检查：</block>
   <block id="6b8f6e18b231bf99c6146439693599fc" category="list-text">在管理节点上打开计算服务 REST API UI ：</block>
-  <block id="1c8392f6269dece4f5a812199952157c" category="list-text">单击 * 发布 / compute​ / ｛ controller_ID ｝​ /health-checks* 。</block>
   <block id="383612ece420590514a7a698fb1a98a9" category="list-text">在 * 控制器 ID * 参数字段中输入您从上一步复制的 ` "controllerId"` 。</block>
   <block id="745c554f364dd4daa431fff381f3de05" category="list-text">在有效负载中，输入您从上一步复制的 ` clusterid"` 值作为 ` "cluster"` 值，然后删除 ` "nodes"` 参数。</block>
-  <block id="7560f9460b060c4ffb044041d8e94a93" category="list-text">单击 * 执行 * 对集群运行状况检查。</block>
   <block id="cfea934fc932560f7afc3e2599922d3c" category="paragraph">代码 200 响应会提供一个 ` "resourcesLink"` URL ，并附加任务 ID ，用于确认运行状况检查结果。</block>
   <block id="931943b9535da59244da338b2185e037" category="list-text">复制 ` "resource"` URL 的任务 ID 部分以验证任务结果。</block>
   <block id="878561216ecd51efeb5cc678630b708d" category="list-text">验证运行状况检查的结果：</block>
   <block id="b06d10a1c40d3224aea27fb57e7da834" category="list-text">返回到管理节点上的计算服务 REST API UI ：</block>
-  <block id="f5c3fe94ef9bde0f45d3db6cb92cd149" category="list-text">单击 * 获取 compute​ /tasks/ ｛ task_id ｝ * 。</block>
   <block id="e3fd98fa7fa0ff1565dca452688be47f" category="list-text">在 `task_id` 参数字段中，输入 * post /t compute​ /｛ controller_ID ｝​ /health-checks* code 200 响应中 ` "resource"` URL 的任务 ID 部分。</block>
   <block id="a833be2f413e0a1f40ebf4693762cf04" category="list-text">如果返回的 `s状态` 指示计算节点运行状况存在问题，请执行以下操作：</block>
   <block id="e62ae23ebffcac16bd140d14408fc2ad" category="list-text">转至为每个问题描述列出的特定知识库文章（`KbLink` ）或执行指定的补救措施。</block>
@@ -1780,16 +1748,12 @@
   <block id="249694a485fc5d3289c38986b4f8e887" category="cell">集群</block>
   <block id="1cbc59a2e915aeee2a8b6232b7cbc105" category="cell">打开 DRS 并确保其完全自动化。</block>
   <block id="a6b1609eef7bf18b35a56455ba310c97" category="inline-link-macro">请参见此知识库文章</block>
-  <block id="0b106011e1401491ec50127e30824f65" category="cell"><block ref="201fe794fdd50313a29a863d464c6f9d" category="inline-link-macro-rx"></block>。注意：如果您拥有标准许可，请将 ESXi 主机置于维护模式并忽略此运行状况检查失败警告。</block>
   <block id="d191d2b41df83d7ad4c364b26e4cccf9" category="cell">是否已在 vSphere 中禁用 DPM ？</block>
   <block id="f1995ca709ae217fb7b4f19e32019b5e" category="cell">关闭分布式电源管理。</block>
-  <block id="08a23929aaacf7e0d9e33e75e2ce551e" category="cell"><block ref="1c3f7b674ad95e260e4a9227b78eaca2" category="inline-link-macro-rx"></block>。</block>
   <block id="30b17a95ef007789fd1a7823bbbab11f" category="cell">是否已在 vSphere 中禁用 HA 允许控制？</block>
   <block id="fe7225ba05a4d8e53f2c5a206e3b3da0" category="cell">关闭 HA 允许控制。</block>
-  <block id="991e2a38721c060dac31f1c6dc53b10c" category="cell"><block ref="49d99fd8ae721a33e2a0bd623d036691" category="inline-link-macro-rx"></block>。</block>
   <block id="83cafbf274b5abe9d9fd4e1e35f8f52a" category="cell">是否为集群中主机上的虚拟机启用了 FT ？</block>
   <block id="31958364c116ad548060d5d6ba632424" category="cell">在任何受影响的虚拟机上暂停容错。</block>
-  <block id="a5100508bd83e8e2af0136102d318f40" category="cell"><block ref="0c751f0aced803fc27338a967c0b48da" category="inline-link-macro-rx"></block>。</block>
   <block id="1019c395da73abf37e118c51b26fe8c5" category="cell">vCenter 中是否存在集群的严重警报？</block>
   <block id="c7462ff7a8e00312bceaaafa2d1605c7" category="cell">启动 vSphere 并解决和 / 或确认任何警报，然后再继续。</block>
   <block id="1d0f735f7201abbac6d3ce3db73c7322" category="cell">不需要 KB 即可解析问题描述。</block>
@@ -1820,7 +1784,6 @@
   <block id="795c4d81c36fe966d72f9df190515945" category="cell">不需要 KB 即可解析问题描述。请参见 <block ref="2a07d7c13714741ba4b52577b79b7461" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="efa35e2a26c4b1293ce5278173656110" category="cell">集群中见证节点的状态是什么？已确定的见证节点均未启动且正在运行。</block>
   <block id="661efa3329c18b8c1bf89a7159543aac" category="cell">见证节点未在备用 ESXi 主机上运行。打开备用 ESXi 主机上的见证节点，然后重新运行运行运行状况检查。* HCI 安装中必须始终运行一个见证节点 * 。</block>
-  <block id="7c8994da921faa4e84244cc696f272ce" category="cell"><block ref="7c8994da921faa4e84244cc696f272ce" category="inline-link-rx"></block></block>
   <block id="079adfadc2c43b45434eb8d256d2b33b" category="cell">集群中见证节点的状态是什么？此见证节点已启动且正在此 ESXi 主机上运行，并且备用见证节点未启动且未运行。</block>
   <block id="b21d5da6d770d534028a937df9e701e0" category="cell">见证节点未在备用 ESXi 主机上运行。打开备用 ESXi 主机上的见证节点。准备好升级此 ESXi 主机后，关闭此 ESXi 主机上运行的见证节点，然后重新运行运行运行状况检查。* HCI 安装中必须始终运行一个见证节点 * 。</block>
   <block id="84ed944f530bec821e980ba07fa756b9" category="cell">集群中见证节点的状态是什么？见证节点已启动且正在此 ESXi 主机上运行，备用节点已启动，但正在同一 ESXi 主机上运行。</block>
@@ -2639,7 +2602,6 @@
   <block id="e984e6e5e79a4f62c039f33332d1bc5b" category="list-text">确认删除操作并选择 * 是 * 。</block>
   <block id="e9af127a726ca755ecdd7c7247d97220" category="inline-link-macro">了解启动程序</block>
   <block id="520e54b191d9f32833ed20cf5d810399" category="list-text"><block ref="520e54b191d9f32833ed20cf5d810399" category="inline-link-macro-rx"></block></block>
-  <block id="de7cc64e04028e029cdcba5bb94d3a0a" category="summary">在 NetApp HCI 或 SolidFire 存储系统升级过程中，您需要对 NetApp Element 软件运行状况检查。</block>
   <block id="f5734d4e8acdeb186a1c22c351c4a0bf" category="paragraph">您必须在升级 Element 存储之前运行运行运行状况检查，以确保集群中的所有存储节点均已准备好进行下一次 Element 存储升级。</block>
   <block id="a9665a647615566ad8a19d93fbf94aa9" category="list-text">您已更新到最新的管理服务包（ 2.10.27 或更高版本）。</block>
   <block id="1b4d7862ca62ac0691b197c1c4e48017" category="admonition">在升级 Element 软件之前，您必须升级到最新的管理服务包。</block>
@@ -2705,7 +2667,6 @@
   <block id="7dffbd2f21931076fdb29acaf8ae26f0" category="list-text">按照响应中所述的说明进行操作。</block>
   <block id="5415d26aa4e82d38e1a9e3b034df122a" category="section-title">您的管理节点位于非公开站点上</block>
   <block id="58bbc3933c0ddb7478a26f7552520e97" category="list-text">查看此消息，并注意升级检查失败：</block>
-  <block id="52ad9cf7578fff9e46bc67a65b3a38a5" category="list-text">下载 <block ref="6a2e5ca01ea61ee7e7ab842e0ceb651a" category="inline-link-macro-rx"></block> 从 NetApp 支持站点的非管理节点计算机上，将其重命名为 `metadata 。 json` 。</block>
   <block id="337d79852891a37d41285c9101c3fff4" category="list-text">运行以下命令：</block>
   <block id="fcc491914f2a9b039c0cf0193fff10b3" category="list-text">有关详细信息，请参见其他 <block ref="6108af9ca5aa4fda7c0167fbe5ccda18" category="inline-link-macro-rx"></block> 非公开站点的信息。</block>
   <block id="611547aaaf1aef29fd97e330f0d053dc" category="list-text">运行以下命令，验证 HealthTools 套件是否为最新版本：</block>
@@ -2777,7 +2738,6 @@
   <block id="8fc04a8e11ea6436ee0a878e99ffaaff" category="paragraph">升级后，计算节点将启动到 ESXi 并像以前一样工作，从而保留配置。</block>
   <block id="67c28390ec59a86cf6eef633a3248a0e" category="inline-link-macro">计算节点固件发行说明</block>
   <block id="c9dd6bad4c7d561872f2e2d498a990bf" category="inline-link">互操作性表工具（ IMT ）</block>
-  <block id="3195f97b6cdf919c06b94918169aaaf6" category="list-text">* 计算驱动程序 * ：您已升级计算节点驱动程序。如果计算节点驱动程序与新固件不兼容，则升级将无法启动。请参见<block ref="3028580b30f2b1d483aad9f9a7a65c7a" category="inline-link-rx"></block> 有关驱动程序和固件兼容性的信息，请查看最新信息 <block ref="8e52b55ffa3dd99e7231384e5c6e0fa1" category="inline-link-macro-rx"></block> 了解重要的最新固件和驱动程序详细信息。</block>
   <block id="3b91723b8891cf7744d215242975ffa1" category="list-text">* 管理员权限 * ：您具有集群管理员和 BMC 管理员权限来执行升级。</block>
   <block id="0f7fc058ffe4e473e69ea8b600e3ea58" category="list-text">* 最低 BMC 和 BIOS 版本 * ：要使用 NetApp Hybrid Cloud Control 升级的节点满足以下最低要求：</block>
   <block id="a559b87068921eec05086ce5485e9784" category="cell">型号</block>
@@ -2795,9 +2755,7 @@
   <block id="590f0f5145e5d58d73d507c6a67aa0b2" category="admonition">H615C 计算节点必须使用将 BMC 固件更新到版本 4.68 <block ref="c58be2f499a493f0490ff81a29aa7beb" category="inline-link-macro-rx"></block> 使 NetApp Hybrid Cloud Control 能够执行未来的固件升级。</block>
   <block id="ae6346ffcf8868be71ccf7393c359eb7" category="admonition">要使 NetApp Hybrid Cloud Control 能够执行未来的固件升级， H300E ， H500E 和 H700E 计算节点需要 Redfish 许可证。请联系 NetApp 支持部门手动安装许可证，直到新的计算固件捆绑包在后续版本中自动执行此过程为止。</block>
   <block id="7389b01d5fe0e17f5523a7fb85295f91" category="inline-link">此知识库文章</block>
-  <block id="1713d181b21d6c0fe093728a7e13a24e" category="admonition">有关适用于您的硬件的完整固件和驱动程序固件列表，请参见<block ref="fc24ec3d1e44bf8a2f61224d71bc24a8" category="inline-link-rx"></block> （需要登录）。</block>
   <block id="92a2b5cb9c6906035c2864fa225e1940" category="inline-link-macro">文章</block>
-  <block id="321b344486a7f135fdd502e95923f7cd" category="list-text">* BIOS 启动顺序 * ：在 BIOS 设置中手动更改每个节点的启动顺序，以确保启动列表中显示 `USB CD/DVD` 。请参见此内容 <block ref="bf0d685451f26fbf320f656cde8e05a9" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="71ff71526d15db86eb50fcac245d183b" category="inline-link-macro">用户界面</block>
   <block id="db974238714ca8de634a7ce1d083a14f" category="inline-link-macro">API</block>
   <block id="a0eadab1ec17be36511ca995d844ebaa" category="list-text">* BMC 凭据 * ：更新 NetApp Hybrid Cloud Control 用于连接到计算节点 BMC 的凭据。您可以使用 NetApp Hybrid Cloud Control 之一执行此操作 <block ref="68c20b51b9ac5e7df85517007b658e2f" category="inline-link-macro-rx"></block> 或 <block ref="3c5e4db962920c879b083f5ee44c9cb7" category="inline-link-macro-rx"></block>。在升级之前更新 BMC 信息可刷新清单，并确保管理节点服务能够识别完成升级所需的所有硬件参数。</block>
@@ -2808,7 +2766,6 @@
   <block id="e32fcfe10328af0f3217cd5ddb0808a4" category="paragraph">在生产环境中，一次升级一个计算节点上的固件。</block>
   <block id="344e78ec2ad025d33ea36041579f298c" category="inline-link-macro">如何在 ESXi 主机上禁用锁定模式</block>
   <block id="51e2f064fae02b78d50335320fa64dee" category="inline-link-macro">VMware 锁定模式行为</block>
-  <block id="edd8b3282549ec1d6dc78d1eb7e1c40e" category="admonition">在运行运行运行状况检查并继续固件升级之前，必须使 ESXi 主机退出锁定模式。请参见 <block ref="fb19a39b93a06583d5a94b26b178d3e3" category="inline-link-macro-rx"></block> 和 <block ref="53ad52678690a80a10338f589ef87ae4" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="565ec7586d772ac9b8a3401217ae8135" category="paragraph">对于 NetApp Hybrid Cloud Control UI 或 API 升级，如果您具有 DRS 功能并需要许可，则 ESXi 主机将在升级过程中自动置于维护模式。节点将重新启动，升级过程完成后， ESXi 主机将退出维护模式。对于 USB 和 BMC UI 选项，您需要手动将 ESXi 主机置于维护模式，如每个操作步骤中所述。</block>
   <block id="97b77951b2d4eaea0f64d30f79d9ee22" category="admonition">在升级之前，请确保检查当前的 ESXi 驱动程序版本。如果此驱动程序已过期，请先升级此驱动程序。然后升级计算节点的计算固件。</block>
   <block id="24aff39b6c002fcae2afa707e6dba7be" category="paragraph">选择与您的升级情形相关的选项：</block>
@@ -2828,16 +2785,12 @@
   <block id="fa7063e93d956bc8344f5540bf669b09" category="list-text">选择要升级的集群。</block>
   <block id="1051fa9779041ad6e9ee3beab1a5804e" category="paragraph">如果可以升级，您将看到集群中的节点以及当前固件版本和更高版本。</block>
   <block id="1ec7d94e055dd1b38fea54a8c52a7107" category="list-text">选择升级软件包。</block>
-  <block id="f5a8a4afc9bf10ecf273f4a23cfb65e2" category="paragraph">单击 * 开始升级 * 后，此窗口将显示失败的运行状况检查（如果有）。</block>
   <block id="a3341b6eded1e35dfa9b561f8a07b57d" category="admonition">开始升级后，升级无法暂停。固件将按以下顺序更新： NIC ， BIOS 和 BMC 。升级期间请勿登录到 BMC UI 。登录到 BMC 将终止用于监控升级过程的混合云控制 LAN 上串行（ Serial Over LAN ， SOL ）会话。</block>
-  <block id="45ad41240a82d6ed24a2dabee37f2a5a" category="list-text">如果在集群或节点级别通过运行状况检查并显示警告，但未发生严重故障，则您将看到 * 已做好升级准备 * 。单击 * 升级节点 * 。</block>
   <block id="576792eafbabeb08a721725d8cd7f8c5" category="admonition">在升级过程中，您可以退出此页面，稍后再返回此页面以继续监控进度。在升级期间， UI 会显示有关升级状态的各种消息。</block>
   <block id="79df72a933d3593ef7d9131e8d7c509c" category="admonition">升级 H610C 和 H615S 计算节点上的固件时，请勿通过 BMC Web UI 打开 LAN 上串行（ Serial Over LAN ， SOL ）控制台。这可能发生原因会导致升级失败。</block>
   <block id="f018c25e2ba6e7d9e59d6f27fbefc1d1" category="paragraph">升级完成后， UI 将显示一条消息。升级完成后，您可以下载日志。</block>
-  <block id="c0b4c391ffe1e98755b4499ece43961c" category="list-text">单击 * 浏览 * 上传从下载的升级软件包<block ref="132031089c33792b234781a9d8501a93" category="inline-link-rx"></block>。</block>
   <block id="67986ad534a347b7de1afe60bc4bad42" category="admonition">如果您离开浏览器窗口，则文件上传将在后台进行。</block>
   <block id="21ab535a80a78a0fb75c944c402b4134" category="paragraph">成功上传并验证文件后，将显示一条屏幕消息。验证可能需要几分钟时间。升级完成后，您可以下载日志。有关各种升级状态更改的信息，请参见 <block ref="963ffe23b927e51707381f60a050d9f4" category="inline-xref-macro-rx"></block>。</block>
-  <block id="46edf9490e1c2c1a395b8706b759f2af" category="admonition">如果升级期间发生故障， NetApp Hybrid Cloud Control 将重新启动节点，使其退出维护模式，并显示故障状态，并提供指向错误日志的链接。您可以下载错误日志，其中包含特定说明或 KB 文章链接，以诊断和更正任何问题描述。有关使用 NetApp Hybrid Cloud Control 的计算节点固件升级问题的更多见解，请参见此文档 <block ref="6f5a5b0da22050fc7aaf44daa977b489" category="inline-link-macro-rx"></block> 文章。</block>
   <block id="eebe4635b143ec06c3d82067486e5631" category="paragraph">以下是用户界面在升级过程之前，期间和之后显示的不同状态：</block>
   <block id="cfe0f5606d79e2e4c6bbb68f7ed24315" category="cell">节点未通过一个或多个运行状况检查。展开以查看详细信息。</block>
   <block id="7fbb279da47cc6249b548441f8eeef5a" category="cell">一个或多个运行状况检查失败。</block>
@@ -2846,7 +2799,6 @@
   <block id="f978a6c0248c217a81017210bb0a3fb6" category="cell">已做好升级准备。</block>
   <block id="ccfdf7f17010a61d70b1bbebffca8da7" category="cell">所有运行状况检查均已成功通过，并且节点已做好升级准备。</block>
   <block id="41a328f03550f94c63742812c6e33bab" category="cell">升级期间发生错误。</block>
-  <block id="23849adf280d8705a61ef2dd0492aba0" category="cell">发生严重错误时，升级将失败并显示此通知。单击 * 下载日志 * 链接以下载日志以帮助解决此错误。解决此错误后，您可以尝试重新升级。</block>
   <block id="358c081d3609c99cc65d904871da499d" category="cell">正在升级节点。</block>
   <block id="54011adfa7bb72ee88b88d3ba0d26d4e" category="cell">正在升级。进度条会显示升级状态。</block>
   <block id="819180dac1edd7f3ad94afb1cd39ecc4" category="section-title">使用 NetApp Hybrid Cloud Control API 升级计算节点</block>
@@ -2854,37 +2806,29 @@
   <block id="571ebba046dfc62ef7155919bf315d2d" category="paragraph">计算节点资产（包括 vCenter 和硬件资产）必须为管理节点资产所知。您可以使用清单服务 API 来验证资产（`https://&lt;ManagementNodeIP&gt;/inventory/1/` ）。</block>
   <block id="689c642c94aa6268a48bbbc19bb529c5" category="list-text">在管理节点上打开软件包服务 REST API UI ：</block>
   <block id="325b3df765685b8bf7d0a291e60ff0d7" category="list-text">在响应中，复制并保存升级软件包名称（` packageName` ）和软件包版本（` packageVersion` ），以供后续步骤使用。</block>
-  <block id="6d766ad7112c950eb04002ef1c7fc39c" category="list-text">转到 NetApp HCI 软件<block ref="3dffc4c3eb8dd9089d721ea160bd23f1" category="inline-link-rx"></block> 并将最新的计算节点固件映像下载到可供管理节点访问的设备。</block>
   <block id="6020d7988dfd2e648ba586d737e1f210" category="list-text">将计算固件升级软件包上传到管理节点：</block>
   <block id="62924c929d970628e011c457f2df9215" category="list-text">在响应中，复制并保存升级软件包名称（` "name"` ）和软件包版本（` "version"` ），以供后续步骤使用。</block>
   <block id="a73185557316cb4d3140159601de085c" category="list-text">找到要升级的节点的计算控制器 ID 和节点硬件 ID ：</block>
   <block id="c1b6479fd9c7db0471ff4d500bfa314c" category="list-text">在响应中，复制并保存集群控制器 ID （` "controllerId"` ）和节点硬件 ID （` "hardwareId"` ），以供后续步骤使用：</block>
   <block id="41bae0332cd621d5a87b2f4d2ae66dbd" category="list-text">运行计算节点固件升级：</block>
-  <block id="8ef0a6dd93d520c0c6fe91d91ff2a0a0" category="list-text">单击 * 发布 /nodes/｛ hardware_id ｝ /upgrades* 。</block>
   <block id="9a1357e1e71579f662d24d17aed1a23a" category="list-text">在参数字段中输入硬件主机资产 ID （` "hardwareId"` Saved from a previous step ）。</block>
   <block id="7271267de19060ea8c43031aa1e16351" category="list-text">对有效负载值执行以下操作：</block>
   <block id="951849308163feee05b1b4f669f83c91" category="list-text">保留值 ` force" ： false` 和 ` "maintenanceMode" ： true"` ，以便在节点上执行运行状况检查，并将 ESXi 主机设置为维护模式。</block>
   <block id="8e9b8402fc729e5b8cf2e9a5e6d1f4a7" category="list-text">输入集群控制器 ID （` "controllerId"` 已从上一步保存）。</block>
   <block id="898aa9fbdeaf861f6b63c3aee3dcac0a" category="list-text">输入您在上一步中保存的软件包名称和软件包版本。</block>
   <block id="c658aaae7b770a779963c2f0814f7b97" category="list-text">复制响应中资源链接（` resourcesLink` ） URL 中的升级任务 ID 。</block>
-  <block id="727f7564461107301e77c148e46ff7ec" category="list-text">单击 * 获取 /task/ ｛ task_id ｝ /logs* 。</block>
   <block id="41ae3303c96aa0617f8cdc8eaf5eacba" category="list-text">在 * 任务 ID * 中输入上一步中的任务 ID 。</block>
-  <block id="4cf61591dd43b980bc04125e0b5ea270" category="list-text">解决集群问题后，根据需要重新进行身份验证，然后单击 * 发布 /nodes/｛ hardware_id ｝ /upgrades* 。</block>
   <block id="6fc04e69abf4e1a97cbcb23fdcde3485" category="list-text">重复上述升级步骤中的步骤。</block>
   <block id="c4b11491ff82324ef6528926fdb97efb" category="cell">升级失败，并且升级日志中未列出缓解步骤。</block>
-  <block id="ee5fbad85baa7771ef1a6095bdff51ac" category="inline-link">知识库文章（需要登录</block>
-  <block id="cfed35538c68f486e81d90b69c20d751" category="list-text">请参见此内容<block ref="38a16d57c78bb3b918105079b6305af4" category="inline-link-rx"></block>）。</block>
   <block id="76ebc3a73437f302f36ef1432523633d" category="list-text">根据需要多次运行 * 获取​ /task/ ｛ task_id ｝ /logs* API ，直到此过程完成。</block>
   <block id="8db93f67ae0c4a59be8d38cb28cd9964" category="paragraph">在升级期间，如果未遇到任何错误，则 `stStatus` 会指示 `Running` 。每个步骤完成后， `stStatus` 值将更改为 `completed` 。</block>
   <block id="42b05f11767800e8781ed3667e5bc181" category="paragraph">当每个步骤的状态为 `completed` 且 `percentageCompleted"` 值为 `100` 时，升级已成功完成。</block>
   <block id="7f42ec43a3a2d2efea9a00b87242c0cb" category="list-text">（可选）确认每个组件的升级固件版本：</block>
-  <block id="9601fe12fef1f9fad33378b6a920c4ed" category="list-text">在 REST API UI 中，单击 * 获取​ / nodes​ / ｛ hardware_id ｝​ /upgrades* 。</block>
   <block id="4b441364b36bb6f4c7b059dcc366682f" category="list-text">（可选）输入日期和状态参数以筛选结果。</block>
   <block id="cc0bc3ddeb0e718be7e738b95d572af9" category="list-text">在响应中验证所有组件的固件是否已成功从先前版本升级到最新固件。</block>
   <block id="c4c5c223d03335842a4306d18b9fe4c8" category="section-title">使用已使用最新计算节点固件包 ISO 映像的 USB 驱动器</block>
   <block id="f67b6a10eef3ca58e647dda805d94d0f" category="paragraph">您可以将下载了最新计算节点固件 ISO 的 USB 驱动器插入计算节点上的 USB 端口。除了使用此操作步骤中所述的 U 盘方法之外，您还可以使用基板管理控制器（ BMC ）界面中虚拟控制台中的 * 虚拟 CD/DVD * 选项在计算节点上挂载 ISO 。BMC 方法所需时间比 U 盘方法要长得多。确保您的工作站或服务器具有所需的网络带宽，并且您与 BMC 的浏览器会话不会超时。</block>
   <block id="66049ae453415635891440129594baf4" category="inline-link">NetApp 软件下载</block>
-  <block id="9ac20456749c4139e1523f9c809e62f9" category="list-text">浏览到<block ref="0330f2661c7496a0691699dabbb8c3be" category="inline-link-rx"></block> 页面上，单击 * NetApp HCI * ，然后单击正确版本的 NetApp HCI 的下载链接。</block>
   <block id="fdb5d17e28db94dde362ad7ba5b0d662" category="list-text">接受最终用户许可协议。</block>
   <block id="b36befe8937b455a62256bcdbd1761e1" category="list-text">在 * 计算和存储节点 * 部分下，下载计算节点映像。</block>
   <block id="6b42b239fce8e2fd9ba87948604faced" category="list-text">使用 Etcher 实用程序将计算节点固件 ISO 闪存到 USB 驱动器。</block>
@@ -2910,28 +2854,19 @@
   <block id="9348cc4ca180e752af9a30b1d8edd48a" category="list-text">如果节点属于集群，请按如下所示将其置于维护模式。如果没有，请跳到步骤 2 。</block>
   <block id="8561216c60b15334923d6df7a3a507ea" category="list-text">登录到 VMware vCenter Web 客户端。</block>
   <block id="0006dbea26c0768b7eb409a4548b0d78" category="list-text">右键单击主机（计算节点）名称，然后选择 * 维护模式 &gt; 进入维护模式 * 。</block>
-  <block id="b564a6ce3dee2108fea4fb751c62e7e7" category="list-text">单击 * 确定 * 。主机上的 VM 将迁移到另一个可用主机。虚拟机迁移可能需要一些时间，具体取决于需要迁移的虚拟机数量。</block>
   <block id="56f11fa64f88708e12f86525e1f10c60" category="admonition">请确保主机上的所有 VM 均已迁移，然后再继续操作。</block>
   <block id="7766a6f95761106ad6d741a6947ad460" category="list-text">导航到 BMC UI `https://BMCIP/#login` ，其中 BMCIP 是 BMC 的 IP 地址。</block>
   <block id="7f9391befb5b4ab3aa0261d24fee724f" category="list-text">使用凭据登录。</block>
   <block id="f60400fe89867cd8c8b3e1095fa53a2b" category="list-text">选择 * 远程控制 &gt; 控制台重定向 * 。</block>
-  <block id="5ff6ac28d71a37b48ebf68885d910712" category="list-text">单击 * 启动控制台 * 。</block>
   <block id="593b9eacda7134868a2d80ea3c474ec6" category="admonition">您可能需要安装或更新 Java 。</block>
-  <block id="ff29c984a76445cda8cc1b46df7124f4" category="list-text">打开控制台后，单击 * 虚拟介质 &gt; 虚拟存储 * 。</block>
-  <block id="52445d4eb11fcdc510107a453f1dc72b" category="list-text">在 * 虚拟存储 * 屏幕上，单击 * 逻辑驱动器类型 * ，然后选择 * ISO 文件 * 。</block>
   <block id="46da4b73e077041d82cbd4b49b3a2a45" category="inline-image-macro">显示了用于选择 ISO 文件的导航路径。</block>
   <block id="88bfc9e47329ab3d571f1872dc37c1fb" category="paragraph"><block ref="88bfc9e47329ab3d571f1872dc37c1fb" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f769a704ec825d9662c82099fa7809df" category="list-text">单击 * 打开映像 * 以浏览到下载 ISO 文件的文件夹，然后选择 ISO 文件。</block>
-  <block id="b0a233c15d1b5b7d8464d9c89b5ea838" category="list-text">单击 * 插件 * 。</block>
-  <block id="02f900a59043e0983b47748ad26aa402" category="list-text">当连接状态显示 `Device# ： VM Plug-in OK ！！` 时，单击 * 确定 * 。</block>
-  <block id="99a5f3ec864d680e99b59d4d83f73238" category="list-text">按 * F12* 并单击 * 重新启动 * 或单击 * 电源控制 &gt; 设置电源重置 * ，以重新启动节点。</block>
   <block id="b96987f61d66ba1db77d5b4f1783876a" category="list-text">重新启动期间，按 * F11 * 选择启动选项并加载 ISO 。在显示启动菜单之前，您可能需要按几次 F11 。</block>
   <block id="a69d47f968d2fc21fb9cdec24acfbe9a" category="paragraph">此时将显示以下屏幕：</block>
   <block id="d0ed128bd3c8c20ecdc5eb6ff37f7d5a" category="inline-image-macro">显示了虚拟 ISO 启动到的屏幕。</block>
   <block id="64db04a065fe8c5683677bfa2a4efcff" category="paragraph"><block ref="64db04a065fe8c5683677bfa2a4efcff" category="inline-image-macro-rx" type="image"></block></block>
   <block id="04b5db58b14ac00557c12b22488da4a9" category="list-text">在上述屏幕上，按 * 输入 * 。根据您的网络，按 * 输入 * 可能需要几分钟的时间才能开始升级。</block>
   <block id="c61e49078f881925dbdfe8eb0ca8d922" category="admonition">某些固件升级可能会对控制台进行发生原因以断开连接，并 / 或对 BMC 上的会话执行发生原因以断开连接。您可以重新登录到 BMC ，但由于固件升级，某些服务（例如控制台）可能不可用。升级完成后，节点将执行冷重新启动，这可能需要大约五分钟的时间。</block>
-  <block id="c8b495fc4ec38fe576323036df4f4062" category="list-text">重新登录到 BMC 用户界面，然后单击 * 系统 * 以在启动到操作系统后验证 BIOS 版本和构建时间。如果升级已正确完成，您将看到新的 BIOS 和 BMC 版本。</block>
   <block id="c0d2845b5e57dd0d6b0732369c810c73" category="admonition">在节点完全启动之前， BIOS 版本不会显示升级后的版本。</block>
   <block id="4b700a11c4dc15bc2c44032b82a6221f" category="list-text">如果节点属于集群，请完成以下步骤。如果此节点为独立节点，则无需执行进一步操作。</block>
   <block id="6559f407fcadf1c3e1b80127774db925" category="list-text">使主机退出维护模式。这可能会显示一个已断开连接的红色标志。请等待所有状态均已清除。</block>
@@ -2939,18 +2874,11 @@
   <block id="d9007dd2676748983c400ce8ca221bb7" category="section-title">升级 H610C/H615C 节点上的固件</block>
   <block id="e2cec94acacbfde7b552c83c32e84744" category="paragraph">根据节点是独立节点还是集群的一部分，步骤会有所不同。操作步骤可能需要大约 25 分钟，其中包括关闭节点电源，上传 ISO ，刷新设备以及在升级后重新启动节点。</block>
   <block id="ae2e167448f73cc45a857eeed2a38a45" category="list-text">导航到 BMC UI `https://BMCIP/#login` ，其中 BMC IP 是 BMC 的 IP 地址。</block>
-  <block id="80877029ef9b9693657b05001c6465aa" category="list-text">单击 * 远程控制 &gt; 启动 KVM （ Java ） * 。</block>
-  <block id="b95b1397016fbe0ae54b9e1391e3b295" category="list-text">在控制台窗口中，单击 * 介质 &gt; 虚拟介质向导 * 。</block>
   <block id="1d622834b8e28acedd0c470eff5709f7" category="image-alt">从 BMC UI 启动虚拟介质向导。</block>
-  <block id="8a44ecefdd60a05cf41c9c1fbc04efbe" category="list-text">单击 * 浏览 * 并选择计算固件 ` .iso` 文件。</block>
-  <block id="478d61e686778ff42217703865c18cb8" category="list-text">单击 * 连接 * 。此时将显示一个弹出窗口，指示成功，底部将显示路径和设备。您可以关闭 * 虚拟介质 * 窗口。</block>
   <block id="e3e72bb291b26812bea6d962e4866dab" category="image-alt">显示 ISO 上传成功的弹出窗口。</block>
   <block id="7edcc1835a80e09463c4bf3b46c42cc0" category="list-text">重新启动期间，按 * F11 * 选择启动选项并加载 ISO 。</block>
-  <block id="2c5dad6825fb78e8a81becbffdc64362" category="list-text">从显示的列表中选择 * AMI Virtual CDRO* ，然后单击 * 输入 * 。如果列表中未显示 AMI 虚拟光盘，请转到 BIOS 并在启动列表中启用它。保存后，节点将重新启动。在重新启动期间，按 * F11 * 。</block>
   <block id="b6c3b9c6bed53710f2cbf2c4dad9c6ef" category="image-alt">显示了可用于选择启动设备的窗口。</block>
-  <block id="549c7be30acce7ebed2ee3ae3dc6de07" category="list-text">在显示的屏幕上，单击 * 输入 * 。</block>
   <block id="38b1366a8da5dc836d161c511ddcb3a8" category="admonition">某些固件升级可能会对控制台进行发生原因以断开连接，并 / 或对 BMC 上的会话执行发生原因以断开连接。您可以重新登录到 BMC ，但由于固件升级，某些服务（例如控制台）可能不可用。升级完成后，节点将执行冷重新启动，这可能需要大约五分钟的时间。</block>
-  <block id="276df6f2cf89a24bf42cdb497efac803" category="list-text">如果与控制台断开连接，请选择 * 远程控制 * 并单击 * 启动 KVM* 或 * 启动 KVM （ Java ） * 以重新连接并验证节点何时完成启动备份。您可能需要多次重新连接，以验证节点是否已成功启动。</block>
   <block id="2558425336b0f6c46dd76c2ddacfe150" category="admonition">在启动过程中，大约 5 分钟内， KVM 控制台将显示 * 无信号 * 。</block>
   <block id="983386544e3658c647474bfcbcb7bb36" category="list-text">打开节点电源后，选择 * 信息板 &gt; 设备信息 &gt; 更多信息 * 以验证 BIOS 和 BMC 版本。此时将显示升级后的 BIOS 和 BMC 版本。只有在节点完全启动后，才会显示升级后的 BIOS 版本。</block>
   <block id="ed615718612dbf4adcce1e9d4941ba75" category="list-text">如果将节点置于维护模式，则在节点启动到 ESXi 后，右键单击主机（计算节点）名称，然后选择 * 维护模式 &gt; 退出维护模式 * ，并将 VM 迁移回主机。</block>
@@ -3135,7 +3063,6 @@
   <block id="a1fbdd995fe1c1ccce6635a976aff3a7" category="paragraph">请参见有关的信息 <block ref="c41e4fefd5b14d95ad96eb2c4a1441c5" category="inline-link-macro-rx"></block>。</block>
   <block id="3500be2d6452b665360ea9b308c6c109" category="inline-link">SolidFire 和 Element 文档</block>
   <block id="06ace0d3bf47e1a95240223bce9b2125" category="list-text"><block ref="06ace0d3bf47e1a95240223bce9b2125" category="inline-link-rx"></block></block>
-  <block id="6b62a6e067bcba1d45a20dcf25bd7baf" category="summary">在 NetApp HCI 或 SolidFire 存储系统升级过程中，您可以升级管理节点。</block>
   <block id="1761ea607c3f8d002099290408801187" category="doc">升级管理节点</block>
   <block id="1d9f05f083ca394b7aa3fbee6b4ba1c9" category="paragraph">您可以将管理节点从 11.0 或更高版本升级到管理节点 12.3.x 版。</block>
   <block id="c3215740fa940d9b86ab9435fcad9e83" category="paragraph">升级存储集群上的 Element 软件不再需要升级管理节点操作系统。如果管理节点为 11.3 或更高版本，您只需将管理服务升级到最新版本，即可使用 NetApp Hybrid Cloud Control 执行 Element 升级。如果您希望出于安全修复等其他原因升级管理节点操作系统，请按照适用于您的方案的管理节点升级操作步骤进行操作。</block>
@@ -3207,22 +3134,17 @@
   <block id="1d0dd1d7212314cbec4589ef288c9451" category="list-text">对于由具有永久性卷的现有管理节点 11.0 或 11.1 管理的多个存储集群：</block>
   <block id="efc71656b9c688dd8b024426e9fac6f5" category="list-text">对于由现有管理节点 11.0 或 11.1 管理且无永久性卷的多个存储集群（ ` -pVM` 标志用于提供集群的 MVIP 地址之一）：</block>
   <block id="9e31323b5cbbe61c6c8c43ad2755958b" category="inline-link-macro">升级适用于 vCenter Server 的 Element 插件</block>
-  <block id="17102379fc0bc7ea881f95eab28fb8d1" category="list-text">（对于使用适用于 vCenter Server 的 NetApp Element 插件的所有 NetApp HCI 安装和 SolidFire 全闪存存储安装）按照中的步骤更新 12.3.x 管理节点上的 vCenter 插件 <block ref="61768f3798a436486dacb908355263cd" category="inline-link-macro-rx"></block> 主题。</block>
   <block id="49fe4cc83f5673ee4313707be652fb5a" category="list-text">使用管理节点 API 查找安装的资产 ID ：</block>
   <block id="81b4d8ce3b6d3d31bcc065c5589192ab" category="list-text">从浏览器登录到管理节点 REST API UI ：</block>
   <block id="c1d91df00a0c3fac54e32076a41126ac" category="list-text">转至存储 MVIP 并登录。此操作将接受证书以执行下一步。</block>
   <block id="53c2c27c3b3fb674bd0285146df5b77b" category="list-text">从代码 200 响应正文中，复制安装的 `id` 。</block>
   <block id="05c59d2489c111c7947e09976e2c1d9a" category="paragraph">您的安装具有在安装或升级期间创建的基本资产配置。</block>
-  <block id="b8724110e3db04169214a0e77620c7c8" category="list-text">如果您安装了 NetApp HCI ，请在 vSphere 中找到计算节点的硬件标记：</block>
   <block id="7c6477f25c22d13e15a77d85b6584b69" category="list-text">在 vSphere Web Client 导航器中选择主机。</block>
-  <block id="ab7c1c96fc4fe2d55e0932c9885caeaa" category="list-text">单击 * 监控 * 选项卡，然后单击 * 硬件运行状况 * 。</block>
   <block id="20de52053c3a1a30b1244f7ee45bc34f" category="list-text">列出了节点 BIOS 制造商和型号。复制并保存 `tag` 的值，以供后续步骤使用。</block>
-  <block id="31213b2a0736c2e0d9485f08f3ce0ce0" category="list-text">将用于 HCI 监控（仅限 NetApp HCI 安装）和混合云控制（适用于所有安装）的 vCenter 控制器资产添加到管理节点的已知资产中：</block>
   <block id="d3ceaee3eba1f3d1dc3dd762d6254a77" category="list-text">单击 * 发布 /assets/ ｛ asset_id ｝ /controllers* 以添加控制器子资产。</block>
   <block id="4fc766d515cef70e327bbefb8f32007e" category="list-text">在 * asset_id* 字段中输入复制到剪贴板的父基本资产 ID 。</block>
   <block id="e2e193a380a16845739e1445cfe23fde" category="list-text">输入类型为 `vCenter` 和 vCenter 凭据的所需有效负载值。</block>
   <block id="421226b233bd18f9c1f8d179419a2f39" category="list-text">（仅限 NetApp HCI ）将计算节点资产添加到管理节点的已知资产：</block>
-  <block id="8d0a0f5de3a566c316d21f114ab1503d" category="list-text">单击 * 发布 /assets/ ｛ asset_id ｝ /compute-nodes* 以添加计算节点子资产以及计算节点资产的凭据。</block>
   <block id="05d6c35ef525375d16c0c0ed228b8280" category="list-text">在有效负载中，输入 " 型号 " 选项卡中定义的所需有效负载值。输入 `ESXi Host` as `type` ，然后粘贴您在上一步中为 `hardware_tag` 保存的硬件标记。</block>
   <block id="1128aaca3a95604af9f4e6f46e755aa7" category="section-title">从管理节点 10.x 版迁移到 11.x</block>
   <block id="aa85ba7b60fc5a8d160bcac4e76602a7" category="inline-link-macro">最新 HealthTools</block>
@@ -3233,18 +3155,13 @@
   <block id="de8fb9a417e5ff3f4cf6f4376300aedb" category="list-text">在管理节点 TUI 中，使用新 ID 和密码登录到管理节点并验证其是否正常工作。</block>
   <block id="f91d0a737a08806ffd3053b00e324760" category="list-text">从 vCenter 或管理节点 TUI 中，获取管理节点 11.1 IP 地址并浏览到端口 9443 上的 IP 地址以打开管理节点 UI 。</block>
   <block id="9f9e2eada94a2b513e7ea2fd2070a26f" category="list-text">在 vSphere 中，选择 * NetApp Element Configuration* &gt; * mNode Settings* 。（在较旧版本中，顶级菜单为 * NetApp SolidFire Configuration* 。）</block>
-  <block id="1286aad41d2555692570d9712015408b" category="list-text">单击 * 操作 * &gt; * 清除 * 。</block>
-  <block id="86078283f9813c09ca3bd3eefc0e0502" category="list-text">要进行确认，请单击 * 是 * 。mNode Status 字段应报告 Not Configured 。</block>
   <block id="56a32dd49a6dbb0e0348a840882069b1" category="admonition">首次转到 * mNode Settings* 选项卡时， mNode Status 字段可能会显示为 * 未配置 * ，而不是预期的 * 启动 * ；您可能无法选择 * 操作 * &gt; * 清除 * 。刷新浏览器。mNode Status 字段最终将显示 * 启动 * 。</block>
   <block id="bcc7cd82367090bebeb1a81f71b20707" category="list-text">从 vSphere 中注销。</block>
   <block id="6bc08ff2c798923f83399b466e83828c" category="list-text">在 Web 浏览器中，打开管理节点注册实用程序并选择 * QoSSIOC Service Management* ：</block>
   <block id="b142f691f9ca32840a06262706751854" category="list-text">设置新的 QoSSIOC 密码。</block>
   <block id="7d175f707658ab8d8d7209eef36c531b" category="admonition">默认密码为 SolidFire` 。要设置新密码，必须提供此密码。</block>
-  <block id="fc0551f8816f4bf952b2401f3e2773ff" category="list-text">单击 * vCenter 插件注册 * 选项卡。</block>
   <block id="d620125983dc5f2427e48ef8cf64e05d" category="list-text">选择 * 更新插件 * 。</block>
-  <block id="c41d4bc0a478053250e25458ba302995" category="list-text">输入所需的值。完成后，单击 * 更新 * 。</block>
   <block id="d2ba2536a729c91022a8866cb76aa0d0" category="list-text">登录到 vSphere 并选择 * NetApp Element Configuration* &gt; * mNode Settings* 。</block>
-  <block id="de826356b70121aa8fa90986bc78720b" category="list-text">单击 * 操作 * &gt; * 配置 * 。</block>
   <block id="39bcb493b71e1252cc79ed60aca98b72" category="list-text">提供管理节点 IP 地址，管理节点用户 ID （用户名为 `admin` ），您在注册实用程序的 * QoSSIOC Service Management* 选项卡上设置的密码以及 vCenter 用户 ID 和密码。</block>
   <block id="394f33ee158efaf5b14e0d18c2f943ed" category="paragraph">在 vSphere 中， "mNode Settings* " 选项卡应将 mNode 状态显示为 "*UP" ，表示管理节点 11.1 已注册到 vCenter 。</block>
   <block id="df3dc388ad6c26081374f74d856f9abd" category="list-text">从管理节点注册实用程序（`https://&lt;mNode 11.1 IP address&gt; ： 9443` ）中，从 * QoSSIOC Service Management* 重新启动 SIOC 服务。</block>
@@ -3269,7 +3186,6 @@
   <block id="7d77f30dd6c3619cac922b1bf9fc7a7c" category="list-text">存储集群运行的是 Element 12.0 或更高版本。</block>
   <block id="69bfe4b77f2e59784e9a7c91881f1161" category="list-text">您的管理节点为 11.3 或更高版本。</block>
   <block id="69f5442caf6936145cd4f73e7c83f2a4" category="list-text">您已按顺序更新管理服务，然后升级 Element 存储。除非按照所述顺序完成升级，否则无法使用此操作步骤重新配置身份验证。</block>
-  <block id="8b185b6ee956bb55fd53ce53dfeefbd6" category="list-text">在 REST API UI 中，单击 * POST /services/reuse-auth* 。</block>
   <block id="d4d6be65d679aa54296e16328ec041bf" category="list-text">对于 * load_images* 参数，选择 `true` 。</block>
   <block id="2a1519db00ab50aa3a0e4964f93a27f8" category="paragraph">响应正文指示重新配置成功。</block>
   <block id="4d3218f7c65e3f09421b33fd3e190ecc" category="summary">NetApp Hybrid Cloud Control 具有特定功能， NetApp 建议在这些功能中运行。</block>
@@ -3394,11 +3310,9 @@
   <block id="f77963c528aa19e59cf9f7c9d5b4a19d" category="summary">在 NetApp HCI 系统升级过程中，您可以升级计算节点驱动程序。</block>
   <block id="0c13e0dd6ebaa11c814ce3c5b29ab7f1" category="paragraph">对于任何 H 系列计算节点，您都可以使用 VMware Update Manager 更新节点上使用的驱动程序。</block>
   <block id="bab93f378f6cea1ed1024018548e066c" category="inline-link">此 NetApp 知识库文章</block>
-  <block id="f6f57ef583a2a8f65eca6d1dd3ad430c" category="paragraph">请参见中适用于您的硬件的固件和驱动程序列表<block ref="281f8980032ebb79864d728ec2225e48" category="inline-link-rx"></block> （需要登录）。</block>
   <block id="cae4b286c77e42f24641d126e94e3848" category="paragraph">一次仅执行其中一个更新操作。</block>
   <block id="7f1cb6f883abc23a81f6db00c067e34f" category="paragraph">在尝试升级计算固件之前，应检查当前 ESXi 驱动程序版本。如果此驱动程序已过期，请先升级此驱动程序。然后升级计算节点的计算固件。</block>
   <block id="3e79f2f4eea24dddb8f0e1d175482fea" category="inline-link">NetApp HCI 软件下载</block>
-  <block id="ee2173a85bb67a0d4771cd4c2fd0a819" category="list-text">浏览到<block ref="586f94736261e3cc826ee8e69c814c18" category="inline-link-rx"></block> 页面上，然后单击正确版本的 NetApp HCI 的下载链接。</block>
   <block id="3a238ed477365094aba2542d83b9d7e1" category="list-text">从下拉列表中选择 * ESXi_drivers* 。</block>
   <block id="3e60e9735750995ab5055c09cb6b687b" category="list-text">下载适用于您的节点类型和 ESXi 版本的驱动程序软件包。</block>
   <block id="583b2202b6101e8fb6a6243369ac0f58" category="list-text">在本地计算机上解压缩下载的驱动程序包。</block>
@@ -3408,9 +3322,7 @@
   <block id="151c76834ad80bda72b790ed956b343b" category="list-text">为计算节点创建新的主机基线。</block>
   <block id="a103a95f7d753b061f47218b727a92a9" category="list-text">为名称和类型选择 * 主机扩展 * ，然后选择要包含在新基线中的所有导入驱动程序软件包。</block>
   <block id="a496a18e70096c13771244c2dde8267d" category="list-text">在 vCenter 的 * 主机和集群 * 菜单中，选择包含要更新的计算节点的集群，然后导航到 * 更新管理器 * 选项卡。</block>
-  <block id="152375a13a7ff77d78d7e7e5ed2cb1b2" category="list-text">单击 * 修复 * ，然后选择新创建的主机基线。确保已选择基线中包含的驱动程序。</block>
   <block id="6d44c32d6b840dfaa324161a0e3d3f72" category="list-text">继续执行向导中的 * 主机修复选项 * ，并确保已选择 * 不更改虚拟机电源状态 * 选项，以便在驱动程序更新期间使虚拟机保持联机。</block>
-  <block id="ad2566c6ba088dd09a41bd19ab095be5" category="list-text">进入向导中的 * 准备完成 * 页面，然后单击 * 完成 * 。</block>
   <block id="7b21b071d697849e963c58b4acc1d064" category="paragraph">集群中所有计算节点的驱动程序一次更新一个节点，而虚拟机保持联机状态。</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律声明提供对版权声明、商标、专利等的访问。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
@@ -3610,13 +3522,11 @@
   <block id="cbc6bc00687b09827f841102ff79b99c" category="list-text">同一型号的计算节点的网络布线配置必须在一个计算集群中匹配。</block>
   <block id="63b242a9aa4eafd6278e80e8d62418ac" category="inline-link">SolidFire 和 Element 软件文档</block>
   <block id="574fec4c923cfe8953b14b138adec28e" category="list-text"><block ref="574fec4c923cfe8953b14b138adec28e" category="inline-link-rx"></block></block>
-  <block id="ec420e81b4295bf240fe77c1e8dbd427" category="summary">在 NetApp HCI 或 SolidFire 系统升级过程中，您可以升级与存储节点关联的固件。</block>
   <block id="28d43e5e13ecfc96dece6248ba9a0e4f" category="admonition">对于运行 Element 软件 12.0 版的 H610S 存储节点，在升级到存储固件包 2.27 之前，应应用 D-patch SUST-909 。在升级之前，请联系 NetApp 支持部门获取 D-patch 。请参见 <block ref="f5af28c84f405696357f61b6dbcf298d" category="inline-link-macro-rx"></block>。</block>
   <block id="26db8374256abd97a337e0f9af2f21c8" category="admonition">在升级存储节点上的固件之前，您必须升级到最新的管理服务包。如果要将 Element 软件更新到 12.2 或更高版本，则需要使用管理服务 2.14.60 或更高版本才能继续。</block>
   <block id="1162dd84e55b1e6c2517bf0323faf96b" category="admonition">要更新 iDRAC 或 BIOS 固件，请联系 NetApp 支持部门。对于追加信息，请参见此内容 <block ref="ce98bbbd0598351d03b47f370ea3b773" category="inline-link-macro-rx"></block>。</block>
   <block id="736c409b380383ee8843715d26079c63" category="list-text">* 集群运行状况 * ：您已运行运行运行状况检查。请参见 <block ref="bdcf6db43efb3c82b174a0c4c0a65c66" category="inline-link-macro-rx"></block>。</block>
   <block id="ebf60ae83a327f8be16b2010df1010c2" category="list-text">* 已更新 H610S 节点的 BMC * ：您已升级 H610S 节点的 BMC 版本。请参见 <block ref="f04f9a521fc4fd678cdbd3d698415a24" category="inline-link-macro-rx"></block>。</block>
-  <block id="549d257a6f61f3935af556f51f5a19e8" category="admonition">有关适用于您的硬件的固件和驱动程序固件的完整列表，请参见此内容<block ref="6cc0561cb437417f52ccd7c1b6fd3ccc" category="inline-link-rx"></block> （需要登录）。</block>
   <block id="5212e4232f93722ce70d3ed042cd25c1" category="paragraph">选择以下存储固件升级选项之一：</block>
   <block id="71894c0623112f371e3598666af16695" category="list-text"><block ref="c67f607f0c5a6b98a7e28e151694a09a" category="inline-xref-macro-rx"></block></block>
   <block id="b8cff0b41605e83e8a12999dd0a4ca92" category="list-text"><block ref="bd241c643056b4027f18f8f059752b73" category="inline-xref-macro-rx"></block></block>
@@ -4950,7 +4860,6 @@
   <block id="8c0ae26900e5f58b61204e22ec858924" category="list-text">选择 * 获取 /services* 。</block>
   <block id="c9febdd1cdc631cc150e210af5959338" category="list-text">选择状态为 * 正在运行 * 。</block>
   <block id="344071cf9eae741abef1df0044596a37" category="paragraph">管理节点上运行的服务会在响应正文中指示。</block>
-  <block id="f6abd23df184583be904e6f9220ba600" category="summary">在 NetApp HCI 或 SolidFire 存储系统升级过程中，您可以升级适用于 vCenter Server 的 Element 插件。</block>
   <block id="03efd38b0802e06b31537f557cd0421f" category="paragraph">对于已注册适用于 vCenter Server 的 NetApp Element 插件（ VCP ）的现有 vSphere 环境，您可以在首次更新包含此插件服务的管理服务包后更新此插件注册。</block>
   <block id="e6c04958395a323ddbc02c929b4dfdf0" category="paragraph">您可以使用注册实用程序在 vCenter Server 虚拟设备（ vCSA ）或 Windows 上更新插件注册。您必须在需要使用 vCenter 插件的每个 vCenter Server 上更改此插件的注册。</block>
   <block id="badb045d93b6de2fe8d2a1a664b92d6f" category="paragraph">此升级操作步骤包括以下升级情形：</block>
@@ -4959,19 +4868,15 @@
   <block id="10d52a77bc99042d3e815ba24e48132b" category="admonition">此插件与适用于 VCP 4.7 及更高版本的 VMware vCenter Server 6.5 不兼容。</block>
   <block id="f171584692be059c88cbbda35827f299" category="list-text">您要升级到 6.7 Flash vSphere Web Client 。</block>
   <block id="26f2f1d140c70238a07a5f09e846fd82" category="inline-link">您的插件版本</block>
-  <block id="7320d4f9ce78688fd8066aecc8c81be4" category="admonition">此插件与 HTML5 vSphere Web Client 的 6.7 U2 内部版本 13007421 以及更新 2a （内部版本 13643870 ）之前发布的其他 6.7 U2 内部版本不兼容。有关受支持的 vSphere 版本的详细信息，请参见的发行说明<block ref="a81344cf9e0a62906c34e4f24b52644e" category="inline-link-rx"></block>。</block>
   <block id="d7be3f2367f28daeaac07c2967977074" category="list-text">* 管理员权限 * ：您具有 vCenter 管理员角色权限来安装插件。</block>
   <block id="7df6c84beb4c7f9c0109ea10accef1ed" category="list-text">* vSphere 升级 * ：在升级适用于 vCenter Server 的 NetApp Element 插件之前，您已执行任何所需的 vCenter 升级。此操作步骤假定 vCenter 升级已完成。</block>
-  <block id="36aa454d124fba9c0e6922eafdf89396" category="list-text">* vCenter Server* ：您的 vCenter 插件 4.x 版已注册到 vCenter Server 。在注册实用程序（`https://[management node IP] ： 9443` ）中，单击 * 注册状态 * ，填写必要字段，然后单击 * 检查状态 * 以验证 vCenter 插件是否已注册以及当前安装的版本号。</block>
   <block id="72b0efdaad5d469b43f79c332bb57be4" category="inline-link">管理服务包</block>
-  <block id="77d899df336762a18bba18ea64c8c2c5" category="list-text">* 管理服务更新 * ：您已更新<block ref="fa63a529ec625e6607508bcea6b40451" category="inline-link-rx"></block> 到最新版本。vCenter 插件的更新通过管理服务更新进行分发，这些更新是在 NetApp HCI 和 SolidFire 全闪存存储的主要产品版本之外发布的。</block>
   <block id="4c02ebe342ea429a0d2a2a23be2ddd19" category="inline-link-macro">已升级</block>
   <block id="27c25a67c147529824177fc694e7fd19" category="list-text">* 管理节点升级 * ：您正在运行的管理节点已 <block ref="23cc83378d4b0551eef4ac573737e008" category="inline-link-macro-rx"></block> 到 11.3 或更高版本。vCenter 插件 4.4 或更高版本要求使用 11.3 或更高版本的管理节点，该节点采用可提供单个服务的模块化架构。必须打开管理节点的电源，并配置其 IP 地址或 DHCP 地址。</block>
   <block id="7d3b6b8e2540bf5435b3b6984ad1f702" category="list-text">* Element 存储升级 * ：您的集群运行的是 NetApp Element 软件 11.3 或更高版本。</block>
   <block id="12a6ece51476e2d3feae5dff01704e58" category="list-text">* vSphere Web Client* ：在开始任何插件升级之前，您已从 vSphere Web Client 中注销。如果您未注销， Web 客户端将无法识别在此过程中对插件所做的更新。</block>
   <block id="c13fa68b55894aaf612067aa7455ac53" category="list-text">在浏览器中输入管理节点的 IP 地址，包括要注册的 TCP 端口： `https://[management node IP] ： 9443` 注册实用程序 UI 将打开至该插件的 * 管理 QoSSIOC 服务凭据 * 页面。</block>
   <block id="26fc450c5cd9b7f28b10cff7659b479d" category="image-alt">描绘了此插件的注册实用程序 UI</block>
-  <block id="fdc3277c2c62fa2903e727dca976e450" category="list-text">单击 * vCenter 插件注册 * 。</block>
   <block id="5c8b8f78ed09c86ecda3569ee8c3a3f0" category="list-text">在 * 管理 vCenter 插件 * 中，选择 * 更新插件 * 。</block>
   <block id="8d8ce4b808495ff41a197ebd82fa0d15" category="list-text">确认或更新以下信息：</block>
   <block id="07cdef615c44d9173ab998dea612cb1c" category="list-text">要注册此插件的 vCenter 服务的 IPv4 地址或 FQDN 。</block>
@@ -4979,8 +4884,6 @@
   <block id="b1e24f0b2fb8f66a9c2444bf0e385f97" category="admonition">您输入的用户名和密码凭据必须适用于具有 vCenter 管理员角色特权的用户。</block>
   <block id="c2611280cf76890b83743a67ac6478e2" category="list-text">vCenter 管理员密码。</block>
   <block id="92d3ac74b6d30f321507464dbfb9220d" category="list-text">（对于内部服务器 / 非公开站点）插件 ZIP 的自定义 URL 。</block>
-  <block id="d4b9a4e220c815cc1436ff29491de974" category="admonition">如果您使用的是 HTTP 或 HTTPS 服务器（非公开站点）或修改了 ZIP 文件名或网络设置，则可以单击 * 自定义 URL* 自定义 URL 。有关自定义 URL 的其他配置步骤，请参见适用于 vCenter Server 的 Element 插件文档，了解有关修改内部（非公开站点） HTTP 服务器的 vCenter 属性的信息。</block>
-  <block id="04252e4e5460971d7f33943bd841f366" category="list-text">单击 * 更新 * 。</block>
   <block id="14b68e07a69ae90b19c2bd823797ff21" category="paragraph">注册成功后，注册实用程序 UI 中将显示一个横幅。</block>
   <block id="2bfb7d51aea637d48bf5bca4afcb46a1" category="list-text">以 vCenter 管理员身份登录到 vSphere Web Client 。如果您已登录到 vSphere Web Client ，则必须先注销，等待两到三分钟，然后重新登录。</block>
   <block id="f523905d48a1db956815565365a5a6ad" category="admonition">此操作将创建一个新数据库并在 vSphere Web Client 中完成安装。</block>
@@ -5156,30 +5059,22 @@
   <block id="d9cb09ff3bb363d7f443887f17b4e9a8" category="cell">CSESF-352</block>
   <block id="0ae0e27e8f79fb1637ff41b83a54eae9" category="cell">TLS 1.0 和 1.1 版存在安全漏洞。此版本会对 H610C 和 H615C 计算节点禁用 TLS 1.0 和 1.1 。</block>
   <block id="4d2352199ed83f9c4e375e964be766eb" category="cell">手动将 H410C 节点上的 BIOS 更新为版本 NA3.7 ： 1.浏览到<block ref="012c28af9aeadbd43f80372415d73a47" category="inline-link-rx"></block>。2. 在下拉列表文本字段中输入 `H410C_BIOS_3.7` 。3. 单击 * 执行 * 。有关更新的说明，请参见下载页面上的 PDF 格式。更新 BIOS 和 BMC 后，请使用计算固件 12.2.109 软件包更新 H410C 节点固件。</block>
-  <block id="ac7407b9cbe3d3eb544a2425bee6370f" category="summary">在 NetApp HCI 或 SolidFire 存储系统升级过程中，您应更新管理服务。</block>
   <block id="2fdf7cb371995103b459c97e897b87ee" category="doc">更新管理服务</block>
   <block id="79775a85ecd792fca2ed73286c1313cf" category="paragraph">安装管理节点 11.3 或更高版本后，您可以将管理服务更新到最新的捆绑包版本。</block>
-  <block id="e01636036452239b025ed3c18d3a540f" category="paragraph">从 Element 11.3 管理节点版本开始，管理节点设计已根据提供单个服务的新模块化架构进行了更改。这些模块化服务可为 NetApp HCI 和 SolidFire 全闪存存储系统提供集中式和扩展式管理功能。管理服务包括系统遥测，日志记录和更新服务，适用于 vCenter Server 的 Element 插件的 QoSSIOC 服务， NetApp Hybrid Cloud Control （ HCC ）等。</block>
   <block id="a443497b41405480f6755e35166556e7" category="inline-link">管理服务发行说明</block>
-  <block id="55d1ba0cfc919d4b1d9560241a53e655" category="admonition">有关介绍每个服务包的主要服务，新功能，错误修复和解决方法的最新管理服务发行说明，请参见<block ref="86aba836d25bf027674d7682756c7cf3" category="inline-link-rx"></block></block>
-  <block id="884a5edae007e6d3e774a912317f61ca" category="paragraph">您可以使用 NetApp Hybrid Cloud Control （ HCC ） UI 或管理节点 REST API 更新管理服务：</block>
   <block id="7d6cae0c176b060b3eb918e8fc3a8a88" category="list-text"><block ref="8b810af37d36ecef3e8ce0cfd28cc60b" category="inline-xref-macro-rx"></block> （建议方法）</block>
   <block id="45d5739efe933eabe3dda4a4ba6b61b1" category="list-text"><block ref="b795f7048c0a3127327e392f4c115728" category="inline-xref-macro-rx"></block></block>
   <block id="610172e2b0e7d4051f0d0b230bd8c722" category="list-text"><block ref="79f95b99cf6c6dc511dd13bb08f1454f" category="inline-xref-macro-rx"></block></block>
   <block id="2325934efda1befa076510008b0f7646" category="section-title">使用 Hybrid Cloud Control 更新管理服务</block>
-  <block id="6812fbe299c3076c40d64e3555fb0f6e" category="paragraph">您可以使用 NetApp Hybrid Cloud Control （ HCC ）更新 NetApp 管理服务。</block>
   <block id="c3e2bcb5601498c3470bd272236342a3" category="paragraph">管理服务捆绑包可为您的安装提供增强功能和修复，而不是主要版本。</block>
   <block id="d0d4d24acea2b29c2079bdc9f046795d" category="list-text">如果要将管理服务更新到版本 2.16 或更高版本，并且运行的是管理节点 11.3 到 11.8 ，则在更新管理服务之前，需要先增加管理节点 VM 的 RAM ：</block>
   <block id="291b81212712dc828fee9037f0662499" category="list-text">您已将管理服务至少升级到 2.1.326 版。NetApp Hybrid Cloud Control 升级在早期的服务捆绑包中不可用。</block>
-  <block id="23e2afe72bb4982d49bafc030ee36b2e" category="admonition">有关每个服务包版本的可用服务列表，请参见<block ref="2c3c1c9ce7397fdd444812632621a9e1" category="inline-link-rx"></block>。</block>
   <block id="55d2ac8cdb689c1c5a8537d8871bd39e" category="list-text">打开 Web 浏览器并浏览到管理节点的 IP 地址： `https://&lt;ManagementNodeIP&gt;`</block>
   <block id="9c3b6a2840d81e74fa978e35f9fda09e" category="list-text">在 Upgrades 页面上，选择 * 管理服务 * 选项卡。</block>
   <block id="2a67be48fd33aed34d5d9b95445a0c20" category="paragraph">管理服务选项卡显示管理服务软件的当前版本和可用版本。</block>
   <block id="8b130e5cda5c613782f9b3fe6b6b0fbe" category="admonition">如果您的安装无法访问 Internet ，则仅会显示当前软件版本。如果您已建立外部连接，但 NetApp HCI 无法访问 NetApp 联机存储库，请检查您的 <block ref="6ff9e66037288034fea8427eccd4ef4c" category="inline-link-macro-rx"></block>。</block>
-  <block id="e967fc111a48b936b8d4f31bd802510d" category="list-text">如果您的安装可以访问 Internet ，并且可以进行管理服务升级，请单击 * 开始升级 * 。</block>
   <block id="88cc6eac67699034974d69a75c774238" category="list-text">如果您的安装无法访问 Internet ，请执行以下操作：</block>
   <block id="3a91ea590517ccc87ccaf6cbda3ac55c" category="list-text">按照页面上的说明将管理服务升级包下载并保存到您的计算机。</block>
-  <block id="82c97bf4e39a1910f6a3d41a6beba3a8" category="list-text">单击 * 浏览 * 以找到您保存的软件包并上传它。</block>
   <block id="30c2b654de6b157d3965b69e2e973b9c" category="paragraph">升级开始后，您可以在此页面上查看升级状态。升级期间，您可能会与 NetApp Hybrid Cloud Control 断开连接，因此必须重新登录才能查看升级结果。</block>
   <block id="e1ab7975bc85b8e4a805e35bfd948176" category="section-title">使用管理节点 API 更新管理服务</block>
   <block id="f64b52761fbac72e8bfdd229b3a113f1" category="paragraph">理想情况下，用户应从 NetApp Hybrid Cloud Control 执行管理服务更新。但是，您可以从管理节点使用 REST API UI 手动更新管理服务。</block>
@@ -5195,7 +5090,6 @@
   <block id="e620d1115b8f26b9e2c66f46d34832bc" category="section-title">使用非公开站点的管理节点 API 更新管理服务</block>
   <block id="c202282c44af53d5ea8a677636541731" category="paragraph">理想情况下，用户应从 NetApp Hybrid Cloud Control 执行管理服务更新。但是，您可以使用 REST API 手动将管理服务的服务包更新上传到，提取并部署到管理节点。您可以从管理节点的 REST API UI 运行每个命令。</block>
   <block id="3601cad086244ec56eee653db5e2b0a3" category="list-text">您已部署 NetApp Element 软件管理节点 11.3 或更高版本。</block>
-  <block id="55f3fe3380783b5b8504008e208fde3e" category="list-text">您已从下载服务包更新<block ref="2b5762a08c48e59925e98fb05c9f6fc6" category="inline-link-rx"></block> 可在非公开站点中使用的设备。</block>
   <block id="54521ea545972501500b09f85df8ba55" category="list-text">使用以下命令在管理节点上上传并提取服务包： `PUT /services/upload`</block>
   <block id="4963e624e3688c6904a816aa37c6c7cc" category="list-text">在管理节点上部署管理服务： `PUT /services/Deploy`</block>
   <block id="c512caf817d81cdc178fb65c97607344" category="list-text">监控更新状态： `get /services/update/status`</block>
@@ -5383,7 +5277,6 @@
   <block id="497e1101c9e2f864d2e2dda128ecb452" category="list-text">您正在运行管理节点 11.0 ， 11.1 或更高版本。</block>
   <block id="dad7cfe229aa9e4b9f9b9cf0e87704cc" category="paragraph">NetApp Hybrid Cloud Control 升级在早期的服务包版本中不可用。</block>
   <block id="9def504d64ab69879cb0311556fe8cc3" category="inline-link">HealthTools</block>
-  <block id="e7da0cdbfdb339591463b52922b2d3ba" category="list-text">您已下载最新版本的<block ref="1055054f9873b0bd497cc7f564cc86d3" category="inline-link-rx"></block> 并将安装文件复制到管理节点。</block>
   <block id="903d0f97d11dd5ed20516ec36dd2abc7" category="admonition">您可以运行 `sfupdate-healthtools -v` 命令来检查本地安装的 HealthTools 版本。</block>
   <block id="10fbc8fd3ac1a011e7631cdf01332562" category="list-text">要对非公开站点使用 HealthTools ，您需要执行以下附加步骤：</block>
   <block id="f86ddd2fb45950e1479e5ffde319cb8f" category="list-text">在非公开站点上启动并运行管理节点。</block>
@@ -6109,17 +6002,97 @@
   <block id="28891145b6c39ff95afbdf5c47061837" category="inline-link">NetApp HCI 计算固件包</block>
   <block id="ad20855a10bcb28bd96d1134e8e2d09e" category="paragraph">要下载计算固件包，请转到<block ref="9e726c85d19808fe7c4afbfe8514b543" category="inline-link-rx"></block> 页面。</block>
   <block id="68baec1bded108851f5cb6cb9332b5fb" category="paragraph">如果您的管理节点未连接到 Internet ，则表示您已下载<block ref="f0f7b836568f7e533a3947b76da1a20e" category="inline-link-rx"></block>。</block>
-  <block id="1551e888ab5308b8b3157b61a9afa28c" category="paragraph">对于 NetApp HCI 系统，请转到 NetApp HCI 软件<block ref="6b16bb0b4b0be4862f98f84f9683318e" category="inline-link-rx"></block> 并下载最新的存储节点映像。</block>
-  <block id="4f05ad42d37ba064812b10f3a7a7c448" category="list-text">下载存储升级软件包。对于 NetApp HCI 系统，请转到 NetApp HCI 软件<block ref="6b16bb0b4b0be4862f98f84f9683318e" category="inline-link-rx"></block> 并将最新的存储节点映像下载到非管理节点设备。</block>
-  <block id="5e16870e97cd7494312cfcaccde66101" category="list-text">对于 NetApp HCI 系统，请转到 NetApp HCI 软件<block ref="6b16bb0b4b0be4862f98f84f9683318e" category="inline-link-rx"></block>。</block>
   <block id="cabc168d31fc4c314cb500b86813e131" category="list-text">下载此<block ref="747556e0149f6188670059abaeb4fd3e" category="inline-link-rx"></block> <block ref="53034c8197fc6f1049d26569a56db918" category="inline-link-rx"></block> 从 NetApp 支持站点的非管理节点计算机上，将其重命名为 `metadata 。 json` 。</block>
-  <block id="83e648796d8c15021f306aae3dd3d686" category="list-text">下载的管理节点 ISO<block ref="4844a5a06bc8e1ed86ef9bb2a86e549e" category="inline-link-rx"></block> 从 NetApp 支持站点到管理节点虚拟机。</block>
-  <block id="2e6c3e131d0b66465caec32d003e1958" category="list-text">下载的管理节点 ISO<block ref="60d1b63b51cb88758e890cf18a0d4bbe" category="inline-link-rx"></block> 从 NetApp 支持站点到管理节点虚拟机。</block>
   <block id="6f0fdd346038a9e820296de3d9746c93" category="inline-link">已下载 NetApp HCI 存储集群的存储固件包</block>
   <block id="68591212ccf64f918a02a9a99d9b17cb" category="paragraph">如果您的管理节点未连接到 Internet ，则表示您已连接到 Internet<block ref="aafe992914552d0a3aa0655fa1abc52d" category="inline-link-rx"></block>。</block>
   <block id="34c8eaed7bf9fcb94a9fec8fc99e01f5" category="inline-link">Element 软件存储固件捆绑包页面</block>
   <block id="4c22618bec261776093bb20f43db4da2" category="list-text">将最新的存储固件升级软件包下载到可供管理节点访问的设备；转到<block ref="6c480cd9e53c4fa50830a2dbc4709412" category="inline-link-rx"></block> 并下载最新的存储固件映像。</block>
-  <block id="cb0ff683af4927c8b141ca4fdd047e6f" category="list-text">从下载适用于您的安装的 OVA 或 ISO<block ref="b6552e9fe421f9ef58cbc1fac1e87c10" category="inline-link-rx"></block> 页面。</block>
-  <block id="fb9dbde245c31e55deba5a52e39161b7" category="inline-link">NetApp HCI 计算固件包</block>
-  <block id="5867a9249c217b0fd396efc0b056c46a" category="paragraph">要下载计算固件包，请转到<block ref="47afcbf58f4f7c048fb68385f91a8522" category="inline-link-rx"></block> 页面。</block>
+  <block id="084b0131bd480b2202263e1d2feee26f" category="summary">在 NetApp HCI 系统升级过程中，您可以升级 NetApp Element 软件。</block>
+  <block id="28915945fea0308bbd2cdf191b79dd68" category="list-text">选择要升级的集群旁边的下拉箭头，然后从 * 元素 * 选项卡下提供的升级版本中进行选择。</block>
+  <block id="b6d17024c4c99e0348e4d802e2508b6b" category="list-text">选择要升级的集群旁边的下拉箭头，然后从可用的升级版本中进行选择。</block>
+  <block id="6c0526aed8944efbe6192f67a288210b" category="list-text">选择 * 开始升级 * 。升级完成后， UI 将提示您执行此过程的第 2 阶段。</block>
+  <block id="814733d416c95bcc389df46e42881e26" category="inline-link">下载页面</block>
+  <block id="f512f8e6b128b8f7bff6fcc1ef0cae59" category="list-text">将存储升级软件包下载到可供管理节点访问的设备；转到 NetApp HCI 软件<block ref="af9e5e5835f26953a003c9bfeff1e72d" category="inline-link-rx"></block> 并下载最新的存储节点映像。</block>
+  <block id="72d6d922116ab2c5c4e00582da6636fe" category="list-text">下载存储升级软件包；转到 NetApp HCI 软件<block ref="af9e5e5835f26953a003c9bfeff1e72d" category="inline-link-rx"></block> 并将最新的存储节点映像下载到非管理节点设备。</block>
+  <block id="33877e64a4f252eccfc0cd9a26c42e8e" category="list-text">转到 NetApp HCI 软件<block ref="af9e5e5835f26953a003c9bfeff1e72d" category="inline-link-rx"></block>。</block>
+  <block id="e9e291beb54413fecd8975237eb4bb64" category="list-text">在 * 计算运行状况检查 * 页面上，选择 * 运行状况检查 * 。</block>
+  <block id="b63360b381f2f4d20abc8c6e41ad03e9" category="list-text">从 REST API UI 中，选择 * 获取​ / installations​ / ｛ id ｝ * 。</block>
+  <block id="0244d8caf66b9412467f25ad4401d48f" category="list-text">选择 * 发布 / compute​ / ｛ controller_ID ｝​ /health-checks* 。</block>
+  <block id="9235b927ec0e8cc731efecee81ca42bc" category="list-text">选择 * 执行 * 可对集群运行状况检查。</block>
+  <block id="746798a24b035d442003701c9b2ff2cf" category="list-text">选择 * 获取 compute​ 任务 / ｛ task_id ｝ * 。</block>
+  <block id="934ce6052c9c54838baf7b56970a8ea1" category="cell"><block ref="dafd9e53b0e107319fd7c98e26521f9c" category="inline-link-macro-rx"></block>。注意：如果您拥有标准许可，请将 ESXi 主机置于维护模式并忽略此运行状况检查失败警告。</block>
+  <block id="bd856841d50b1115c0be80b2b4c03f96" category="cell"><block ref="9cae80730f58713cd253305bd8a17f51" category="inline-link-macro-rx"></block>。</block>
+  <block id="901e3d3daf031f6d5818264fe95950fb" category="cell"><block ref="af342b67e8cb1017f4d3851a95ecec2c" category="inline-link-macro-rx"></block>。</block>
+  <block id="3c9edce8deb164b2bcb5a4c0edb19031" category="cell"><block ref="438a0bd6ae60534499b49dc869c9923c" category="inline-link-macro-rx"></block>。</block>
+  <block id="493dbf808140d6e440e6d71d077c313b" category="cell"><block ref="493dbf808140d6e440e6d71d077c313b" category="inline-link-rx"></block></block>
+  <block id="a5b37844a6e9e768f0ce85640b2581b5" category="summary">在 NetApp HCI 系统升级过程中，您需要对 NetApp Element 软件运行状况检查。</block>
+  <block id="6a2367272d7df1e3bc820ae7cd85cca3" category="list-text">下载 <block ref="a8a51581fa7186019dceaf790825b165" category="inline-link-macro-rx"></block> 从 NetApp 支持站点的非管理节点计算机上，将其重命名为 `metadata 。 json` 。</block>
+  <block id="735339172aeec7b940204188ab8289fb" category="list-text">* 计算驱动程序 * ：您已升级计算节点驱动程序。如果计算节点驱动程序与新固件不兼容，则升级将无法启动。请参见<block ref="2b761b14db6e131ceb5a9ee87e5e085a" category="inline-link-rx"></block> 有关驱动程序和固件兼容性的信息，请查看最新信息 <block ref="8e52b55ffa3dd99e7231384e5c6e0fa1" category="inline-link-macro-rx"></block> 了解重要的最新固件和驱动程序详细信息。</block>
+  <block id="b24f3db75077a578765967e0b8ffa295" category="admonition">有关适用于您的硬件的完整固件和驱动程序固件列表，请参见<block ref="54a79ab153742147d13ffd4ac16bf6ba" category="inline-link-rx"></block> （需要登录）。</block>
+  <block id="a6c551bfacbff9bc6d510d240a1f729e" category="list-text">* BIOS 启动顺序 * ：在 BIOS 设置中手动更改每个节点的启动顺序，以确保启动列表中显示 `USB CD/DVD` 。请参见此内容 <block ref="40fb6836e33e97dd94fb747393132791" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="8cbab0daf89fd647357f115f87cafa08" category="admonition">在运行运行运行状况检查并继续固件升级之前，必须使 ESXi 主机退出锁定模式。请参见 <block ref="413633461dfba42d2895a891a0754971" category="inline-link-macro-rx"></block> 和 <block ref="3763c4992ac43c28a18a921e7668037d" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="ad658e59cd09feeecf6b238e019458b8" category="paragraph">选择 * 开始升级 * 后，此窗口将显示失败的运行状况检查（如果有）。</block>
+  <block id="466e65481ab5efa6812230aeb4b69f80" category="list-text">如果在集群或节点级别通过运行状况检查并显示警告，但未发生严重故障，则您将看到 * 已做好升级准备 * 。选择 * 升级节点 * 。</block>
+  <block id="c39906efe5a223585b255a41266ea9c8" category="list-text">选择 * 浏览 * 可上传从下载的升级软件包<block ref="132031089c33792b234781a9d8501a93" category="inline-link-rx"></block>。</block>
+  <block id="a4566f571e6e969e6131fb2ffde2867a" category="admonition">如果升级期间发生故障， NetApp Hybrid Cloud Control 将重新启动节点，使其退出维护模式，并显示故障状态，并提供指向错误日志的链接。您可以下载错误日志，其中包含特定说明或 KB 文章链接，以诊断和更正任何问题描述。有关使用 NetApp Hybrid Cloud Control 的计算节点固件升级问题的更多见解，请参见此文档 <block ref="4842a5749652a9b76b4c5d2cd1cc749c" category="inline-link-macro-rx"></block> 文章。</block>
+  <block id="f3656040c81e459770d6f808f555e44b" category="cell">发生严重错误时，升级将失败并显示此通知。选择 * 下载日志 * 链接以下载日志以帮助解决此错误。解决此错误后，您可以尝试重新升级。</block>
+  <block id="aa9d5bf83f31cb6b0178cd6fca1bf339" category="list-text">转到 NetApp HCI 软件<block ref="5edcf9a6caebd1bfc3b9c296487defc8" category="inline-link-rx"></block> 并将最新的计算节点固件映像下载到可供管理节点访问的设备。</block>
+  <block id="afa7546eaf1454c94bb86a84962765ef" category="list-text">选择 * POST /nodes/｛ hardware_id ｝ /upgrades* 。</block>
+  <block id="2af0540e1b6b59e46ab66bb3122952c5" category="list-text">选择 * 获取 /task/ ｛ task_id ｝ /logs* 。</block>
+  <block id="39752c4375b51cda523113de3c91a69a" category="list-text">解决集群问题后，如果需要，请重新进行身份验证，然后选择 * 发布 /nodes/｛ hardware_id ｝ /upgrades* 。</block>
+  <block id="626dccb9f3533429f8ff6726b7bc468c" category="list-text">请参见此内容<block ref="ab9b4acb1029e814de59e725ff477757" category="inline-link-rx"></block> （需要登录）。</block>
+  <block id="8cbe2759efcdf76c5f107e0ecb7b4592" category="list-text">从 REST API UI 中，选择 * 获取​ / nodes​ / ｛ hardware_id ｝​ / 升级 * 。</block>
+  <block id="9db3b1bbf31a34f016b6751560d022ca" category="list-text">浏览到<block ref="faddc0b2b4da1eceb58811a395f38dc6" category="inline-link-rx"></block> 页面上，选择 * NetApp HCI * ，然后选择正确版本的 NetApp HCI 的下载链接。</block>
+  <block id="7b2ebadeeacacfd175f5f97176710a3a" category="list-text">选择 * 确定 * 。主机上的 VM 将迁移到另一个可用主机。虚拟机迁移可能需要一些时间，具体取决于需要迁移的虚拟机数量。</block>
+  <block id="d4978a595335fff63b260fc4b8cdbca0" category="list-text">选择 * 启动控制台 * 。</block>
+  <block id="086e11190936943bd47b89359cc316ab" category="list-text">打开控制台后，选择 * 虚拟介质 &gt; 虚拟存储 * 。</block>
+  <block id="0d86b24c482b6af94686b61cab281a55" category="list-text">在 * 虚拟存储 * 屏幕上，选择 * 逻辑驱动器类型 * ，然后选择 * ISO 文件 * 。</block>
+  <block id="1034338dbc0cc8fb2f0061d492d27045" category="list-text">选择 * 打开映像 * 以浏览到下载 ISO 文件的文件夹，然后选择 ISO 文件。</block>
+  <block id="9e02313ddd26aee118ee23b52ccb621f" category="list-text">选择 * 插件 * 。</block>
+  <block id="1ae7c00d24ffdca7598b194b2dc27dbf" category="list-text">当连接状态显示 `Device# ： VM Plug-in OK ！！` 时，选择 * 确定 * 。</block>
+  <block id="da7914315fd2c0a46bc91f4a9b89ba7a" category="list-text">按 * F12* 并选择 * 重新启动 * 或选择 * 电源控制 &gt; 设置电源重置 * ，以重新启动节点。</block>
+  <block id="970cbfd1c58267733c44d0cd2358be33" category="list-text">重新登录到 BMC UI 并选择 * 系统 * ，以在启动到操作系统后验证 BIOS 版本和构建时间。如果升级已正确完成，您将看到新的 BIOS 和 BMC 版本。</block>
+  <block id="d2fcf7c7acbf0658169aa81fda53c0ff" category="list-text">选择 * 远程控制 &gt; 启动 KVM （ Java ） * 。</block>
+  <block id="7d853bfef08c6d2c19333026c6a5f295" category="list-text">在控制台窗口中，选择 * 介质 &gt; 虚拟介质向导 * 。</block>
+  <block id="ff568983eaa948e1c45ea44fd20c3515" category="list-text">选择 * 浏览 * 并选择计算固件 ` .iso` 文件。</block>
+  <block id="6988680d8d9db783d89d962e3a07b128" category="list-text">选择 * 连接 * 。此时将显示一个弹出窗口，指示成功，底部将显示路径和设备。您可以关闭 * 虚拟介质 * 窗口。</block>
+  <block id="e57c91d23315863d32587c65e08c874a" category="list-text">从显示的列表中选择 * AMI Virtual CDRO* ，然后选择 * 输入 * 。如果列表中未显示 AMI 虚拟光盘，请转到 BIOS 并在启动列表中启用它。保存后，节点将重新启动。在重新启动期间，按 * F11 * 。</block>
+  <block id="f168f35f98997ef1f6a33afa3e3be93e" category="list-text">在显示的屏幕上，选择 * 输入 * 。</block>
+  <block id="81fa3392dafdab901ebeed86d16e4abe" category="list-text">如果与控制台断开连接，请选择 * 远程控制 * 并选择 * 启动 KVM* 或 * 启动 KVM （ Java ） * 以重新连接并验证节点何时完成启动备份。您可能需要多次重新连接，以验证节点是否已成功启动。</block>
+  <block id="f7658c00205041bd6da6d27dbaa7fe7b" category="summary">在 NetApp HCI 系统升级过程中，您可以升级管理节点。</block>
+  <block id="303c7d52b5c18e714947ecd4996594a2" category="inline-link">管理节点 ISO</block>
+  <block id="5454c55e4483c81c83dc88e7d51b7235" category="list-text">下载<block ref="81f96ab5ebaacae5f09640e77583a876" category="inline-link-rx"></block> 将 NetApp HCI 从 NetApp 支持站点连接到管理节点虚拟机。</block>
+  <block id="d142097cec7b7123937c2ec16e09998c" category="list-text">（对于使用适用于 vCenter Server 的 NetApp Element 插件的所有 NetApp HCI 安装）按照中的步骤更新 12.3.x 管理节点上的 vCenter 插件 <block ref="61768f3798a436486dacb908355263cd" category="inline-link-macro-rx"></block> 主题。</block>
+  <block id="3af4bea014b0f1b76a3603ae6f5957ff" category="list-text">在 vSphere 中找到计算节点的硬件标记：</block>
+  <block id="a8e5aea5105effb7b748821e3735f2bb" category="list-text">将用于 HCI 监控和 Hybrid Cloud Control 的 vCenter 控制器资产添加到管理节点的已知资产中：</block>
+  <block id="cbda5d4a711e27c7bcc1c2cc1d2b18ac" category="list-text">将计算节点资产添加到管理节点的已知资产：</block>
+  <block id="94ab457d92269ad56ccbd284e4f2d66e" category="list-text">选择 * 操作 * &gt; * 清除 * 。</block>
+  <block id="d12a393c1ac6d6c4feb3dcc671803e35" category="list-text">要确认，请选择 * 是 * 。mNode Status 字段应报告 Not Configured 。</block>
+  <block id="7b837430d09749101caac8ac6929be11" category="list-text">选择 * vCenter 插件注册 * 选项卡。</block>
+  <block id="6387feb1f0b906aebdb1cafedac7cc98" category="list-text">输入所需的值。完成后，选择 * 更新 * 。</block>
+  <block id="f4c7104fec7161266ebc2750f99bf53e" category="list-text">选择 * 操作 * &gt; * 配置 * 。</block>
+  <block id="b8e3af673664eb79ebe128d1f309bdd6" category="list-text">从 REST API UI 中，选择 * POST /services/reuse-auth* 。</block>
+  <block id="de3741b094be24deccfc553754ce0a3a" category="paragraph">请参见中适用于您的硬件的固件和驱动程序列表<block ref="69b1d186a6529d94f61dae13551aa3aa" category="inline-link-rx"></block> （需要登录）。</block>
+  <block id="477a3e44a347d971185a2c3a5140588e" category="list-text">浏览到<block ref="d4caed46ff739416e1ca7149df2744c7" category="inline-link-rx"></block> 页面并选择正确版本的 NetApp HCI 的下载链接。</block>
+  <block id="1288b4af7d9b295a0901b8b5e9b2de64" category="list-text">选择 * 修复 * ，然后选择新创建的主机基线。确保已选择基线中包含的驱动程序。</block>
+  <block id="ecd715524a148d3d6e20b711f37ce2c3" category="list-text">继续到向导中的 * 准备完成 * 页面，然后选择 * 完成 * 。</block>
+  <block id="0f1940d8b9e51abf4381f9e406fda543" category="summary">在 NetApp HCI 系统升级过程中，您可以升级与存储节点关联的固件。</block>
+  <block id="13c2b42759130af4400c46b2b928dc26" category="admonition">有关适用于您的硬件的固件和驱动程序固件的完整列表，请参见此内容<block ref="919d0da258d2c9346bfb11f078cfd474" category="inline-link-rx"></block> （需要登录）。</block>
+  <block id="fc6261a1be6f27091e994d8c8b075b29" category="summary">在 NetApp HCI 系统升级过程中，您可以升级适用于 vCenter Server 的 Element 插件。</block>
+  <block id="1e1e7dd8551842ca8c6e4ac3c35cb249" category="admonition">此插件与 HTML5 vSphere Web Client 的 6.7 U2 内部版本 13007421 以及更新 2a （内部版本 13643870 ）之前发布的其他 6.7 U2 内部版本不兼容。有关受支持的 vSphere 版本的详细信息，请参见的发行说明<block ref="52a3661120ba33cd100cafc9c9d568e0" category="inline-link-rx"></block>。</block>
+  <block id="c60238cb58d95b456566853e62db1d18" category="list-text">* vCenter Server* ：您的 vCenter 插件 4.x 版已注册到 vCenter Server 。从注册实用程序（`https://[management node IP] ： 9443` ）中，选择 * 注册状态 * ，填写必要字段，然后选择 * 检查状态 * 以验证 vCenter 插件是否已注册以及当前安装的版本号。</block>
+  <block id="73bb2b0d39f901d3bcdddd6b19d7170a" category="list-text">* 管理服务更新 * ：您已更新<block ref="f6e495ec9a99fcd5692d41358780e884" category="inline-link-rx"></block> 到最新版本。vCenter 插件的更新通过在 NetApp HCI 主要产品版本之外发布的管理服务更新进行分发。</block>
+  <block id="0bd0c7dc69df55cee394b64eebcd27ab" category="list-text">选择 * vCenter 插件注册 * 。</block>
+  <block id="daa4768416116e6634bf75e379507244" category="admonition">如果您使用的是 HTTP 或 HTTPS 服务器（非公开站点）或修改了 ZIP 文件名或网络设置，则可以选择 * 自定义 URL* 自定义 URL 。有关自定义 URL 的其他配置步骤，请参见适用于 vCenter Server 的 Element 插件文档，了解有关修改内部（非公开站点） HTTP 服务器的 vCenter 属性的信息。</block>
+  <block id="35165f9b14f6cde03fa7f6f9b03732ba" category="list-text">选择 * 更新 * 。</block>
+  <block id="de136c431770d40aaaa67d78445252dd" category="summary">在 NetApp HCI 系统升级过程中，您应更新管理服务。</block>
+  <block id="4a7821cd3898fc74659163d0e111cd38" category="paragraph">从 Element 11.3 管理节点版本开始，管理节点设计已根据提供单个服务的新模块化架构进行了更改。这些模块化服务可为 NetApp HCI 系统提供集中式和扩展式管理功能。管理服务包括系统遥测，日志记录和更新服务，适用于 vCenter Server 的 Element 插件的 QoSSIOC 服务， NetApp Hybrid Cloud Control 等。</block>
+  <block id="b142e9d9b67c7c4504bd1ab09fd15db2" category="admonition">有关介绍每个服务包的主要服务，新功能，错误修复和解决方法的最新管理服务发行说明，请参见<block ref="51c56ce961e981301a44342800a6fcbd" category="inline-link-rx"></block></block>
+  <block id="a5237c2b3436db5dc67ab53b053d3ec9" category="paragraph">您可以使用 NetApp Hybrid Cloud Control UI 或管理节点 REST API 更新管理服务：</block>
+  <block id="6dd42a6a80b9ea41a3c15d5cbf5c3528" category="paragraph">您可以使用 NetApp Hybrid Cloud Control 更新 NetApp 管理服务。</block>
+  <block id="f4b19cd96a813fb177542ed57f6d27aa" category="admonition">有关每个服务包版本的可用服务列表，请参见<block ref="b7b8dc48337abf993d8909e2c4d32cb1" category="inline-link-rx"></block>。</block>
+  <block id="b48c8e3e654392e94eba7ff80f2a9810" category="list-text">如果您的安装可以访问 Internet ，并且可以进行管理服务升级，请选择 * 开始升级 * 。</block>
+  <block id="59ab5341afeb797e4cbab599e21e347f" category="list-text">选择 * 浏览 * 以找到您保存的软件包并上传它。</block>
+  <block id="9d89df9ed11d9d07aa2a21fce8623b87" category="list-text">您已从下载服务包更新<block ref="1c68cef0c53db6ec1d50d3b221c314cd" category="inline-link-rx"></block> 可在非公开站点中使用的设备。</block>
+  <block id="36d419edc3b1ab2e45efc2685e55bd65" category="list-text">您已下载最新版本的<block ref="ca5118192781a2e9e031eb3a76fde869" category="inline-link-rx"></block> 并将安装文件复制到管理节点。</block>
 </blocks>

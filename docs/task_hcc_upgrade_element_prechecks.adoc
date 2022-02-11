@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: docs/task_hcc_upgrade_element_prechecks.html 
-summary: 在 NetApp HCI 或 SolidFire 存储系统升级过程中，您需要对 NetApp Element 软件运行状况检查。 
+summary: 在 NetApp HCI 系统升级过程中，您需要对 NetApp Element 软件运行状况检查。 
 keywords: netapp, storage prechecks, element upgrade, healthtools, sfupgradecheck 
 ---
 = 在升级存储之前，请运行 Element 存储运行状况检查
@@ -345,7 +345,7 @@ Or rerun with the -n option
 ----
 sfupgradecheck failed: Unable to verify latest available version of healthtools.
 ----
-. 下载 link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740["JSON 文件"] 从 NetApp 支持站点的非管理节点计算机上，将其重命名为 `metadata 。 json` 。
+. 下载 link:https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740["JSON 文件"^] 从 NetApp 支持站点的非管理节点计算机上，将其重命名为 `metadata 。 json` 。
 . 运行以下命令：
 +
 [listing]
