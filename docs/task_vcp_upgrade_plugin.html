@@ -9,7 +9,7 @@
   <meta property="og:title" content="升级适用于 vCenter Server 的 Element 插件" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/zh-cn/hci/docs/task_vcp_upgrade_plugin.html" />
-	<meta property="og:description" content="在 NetApp HCI 或 SolidFire 存储系统升级过程中，您可以升级适用于 vCenter Server 的 Element 插件。" />
+	<meta property="og:description" content="在 NetApp HCI 系统升级过程中，您可以升级适用于 vCenter Server 的 Element 插件。" />
   <meta property="og:image" content="https://docs.netapp.com/zh-cn/hci/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
@@ -18,7 +18,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="在 NetApp HCI 或 SolidFire 存储系统升级过程中，您可以升级适用于 vCenter Server 的 Element 插件。">
+  <meta name="description" content="在 NetApp HCI 系统升级过程中，您可以升级适用于 vCenter Server 的 Element 插件。">
   <meta name="keywords" content=" netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7, 4.8">
   
   
@@ -1716,7 +1716,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-11 17:09:59 +0000">02/11/2022</time>
+    <time datetime="2022-02-11 20:27:33 +0000">02/11/2022</time>
     
   
 
@@ -1734,14 +1734,6 @@
           alt="netapp-dbagwell"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/53352450?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
-  <a target="_blank" href="https://github.com/dbag-personal">
-    <img  class="avatar avatar-small"
-          alt="dbag-personal"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/56609800?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1797,7 +1789,7 @@
 <img src="/us-en/hci/images/important.svg" alt="重要">
 </td>
 <td class="content">
-此插件与 HTML5 vSphere Web Client 的 6.7 U2 内部版本 13007421 以及更新 2a （内部版本 13643870 ）之前发布的其他 6.7 U2 内部版本不兼容。有关受支持的 vSphere 版本的详细信息，请参见的发行说明 <a href="https://docs.netapp.com/us-en/vcp/rn_relatedrn_vcp.html#netapp-element-plug-in-for-vcenter-server">"您的插件版本"</a>。
+此插件与 HTML5 vSphere Web Client 的 6.7 U2 内部版本 13007421 以及更新 2a （内部版本 13643870 ）之前发布的其他 6.7 U2 内部版本不兼容。有关受支持的 vSphere 版本的详细信息，请参见的发行说明 <a href="https://docs.netapp.com/us-en/vcp/rn_relatedrn_vcp.html#netapp-element-plug-in-for-vcenter-server" target="_blank" rel="noopener">"您的插件版本"</a>。
 </td>
 </tr>
 </table>
@@ -1815,10 +1807,10 @@
 <p>* vSphere 升级 * ：在升级适用于 vCenter Server 的 NetApp Element 插件之前，您已执行任何所需的 vCenter 升级。此操作步骤假定 vCenter 升级已完成。</p>
 </li>
 <li>
-<p>* vCenter Server* ：您的 vCenter 插件 4.x 版已注册到 vCenter Server 。在注册实用程序（<code>https://[management node IP] ： 9443</code> ）中，单击 * 注册状态 * ，填写必要字段，然后单击 * 检查状态 * 以验证 vCenter 插件是否已注册以及当前安装的版本号。</p>
+<p>* vCenter Server* ：您的 vCenter 插件 4.x 版已注册到 vCenter Server 。从注册实用程序（<code>https://[management node IP] ： 9443</code> ）中，选择 * 注册状态 * ，填写必要字段，然后选择 * 检查状态 * 以验证 vCenter 插件是否已注册以及当前安装的版本号。</p>
 </li>
 <li>
-<p>* 管理服务更新 * ：您已更新 <a href="https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab">"管理服务包"</a> 到最新版本。vCenter 插件的更新通过管理服务更新进行分发，这些更新是在 NetApp HCI 和 SolidFire 全闪存存储的主要产品版本之外发布的。</p>
+<p>* 管理服务更新 * ：您已更新 <a href="https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab" target="_blank" rel="noopener">"管理服务包"</a> 到最新版本。vCenter 插件的更新通过在 NetApp HCI 主要产品版本之外发布的管理服务更新进行分发。</p>
 </li>
 <li>
 <p>* 管理节点升级 * ：您正在运行的管理节点已 <a href="task_hcc_upgrade_management_node.html">"已升级"</a> 到 11.3 或更高版本。vCenter 插件 4.4 或更高版本要求使用 11.3 或更高版本的管理节点，该节点采用可提供单个服务的模块化架构。必须打开管理节点的电源，并配置其 IP 地址或 DHCP 地址。</p>
@@ -1843,7 +1835,7 @@
 </div>
 </li>
 <li>
-<p>单击 * vCenter 插件注册 * 。</p>
+<p>选择 * vCenter 插件注册 * 。</p>
 <div class="imageblock">
 <div class="content">
 <img src="vcp_registration_utility_ui.png" alt="描绘了此插件的注册实用程序 UI">
@@ -1887,7 +1879,7 @@
 <img src="/us-en/hci/images/note.svg" alt="注">
 </td>
 <td class="content">
-如果您使用的是 HTTP 或 HTTPS 服务器（非公开站点）或修改了 ZIP 文件名或网络设置，则可以单击 * 自定义 URL* 自定义 URL 。有关自定义 URL 的其他配置步骤，请参见适用于 vCenter Server 的 Element 插件文档，了解有关修改内部（非公开站点） HTTP 服务器的 vCenter 属性的信息。
+如果您使用的是 HTTP 或 HTTPS 服务器（非公开站点）或修改了 ZIP 文件名或网络设置，则可以选择 * 自定义 URL* 自定义 URL 。有关自定义 URL 的其他配置步骤，请参见适用于 vCenter Server 的 Element 插件文档，了解有关修改内部（非公开站点） HTTP 服务器的 vCenter 属性的信息。
 </td>
 </tr>
 </table>
@@ -1897,7 +1889,7 @@
 </div>
 </li>
 <li>
-<p>单击 * 更新 * 。</p>
+<p>选择 * 更新 * 。</p>
 <div class="paragraph">
 <p>注册成功后，注册实用程序 UI 中将显示一个横幅。</p>
 </div>
