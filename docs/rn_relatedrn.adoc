@@ -41,7 +41,6 @@ NOTE: 系统将提示您使用 NetApp 支持站点凭据登录。
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2873789["《 NetApp Element 软件 12.2 发行说明》"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2877208["《 NetApp Element 软件 12.0.1 发行说明》"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2865022["《 NetApp Element 软件 12.0 发行说明》"]
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2877206["《 NetApp Element 软件 11.8.1 发行说明》"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2864256["NetApp Element 软件 11.8 发行说明"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2861225["《 NetApp Element 软件 11.7 发行说明》"]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2863854["《 NetApp Element 软件 11.5.1 发行说明》"^]
@@ -71,7 +70,7 @@ NOTE: 系统将提示您使用 NetApp 支持站点凭据登录。
 
 == 计算固件
 
-* link:rn_compute_firmware_2.76.10.html["计算固件包 2.76.10 发行说明（最新）"]
+* link:rn_compute_firmware_2.146.html["计算固件包 2.146 发行说明（最新）"]
 * link:rn_compute_firmware_2.76.html["计算固件包 2.76 发行说明"]
 * link:rn_compute_firmware_2.27.html["计算固件包 2.27 发行说明"]
 * link:rn_firmware_12.2.109.html["计算固件包 12.2.109 发行说明"]
@@ -81,7 +80,8 @@ NOTE: 系统将提示您使用 NetApp 支持站点凭据登录。
 
 == 存储固件
 
-* link:rn_storage_firmware_2.99.2.html["存储固件包 2.99.2 发行说明（最新）"]
+* link:rn_storage_firmware_2.146.html["存储固件包 2.146 发行说明（最新）"]
+* link:rn_storage_firmware_2.99.2.html["存储固件包 2.99.2 发行说明"]
 * link:rn_storage_firmware_2.76.html["存储固件包 2.76 发行说明"]
 * link:rn_storage_firmware_2.27.html["存储固件包 2.27 发行说明"]
 * link:rn_H610S_BMC_3.84.07.html["H610S BMC 3.84.07 发行说明"]
