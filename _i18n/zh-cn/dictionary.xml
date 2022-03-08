@@ -6187,4 +6187,9 @@
   <block id="78f6798eb036b3dd12c871ca38087892" category="inline-link-macro">存储固件包 2.146 发行说明（最新）</block>
   <block id="ffd0fc3ed0aa2dae6e9d6c7cd57e6888" category="list-text"><block ref="ffd0fc3ed0aa2dae6e9d6c7cd57e6888" category="inline-link-macro-rx"></block></block>
   <block id="c7faa307a21de68e6b2b579eb4dd6238" category="list-text"><block ref="c7faa307a21de68e6b2b579eb4dd6238" category="inline-link-macro-rx"></block></block>
+  <block id="17a3f3fcb25f60a1e4c1a40f1e7eace3" category="list-text">对于 VMware ESXi 7.0 ， NetApp H610C ， H615C ， H410C 和 Hx00E 计算节点及其内置系统组件的所有必要驱动程序均包含在标准 VMware ESXi 7.0 安装 ISO 映像中。对于运行 VMware ESXi 7.0 （和更新）的 NetApp HCI 计算节点，您不需要其他或更新驱动程序。</block>
+  <block id="3df9942375d4c2463d762d41ec77a6e1" category="list-text">对于 VMware ESXi 6.x ，请执行以下步骤以导入驱动程序脱机捆绑包文件：</block>
+  <block id="772251791cdb07bc2fc3967b8243ac21" category="list-text">选择 * 更新 * 选项卡。</block>
+  <block id="633d466e4a34f3db8d313150633fe669" category="list-text">选择 * 从文件上传 * 。</block>
+  <block id="0965e8793c3a408e2c948a5aa3f43df7" category="list-text">浏览到先前下载的脱机捆绑包并选择 * 导入 * 。</block>
 </blocks>
