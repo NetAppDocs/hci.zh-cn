@@ -6192,4 +6192,5 @@
   <block id="772251791cdb07bc2fc3967b8243ac21" category="list-text">选择 * 更新 * 选项卡。</block>
   <block id="633d466e4a34f3db8d313150633fe669" category="list-text">选择 * 从文件上传 * 。</block>
   <block id="0965e8793c3a408e2c948a5aa3f43df7" category="list-text">浏览到先前下载的脱机捆绑包并选择 * 导入 * 。</block>
+  <block id="38be14292d8d278a5d7b04a84bab839d" category="admonition">升级到 VMware vCenter Server 7.0 U3 后，适用于 vCenter Server 的所有版本的 NetApp Element 插件都无法部署。要解决此问题描述 ，请参见<block ref="770c119932f7fa962a47dc0795db1af6" category="inline-link-rx"></block>。</block>
 </blocks>
