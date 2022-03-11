@@ -50,10 +50,10 @@
   
   <link rel="stylesheet" href="/zh-cn/hci/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/zh-cn/hci/css/tabbed-blocks.css" type="text/css">
-  <link rel="stylesheet" href='/zh-cn/hci/css/product-family.css' type="text/css">
   <link rel='stylesheet' href='/zh-cn/hci/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-  <!-- Used to import Promise for IE. Required for SearchKit -->
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/hci/js/na-search.js'></script><script src='/zh-cn/hci/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-cn/hci/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/hci/css/prism-netapp.css' type='text/css'>
 
@@ -131,7 +131,6 @@
   }
   </script>
   <script src='/zh-cn/hci/js/version-dropdown.js'></script>
-  <script src='/zh-cn/hci/js/product-family.js'></script>
   <script src='/zh-cn/hci/js/FileSaver.min.js'></script>
   <script src='/zh-cn/hci/js/jszip-utils.min.js'></script>
   <script src='/zh-cn/hci/js/jszip.min.js'></script>
@@ -144,6 +143,25 @@
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/hci/issues/new?body=Page%3A%20[使用适用于 vCenter Server 的 Element 插件升级适用于 NetApp HCI 系统的 vSphere 组件](https://docs.netapp.com/zh-cn/hci/docs/task_hci_upgrade_all_vsphere.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/hci/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/hci/blob/main/docs/task_hci_upgrade_all_vsphere.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/hci/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/hci/images/article-sm.svg" class="github-icon" />提供者指南</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此页面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
   <!-- Start top_hat -->
   <div class="n-top-hat">
     <div class="n-container">
@@ -1647,19 +1665,16 @@
     <div class="n-breadcrumb">
       <ul class="n-breadcrumb__list">
         <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">主页</a>
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">文档</a>
-        </li>
+        
+
         
 
         <li class="n-breadcrumb__list-item">
           <a href="/zh-cn/hci/">HCI</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          使用适用于 vCenter Server 的 Element 插件升级适用于 NetApp HCI 系统的 vSphere 组件
-        </li>
+
       </ul>
     </div>
     <div style="clear: both"></div><!-- Main needs to have height -->
@@ -1688,7 +1703,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-08 10:10:25 +0000">03/08/2022</time>
+    <time datetime="2022-03-11 15:55:13 +0000">03/11/2022</time>
     
   
 
@@ -1698,6 +1713,14 @@
           alt="dbag-personal"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/56609800?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-pcarriga">
+    <img  class="avatar avatar-small"
+          alt="netapp-pcarriga"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/77334475?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1722,7 +1745,6 @@
 
 </p>
 
-
 <div class="paragraph lead">
 <p>在升级 NetApp HCI 安装中的 VMware vSphere 组件时，您还需要对适用于 vCenter Server 的 Element 插件执行一些其他步骤。</p>
 </div>
@@ -1737,6 +1759,18 @@
 </li>
 <li>
 <p><a href="https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-7AFB6672-0B0B-4902-B254-EE6AE81993B2.html" target="_blank" rel="noopener">"升级 vSphere ，包括 vCenter Server ， ESXi ， VM 和其他 VMware 组件"</a>。</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/hci/images/important.svg" alt="重要">
+</td>
+<td class="content">
+升级到 VMware vCenter Server 7.0 U3 后，适用于 vCenter Server 的所有版本的 NetApp Element 插件都无法部署。要解决此问题描述 ，请参见 <a href="https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3" target="_blank" rel="noopener">"此知识库文章"</a>。
+</td>
+</tr>
+</table>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1783,25 +1817,6 @@
     <!-- Page Container -->
   </div>
 
-  
-  <!-- Start Page Toolbar -->
-  <div class="page-nav-toolbar">
-    <div id="version-dropdown"></div>
-    <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/hci/issues/new?body=Page%3A%20[使用适用于 vCenter Server 的 Element 插件升级适用于 NetApp HCI 系统的 vSphere 组件](https://docs.netapp.com/zh-cn/hci/docs/task_hci_upgrade_all_vsphere.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/hci/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/hci/blob/main/docs/task_hci_upgrade_all_vsphere.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/hci/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/hci/images/article-sm.svg" class="github-icon" />提供者指南</a>
-    </div>
-    <div class="page-nav-container">
-      <nav class="page-nav-fixed">
-        <div class="page-nav-title">在此页面上</div>
-        <div class="page-nav-links">
-          <ul class="page-nav-inner" id="page-menu"></ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-  
   <div style="clear: both"></div><!-- Main needs to have height --></div>
 
         </main>
