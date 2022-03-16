@@ -23,9 +23,6 @@ keywords: netapp, hci, on premise, cluster, element, compute node, vmware, upgra
 | 型号 | 最低 BMC 版本 | 最低 BIOS 版本 
 
 
-| H300E ， H500E ， H700E​ | 6.84.00 | NA2.1 
-
-
 | H410C​ | 支持的所有版本（无需升级）​ | 支持的所有版本（无需升级）​ 
 
 
@@ -37,10 +34,6 @@ keywords: netapp, hci, on premise, cluster, element, compute node, vmware, upgra
 +
 
 NOTE: H615C 计算节点必须使用将 BMC 固件更新到版本 4.68 link:rn_compute_firmware_2.27.html["计算固件包 2.27"] 使 NetApp Hybrid Cloud Control 能够执行未来的固件升级。
-
-+
-
-NOTE: 要使 NetApp Hybrid Cloud Control 能够执行未来的固件升级， H300E ， H500E 和 H700E 计算节点需要 Redfish 许可证。请联系 NetApp 支持部门手动安装许可证，直到新的计算固件捆绑包在后续版本中自动执行此过程为止。
 
 +
 
@@ -86,6 +79,9 @@ TIP: 对于非公开站点升级，如果升级软件包和管理节点都位于
 
 
 NOTE: 根据管理节点与 BMC 主机之间的网络连接速度，每个节点升级 NIC ， BIOS 和 BMC 可能需要大约 60 分钟的时间。
+
+
+NOTE: 不再支持使用 NetApp Hybrid Cloud Control UI 升级 H300E/H500E/H700E 计算节点上的计算固件。要进行升级，建议您使用 <<manual_method_USB,USB 驱动器>> 或 <<manual_method_BMC,BMC 用户界面>> 挂载计算固件 ISO 。
 
 .您需要什么？ #8217 ；将需要什么
 * 如果您的管理节点未连接到 Internet ，则表示您已从下载计算节点固件包 https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab/download/62542/Compute_Firmware_Bundle["NetApp 支持站点"^]。
@@ -189,6 +185,9 @@ TIP: 如果升级期间发生故障， NetApp Hybrid Cloud Control 将重新启�
 == 使用 NetApp Hybrid Cloud Control API 升级计算节点
 
 您可以使用 API 将集群中的每个计算节点升级到最新固件版本。您可以使用自己选择的自动化工具来运行 API 。此处介绍的 API 工作流使用管理节点上提供的 REST API UI 作为示例。
+
+
+NOTE: 不再支持使用 NetApp Hybrid Cloud Control UI 升级 H300E/H500E/H700E 计算节点上的计算固件。要进行升级，建议您使用 <<manual_method_USB,USB 驱动器>> 或 <<manual_method_BMC,BMC 用户界面>> 挂载计算固件 ISO 。
 
 计算节点资产（包括 vCenter 和硬件资产）必须为管理节点资产所知。您可以使用清单服务 API 来验证资产（`https://<ManagementNodeIP>/inventory/1/` ）。
 

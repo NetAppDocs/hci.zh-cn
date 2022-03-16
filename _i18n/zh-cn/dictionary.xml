@@ -2743,7 +2743,6 @@
   <block id="a559b87068921eec05086ce5485e9784" category="cell">型号</block>
   <block id="28a5d597dff6432b588d89f6acfdf343" category="cell">最低 BMC 版本</block>
   <block id="8f8d91fc37539c7dc54fe9ca413f6673" category="cell">最低 BIOS 版本</block>
-  <block id="4bbe694d59e403ad0ad7d03479971908" category="cell">H300E ， H500E ， H700E​</block>
   <block id="81267fed636b653e3d782db366f1c339" category="cell">H410C​</block>
   <block id="fa79295b13ba6136cf2fb5e4e4164155" category="cell">支持的所有版本（无需升级）​</block>
   <block id="4fc5318bd9b3c68006da2413f414a4ca" category="cell">H610C​</block>
@@ -2753,7 +2752,6 @@
   <block id="7574455cfeef101402ffde3ea33bd53a" category="cell">3B08.CO ​​</block>
   <block id="f6c9b6a55fa82505a20a84fc29dd1409" category="inline-link-macro">计算固件包 2.27</block>
   <block id="590f0f5145e5d58d73d507c6a67aa0b2" category="admonition">H615C 计算节点必须使用将 BMC 固件更新到版本 4.68 <block ref="c58be2f499a493f0490ff81a29aa7beb" category="inline-link-macro-rx"></block> 使 NetApp Hybrid Cloud Control 能够执行未来的固件升级。</block>
-  <block id="ae6346ffcf8868be71ccf7393c359eb7" category="admonition">要使 NetApp Hybrid Cloud Control 能够执行未来的固件升级， H300E ， H500E 和 H700E 计算节点需要 Redfish 许可证。请联系 NetApp 支持部门手动安装许可证，直到新的计算固件捆绑包在后续版本中自动执行此过程为止。</block>
   <block id="7389b01d5fe0e17f5523a7fb85295f91" category="inline-link">此知识库文章</block>
   <block id="92a2b5cb9c6906035c2864fa225e1940" category="inline-link-macro">文章</block>
   <block id="71ff71526d15db86eb50fcac245d183b" category="inline-link-macro">用户界面</block>
@@ -6193,4 +6191,7 @@
   <block id="633d466e4a34f3db8d313150633fe669" category="list-text">选择 * 从文件上传 * 。</block>
   <block id="0965e8793c3a408e2c948a5aa3f43df7" category="list-text">浏览到先前下载的脱机捆绑包并选择 * 导入 * 。</block>
   <block id="38be14292d8d278a5d7b04a84bab839d" category="admonition">升级到 VMware vCenter Server 7.0 U3 后，适用于 vCenter Server 的所有版本的 NetApp Element 插件都无法部署。要解决此问题描述 ，请参见<block ref="770c119932f7fa962a47dc0795db1af6" category="inline-link-rx"></block>。</block>
+  <block id="abca9e82408ff65627f936784141931b" category="inline-xref">USB 驱动器</block>
+  <block id="e06e1c211afdb87bf0364232088b0c36" category="inline-xref">BMC 用户界面</block>
+  <block id="ee32ec3c00387e48d64d3e91709654f2" category="admonition">不再支持使用 NetApp Hybrid Cloud Control UI 升级 H300E/H500E/H700E 计算节点上的计算固件。要进行升级，建议您使用 <block ref="4d9d1e5487766b88d4d71ed7b5cbc3b9" category="inline-xref-macro-rx"></block> 或 <block ref="1f3fb96b93183df027058d51b91b7971" category="inline-xref-macro-rx"></block> 挂载计算固件 ISO 。</block>
 </blocks>
