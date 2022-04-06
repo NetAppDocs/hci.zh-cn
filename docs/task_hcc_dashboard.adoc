@@ -5,6 +5,7 @@ summary: 您可以在 NetApp 混合云控制信息板上查看存储和计算资
 keywords: netapp, hci, on premise, hcc, hybrid cloud control, storage, compute, storage performance, utilization, capacity 
 ---
 = 在混合云控制信息板上监控存储和计算资源
+:allow-uri-read: 
 
 
 [role="lead"]

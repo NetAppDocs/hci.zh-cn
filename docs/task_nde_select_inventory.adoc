@@ -6,6 +6,7 @@ keywords: netapp, hci, deployment, compatibility, nodes
 ---
 = 选择清单
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

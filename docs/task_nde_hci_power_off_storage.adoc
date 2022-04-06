@@ -6,6 +6,7 @@ keywords: netapp, hci, netapp deployment engine, deployment, vsphere
 ---
 = 关闭 NetApp HCI 系统的存储资源
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

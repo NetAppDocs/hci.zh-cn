@@ -5,6 +5,7 @@ summary: NetApp Hybrid Cloud Control 具有特定功能， NetApp 建议在这�
 keywords: netapp, hci, HCC, configuration, capabilities, limits, maximums 
 ---
 = NetApp Hybrid Cloud Control 配置上限
+:allow-uri-read: 
 
 
 [role="lead"]

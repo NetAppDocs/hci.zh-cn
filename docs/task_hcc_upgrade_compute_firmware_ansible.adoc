@@ -5,6 +5,7 @@ summary: 对于 H 系列计算节点， NetApp 提供了 Ansible 角色，可帮
 keywords: netapp, hci, on premise, cluster, element, compute node, ansible upgrade, upgrade role 
 ---
 = 利用 Ansible 自动升级计算节点固件
+:allow-uri-read: 
 
 
 [role="lead"]

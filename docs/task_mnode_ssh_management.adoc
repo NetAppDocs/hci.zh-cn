@@ -5,6 +5,7 @@ summary: 您可以使用 REST API UI 在管理节点上禁用，启用或确定 
 keywords: netapp, mnode, management node, ssh, disable, enable, rest api 
 ---
 = 在管理节点上管理 SSH 功能
+:allow-uri-read: 
 
 
 [role="lead"]

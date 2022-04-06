@@ -5,6 +5,7 @@ summary: 您可以创建或删除集群支持包，重置节点配置设置或�
 keywords: netapp, element, management node ui, mnode ui, system utilities 
 ---
 = 从管理节点运行系统实用程序
+:allow-uri-read: 
 
 
 [role="lead"]

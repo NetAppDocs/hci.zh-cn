@@ -5,6 +5,7 @@ summary: 您可以升级 NetApp HCI 及其所有组件。
 keywords: netapp, hci, on premise, cluster, upgrade, element 
 ---
 = 升级顺序概述
+:allow-uri-read: 
 
 
 [role="lead"]

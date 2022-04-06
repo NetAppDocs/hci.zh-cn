@@ -5,6 +5,7 @@ summary: 您可以执行硬件维护任务，例如更换节点，更换存储�
 keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance, rails, h-series, nodes 
 ---
 = H 系列硬件维护概述
+:allow-uri-read: 
 
 
 [role="lead"]

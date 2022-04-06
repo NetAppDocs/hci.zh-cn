@@ -6,6 +6,7 @@ keywords: netapp, hci, deployment, review, deploy, boot, drive, wear
 ---
 = 减少 NetApp HCI 计算节点上的启动介质损耗
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

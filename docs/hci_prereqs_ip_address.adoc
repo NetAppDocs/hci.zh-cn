@@ -6,6 +6,7 @@ keywords: netapp, hci, IP address, requirements
 ---
 = IP 地址要求
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

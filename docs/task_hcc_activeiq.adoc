@@ -5,6 +5,7 @@ summary: 您可以使用 SolidFire Active IQ 监控集群运行状况。
 keywords: netapp, hci, on premise, activeiq, active iq, cluster, performance 
 ---
 = 使用 SolidFire Active IQ 监控性能，容量和集群运行状况
+:allow-uri-read: 
 
 
 [role="lead"]

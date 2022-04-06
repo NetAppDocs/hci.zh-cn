@@ -5,6 +5,7 @@ summary: 了解如何创建卷并将卷与给定帐户关联。
 keywords: netapp, hci, cluster, element, volume 
 ---
 = 使用 NetApp Hybrid Cloud Control 创建和管理卷
+:allow-uri-read: 
 
 
 [role="lead"]

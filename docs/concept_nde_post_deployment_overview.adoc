@@ -6,6 +6,7 @@ keywords: netapp, hci, deployment, review, deploy
 ---
 = 部署后任务
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

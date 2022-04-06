@@ -6,6 +6,7 @@ keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, acc
 ---
 = 手动分配 IP 地址以访问 NetApp 部署引擎
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

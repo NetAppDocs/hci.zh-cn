@@ -6,6 +6,7 @@ keywords: netapp, hci, storage volume, solidfire volume, element volume, persist
 ---
 = 卷访问组
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

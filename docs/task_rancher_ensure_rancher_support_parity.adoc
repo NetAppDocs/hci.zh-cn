@@ -6,6 +6,7 @@ keywords: netapp, hci, Rancher, licensing
 ---
 = 确保 Rancher 支持奇偶校验
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

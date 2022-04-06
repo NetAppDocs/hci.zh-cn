@@ -7,6 +7,7 @@ keywords: netapp, hci, on premise,
 ---
 = NetApp HCI 文档
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

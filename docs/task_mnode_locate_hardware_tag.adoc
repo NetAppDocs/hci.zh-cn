@@ -5,6 +5,7 @@ summary: 要使用 REST API UI 将计算节点资产添加到管理节点配置�
 keywords: netapp, management node, rest api, hci, hardware tag 
 ---
 = 如何查找计算节点的硬件标记
+:allow-uri-read: 
 
 
 [role="lead"]

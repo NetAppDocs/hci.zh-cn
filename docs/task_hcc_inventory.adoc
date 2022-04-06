@@ -6,6 +6,7 @@ keywords: netapp, hci, hcc, on premise, inventory, hybrid cloud control
 ---
 = 在混合云控制中查看 NetApp HCI 清单
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

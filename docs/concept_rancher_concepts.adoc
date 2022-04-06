@@ -6,6 +6,7 @@ keywords: netapp, hci, rancher, control plane, catalog, cluster, kubernetes
 ---
 = Rancher on NetApp HCI 概念
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

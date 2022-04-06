@@ -6,6 +6,7 @@ keywords: netapp, hci, rancher, kubernetes clusters, create cluster
 ---
 = 创建用户集群
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

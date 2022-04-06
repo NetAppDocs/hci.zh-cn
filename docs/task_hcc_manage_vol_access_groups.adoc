@@ -5,6 +5,7 @@ summary: 了解如何添加新的卷访问组以使用 NetApp HCI 存储卷，�
 keywords: netapp, hci, on premise, cluster, element 
 ---
 = 创建和管理卷访问组
+:allow-uri-read: 
 
 
 [role="lead"]

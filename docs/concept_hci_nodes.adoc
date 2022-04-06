@@ -6,6 +6,7 @@ keywords: netapp, hci, storage nodes, volumes, compute nodes, witness nodes, man
 ---
 = 节点
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

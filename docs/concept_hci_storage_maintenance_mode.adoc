@@ -6,6 +6,7 @@ keywords: netapp, hci, storage nodes, maintenance, mode
 ---
 = 维护模式
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

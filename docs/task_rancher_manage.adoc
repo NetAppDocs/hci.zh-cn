@@ -6,6 +6,7 @@ keywords: netapp, hci, rancher, deploy, cluster, kubernetes, control plane, moni
 ---
 = 在 NetApp HCI 上管理 Rancher
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

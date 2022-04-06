@@ -6,6 +6,7 @@ keywords: NetApp, HCI, on premise, expand, hcc, hybrid cloud control
 ---
 = 扩展概述
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

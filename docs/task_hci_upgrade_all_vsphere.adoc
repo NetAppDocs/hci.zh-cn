@@ -5,6 +5,7 @@ summary: 您可以升级 NetApp HCI 的 VMware 组件，并执行其他步骤重
 keywords: netapp, hci, vSphere components, upgrade, vCenter, ESXi 
 ---
 = 使用适用于 vCenter Server 的 Element 插件升级适用于 NetApp HCI 系统的 vSphere 组件
+:allow-uri-read: 
 
 
 [role="lead"]

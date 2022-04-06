@@ -5,6 +5,7 @@ summary: 在 NetApp HCI 系统升级过程中，您可以升级 NetApp Element �
 keywords: netapp, hci, HealthTools, cluster, element, H610S upgrade, hcc 
 ---
 = 升级 Element 软件
+:allow-uri-read: 
 
 
 [role="lead"]

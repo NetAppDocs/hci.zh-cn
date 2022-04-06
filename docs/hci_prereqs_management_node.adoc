@@ -6,6 +6,7 @@ keywords: netapp, hci, management node, mnode, best practice
 ---
 = 管理节点要求
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

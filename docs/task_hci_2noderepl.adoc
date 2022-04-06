@@ -6,6 +6,7 @@ keywords: netapp, hci, H610C, H615C, chassis replacement, node replacement
 ---
 = 更换双节点集群中的存储节点
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

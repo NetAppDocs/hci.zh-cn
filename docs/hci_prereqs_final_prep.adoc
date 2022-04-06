@@ -6,6 +6,7 @@ keywords: netapp, hci, final preparations, requirements
 ---
 = 为每个节点配置 IPMI
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

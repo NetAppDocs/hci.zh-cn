@@ -5,6 +5,7 @@ keywords: protection domain layout,user-defined,custom layout
 summary: 您可以定义自定义保护域布局，其中每个节点都与一个且仅与一个自定义保护域相关联。默认情况下，每个节点都分配到相同的默认自定义保护域。 
 ---
 = 自定义保护域
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

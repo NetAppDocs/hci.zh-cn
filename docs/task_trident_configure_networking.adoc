@@ -6,6 +6,7 @@ keywords: netapp, hci, netapp, networking, clusters, user, trident, rancher
 ---
 = 为用户集群启用 Trident 支持
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

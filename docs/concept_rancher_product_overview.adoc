@@ -6,6 +6,7 @@ keywords: netapp, hci, rancher, architecture, kubernetes, cluster
 ---
 = NetApp HCI 上的 Rancher 概述
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

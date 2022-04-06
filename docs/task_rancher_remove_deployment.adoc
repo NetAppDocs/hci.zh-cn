@@ -5,6 +5,7 @@ summary: 了解如何在 NetApp HCI 部署中删除 Rancher 安装以进行重�
 keywords: netapp, hci, api, REST, remove, Rancher, redeploy 
 ---
 = 删除 NetApp HCI 上的 Rancher 安装
+:allow-uri-read: 
 
 
 [role="lead"]

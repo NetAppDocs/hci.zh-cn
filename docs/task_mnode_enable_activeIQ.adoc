@@ -5,6 +5,7 @@ summary: 您可以使用管理节点（ mNode ）启用 NetApp Active IQ 和 Net
 keywords: netapp, hci, api, enable, active iq, activeiq, hci monitoring 
 ---
 = 启用 Active IQ 和 NetApp HCI 监控
+:allow-uri-read: 
 
 
 [role="lead"]

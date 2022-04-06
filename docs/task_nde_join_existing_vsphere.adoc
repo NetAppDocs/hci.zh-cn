@@ -6,6 +6,7 @@ keywords: netapp, hci, netapp deployment engine, deployment, vsphere
 ---
 = 加入现有的 VMware vSphere 部署
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

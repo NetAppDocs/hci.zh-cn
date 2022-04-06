@@ -6,6 +6,7 @@ keywords: netapp, hci, deployment, review, deploy
 ---
 = 在已配置的交换机上禁用 lac-individual 命令
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

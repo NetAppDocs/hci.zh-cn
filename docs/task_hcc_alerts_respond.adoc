@@ -6,6 +6,7 @@ keywords: netapp, hci, hcc, on premise, alerts, warnings
 ---
 = 响应混合云控制信息板上的警报
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

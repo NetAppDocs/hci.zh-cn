@@ -6,6 +6,7 @@ keywords: netapp, hci, H410C nodes, replacement, node replacement
 ---
 = 更换 H410C 节点
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -5,6 +5,7 @@ summary: 借助 NetApp HCI ，您可以使用 NetApp 混合云控制来管理存
 keywords: netapp, hci, on premise, cluster, element, account, user, volume, hybrid cloud control, hcc 
 ---
 = 管理 NetApp HCI 存储概述
+:allow-uri-read: 
 
 
 [role="lead"]

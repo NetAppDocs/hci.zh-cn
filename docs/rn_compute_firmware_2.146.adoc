@@ -6,6 +6,7 @@ keywords: netapp, hci, compute firmware
 ---
 = 计算固件包 2.146 发行说明
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

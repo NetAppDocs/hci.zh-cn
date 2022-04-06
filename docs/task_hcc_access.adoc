@@ -6,6 +6,7 @@ keywords: netapp, hci, on premise, hybrid cloud control, hcc
 ---
 = 访问 NetApp HCI 混合云控制
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

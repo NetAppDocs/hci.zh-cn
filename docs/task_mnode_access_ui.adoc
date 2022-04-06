@@ -5,6 +5,7 @@ summary: 您可以访问管理 UI 或 REST API UI 。
 keywords: netapp, mnode, management node, api, hci 
 ---
 = 访问管理节点
+:allow-uri-read: 
 
 
 [role="lead"]

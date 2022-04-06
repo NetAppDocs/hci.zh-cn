@@ -5,6 +5,7 @@ summary: 在 NetApp HCI 系统升级过程中，您应更新管理服务。
 keywords: netapp, hci, on premise, cluster, management services 
 ---
 = 更新管理服务
+:allow-uri-read: 
 
 
 [role="lead"]

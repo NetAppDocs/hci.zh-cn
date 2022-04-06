@@ -6,6 +6,7 @@ keywords: netapp, hci, psu, replace power supply, H610S, H615C, DC
 ---
 = 更换 H615C 和 H610S 节点中的直流电源设备
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

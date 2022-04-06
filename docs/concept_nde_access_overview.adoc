@@ -6,6 +6,7 @@ keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, acc
 ---
 = NetApp 部署引擎访问选项概述
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

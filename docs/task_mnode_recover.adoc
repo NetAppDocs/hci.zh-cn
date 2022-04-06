@@ -5,6 +5,7 @@ summary: 您可以为运行 NetApp Element 软件的集群恢复和重新部署�
 keywords: netapp, element, management node, mnode, disaster recovery, redeploy, VM 
 ---
 = 恢复管理节点
+:allow-uri-read: 
 
 
 [role="lead"]

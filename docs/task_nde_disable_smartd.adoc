@@ -6,6 +6,7 @@ keywords: netapp, hci, netapp deployment engine, deployment, vsphere, ESXi, comp
 ---
 = 在 NetApp HCI 计算节点上禁用 smartd 服务
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

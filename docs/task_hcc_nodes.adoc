@@ -5,6 +5,7 @@ summary: 您可以使用 Hybrid Cloud Control Nodes 页面查看系统中的存�
 keywords: netapp, hci, on premise, cluster, inventory, nodes, storage, compute 
 ---
 = 在节点页面上查看清单
+:allow-uri-read: 
 
 
 [role="lead"]

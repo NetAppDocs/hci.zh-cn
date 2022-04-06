@@ -6,6 +6,7 @@ summary: 如果您未运行最新版本，可以参考先前版本的 NetApp HCI
 ---
 = 早期版本的 NetApp HCI 文档
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

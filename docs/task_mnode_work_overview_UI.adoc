@@ -5,6 +5,7 @@ summary: '使用管理节点 UI (https://<mNodeIP>:442)[]，您可以更改网�
 keywords: 'netapp, management node ui, mnode ui, :442, element' 
 ---
 = 管理节点 UI 概述
+:allow-uri-read: 
 
 
 [role="lead"]

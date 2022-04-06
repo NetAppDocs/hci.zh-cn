@@ -6,6 +6,7 @@ keywords: netapp, hci, environment, requirements
 ---
 = 环境要求
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

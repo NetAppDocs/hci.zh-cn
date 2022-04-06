@@ -6,6 +6,7 @@ keywords: netapp, hci, on premise, administrator, user account, cloud services, 
 ---
 = 用户帐户
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

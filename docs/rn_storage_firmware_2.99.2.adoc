@@ -6,6 +6,7 @@ keywords: netapp, hci, storage firmware
 ---
 = 存储固件包 2.99.2 发行说明
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

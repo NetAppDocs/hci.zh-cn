@@ -6,6 +6,7 @@ keywords: netapp, hci, element, storage, protection domains
 ---
 = 保护域
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

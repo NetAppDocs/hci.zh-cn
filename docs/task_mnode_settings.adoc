@@ -5,6 +5,7 @@ summary: 您可以修改和测试管理节点网络，集群和系统设置。
 keywords: netapp, management node ui, mnode ui, network settings, test network, cluster settings 
 ---
 = 修改并测试管理节点网络，集群和系统设置
+:allow-uri-read: 
 
 
 [role="lead"]

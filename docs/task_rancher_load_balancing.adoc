@@ -6,6 +6,7 @@ keywords: netapp, hci, Rancher, install, installation, load, balance
 ---
 = 配置负载平衡
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

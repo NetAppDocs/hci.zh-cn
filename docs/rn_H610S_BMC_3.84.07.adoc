@@ -6,6 +6,7 @@ keywords: netapp, hci, compute firmware
 ---
 = H610S BMC 3.84.07 发行说明
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

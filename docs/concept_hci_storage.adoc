@@ -6,6 +6,7 @@ keywords: netapp, hci, storage nodes, volumes
 ---
 = 存储
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

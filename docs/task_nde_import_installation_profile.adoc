@@ -6,6 +6,7 @@ keywords: netapp, hci, deployment, compatibility, nodes, installation, profile, 
 ---
 = 导入安装配置文件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

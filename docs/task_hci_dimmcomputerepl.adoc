@@ -6,6 +6,7 @@ keywords: netapp, hci, dimm, compute nodes
 ---
 = 更换计算节点中的 DIMM
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -5,6 +5,7 @@ summary: 您可以配置 FQDM 并管理 NetApp HCI ，用户帐户，存储集�
 keywords: netapp, hci, install, deploy, get started, configure, fqdn, fully qualified domain name 
 ---
 = NetApp HCI 管理概述
+:allow-uri-read: 
 
 
 [role="lead"]

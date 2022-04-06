@@ -6,6 +6,7 @@ keywords: netapp, hci, witness nodes, two-node cluster, four-node cluster, compu
 ---
 = 扩展集群后删除见证节点
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

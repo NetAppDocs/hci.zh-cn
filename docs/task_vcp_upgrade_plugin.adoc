@@ -5,6 +5,7 @@ summary: 在 NetApp HCI 系统升级过程中，您可以升级适用于 vCenter
 keywords: netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7, 4.8 
 ---
 = 升级适用于 vCenter Server 的 Element 插件
+:allow-uri-read: 
 
 
 [role="lead"]

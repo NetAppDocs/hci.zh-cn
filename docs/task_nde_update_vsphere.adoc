@@ -6,6 +6,7 @@ keywords: netapp, hci, deployment, review, deploy
 ---
 = 使 VMware vSphere 保持最新
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

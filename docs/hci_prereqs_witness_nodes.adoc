@@ -6,6 +6,7 @@ keywords: netapp, hci, element, Witness Node
 ---
 = 见证双节点存储集群的节点资源要求
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

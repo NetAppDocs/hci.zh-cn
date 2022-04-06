@@ -6,6 +6,7 @@ keywords: netapp, hci, deployment, review, GPU, install, driver, drivers
 ---
 = 访问 NetApp Hybrid Cloud Control
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

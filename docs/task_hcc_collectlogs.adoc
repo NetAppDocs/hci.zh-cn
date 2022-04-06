@@ -5,6 +5,7 @@ summary: 您可以使用 NetApp 混合云控制从 NetApp HCI 或 Element 安装
 keywords: netapp, hci, logs, collection, troubleshooting, monitor 
 ---
 = 收集日志以进行故障排除
+:allow-uri-read: 
 
 
 [role="lead"]

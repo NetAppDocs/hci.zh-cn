@@ -6,6 +6,7 @@ keywords: netapp, hci, network, switch, requirements
 ---
 = 网络和交换机要求
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

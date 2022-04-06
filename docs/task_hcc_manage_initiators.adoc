@@ -5,6 +5,7 @@ summary: 了解如何添加创建和管理启动程序，以便在外部客户�
 keywords: netapp, hci, initiator, storage, element, access group 
 ---
 = 创建和管理启动程序
+:allow-uri-read: 
 
 
 [role="lead"]
