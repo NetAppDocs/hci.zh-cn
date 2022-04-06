@@ -625,7 +625,7 @@ IMPORTANT: 如果您要将 H610S 系列节点升级到 Element 12.3.x ，并且�
 
 NOTE: 要升级 Element 存储软件，您需要最新版本的 HealthTools 。
 
-. 下载此 https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740["JSON 文件"^]  从 NetApp 支持站点的非管理节点计算机上，将其重命名为 `metadata 。 json` 。
+. 下载此 https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740["JSON 文件"^] (https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740)[] 从 NetApp 支持站点的非管理节点计算机上，将其重命名为 `metadata 。 json` 。
 . 将此 ISO 文件复制到管理节点中可访问的位置，例如 ` /tmp` 。
 +
 

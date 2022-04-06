@@ -65,7 +65,7 @@ NOTE: 升级存储集群上的 Element 软件不再需要升级管理节点操�
 . link:task_vcp_upgrade_plugin.html["升级适用于 vCenter Server 的 Element 插件"]。
 . link:task_upgrade_compute_prechecks.html["在升级计算固件之前运行计算节点运行状况检查"]。
 . link:task_hcc_upgrade_compute_node_drivers.html["更新计算节点驱动程序"]。
-. link:task_hcc_upgrade_compute_node_firmware.html["使用 NetApp Hybrid Cloud Control 更新计算节点固件"] 或 。
+. link:task_hcc_upgrade_compute_node_firmware.html["使用 NetApp Hybrid Cloud Control 更新计算节点固件"] 或 link:task_hcc_upgrade_compute_firmware_ansible.html["利用 Ansible 自动升级计算固件"]。
 
 
 [discrete]

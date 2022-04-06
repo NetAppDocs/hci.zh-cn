@@ -16,7 +16,7 @@ keywords: netapp, qos policy, quality of service, qos policies, volumes, element
 通过 QoS （服务质量）策略，您可以创建和保存可应用于多个卷的标准化服务质量设置。要使用 QoS 策略，选定集群必须为 Element 10.0 或更高版本；否则， QoS 策略功能将不可用。
 
 
-NOTE: 有关使用的详细信息，请参见 NetApp HCI 概念内容 link:concept_hci_performance.html#qos-policies["QoS 策略"] 而不是单个卷 。
+NOTE: 有关使用的详细信息，请参见 NetApp HCI 概念内容 link:concept_hci_performance.html#qos-policies["QoS 策略"] 而不是单个卷 link:concept_hci_performance.html["QoS"]。
 
 使用 NetApp Hybrid Cloud Control ，您可以通过完成以下任务来创建和管理 QoS 策略：
 

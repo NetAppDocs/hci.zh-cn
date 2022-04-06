@@ -23,7 +23,7 @@ NOTE: 替代节点应与 NetApp HCI 安装中的其余计算节点具有相同�
 * 您有一个替代计算节点。要订购替代节点，您应联系 NetApp 支持部门。计算节点在出厂时已安装 Bootstrap 操作系统。节点出厂时已安装最新版本的 Bootstrap OS 。在以下情况下，您可能需要在节点上执行恢复出厂映像（ Return to Factory Image ， RTFI ）过程：
 +
 ** 您当前安装的 NetApp HCI 正在运行的 Bootstrap OS 版本早于最新版本。在这种情况下， RTFI 进程会将新节点降级到 NetApp HCI 安装正在运行的操作系统版本。
-** 出厂的替代节点运行的启动操作系统版本早于最新版本，要替换此节点的 NetApp HCI 安装已运行最新版本。在这种情况下， RTFI 进程会将新节点上的操作系统版本升级到最新版本。请参见 link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/HCI_-_How_to_RTFI_using_a_USB_key["如何使用 USB 密钥执行 RTFI （需要登录）"^] 和 。
+** 出厂的替代节点运行的启动操作系统版本早于最新版本，要替换此节点的 NetApp HCI 安装已运行最新版本。在这种情况下， RTFI 进程会将新节点上的操作系统版本升级到最新版本。请参见 link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/HCI_-_How_to_RTFI_using_a_USB_key["如何使用 USB 密钥执行 RTFI （需要登录）"^] 和 link:https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_RTFI_an_HCI_Compute_Node_via_BMC["如何使用 BMC 执行 RTFI （需要登录）"^]。
 
 
 * 您已佩戴静电释放（ ESD ）腕带，或者已采取其他防静电预防措施。

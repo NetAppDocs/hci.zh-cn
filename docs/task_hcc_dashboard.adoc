@@ -97,7 +97,7 @@ NOTE: 您可以设置 " 警告 " 阈值，该阈值默认为比 " 错误 " 阈�
 
 +
 
-TIP: 有关相关集群阈值 Element API 的详细信息，请参见 https://docs.netapp.com/us-en/element-software/api/reference_element_api_getclusterfullthreshold.html["GetClusterFullThreshold"^] 在 _Element 软件 API 文档 _ 中。要查看有关块和元数据容量的详细信息，请参见 在 _Element 软件文档 _ 中。
+TIP: 有关相关集群阈值 Element API 的详细信息，请参见 https://docs.netapp.com/us-en/element-software/api/reference_element_api_getclusterfullthreshold.html["GetClusterFullThreshold"^] 在 _Element 软件 API 文档 _ 中。要查看有关块和元数据容量的详细信息，请参见 https://docs.netapp.com/us-en/element-software/storage/concept_monitor_understand_cluster_fullness_levels.html["了解集群填充度级别"^] 在 _Element 软件文档 _ 中。
 
 . 选择 * 有效 * 选项卡可查看有关配置给已连接主机的总存储空间的信息并查看效率等级。
 +

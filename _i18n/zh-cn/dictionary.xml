@@ -4425,7 +4425,6 @@
   <block id="7e6093e52119f18464fc862a969c9f6a" category="admonition">如果需要 IPv6 支持，可以使用管理节点 11.1 。</block>
   <block id="9385b032418674e92472a8b4a2ae5cdf" category="list-text">（使用代理服务器的管理节点 12.0 及更高版本）在配置代理服务器之前，您已将 NetApp Hybrid Cloud Control 更新为管理服务版本 2.16 。</block>
   <block id="0406c3e25004e3d1dddbc367d2c4010f" category="paragraph">Element 12.2 管理节点是一种可选升级。现有部署不需要此功能。</block>
-  <block id="4c1c75837506a09df0b018e8ae0bf93e" category="paragraph">在遵循此操作步骤之前，您应了解 <block ref="6f73bacaba2e470844b654fcbffb809f" category="inline-link-macro-rx"></block> 以及是否要使用它们。永久性卷是可选的，但建议在虚拟机丢失时用于管理节点配置数据恢复。</block>
   <block id="d65a2ab43bcac7efebde7effc9d142f8" category="list-text"><block ref="4e8e62755aa10b5d2420c05d87c0085a" category="inline-xref-macro-rx"></block></block>
   <block id="c92609be7302c756d6d918553df475c1" category="list-text"><block ref="d9e86326331a25418b718094ae602c19" category="inline-xref-macro-rx"></block></block>
   <block id="0267f7e06220d0fa6fb42578b5746da3" category="list-text"><block ref="b41cb2f7bd156a4035cdf9347b89cebe" category="inline-xref-macro-rx"></block></block>
@@ -6194,4 +6193,15 @@
   <block id="abca9e82408ff65627f936784141931b" category="inline-xref">USB 驱动器</block>
   <block id="e06e1c211afdb87bf0364232088b0c36" category="inline-xref">BMC 用户界面</block>
   <block id="ee32ec3c00387e48d64d3e91709654f2" category="admonition">不再支持使用 NetApp Hybrid Cloud Control UI 升级 H300E/H500E/H700E 计算节点上的计算固件。要进行升级，建议您使用 <block ref="4d9d1e5487766b88d4d71ed7b5cbc3b9" category="inline-xref-macro-rx"></block> 或 <block ref="1f3fb96b93183df027058d51b91b7971" category="inline-xref-macro-rx"></block> 挂载计算固件 ISO 。</block>
+  <block id="7f10e6e99f08f394e823f7104513126a" category="paragraph">在遵循此操作步骤之前，您应了解 <block ref="6f73bacaba2e470844b654fcbffb809f" category="inline-link-macro-rx"></block> 以及是否要使用它们。永久性卷是可选的，但建议在虚拟机（ VM ）丢失时用于管理节点配置数据恢复。</block>
+  <block id="bb79fe0e6bf117510635c505cc16e74d" category="list-text">使用以下配置从虚拟机管理程序创建新的 64 位 VM ：</block>
+  <block id="4aec8fb7a6a9c5631ebb25a7b86d9ac5" category="admonition">请勿在此操作步骤 中指示稍后启动此虚拟机的步骤之前启动此虚拟机。</block>
+  <block id="1632315c8463eb1e9d1b980297d68c37" category="list-text">将 ISO 连接到虚拟机并启动到 .iso 安装映像。</block>
+  <block id="faa024991ac61fa39b20d61ed2e88ada" category="list-text">安装完成后，启动管理节点的虚拟机。</block>
+  <block id="c19f63a05ffe39159954c2b2fd892582" category="list-text">如果网络上有一个动态主机配置协议（ DHCP ）服务器，用于分配最大传输单元（ MTU ）小于 1500 字节的 IP ，则必须执行以下步骤：</block>
+  <block id="b44234e2a29812de715ddf5ea19c15fc" category="list-text">临时将管理节点置于不使用 DHCP 的 vSphere 网络上，例如 iSCSI 。</block>
+  <block id="f35b648abbd5fe5949ea297ee6cef3b9" category="list-text">重新启动 VM 或重新启动 VM 网络。</block>
+  <block id="5e790f023d6f269f25709b2372d8cef2" category="list-text">使用 TUI 在 MTU 大于或等于 1500 字节的管理网络上配置正确的 IP 。</block>
+  <block id="8c79dbfa1dd86948b37af21a8d7639d5" category="list-text">将正确的 VM 网络重新分配给 VM 。</block>
+  <block id="85708c896a2da121ac4eee4307002bd9" category="admonition">如果 DHCP 分配的 IP MTU 小于 1500 字节，则可能会阻止您配置管理节点网络或使用管理节点 UI 。</block>
 </blocks>
