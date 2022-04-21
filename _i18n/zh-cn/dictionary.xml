@@ -4880,8 +4880,6 @@
   <block id="c4676996d8b51da422f5ab619c54ae01" category="list-text">验证 NetApp Element 配置和管理扩展点是否显示在 vSphere Web Client 的 * 快捷方式 * 选项卡以及侧面板中。</block>
   <block id="342171073fda0fd2cec612dc41323bdb" category="image-alt">描述了成功升级或安装后的插件扩展点</block>
   <block id="a0abd6db969f497b63a29f8fbd1771df" category="inline-link-macro">适用于 vCenter Server 的 Element 插件</block>
-  <block id="3cc243a697de25c61818bc316cea4e98" category="paragraph">如果不显示 vCenter 插件图标，请参见 <block ref="f9851c8aa620f0cd00ac6d51cd4290b1" category="inline-link-macro-rx"></block> 有关插件故障排除的文档。</block>
-  <block id="65dc103da0aa4a7822d43218290b7b8d" category="paragraph">在使用 VMware vCenter Server 6.7U1 升级到 VCP 4.8 后，如果 NetApp Element 配置的 * 集群 * 和 * QoSSIOC 设置 * 部分未列出存储集群或显示服务器错误，请参见 <block ref="107c2c097bec52fadb44d9536d1a3a46" category="inline-link-macro-rx"></block> 有关对这些错误进行故障排除的文档。</block>
   <block id="b9e50e6a339819ad9d12906b29e978ca" category="list-text">在插件的 * NetApp Element Configuration* 扩展点中的 * 关于 * 选项卡中验证版本更改。</block>
   <block id="a2b39afbde860c9c0fc759f3772e2dd2" category="paragraph">您应看到以下版本详细信息或较新版本的详细信息：</block>
   <block id="4715e0cc20eb79c52c1f181ce0f6afb0" category="admonition">vCenter 插件包含联机帮助内容。要确保帮助包含最新内容，请在升级插件后清除浏览器缓存。</block>
@@ -6214,4 +6212,6 @@
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
+  <block id="5e98629f8afe2eee1c27355eb45a80e0" category="paragraph">如果不显示 vCenter 插件图标，请参见 <block ref="ab9b282dbdbe327f4195d1f5d71c406f" category="inline-link-macro-rx"></block> 有关插件故障排除的文档。</block>
+  <block id="3d06b6c0430a7ea489938883e0eb617e" category="paragraph">在使用 VMware vCenter Server 6.7U1 升级到 VCP 4.8 后，如果 NetApp Element 配置的 * 集群 * 和 * QoSSIOC 设置 * 部分未列出存储集群或显示服务器错误，请参见 <block ref="ccd6ffc15d371ab994b0e9dff04cb8c2" category="inline-link-macro-rx"></block> 有关对这些错误进行故障排除的文档。</block>
 </blocks>
