@@ -46,7 +46,7 @@ TIP: 要检查管理节点的版本，请登录到管理节点并在登录横幅
 
 * 您已使用 NetApp Hybrid Cloud Control 将管理服务捆绑包更新为最新版本。您可以从以下 IP 地址访问 NetApp Hybrid Cloud Control ： ` https://<ManagementNodeIP>`
 * 如果要将管理节点更新到版本12.5、则需要管理服务2.20.69或更高版本才能继续。
-* 您已按照中的说明配置了一个额外的网络适配器（如果需要） link:../mnode/task_mnode_install_add_storage_NIC.html["配置其他存储 NIC"]。
+* 您已按照中的说明配置了一个额外的网络适配器（如果需要） link:task_mnode_install_add_storage_NIC.html["配置其他存储 NIC"]。
 +
 
 NOTE: 如果 eth0 无法路由到 SVIP ，则永久性卷可能需要额外的网络适配器。在 iSCSI 存储网络上配置一个新的网络适配器，以便配置永久性卷。
@@ -119,7 +119,7 @@ sudo /sf/packages/mnode/redeploy-mnode -mu <mnode user>
 
 
 
-IMPORTANT: 如果先前已在管理节点上禁用 SSH 功能，则需要 link:../mnode/task_mnode_ssh_management.html["再次禁用 SSH"] 在已恢复的管理节点上。提供的 SSH 功能 link:../mnode/task_mnode_enable_remote_support_connections.html["NetApp 支持远程支持通道（ RST ）会话访问"] 默认情况下，在管理节点上处于启用状态。
+IMPORTANT: 如果先前已在管理节点上禁用 SSH 功能，则需要 link:task_mnode_ssh_management.html["再次禁用 SSH"] 在已恢复的管理节点上。提供的 SSH 功能 link:task_mnode_enable_remote_support_connections.html["NetApp 支持远程支持通道（ RST ）会话访问"] 默认情况下，在管理节点上处于启用状态。
 
 
 

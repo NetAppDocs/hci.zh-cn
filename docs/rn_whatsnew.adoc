@@ -35,6 +35,18 @@ NetApp HCI 1.10不再要求满足计算节点上的默认部署VMK和vmnic配置
 
 
 
+== 存储节点固件更新
+
+NetApp HCI 1.10包括存储节点的固件更新。 link:rn_relatedrn.html#storage-firmware["了解更多信息。"]。
+
+
+
+== 计算节点固件更新
+
+NetApp HCI 1.10包括计算节点的固件更新。 link:rn_relatedrn.html#compute-firmware["了解更多信息。"]。
+
+
+
 === 适用于vCenter Server 4.9的NetApp Element 插件可用性
 
 适用于vCenter Server 4.9的NetApp Element 插件在管理节点12.5和NetApp HCI 1.10版之外提供。要升级此插件，请按照中的说明进行操作 link:concept_hci_upgrade_overview.html["NetApp HCI 升级"] 文档。

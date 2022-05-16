@@ -6071,11 +6071,9 @@
   <block id="02bd6928c03c8f53c18f8a5143bdd5f4" category="list-text">您要升级的管理节点为 12.0 版，并使用 IPv4 网络。管理节点版本12.5不支持IPv6。</block>
   <block id="37a42081cc0d0c72d69723b5792a6c73" category="list-text">您已使用 NetApp Hybrid Cloud Control 将管理服务捆绑包更新为最新版本。您可以从以下 IP 地址访问 NetApp Hybrid Cloud Control ： ` https://&lt;ManagementNodeIP&gt;`</block>
   <block id="1e92b13cdf15b50caf5e299263e754d4" category="list-text">如果要将管理节点更新到版本12.5、则需要管理服务2.20.69或更高版本才能继续。</block>
-  <block id="4733d6f93dbca188e79e25900eaeacb7" category="list-text">您已按照中的说明配置了一个额外的网络适配器（如果需要） <block ref="1f5ebd4d6fe6b214007c2692b1a22cfb" category="inline-link-macro-rx"></block>。</block>
   <block id="dfa645595ef398bf7b6f3c49d39a3426" category="list-text">存储节点正在运行Element 12.3或更高版本。</block>
   <block id="bc6733dc102d98376848617102ed0352" category="list-text">下载<block ref="ef86b20d3f4c031a449af5dec98fb6d8" category="inline-link-rx"></block> 从 NetApp 支持站点到管理节点虚拟机的 Element 软件。</block>
   <block id="7af3e8bcf74bc743e6d42428a1ef8e84" category="list-text">对下载的文件运行 md5sum 以检查下载的完整性，并将输出与 NetApp 支持站点上提供的 Element 软件进行比较，如以下示例所示：</block>
-  <block id="a2f6f7c35b138d94e9b2424fdbb2d5c7" category="admonition">如果先前已在管理节点上禁用 SSH 功能，则需要 <block ref="babf2b858a12e4314c7067787e8a0fcb" category="inline-link-macro-rx"></block> 在已恢复的管理节点上。提供的 SSH 功能 <block ref="9dd7f5719fe61d2f4608af99c83acda9" category="inline-link-macro-rx"></block> 默认情况下，在管理节点上处于启用状态。</block>
   <block id="2914d2e1549f2ef461f9b040823e6218" category="list-text">您已将管理服务更新到2.20.69或更高版本。</block>
   <block id="311e83625ce0c896e7a3f811f3ac48c2" category="list-text">存储集群运行的是Element 12.3或更高版本。</block>
   <block id="fa74c37a30199ebd12f7aa7320d0cc0f" category="inline-link">NetApp HCI 1.9和1.9P1</block>
@@ -6083,12 +6081,10 @@
   <block id="6c529facc953c911e43fb9725bdef1f8" category="list-text">*已更新H610S节点的基板管理控制器(BMC)*：您已升级H610S节点的BMC版本。请参见 <block ref="f04f9a521fc4fd678cdbd3d698415a24" category="inline-link-macro-rx"></block>。</block>
   <block id="477832301b5ab810e59d16b6d6cf05dc" category="paragraph">这些组件包括管理服务、NetApp Hybrid Cloud Control、Element软件、管理节点、计算固件、计算驱动程序、 和适用于vCenter Server的Element插件。​</block>
   <block id="abad8a22ec62bb4befaee820afb760ef" category="inline-link-macro">使用HealthTools升级到Element 12.3</block>
-  <block id="e4f2f9baf039ea62b7a0740e3ba88a7a" category="admonition">从Element 12.5开始、Element软件升级不再支持NetApp HealthTools。如果您运行的是Element 11.0或11.1、则必须先执行此操作 <block ref="d9103b755f8af19a5128488b4c389687" category="inline-link-macro-rx"></block> 然后使用NetApp Hybrid Cloud Control升级到Element 12.5。</block>
   <block id="27bb76bfb1e4f9966c31f5042348cd1e" category="inline-link-macro">Element 软件</block>
   <block id="85aed6fa173952d69db4c99c1290921b" category="inline-link-macro">存储固件</block>
   <block id="a8c7f4c70c59120de0b33efda8af8aa5" category="list-text">您已为计划了足够的时间 <block ref="cff6d63ff47747e8e31df90baa037fdf" category="inline-link-macro-rx"></block> 和 <block ref="64ca0a1c0466cb0bbd500939e8f353f3" category="inline-link-macro-rx"></block> 升级。升级到Element软件12.5时、升级过程时间因Element软件版本和固件更新而异。</block>
   <block id="356747bc1580f5d7e13f9055ae1f02df" category="paragraph">要升级NetApp Element 软件、您可以使用NetApp混合云控制UI或REST API。Element 软件升级期间会禁止某些操作，例如添加和删除节点，添加和删除驱动器以及与启动程序，卷访问组和虚拟网络等关联的命令。</block>
-  <block id="ffd4aa64d8f4496c6bf5fe71098c57dd" category="admonition">从Element 12.5开始、Element软件升级不再支持NetApp HealthTools。如果您运行的是Element 11.0或11.1、则必须先执行此操作 <block ref="4f4fa541f4efe424c14199907bc39f9a" category="inline-link-macro-rx"></block> 然后使用NetApp Hybrid Cloud Control升级到Element 12.5。</block>
   <block id="7970314795c697c589f52cd629d4a341" category="admonition">在将Element软件升级到版本12.5之前、您必须升级到最新的管理服务包。如果要将Element软件更新到版本12.5、则需要使用管理服务2.20.69或更高版本继续操作。</block>
   <block id="c89140006bf75078f844d017f1b6efe6" category="list-text">*已更新H610S节点的基板管理控制器(BMC)*：您已升级H610S节点的BMC版本。请参见 <block ref="f04f9a521fc4fd678cdbd3d698415a24" category="inline-link-macro-rx"></block>。</block>
   <block id="5698bc375e8d546422c418c82337e349" category="admonition">如果您要将H610S系列节点升级到Element 12.5、并且此节点运行的Element软件版本早于11.8、则需要执行此中的其他升级步骤<block ref="f89d7bc8c94108aeb49b4fdeac4ce106" category="inline-link-rx"></block> 用于每个存储节点。如果您运行的是Element 11.8或更高版本、则不需要执行其他升级步骤。</block>
@@ -6116,4 +6112,10 @@
   <block id="96e3de2dc958815b04ec4fa9637d6c82" category="paragraph">只有在与VMware vSphere分布式交换机(VDS)结合使用时、才支持H610C节点的此配置、并且需要获得VMware vSphere Enterprise Plus许可。</block>
   <block id="3f8dc42473404a03daf2d9c6bea23bab" category="paragraph">只有在与VMware vSphere分布式交换机(VDS)结合使用时、才支持H615C节点的此配置、并且需要获得VMware vSphere Enterprise Plus许可。</block>
   <block id="c43e9c45e3f5fec93d3d81eb3dfd26b8" category="sidebar">升级NetApp HCI 系统版本1.10</block>
+  <block id="dcdf590029e004f9b873add76a7c9b0f" category="paragraph">NetApp HCI 1.10包括存储节点的固件更新。 <block ref="85b1ca7b9d38c1ae37737e559d029bba" category="inline-link-macro-rx"></block>。</block>
+  <block id="2873f22ff6aadfc4729e3610a34d21d3" category="section-title">计算节点固件更新</block>
+  <block id="1ca4ec9d42e7d5a59eaba19a479f205b" category="paragraph">NetApp HCI 1.10包括计算节点的固件更新。 <block ref="ca10623cb3d7fd255749833fc365bfbb" category="inline-link-macro-rx"></block>。</block>
+  <block id="2af95608d9fd504ee8d4e0f92619eb96" category="list-text">您已按照中的说明配置了一个额外的网络适配器（如果需要） <block ref="be46399bf51a96ee544de66528d12203" category="inline-link-macro-rx"></block>。</block>
+  <block id="73f0b06b075dc2c13caded9ae137e4cf" category="admonition">如果先前已在管理节点上禁用 SSH 功能，则需要 <block ref="5b81c87a44b075e9194cc26f66c2b99f" category="inline-link-macro-rx"></block> 在已恢复的管理节点上。提供的 SSH 功能 <block ref="6bb28df38aa0844e287b2e23fc581879" category="inline-link-macro-rx"></block> 默认情况下，在管理节点上处于启用状态。</block>
+  <block id="1c0d3ba5e7a44f6ae998504b246b1227" category="admonition">从Element 12.5开始、Element软件升级不再支持NetApp HealthTools。如果您运行的是Element 11.0或11.1、则必须先执行此操作 <block ref="44a31a9a881af2f85b504df3b697bf3f" category="inline-link-macro-rx"></block> 然后使用NetApp Hybrid Cloud Control升级到Element 12.5。</block>
 </blocks>
