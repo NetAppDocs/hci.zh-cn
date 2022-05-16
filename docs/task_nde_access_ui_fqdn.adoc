@@ -35,7 +35,7 @@ keywords: netapp, hci, fqdn, ui, access, web, administration
 == 使用 NetApp Hybrid Cloud Control 配置 FQDN Web UI 访问
 
 .步骤
-. 打开 Web 浏览器并浏览到管理节点的 IP 地址：
+. 在Web浏览器中打开管理节点的IP地址：
 +
 [listing]
 ----

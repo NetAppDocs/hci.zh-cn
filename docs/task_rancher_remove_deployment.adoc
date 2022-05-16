@@ -28,7 +28,7 @@ TIP: 您可能希望保留用户集群。如果确实保留了这些 Rancher ，
 您可以使用 NetApp Hybrid Cloud Control Web UI 删除在部署期间设置的三个虚拟机，以托管 Rancher 服务器。
 
 .步骤
-. 打开 Web 浏览器并浏览到管理节点的 IP 地址：
+. 在Web浏览器中打开管理节点的IP地址：
 +
 [listing]
 ----

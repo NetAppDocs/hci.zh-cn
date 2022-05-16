@@ -39,7 +39,7 @@ keywords: netapp, hci, on premise, expand, storage, compute, cluster
 
 
 .步骤
-. 打开 Web 浏览器并浏览到管理节点的 IP 地址。例如：
+. 在Web浏览器中打开管理节点的IP地址。例如：
 +
 [listing]
 ----

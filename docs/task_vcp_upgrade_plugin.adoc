@@ -2,24 +2,24 @@
 sidebar: sidebar 
 permalink: docs/task_vcp_upgrade_plugin.html 
 summary: 在 NetApp HCI 系统升级过程中，您可以升级适用于 vCenter Server 的 Element 插件。 
-keywords: netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7, 4.8 
+keywords: netapp, vcp, vCenter plug-in, upgrade, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9 
 ---
 = 升级适用于 vCenter Server 的 Element 插件
 :allow-uri-read: 
 
 
 [role="lead"]
-对于已注册适用于 vCenter Server 的 NetApp Element 插件（ VCP ）的现有 vSphere 环境，您可以在首次更新包含此插件服务的管理服务包后更新此插件注册。
+对于已注册适用于vCenter Server的NetApp Element 插件的现有vSphere环境、您可以在首次更新包含此插件服务的管理服务包后更新此插件注册。
 
 您可以使用注册实用程序在 vCenter Server 虚拟设备（ vCSA ）或 Windows 上更新插件注册。您必须在需要使用 vCenter 插件的每个 vCenter Server 上更改此插件的注册。
 
 此升级操作步骤包括以下升级情形：
 
-* 您要升级到 VCP 4.8 ， 4.7 ， 4.6 ， 4.5 或 4.4 。
+* 您要升级到适用于VMware vCenter Server 4.9、4.8、4.7、4.6、4.5或4.4的Element插件。
 * 您要升级到 7.0 ， 6.7 或 6.5 HTML5 vSphere Web Client 。
 +
 
-IMPORTANT: 此插件与适用于 VCP 4.7 及更高版本的 VMware vCenter Server 6.5 不兼容。
+IMPORTANT: 此插件与适用于VMware vCenter Server 4.6、4.7和4.8的VMware vCenter Server 6.5 for Element插件不兼容。
 
 * 您要升级到 6.7 Flash vSphere Web Client 。
 +
@@ -83,7 +83,7 @@ image::vcp_shortcuts_page_accessing_plugin.png[描述了成功升级或安装后
 ====
 如果不显示 vCenter 插件图标，请参见 link:https://docs.netapp.com/us-en/vcp/vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client["适用于 vCenter Server 的 Element 插件"^] 有关插件故障排除的文档。
 
-在使用 VMware vCenter Server 6.7U1 升级到 VCP 4.8 后，如果 NetApp Element 配置的 * 集群 * 和 * QoSSIOC 设置 * 部分未列出存储集群或显示服务器错误，请参见 link:https://docs.netapp.com/us-en/vcp/vcp_reference_troubleshoot_vcp.html#errors-after-vcp-4-8-upgrade-with-vmware-vcenter-server-6-7u1["适用于 vCenter Server 的 Element 插件"^] 有关对这些错误进行故障排除的文档。
+使用VMware vCenter Server 6.7U1升级到VCP 4.8或更高版本后、如果NetApp Element 配置的*集群*和* QoSSIOC设置*部分未列出存储集群或显示服务器错误、请参见 link:https://docs.netapp.com/us-en/vcp/vcp_reference_troubleshoot_vcp.html#errors-after-vcp-4-8-upgrade-with-vmware-vcenter-server-6-7u1["适用于 vCenter Server 的 Element 插件"^] 有关对这些错误进行故障排除的文档。
 
 ====
 . 在插件的 * NetApp Element Configuration* 扩展点中的 * 关于 * 选项卡中验证版本更改。
@@ -94,8 +94,8 @@ image::vcp_shortcuts_page_accessing_plugin.png[描述了成功升级或安装后
 
 [listing]
 ----
-NetApp Element Plug-in Version: 4.8
-NetApp Element Plug-in Build Number: 34
+NetApp Element Plug-in Version: 4.9
+NetApp Element Plug-in Build Number: 14
 ----
 
 NOTE: vCenter 插件包含联机帮助内容。要确保帮助包含最新内容，请在升级插件后清除浏览器缓存。

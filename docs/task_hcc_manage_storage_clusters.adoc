@@ -130,10 +130,12 @@ CAUTION: 单击 * 是 * 下一步将从安装中删除集群。
 NOTE: 一次只能有一个节点处于维护模式。
 
 .步骤
-. 打开 Web 浏览器并浏览到管理节点的 IP 地址。例如：
+. 在Web浏览器中打开管理节点的IP地址。例如：
 +
-`https://<ManagementNodeIP>`
-
+[listing]
+----
+https://<ManagementNodeIP>
+----
 . 通过提供 NetApp HCI 存储集群管理员凭据登录到 NetApp 混合云控制。
 +
 

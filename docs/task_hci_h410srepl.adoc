@@ -147,7 +147,12 @@ TIP: 确保存储容量均匀分布在所有机箱中，以获得最佳可靠性
 只有在 NetApp HCI 安装运行于 1.6P1 或更高版本时，才能使用 NetApp 混合云控制。
 
 .步骤
-. 打开 Web 浏览器并浏览到管理节点的 IP 地址。例如： `https://<ManagementNodeIP>/manager/login`
+. 在Web浏览器中打开管理节点的IP地址。例如：
++
+[listing]
+----
+https://<ManagementNodeIP>/manager/login
+----
 . 通过提供 NetApp HCI 存储集群管理员凭据登录到 NetApp 混合云控制。
 . 在 Expand Installation 窗格中，选择 * 展开 * 。
 . 通过提供 NetApp HCI 存储集群管理员凭据登录到 NetApp 部署引擎。

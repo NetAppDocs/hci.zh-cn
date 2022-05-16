@@ -29,7 +29,7 @@ keywords: netapp, hci, logs, collection, troubleshooting, monitor
 您可以从 NetApp Hybrid Cloud Control Dashboard 访问日志收集区域。
 
 .步骤
-. 打开 Web 浏览器并浏览到管理节点的 IP 地址。例如：
+. 在Web浏览器中打开管理节点的IP地址。例如：
 +
 [listing]
 ----

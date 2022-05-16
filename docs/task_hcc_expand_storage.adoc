@@ -33,7 +33,7 @@ keywords: netapp, hci, on premise, expand, storage, cluster
 TIP: 在扩展存储资源时，存储容量应均匀分布在所有机箱中，以获得最佳可靠性。
 
 .步骤
-. 打开 Web 浏览器并浏览到管理节点的 IP 地址。例如：
+. 在Web浏览器中打开管理节点的IP地址。例如：
 +
 [listing]
 ----

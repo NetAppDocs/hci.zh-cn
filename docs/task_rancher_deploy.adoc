@@ -53,10 +53,12 @@ NOTE: 您的 NetApp Support Edge 协议不包含 Rancher 支持。有关选项�
 
 要开始部署，请访问 NetApp Hybrid Cloud Control 。
 
-. 打开 Web 浏览器并浏览到管理节点的 IP 地址。例如：
+. 在Web浏览器中打开管理节点的IP地址。例如：
 +
-`https://<ManagementNodeIP>`
-
+[listing]
+----
+https://<ManagementNodeIP>
+----
 . 通过提供 NetApp HCI 存储集群管理员凭据登录到 NetApp 混合云控制。
 +
 此时将显示 NetApp Hybrid Cloud Control 界面。

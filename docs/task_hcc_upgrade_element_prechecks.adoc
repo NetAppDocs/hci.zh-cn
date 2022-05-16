@@ -12,13 +12,30 @@ keywords: netapp, storage prechecks, element upgrade, healthtools, sfupgradechec
 您必须在升级 Element 存储之前运行运行运行状况检查，以确保集群中的所有存储节点均已准备好进行下一次 Element 存储升级。
 
 .您需要什么？ #8217 ；将需要什么
-* 您已更新到最新的管理服务包（ 2.10.27 或更高版本）。
+* *管理服务*：您已更新到最新的管理服务包(2.10.27或更高版本)。
 +
 
 IMPORTANT: 在升级 Element 软件之前，您必须升级到最新的管理服务包。
 
-* 您正在运行管理节点 11.3 或更高版本。
-* 您的集群版本运行的是 NetApp Element 软件 11.3 或更高版本。
+* *管理节点*：正在运行管理节点11.3或更高版本。
+* * Element Software*：您的集群版本运行的是NetApp Element 软件11.3或更高版本。
+* *最终用户许可协议(EULA)*：从管理服务来看、在使用NetApp混合云控制UI或API运行Element存储运行状况检查之前、您必须接受并保存此EULA：
++
+.. 在Web浏览器中打开管理节点的IP地址：
++
+[listing]
+----
+https://<ManagementNodeIP>
+----
+.. 通过提供存储集群管理员凭据登录到 NetApp Hybrid Cloud Control 。
+.. 选择靠近接口右上角的 * 升级 * 。
+.. 此时将弹出EULA。向下滚动、选择*我接受当前更新和所有未来更新*、然后选择*保存*。
++
+
+NOTE: 如果您接受EULA、则会在所有未来更新中记录此EULA、并启用自动下载功能。您将收到有关NetApp软件更新和升级的更新、您可以在方便时自行决定安装这些更新。您可以通过禁用与NetApp联机软件存储库的网络连接来禁用自动下载功能。
+
+
+
 
 
 您可以使用 NetApp Hybrid Cloud Control （ HCC ） UI ， HCC API 或 HealthTools 套件运行运行状况检查：
@@ -40,7 +57,7 @@ IMPORTANT: 在升级 Element 软件之前，您必须升级到最新的管理服
 使用 NetApp Hybrid Cloud Control （ HCC ），您可以验证存储集群是否已做好升级准备。
 
 .步骤
-. 打开 Web 浏览器并浏览到管理节点的 IP 地址：
+. 在Web浏览器中打开管理节点的IP地址：
 +
 [listing]
 ----

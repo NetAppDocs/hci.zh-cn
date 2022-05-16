@@ -372,7 +372,7 @@ NOTE: 系统将自动发现所有其他 NetApp HCI 节点。
 === 展开现有 NetApp HCI 安装
 
 .步骤
-. 打开 Web 浏览器并浏览到管理节点的 IP 地址。
+. 在Web浏览器中打开管理节点的IP地址。
 . 通过提供 NetApp HCI 存储集群管理员凭据登录到 NetApp 混合云控制。
 . 按照向导中的步骤向 NetApp HCI 安装添加存储和 / 或计算节点。
 +

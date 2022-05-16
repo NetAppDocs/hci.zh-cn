@@ -29,7 +29,7 @@ NOTE: 如果您在运行状况检查期间设置了 BMC 凭据，则在 * 节点
 您可以使用 NetApp Hybrid Cloud Control Dashboard 编辑存储的 BMC 凭据。
 
 .步骤
-. 打开 Web 浏览器并浏览到管理节点的 IP 地址。例如：
+. 在Web浏览器中打开管理节点的IP地址。例如：
 +
 [listing]
 ----

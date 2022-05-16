@@ -28,7 +28,7 @@ NOTE: 首次启动新的 NetApp Hybrid Cloud Control 会话时，如果管理节
 
 == 访问 NetApp HCC 信息板
 
-. 打开 Web 浏览器并浏览到管理节点的 IP 地址。例如：
+. 在Web浏览器中打开管理节点的IP地址。例如：
 +
 [listing]
 ----

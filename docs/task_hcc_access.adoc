@@ -27,10 +27,12 @@ keywords: netapp, hci, on premise, hybrid cloud control, hcc
 
 * 步骤 *
 
-. 打开 Web 浏览器并浏览到管理节点的 IP 地址。例如：
+. 在Web浏览器中打开管理节点的IP地址。例如：
 +
-https://_<ManagementNodeIP>_[]
-
+[listing]
+----
+https://<ManagementNodeIP>
+----
 . 通过提供 NetApp HCI 存储集群管理员凭据登录到 NetApp 混合云控制。
 +
 此时将显示 NetApp Hybrid Cloud Control 界面。

@@ -18,7 +18,7 @@ SolidFire 系统使用卷配置存储。卷是 iSCSI 或光纤通道客户端通
 只有当您拥有 NetApp Hybrid Cloud Control 管理权限时，才能访问此信息。
 
 .步骤
-. 打开 Web 浏览器并浏览到管理节点的 IP 地址。例如：
+. 在Web浏览器中打开管理节点的IP地址。例如：
 +
 [listing]
 ----
