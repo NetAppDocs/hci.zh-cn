@@ -6077,7 +6077,6 @@
   <block id="2914d2e1549f2ef461f9b040823e6218" category="list-text">您已将管理服务更新到2.20.69或更高版本。</block>
   <block id="311e83625ce0c896e7a3f811f3ac48c2" category="list-text">存储集群运行的是Element 12.3或更高版本。</block>
   <block id="fa74c37a30199ebd12f7aa7320d0cc0f" category="inline-link">NetApp HCI 1.9和1.9P1</block>
-  <block id="b1943b2045cf1614e825d3581d335512" category="list-text"><block ref="b1943b2045cf1614e825d3581d335512" category="inline-link-rx"></block></block>
   <block id="6c529facc953c911e43fb9725bdef1f8" category="list-text">*已更新H610S节点的基板管理控制器(BMC)*：您已升级H610S节点的BMC版本。请参见 <block ref="f04f9a521fc4fd678cdbd3d698415a24" category="inline-link-macro-rx"></block>。</block>
   <block id="477832301b5ab810e59d16b6d6cf05dc" category="paragraph">这些组件包括管理服务、NetApp Hybrid Cloud Control、Element软件、管理节点、计算固件、计算驱动程序、 和适用于vCenter Server的Element插件。​</block>
   <block id="abad8a22ec62bb4befaee820afb760ef" category="inline-link-macro">使用HealthTools升级到Element 12.3</block>
@@ -6118,4 +6117,5 @@
   <block id="2af95608d9fd504ee8d4e0f92619eb96" category="list-text">您已按照中的说明配置了一个额外的网络适配器（如果需要） <block ref="be46399bf51a96ee544de66528d12203" category="inline-link-macro-rx"></block>。</block>
   <block id="73f0b06b075dc2c13caded9ae137e4cf" category="admonition">如果先前已在管理节点上禁用 SSH 功能，则需要 <block ref="5b81c87a44b075e9194cc26f66c2b99f" category="inline-link-macro-rx"></block> 在已恢复的管理节点上。提供的 SSH 功能 <block ref="6bb28df38aa0844e287b2e23fc581879" category="inline-link-macro-rx"></block> 默认情况下，在管理节点上处于启用状态。</block>
   <block id="1c0d3ba5e7a44f6ae998504b246b1227" category="admonition">从Element 12.5开始、Element软件升级不再支持NetApp HealthTools。如果您运行的是Element 11.0或11.1、则必须先执行此操作 <block ref="44a31a9a881af2f85b504df3b697bf3f" category="inline-link-macro-rx"></block> 然后使用NetApp Hybrid Cloud Control升级到Element 12.5。</block>
+  <block id="349ff6a47f89283c2d4f778d3823c091" category="list-text"><block ref="349ff6a47f89283c2d4f778d3823c091" category="inline-link-rx"></block></block>
 </blocks>
