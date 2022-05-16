@@ -550,6 +550,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -1090,11 +1092,11 @@
           
           <a target="_blank" 
             
-              href="/zh-cn/hci/pdfs/sidebar/升级_NetApp_HCI_系统版本_1_9_或_1_9P1.pdf" 
+              href="/zh-cn/hci/pdfs/sidebar/升级NetApp_HCI_系统版本1_10.pdf" 
             
           >
             <img src="/zh-cn/hci/images/pdf.png" width="16" height="16"/>
-            升级 NetApp HCI 系统版本 1.9 或 1.9P1
+            升级NetApp HCI 系统版本1.10
           </a>
           
 
@@ -1115,8 +1117,6 @@
             系统升级过程
           </a>
           
-
-
 
 
 
@@ -1441,6 +1441,8 @@
         保护域
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/hci_prereqs_witness_nodes.html">
         见证双节点存储集群的节点资源要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/hci_prereqs_deployment_configuration_restriction.html">
+        部署配置限制
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 开始使用 NetApp HCI</div>
       </a>
@@ -1635,7 +1637,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_hcc_collectlogs.html">
         收集日志以进行故障排除
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> 升级 NetApp HCI 系统版本 1.9 或 1.9P1</div>
+        <div class="na-navbar-padding"> 升级NetApp HCI 系统版本1.10</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/concept_hci_upgrade_overview.html">
         升级顺序概述
@@ -1644,8 +1646,6 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_hcc_update_management_services.html">
         更新管理服务
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_upgrade_element_latest_healthtools.html">
-        升级到最新的 HealthTools
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_hcc_upgrade_element_prechecks.html">
         在升级存储之前，请运行 Element 存储运行状况检查
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_hcc_upgrade_element_software.html">
@@ -1807,7 +1807,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-18 06:14:20 +0000">04/18/2022</time>
+    <time datetime="2022-05-16 16:25:23 +0000">05/16/2022</time>
     
   
 
@@ -1817,33 +1817,107 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>NetApp 会定期更新 NetApp HCI ，为您提供新功能，增强功能和错误修复。NetApp HCI 1.9P1 包括适用于存储集群的 Element 12.3.2 。</p>
+<p>NetApp 会定期更新 NetApp HCI ，为您提供新功能，增强功能和错误修复。NetApp HCI 1.10包括适用于存储集群的Element 12.5。</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>。 <a href="#netapp-hci-1-9p1">NetApp HCI 1.9P1</a> 第节介绍 NetApp HCI 1.9P1 版中的新增功能和更新。</p>
+<p>。 <a href="#netapp-hci-1-10">NetApp HCI 1.10</a> 第节介绍NetApp HCI 1.10版中的新增功能和更新。</p>
 </li>
 <li>
-<p>。 <a href="#element-12-3-2">Element 12.3.2</a> 第节介绍 NetApp Element 12.3.2 中的新增功能和更新。</p>
+<p>。 <a href="#Element software 12.5">[Element software 12.5]</a> 第节介绍Element 12.5中的新增功能和更新。</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="netapp-hci-1-9p1">NetApp HCI 1.9P1</h2>
+<h2 id="netapp-hci-1-10">NetApp HCI 1.10</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>NetApp HCI 1.9P1 改进了安全性和稳定性。</p>
+<p>NetApp HCI 1.10提高了安全性和稳定性、并提高了部署后扩展的灵活性。</p>
+</div>
+<div class="sect2">
+<h3 id="部署后扩展灵活性">部署后扩展灵活性</h3>
+<div class="paragraph">
+<p>NetApp HCI 1.10不再要求满足计算节点上的默认部署VMK和vmnic配置设置、从而提高了扩展NetApp HCI 计算资源的灵活性。从NetApp HCI 1.10开始、扩展计算资源时、NetApp HCI 只需要在计算节点上配置常规VMK。 <a href="task_nde_supported_net_changes.html">"了解更多信息。"</a>。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="适用于vcenter-server-4-9的netapp-element-插件可用性">适用于vCenter Server 4.9的NetApp Element 插件可用性</h3>
+<div class="paragraph">
+<p>适用于vCenter Server 4.9的NetApp Element 插件在管理节点12.5和NetApp HCI 1.10版之外提供。要升级此插件，请按照中的说明进行操作 <a href="concept_hci_upgrade_overview.html">"NetApp HCI 升级"</a> 文档。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="netapp-hybrid-cloud-control增强功能">NetApp Hybrid Cloud Control增强功能</h3>
+<div class="paragraph">
+<p>NetApp Hybrid Cloud Control在版本1.10中进行了增强。 <a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes" target="_blank" rel="noopener">"了解更多信息。"</a>。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="已解决的问题和已知问题">已解决的问题和已知问题</h3>
+<div class="paragraph">
+<p>NetApp Bug Online工具可提供有关NetApp HCI 、Element软件和其他产品的已解决问题和已知问题。您可以在中使用关键字或版本浏览这些问题 <a href="https://mysupport.netapp.com/site/products/all/details/netapp-hci/bugsonline-tab" target="_blank" rel="noopener">"NetApp Bug Online"</a>。</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="element-12-3-2">Element 12.3.2</h2>
+<h2 id="element软件12-5">Element软件12.5.</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Element 软件 12.3.2 版包含一些缓解措施，可消除 Element 软件受到 Apache Log4j 漏洞的影响。已启用虚拟卷（ VVol ）功能的 NetApp SolidFire 存储集群会受到此漏洞的影响。</p>
+<p>Element 12.5引入了改进的存储节点访问、增强的自定义保护域易管理性、新增的和改进的集群故障和事件、增强的集群UI功能、增强的安全性以及使用Ansible的自动升级。</p>
+</div>
+<div class="sect2">
+<h3 id="改进了存储节点访问">改进了存储节点访问</h3>
+<div class="paragraph">
+<p>Element 12.5通过使用签名SSH证书改进了对单个节点的远程访问。为了安全地远程访问存储节点、现在会在存储节点的RTFI期间创建一个名为`sfreadonly`的新的有限权限本地用户帐户。使用`sfreadonly`帐户可以访问存储节点后端、以便进行基本维护或故障排除。现在、您可以为集群管理员用户配置`supportAdmin`访问类型、以允许NetApp支持根据需要访问集群。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="增强了自定义保护域的易管理性">增强了自定义保护域的易管理性</h3>
+<div class="paragraph">
+<p>Element 12.5提供了一个新的用户界面、可用于快速轻松地查看现有的自定义保护域并配置新的自定义保护域。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="新增并改进了集群故障事件和警报">新增并改进了集群故障、事件和警报</h3>
+<div class="paragraph">
+<p>Element 12.5引入了新的集群故障代码`BmcSelfTestFailed`和`CpuThermalEventThreshold`、从而增强了系统故障排除的能力。Element 12.5还改进了现有集群事件和警报的可靠性、例如`nodeOffline`、<code>volumeOffline</code>、<code>driveHealthFault</code>、<code>networkEvent</code>、 和`cSumEvent`。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="从创建集群ui启用空闲软件加密">从创建集群UI启用空闲软件加密</h3>
+<div class="paragraph">
+<p>在创建集群UI中添加了一个新复选框、Element 12.5允许您在创建集群期间为SolidFire 全闪存存储集群启用集群范围的空闲软件加密。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="存储节点固件更新">存储节点固件更新</h3>
+<div class="paragraph">
+<p>Element 12.5包括存储节点的固件更新。 <a href="https://docs.netapp.com/us-en/element-software/concepts/concept_rn_relatedrn_element.html#storage-firmware" target="_blank" rel="noopener">"了解更多信息。"</a>。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="增强的安全性">增强的安全性</h3>
+<div class="paragraph">
+<p>Element 12.5提供了一种缓解方法、可消除Element软件受到Apache Log4j漏洞的影响。启用了虚拟卷(VVol)功能的NetApp SolidFire 存储集群受到Apache Log4j漏洞的影响。有关NetApp Element 软件中Apache Log4j漏洞的临时解决策 的信息、请参见 <a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/Element_Software_-_Apache_Log4j_Vulnerability_-_Workaround" target="_blank" rel="noopener">"知识库文章"</a>。</p>
+</div>
+<div class="paragraph">
+<p>如果您运行的是Element 11.x、12.0或12.2、或者您的存储集群已位于Element 12.3或12.3.1中且已启用VVol功能、则强烈建议升级到12.5。</p>
+</div>
+<div class="paragraph">
+<p>Element 12.5还包括120多个CVE安全漏洞修复。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="使用ansible自动升级">使用Ansible自动升级</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>在Element 12.5中、您可以使用Ansible对整个存储集群执行滚动升级、从而自动执行Element软件升级工作流。要开始使用，请导航到 <a href="https://github.com/NetApp-Automation" target="_blank" rel="noopener">"NetApp Ansible存储库"</a> 在GitHub上下载`NAR_solidfire_SDS_upgrade`角色和文档。</p>
 </div>
 <h2 id="了解更多信息" class="discrete">了解更多信息</h2>
 <div class="ulist">

@@ -541,6 +541,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -1081,11 +1083,11 @@
           
           <a target="_blank" 
             
-              href="/zh-cn/hci/pdfs/sidebar/升级_NetApp_HCI_系统版本_1_9_或_1_9P1.pdf" 
+              href="/zh-cn/hci/pdfs/sidebar/升级NetApp_HCI_系统版本1_10.pdf" 
             
           >
             <img src="/zh-cn/hci/images/pdf.png" width="16" height="16"/>
-            升级 NetApp HCI 系统版本 1.9 或 1.9P1
+            升级NetApp HCI 系统版本1.10
           </a>
           
 
@@ -1106,8 +1108,6 @@
             系统升级过程
           </a>
           
-
-
 
 
 
@@ -1441,6 +1441,8 @@
         保护域
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/hci_prereqs_witness_nodes.html">
         见证双节点存储集群的节点资源要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/hci_prereqs_deployment_configuration_restriction.html">
+        部署配置限制
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 开始使用 NetApp HCI</div>
       </a>
@@ -1635,7 +1637,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_hcc_collectlogs.html">
         收集日志以进行故障排除
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> 升级 NetApp HCI 系统版本 1.9 或 1.9P1</div>
+        <div class="na-navbar-padding"> 升级NetApp HCI 系统版本1.10</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/concept_hci_upgrade_overview.html">
         升级顺序概述
@@ -1644,8 +1646,6 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_hcc_update_management_services.html">
         更新管理服务
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_upgrade_element_latest_healthtools.html">
-        升级到最新的 HealthTools
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_hcc_upgrade_element_prechecks.html">
         在升级存储之前，请运行 Element 存储运行状况检查
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_hcc_upgrade_element_software.html">
@@ -1807,7 +1807,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-16 14:13:30 +0000">05/16/2022</time>
+    <time datetime="2022-05-16 16:25:23 +0000">05/16/2022</time>
     
   
 
@@ -1881,7 +1881,7 @@
 <p>* 集群运行状况 * ：您已运行运行运行状况检查。请参见 <a href="task_hcc_upgrade_element_prechecks.html">"在升级存储之前，请运行 Element 存储运行状况检查"</a>。</p>
 </li>
 <li>
-<p>* 已更新 H610S 节点的 BMC * ：您已升级 H610S 节点的 BMC 版本。请参见 <a href="rn_H610S_BMC_3.84.07.html" target="_blank" rel="noopener">"发行说明和升级说明"</a>。</p>
+<p><strong>已更新H610S节点的基板管理控制器(BMC)</strong>：您已升级H610S节点的BMC版本。请参见 <a href="rn_H610S_BMC_3.84.07.html" target="_blank" rel="noopener">"发行说明和升级说明"</a>。</p>
 </li>
 </ul>
 </div>
@@ -1897,8 +1897,58 @@
 </tr>
 </table>
 </div>
-<div class="ulist">
+<div id="storage-firmware-upgrade" class="ulist">
 <ul>
+<li>
+<p><strong>升级过程时间</strong>：您已计划足够的时间执行升级。升级到Element软件12.5时、升级过程时间会因您当前的Element软件版本和固件更新而异。</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">存储节点</th>
+<th class="tableblock halign-left valign-top">当前Element软件版本</th>
+<th class="tableblock halign-left valign-top">每个节点的大致软件和固件安装时间<sup>1</sup></th>
+<th class="tableblock halign-left valign-top">每个节点的大致数据同步时间<sup>2</sup></th>
+<th class="tableblock halign-left valign-top">每个节点的大致升级总时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">具有最新固件的所有SolidFire 和NetApp H系列节点</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15 分钟</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10到15分钟</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20到30分钟</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">H610S和H410S</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.x和11.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">60分钟</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30到60分钟</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90到120分钟</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">H610S</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.7及更早版本</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90分钟</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">40到70分钟</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">您还必须花费130到160分钟 <a href="https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure" target="_blank" rel="noopener">"完全关闭节点并断开电源"</a> 对于每个H610S节点。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><sup>1</sup>有关适用于您的硬件的完整固件和驱动程序固件列表、请参见此内容 <a href="https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software" target="_blank" rel="noopener">"知识库文章"</a> （需要登录）。</p>
+</div>
+<div class="paragraph">
+<p><sup>2</sup>如果将写入IOPS负载较重的集群与较长的固件更新时间结合使用、则数据同步时间将会增加。</p>
+</div>
+</li>
 <li>
 <p><strong>最终用户许可协议(EULA)</strong>：从管理服务2.2开始、您必须先接受并保存EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级存储固件：</p>
 <div class="olist loweralpha">

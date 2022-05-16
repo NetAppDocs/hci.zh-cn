@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="在 NetApp HCI 系统升级过程中，您需要对 NetApp Element 软件运行状况检查。">
-  <meta name="keywords" content=" netapp, storage prechecks, element upgrade, healthtools, sfupgradecheck"><!-- Icons -->
+  <meta name="keywords" content=" netapp, storage prechecks, element upgrade, sfupgradecheck"><!-- Icons -->
   <link rel="icon" href="/zh-cn/hci/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -530,6 +530,8 @@
     
 
   
+
+
 
 
 
@@ -1081,11 +1083,11 @@
           
           <a target="_blank" 
             
-              href="/zh-cn/hci/pdfs/sidebar/升级_NetApp_HCI_系统版本_1_9_或_1_9P1.pdf" 
+              href="/zh-cn/hci/pdfs/sidebar/升级NetApp_HCI_系统版本1_10.pdf" 
             
           >
             <img src="/zh-cn/hci/images/pdf.png" width="16" height="16"/>
-            升级 NetApp HCI 系统版本 1.9 或 1.9P1
+            升级NetApp HCI 系统版本1.10
           </a>
           
 
@@ -1106,8 +1108,6 @@
             系统升级过程
           </a>
           
-
-
 
 
     <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
@@ -1441,6 +1441,8 @@
         保护域
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/hci_prereqs_witness_nodes.html">
         见证双节点存储集群的节点资源要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/hci_prereqs_deployment_configuration_restriction.html">
+        部署配置限制
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 开始使用 NetApp HCI</div>
       </a>
@@ -1635,7 +1637,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_hcc_collectlogs.html">
         收集日志以进行故障排除
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> 升级 NetApp HCI 系统版本 1.9 或 1.9P1</div>
+        <div class="na-navbar-padding"> 升级NetApp HCI 系统版本1.10</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/concept_hci_upgrade_overview.html">
         升级顺序概述
@@ -1644,8 +1646,6 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_hcc_update_management_services.html">
         更新管理服务
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_upgrade_element_latest_healthtools.html">
-        升级到最新的 HealthTools
       </a></li><li class="  active "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_hcc_upgrade_element_prechecks.html">
         在升级存储之前，请运行 Element 存储运行状况检查
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_hcc_upgrade_element_software.html">
@@ -1807,7 +1807,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-16 14:13:30 +0000">05/16/2022</time>
+    <time datetime="2022-05-16 16:25:23 +0000">05/16/2022</time>
     
   
 
@@ -1882,7 +1882,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>您可以使用 NetApp Hybrid Cloud Control （ HCC ） UI ， HCC API 或 HealthTools 套件运行运行状况检查：</p>
+<p>您可以使用NetApp Hybrid Cloud Control UI或NetApp Hybrid Cloud Control API运行运行状况检查：</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1891,9 +1891,6 @@
 </li>
 <li>
 <p><a href="#Use API to run Element storage health checks prior to upgrading storage">[Use API to run Element storage health checks prior to upgrading storage]</a></p>
-</li>
-<li>
-<p><a href="#Use HealthTools to run Element storage health checks prior to upgrading storage">[Use HealthTools to run Element storage health checks prior to upgrading storage]</a></p>
 </li>
 </ul>
 </div>
@@ -2190,226 +2187,6 @@
 </div>
 </li>
 </ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="在升级存储之前请使用-healthtools-运行-element-存储运行状况检查">在升级存储之前，请使用 HealthTools 运行 Element 存储运行状况检查</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>您可以使用 <code>sfupgradecheck</code> 命令验证存储集群是否已做好升级准备。此命令可验证待定节点，磁盘空间和集群故障等信息。</p>
-</div>
-<div class="paragraph">
-<p>如果您的管理节点位于没有外部连接的非公开站点上，则升级就绪检查需要使用您在期间下载的 <code>metadata .json</code> 文件 <a href="task_upgrade_element_latest_healthtools.html">"HealthTools 升级"</a> 以成功运行。</p>
-</div>
-<div class="paragraph">
-<p>此操作步骤介绍了如何处理升级检查，这些检查会产生以下结果之一：</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>已成功运行 <code>sfupgradecheck</code> 命令。您的集群已做好升级准备。</p>
-</li>
-<li>
-<p>在 <code>sfupgradecheck</code> 工具中执行的检查失败，并显示错误消息。您的集群尚未做好升级准备，需要执行其他步骤。</p>
-</li>
-<li>
-<p>升级检查失败，并显示一条错误消息，指出 HealthTools 已过期。</p>
-</li>
-<li>
-<p>升级检查失败，因为管理节点位于非公开站点上。</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">步骤</div>
-<ol class="arabic">
-<li>
-<p>运行 <code>sfupgradecheck</code> 命令：</p>
-<div class="listingblock">
-<div class="content">
-<pre>sfupgradecheck -u &lt;cluster-user-name&gt; MVIP</pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/hci/images/note.svg" alt="注">
-</td>
-<td class="content">
-对于包含特殊字符的密码，请在每个特殊字符之前添加反斜杠（` \` ）。例如， <code>mypass ！@1</code> 应输入为 <code>mypass\ ！ \@</code> 。
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>示例输入命令，其中包含示例输出，不会显示任何错误，并且您已做好升级准备：</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>sfupgradecheck -u admin 10.117.78.244</pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>check_pending_nodes:
-Test Description: Verify no pending nodes in cluster
-More information: https://kb.netapp.com/support/s/article/ka11A0000008ltOQAQ/pendingnodes
-check_cluster_faults:
-Test Description: Report any cluster faults
-check_root_disk_space:
-Test Description: Verify node root directory has at least 12 GBs of available disk space
-Passed node IDs: 1, 2, 3
-More information: https://kb.netapp.com/support/s/article/ka11A0000008ltTQAQ/
-SolidFire-Disk-space-error
-check_mnode_connectivity:
-Test Description: Verify storage nodes can communicate with management node
-Passed node IDs: 1, 2, 3
-More information: https://kb.netapp.com/support/s/article/ka11A0000008ltYQAQ/mNodeconnectivity
-check_files:
-Test Description: Verify options file exists
-Passed node IDs: 1, 2, 3
-check_cores:
-Test Description: Verify no core or dump files exists
-Passed node IDs: 1, 2, 3
-check_upload_speed:
-Test Description: Measure the upload speed between the storage node and the
-management node
-Node ID: 1 Upload speed: 90063.90 KBs/sec
-Node ID: 3 Upload speed: 106511.44 KBs/sec
-Node ID: 2 Upload speed: 85038.75 KBs/sec</pre>
-</div>
-</div>
-</li>
-<li>
-<p>如果出现错误，则需要执行其他操作。有关详细信息，请参见以下子部分。</p>
-</li>
-</ol>
-</div>
-<div class="sect2">
-<h3 id="您的集群未做好升级准备">您的集群未做好升级准备</h3>
-<div class="paragraph">
-<p>如果您看到与其中一项运行状况检查相关的错误消息，请按照以下步骤进行操作：</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>查看 <code>sfupgradecheck</code> 错误消息。</p>
-<div class="paragraph">
-<p>响应示例：</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>The following tests failed:
-check_root_disk_space:
-Test Description: Verify node root directory has at least 12 GBs of available disk space
-Severity: ERROR
-Failed node IDs: 2
-Remedy: Remove unneeded files from root drive
-More information: https://kb.netapp.com/support/s/article/ka11A0000008ltTQAQ/SolidFire-
-Disk-space-error
-check_pending_nodes:
-Test Description: Verify no pending nodes in cluster
-More information: https://kb.netapp.com/support/s/article/ka11A0000008ltOQAQ/pendingnodes
-check_cluster_faults:
-Test Description: Report any cluster faults
-check_root_disk_space:
-Test Description: Verify node root directory has at least 12 GBs of available disk space
-Passed node IDs: 1, 3
-More information: https://kb.netapp.com/support/s/article/ka11A0000008ltTQAQ/SolidFire-
-Disk-space-error
-check_mnode_connectivity:
-Test Description: Verify storage nodes can communicate with management node
-Passed node IDs: 1, 2, 3
-More information: https://kb.netapp.com/support/s/article/ka11A0000008ltYQAQ/mNodeconnectivity
-check_files:
-Test Description: Verify options file exists
-Passed node IDs: 1, 2, 3
-check_cores:
-Test Description: Verify no core or dump files exists
-Passed node IDs: 1, 2, 3
-check_upload_speed:
-Test Description: Measure the upload speed between the storage node and the management node
-Node ID: 1 Upload speed: 86518.82 KBs/sec
-Node ID: 3 Upload speed: 84112.79 KBs/sec
-Node ID: 2 Upload speed: 93498.94 KBs/sec</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>在此示例中，节点 1 的磁盘空间不足。有关详细信息，请参见 <a href="https://kb.netapp.com" target="_blank" rel="noopener">"知识库"</a> （ KB ）错误消息中列出的文章。</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="healthtools-已过期">HealthTools 已过期</h3>
-<div class="paragraph">
-<p>如果您看到指示 HealthTools 不是最新版本的错误消息，请按照以下说明进行操作：</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>查看错误消息，并注意升级检查失败。</p>
-<div class="paragraph">
-<p>响应示例：</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>sfupgradecheck failed: HealthTools is out of date:
-installed version: 2018.02.01.200
-latest version: 2020.03.01.09.
-The latest version of the HealthTools can be downloaded from: https://mysupport.netapp.com/NOW/cgi-bin/software/
-Or rerun with the -n option</pre>
-</div>
-</div>
-</li>
-<li>
-<p>按照响应中所述的说明进行操作。</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="您的管理节点位于非公开站点上">您的管理节点位于非公开站点上</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>查看此消息，并注意升级检查失败：</p>
-<div class="paragraph">
-<p>响应示例：</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>sfupgradecheck failed: Unable to verify latest available version of healthtools.</pre>
-</div>
-</div>
-</li>
-<li>
-<p>下载 <a href="https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740" target="_blank" rel="noopener">"JSON 文件"</a> 从 NetApp 支持站点的非管理节点计算机上，将其重命名为 <code>metadata 。 json</code> 。</p>
-</li>
-<li>
-<p>运行以下命令：</p>
-<div class="listingblock">
-<div class="content">
-<pre>sfupgradecheck -l --metadata=&lt;path-to-metadata-json&gt;</pre>
-</div>
-</div>
-</li>
-<li>
-<p>有关详细信息，请参见其他 <a href="task_upgrade_element_latest_healthtools.html">"HealthTools 升级"</a> 非公开站点的信息。</p>
-</li>
-<li>
-<p>运行以下命令，验证 HealthTools 套件是否为最新版本：</p>
-<div class="listingblock">
-<div class="content">
-<pre>sfupgradecheck -u &lt;cluster-user-name&gt; -p &lt;cluster-password&gt; MVIP</pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
 </div>
 </div>
 </div>

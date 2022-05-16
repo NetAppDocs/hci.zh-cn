@@ -541,6 +541,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -1081,11 +1083,11 @@
           
           <a target="_blank" 
             
-              href="/zh-cn/hci/pdfs/sidebar/升级_NetApp_HCI_系统版本_1_9_或_1_9P1.pdf" 
+              href="/zh-cn/hci/pdfs/sidebar/升级NetApp_HCI_系统版本1_10.pdf" 
             
           >
             <img src="/zh-cn/hci/images/pdf.png" width="16" height="16"/>
-            升级 NetApp HCI 系统版本 1.9 或 1.9P1
+            升级NetApp HCI 系统版本1.10
           </a>
           
     <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
@@ -1115,8 +1117,6 @@
             系统升级过程
           </a>
           
-
-
 
 
 
@@ -1441,6 +1441,8 @@
         保护域
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/hci_prereqs_witness_nodes.html">
         见证双节点存储集群的节点资源要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/hci_prereqs_deployment_configuration_restriction.html">
+        部署配置限制
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 开始使用 NetApp HCI</div>
       </a>
@@ -1635,7 +1637,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_hcc_collectlogs.html">
         收集日志以进行故障排除
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> 升级 NetApp HCI 系统版本 1.9 或 1.9P1</div>
+        <div class="na-navbar-padding"> 升级NetApp HCI 系统版本1.10</div>
       </a>
       <ul><li class="  active "><a class="na-navbar-padding" href="/zh-cn/hci/docs/concept_hci_upgrade_overview.html">
         升级顺序概述
@@ -1644,8 +1646,6 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_hcc_update_management_services.html">
         更新管理服务
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_upgrade_element_latest_healthtools.html">
-        升级到最新的 HealthTools
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_hcc_upgrade_element_prechecks.html">
         在升级存储之前，请运行 Element 存储运行状况检查
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/hci/docs/task_hcc_upgrade_element_software.html">
@@ -1807,7 +1807,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-18 06:14:20 +0000">04/18/2022</time>
+    <time datetime="2022-05-16 16:25:23 +0000">05/16/2022</time>
     
   
 
@@ -1820,7 +1820,19 @@
 <p>您可以通过按顺序升级所有 NetApp HCI 软件组件，在部署后使 NetApp HCI 系统保持最新。</p>
 </div>
 <div class="paragraph">
-<p>这些组件包括管理服务， HealthTools ， NetApp Hybrid Cloud Control ， Element 软件，管理节点，计算固件，计算驱动程序， 和适用于 vCenter Server 的 Element 插件。​</p>
+<p>这些组件包括管理服务、NetApp Hybrid Cloud Control、Element软件、管理节点、计算固件、计算驱动程序、 和适用于vCenter Server的Element插件。​</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/hci/images/note.svg" alt="注">
+</td>
+<td class="content">
+从Element 12.5开始、Element软件升级不再支持NetApp HealthTools。如果您运行的是Element 11.0或11.1、则必须先执行此操作 <a href="https://docs.netapp.com/us-en/element-software-123/upgrade/task_hcc_upgrade_element_software.html#upgrade-element-software-at-connected-sites-using-healthtools" target="_blank" rel="noopener">"使用HealthTools升级到Element 12.3"</a> 然后使用NetApp Hybrid Cloud Control升级到Element 12.5。
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>。 <a href="#sys_upgrade_seq">系统升级顺序</a> 内容介绍了完成 NetApp HCI 系统升级所需的任务。理想情况下，您可以在较大的升级序列中执行这些过程，而不是孤立执行这些过程。如果需要基于组件的升级或更新，请参见操作步骤前提条件以确保解决其他复杂问题。</p>
@@ -1854,6 +1866,9 @@
 </li>
 <li>
 <p>您已确保所有节点上的系统时间均已同步，并且已为存储集群和节点正确配置 NTP 。必须在每个节点 Web UI （<code>https://[IP address] ： 442</code> ）中为每个节点配置一个 DNS 命名服务器，并且不会出现与时间偏差相关的未解决集群故障。</p>
+</li>
+<li>
+<p>您已为计划了足够的时间 <a href="task_hcc_upgrade_element_software.html#element-upgrade-time">"Element 软件"</a> 和 <a href="task_hcc_upgrade_storage_firmware.html#storage-firmware-upgrade">"存储固件"</a> 升级。升级到Element软件12.5时、升级过程时间因Element软件版本和固件更新而异。</p>
 </li>
 </ul>
 </div>
@@ -1890,21 +1905,6 @@
 </td>
 <td class="content">
 在升级 Element 软件之前，您必须更新到最新的管理服务包。
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p><a href="task_upgrade_element_latest_healthtools.html">"（可选）升级到最新的 HealthTools"</a>。</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/hci/images/note.svg" alt="注">
-</td>
-<td class="content">
-只有在运行的管理节点和 Element 软件为 11.1 或更早版本时，才需要升级 HealthTools 。使用 NetApp Hybrid Cloud Control 执行 Element 升级不需要 HealthTools 。
 </td>
 </tr>
 </table>
