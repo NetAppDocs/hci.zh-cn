@@ -1807,7 +1807,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-18 06:14:20 +0000">04/18/2022</time>
+    <time datetime="2022-05-16 14:13:30 +0000">05/16/2022</time>
     
   
 
@@ -1817,18 +1817,6 @@
 <div class="paragraph lead">
 <p>您可能需要允许以下端口通过数据中心的边缘防火墙，以便可以远程管理系统，允许数据中心外部的客户端连接到资源，并确保内部服务能够正常运行。其中某些端口， URL 或 IP 地址可能不是必需的，具体取决于您使用系统的方式。除非另有说明，否则所有端口均为 TCP 。</p>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/hci/images/important.svg" alt="重要">
-</td>
-<td class="content">
-NetApp 正在重建联机存储库，该存储库托管支持 NetApp Hybrid Cloud Control 自动升级工作流的软件和固件包下载。 <a href="https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU474">"了解更多信息。"</a>
-</td>
-</tr>
-</table>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1837,16 +1825,24 @@ NetApp 正在重建联机存储库，该存储库托管支持 NetApp Hybrid Clou
 </td>
 <td class="content">
 <div class="paragraph">
-<p>NetApp Hybrid Cloud Control Web UI 和 API 可从 NetApp 在线软件存储库下载软件包，该存储库使用 JFrog Artifactory Cloud 作为分发中心，并采用 CDN 技术托管文件。因此，根据内容交付网络，某些 URL 或 IP 地址可能会解析为其他 URL 或 IP 地址。如果可能，您应与网络工程师合作，使用以下常规步骤将这些 URL 或 IP 地址添加到防火墙规则中：</p>
+<p>NetApp Hybrid Cloud Control Web UI和API可从NetApp联机软件存储库下载软件包。因此，根据内容交付网络，某些 URL 或 IP 地址可能会解析为其他 URL 或 IP 地址。如果可能，您应与网络工程师合作，使用以下常规步骤将这些 URL 或 IP 地址添加到防火墙规则中：</p>
 </div>
 <div class="olist arabic">
 <div class="title">步骤</div>
 <ol class="arabic">
 <li>
-<p>使用 wget 或 cURL 实用程序访问 URL （例如 repo.netapp.com ）。</p>
+<p>使用wget或cURL实用程序访问URL (例如support-sg-nawest.netapp.com)。</p>
 </li>
 <li>
-<p>无法访问此 URL （与 repo.netapp.com 不同）。</p>
+<p>检查连接、如以下示例所示：</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/network_ports.PNG" alt="检查端口连接">
+</div>
+</div>
+</li>
+<li>
+<p>无法访问此URL (与support-sg-nawest.netapp.com不同)。</p>
 </li>
 <li>
 <p>编辑防火墙规则以允许使用新 URL 。</p>
@@ -2009,18 +2005,28 @@ NetApp 正在重建联机存储库，该存储库托管支持 NetApp Hybrid Clou
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">管理节点</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>联机软件存储库：</p>
+<p>新版本通知：</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code><a href="https://repo.netapp.com/bintray/api/package" class="bare">https://repo.netapp.com/bintray/api/package</a></code></p>
+<p><code><a href="https://support.netapp.com/aods/" class="bare">https://support.netapp.com/aods/</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>软件下载：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><a href="https://support-sg-emea.netapp.com" class="bare">https://support-sg-emea.netapp.com</a></code></p>
 </li>
 <li>
-<p><code><a href="https://repo.netapp.com/downloads" class="bare">https://repo.netapp.com/downloads</a></code></p>
+<p><code><a href="https://support-sg-naeast.netapp.com" class="bare">https://support-sg-naeast.netapp.com</a></code></p>
 </li>
 <li>
-<p><code><a href="https://netappdownloads.jfrog.io:443" class="bare">https://netappdownloads.jfrog.io:443</a></code></p>
+<p><code><a href="https://support-sg-nawest.netapp.com" class="bare">https://support-sg-nawest.netapp.com</a></code></p>
 </li>
 </ul>
 </div></div></td>

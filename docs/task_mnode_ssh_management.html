@@ -9,15 +9,15 @@
   <meta property="og:title" content="在管理节点上管理 SSH 功能" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/zh-cn/hci/docs/task_mnode_ssh_management.html" />
-	<meta property="og:description" content="您可以使用 REST API UI 在管理节点上禁用，启用或确定 SSH 支持连接功能的状态。" />
+	<meta property="og:description" content="您可以使用NetApp Hybrid Cloud Control UI或REST API UI在管理节点上禁用和启用SSH功能、或者使用REST API UI确定SSH支持连接功能的状态。" />
   <meta property="og:image" content="https://docs.netapp.com/zh-cn/hci/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="您可以使用 REST API UI 在管理节点上禁用，启用或确定 SSH 支持连接功能的状态。">
-  <meta name="keywords" content=" netapp, mnode, management node, ssh, disable, enable, rest api"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="您可以使用NetApp Hybrid Cloud Control UI或REST API UI在管理节点上禁用和启用SSH功能、或者使用REST API UI确定SSH支持连接功能的状态。">
+  <meta name="keywords" content=" netapp, mnode, management node, ssh, disable, enable, rest api, hybrid, cloud, control, hcc"><!-- Icons -->
   <link rel="icon" href="/zh-cn/hci/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -1807,7 +1807,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-18 06:14:20 +0000">04/18/2022</time>
+    <time datetime="2022-05-16 14:13:30 +0000">05/16/2022</time>
     
   
 
@@ -1819,9 +1819,15 @@
 <div class="paragraph lead">
 <p>您可以使用 REST API 在管理节点（ mNode ）上禁用，重新启用或确定 SSH 功能的状态。提供的 SSH 功能 <a href="task_mnode_enable_remote_support_connections.html">"NetApp 支持远程支持通道（ RST ）会话访问"</a> 默认情况下，在运行管理服务 2.18 或更高版本的管理节点上处于禁用状态。</p>
 </div>
+<div class="paragraph">
+<p>从管理服务2.2开始、您可以使用NetApp Hybrid Cloud Control UI在管理节点上启用和禁用SSH功能。</p>
+</div>
 <div class="ulist">
 <div class="title">您需要什么？ #8217 ；将需要什么</div>
 <ul>
+<li>
+<p>* NetApp Hybrid Cloud Control权限*：您拥有管理员权限。</p>
+</li>
 <li>
 <p>* 集群管理员权限 * ：您对存储集群拥有管理员权限。</p>
 </li>
@@ -1832,7 +1838,25 @@
 <p>* 管理节点 * ：您已部署运行 11.3 或更高版本的管理节点。</p>
 </li>
 <li>
-<p>* 管理服务更新 * ：您已更新 <a href="https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab">"管理服务包"</a> 到 2.17 版。</p>
+<p><strong>管理服务更新</strong>：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>要使用NetApp Hybrid Cloud Control UI、您已更新 <a href="https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab" target="_blank" rel="noopener">"管理服务包"</a> 到版本2.20。</p>
+</li>
+<li>
+<p>要使用REST API UI、您已更新 <a href="https://mysupport.netapp.com/site/products/all/details/mgmtservices/downloads-tab" target="_blank" rel="noopener">"管理服务包"</a> 到 2.17 版。</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">选项</div>
+<ul>
+<li>
+<p><a href="#Disable or enable the SSH capability on the management node using NetApp Hybrid Cloud Control UI">[Disable or enable the SSH capability on the management node using NetApp Hybrid Cloud Control UI]</a></p>
 </li>
 </ul>
 </div>
@@ -1842,17 +1866,51 @@
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Disable or enable the SSH capability on the management node">[Disable or enable the SSH capability on the management node]</a></p>
+<p><a href="#Disable or enable the SSH capability on the management node using APIs">[Disable or enable the SSH capability on the management node using APIs]</a></p>
 </li>
 <li>
-<p><a href="#Determine status of the SSH capability on the management node">[Determine status of the SSH capability on the management node]</a></p>
+<p><a href="#Determine status of the SSH capability on the management node using APIs">[Determine status of the SSH capability on the management node using APIs]</a></p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="在管理节点上禁用或启用-ssh-功能">在管理节点上禁用或启用 SSH 功能</h2>
+<h2 id="使用netapp-hybrid-cloud-control-ui在管理节点上禁用或启用ssh功能">使用NetApp Hybrid Cloud Control UI在管理节点上禁用或启用SSH功能</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>您可以在管理节点上禁用或重新启用 SSH 功能。提供的 SSH 功能 <a href="task_mnode_enable_remote_support_connections.html">"NetApp 支持远程支持通道（ RST ）会话访问"</a> 默认情况下，在运行管理服务 2.18 或更高版本的管理节点上处于禁用状态。禁用 SSH 不会终止或断开与管理节点的现有 SSH 客户端会话。如果您禁用SSH并选择稍后重新启用它、则可以使用NetApp Hybrid Cloud Control UI执行此操作。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/hci/images/note.svg" alt="注">
+</td>
+<td class="content">
+要使用SSH为存储集群启用或禁用支持访问、必须使用 <a href="https://docs.netapp.com/us-en/element-software/storage/task_system_manage_cluster_enable_and_disable_support_access.html" target="_blank" rel="noopener">"Element UI集群设置页面"</a>。
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">步骤</div>
+<ol class="arabic">
+<li>
+<p>从信息板中，选择右上角的选项菜单，然后选择 * 配置 * 。</p>
+</li>
+<li>
+<p>在*管理节点的支持访问*屏幕中、切换交换机以启用管理节点SSH。</p>
+</li>
+<li>
+<p>完成故障排除后、在*管理节点的支持访问*屏幕中、切换交换机以禁用管理节点SSH。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="使用api在管理节点上禁用或启用ssh功能">使用API在管理节点上禁用或启用SSH功能</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>您可以在管理节点上禁用或重新启用 SSH 功能。提供的 SSH 功能 <a href="task_mnode_enable_remote_support_connections.html">"NetApp 支持远程支持通道（ RST ）会话访问"</a> 默认情况下，在运行管理服务 2.18 或更高版本的管理节点上处于禁用状态。禁用 SSH 不会终止或断开与管理节点的现有 SSH 客户端会话。如果禁用 SSH 并选择稍后重新启用它，则可以使用同一 API 来执行此操作。</p>
@@ -1936,7 +1994,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="确定管理节点上-ssh-功能的状态">确定管理节点上 SSH 功能的状态</h2>
+<h2 id="使用api确定管理节点上ssh功能的状态">使用API确定管理节点上SSH功能的状态</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>您可以使用管理节点服务 API 确定是否在管理节点上启用了 SSH 功能。在运行管理服务 2.18 或更高版本的管理节点上， SSH 默认处于禁用状态。</p>

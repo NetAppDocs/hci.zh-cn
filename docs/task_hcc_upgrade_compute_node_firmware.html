@@ -1807,7 +1807,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-18 06:14:20 +0000">04/18/2022</time>
+    <time datetime="2022-05-16 14:13:30 +0000">05/16/2022</time>
     
   
 
@@ -1909,6 +1909,42 @@ H615C 计算节点必须使用将 BMC 固件更新到版本 4.68 <a href="rn_com
 </li>
 <li>
 <p>* 计算节点运行状况检查 * ：您已验证此节点是否已做好升级准备。请参见 <a href="task_upgrade_compute_prechecks.html">"在升级计算固件之前运行计算节点运行状况检查"</a>。</p>
+</li>
+<li>
+<p><strong>最终用户许可协议(EULA)</strong>：从管理服务2.2开始、您必须先接受并保存EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级计算节点固件：</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>在Web浏览器中打开管理节点的IP地址：</p>
+<div class="listingblock">
+<div class="content">
+<pre>https://&lt;ManagementNodeIP&gt;</pre>
+</div>
+</div>
+</li>
+<li>
+<p>通过提供存储集群管理员凭据登录到 NetApp Hybrid Cloud Control 。</p>
+</li>
+<li>
+<p>选择靠近接口右上角的 * 升级 * 。</p>
+</li>
+<li>
+<p>此时将弹出EULA。向下滚动、选择*我接受当前更新和所有未来更新*、然后选择*保存*。</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/hci/images/note.svg" alt="注">
+</td>
+<td class="content">
+如果您接受EULA、则会在所有未来更新中记录此EULA、并启用自动下载功能。您将收到有关NetApp软件更新和升级的更新、您可以在方便时自行决定安装这些更新。您可以通过禁用与NetApp联机软件存储库的网络连接来禁用自动下载功能。
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
 </li>
 </ul>
 </div>
@@ -2041,7 +2077,7 @@ H615C 计算节点必须使用将 BMC 固件更新到版本 4.68 <a href="rn_com
 <div class="title">步骤</div>
 <ol class="arabic">
 <li>
-<p>打开 Web 浏览器并浏览到管理节点的 IP 地址：</p>
+<p>在Web浏览器中打开管理节点的IP地址：</p>
 <div class="listingblock">
 <div class="content">
 <pre>https://&lt;ManagementNodeIP&gt;</pre>
