@@ -15,23 +15,93 @@ keywords: netapp, hci, element, new, whatsnew
 
 
 [role="lead"]
-NetApp 会定期更新 NetApp HCI ，为您提供新功能，增强功能和错误修复。NetApp HCI 1.9P1 包括适用于存储集群的 Element 12.3.2 。
+NetApp 会定期更新 NetApp HCI ，为您提供新功能，增强功能和错误修复。NetApp HCI 1.10包括适用于存储集群的Element 12.5。
 
-* 。 <<NetApp HCI 1.9P1>> 第节介绍 NetApp HCI 1.9P1 版中的新增功能和更新。
-* 。 <<Element 12.3.2>> 第节介绍 NetApp Element 12.3.2 中的新增功能和更新。
-
-
-
-
-== NetApp HCI 1.9P1
-
-NetApp HCI 1.9P1 改进了安全性和稳定性。
+* 。 <<NetApp HCI 1.10>> 第节介绍NetApp HCI 1.10版中的新增功能和更新。
+* 。 <<Element software 12.5>> 第节介绍Element 12.5中的新增功能和更新。
 
 
 
-== Element 12.3.2
 
-Element 软件 12.3.2 版包含一些缓解措施，可消除 Element 软件受到 Apache Log4j 漏洞的影响。已启用虚拟卷（ VVol ）功能的 NetApp SolidFire 存储集群会受到此漏洞的影响。
+== NetApp HCI 1.10
+
+NetApp HCI 1.10提高了安全性和稳定性、并提高了部署后扩展的灵活性。
+
+
+
+=== 部署后扩展灵活性
+
+NetApp HCI 1.10不再要求满足计算节点上的默认部署VMK和vmnic配置设置、从而提高了扩展NetApp HCI 计算资源的灵活性。从NetApp HCI 1.10开始、扩展计算资源时、NetApp HCI 只需要在计算节点上配置常规VMK。 link:task_nde_supported_net_changes.html["了解更多信息。"]。
+
+
+
+=== 适用于vCenter Server 4.9的NetApp Element 插件可用性
+
+适用于vCenter Server 4.9的NetApp Element 插件在管理节点12.5和NetApp HCI 1.10版之外提供。要升级此插件，请按照中的说明进行操作 link:concept_hci_upgrade_overview.html["NetApp HCI 升级"] 文档。
+
+
+
+=== NetApp Hybrid Cloud Control增强功能
+
+NetApp Hybrid Cloud Control在版本1.10中进行了增强。 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["了解更多信息。"^]。
+
+
+
+=== 已解决的问题和已知问题
+
+NetApp Bug Online工具可提供有关NetApp HCI 、Element软件和其他产品的已解决问题和已知问题。您可以在中使用关键字或版本浏览这些问题 https://mysupport.netapp.com/site/products/all/details/netapp-hci/bugsonline-tab["NetApp Bug Online"^]。
+
+
+
+== Element软件12.5.
+
+Element 12.5引入了改进的存储节点访问、增强的自定义保护域易管理性、新增的和改进的集群故障和事件、增强的集群UI功能、增强的安全性以及使用Ansible的自动升级。
+
+
+
+=== 改进了存储节点访问
+
+Element 12.5通过使用签名SSH证书改进了对单个节点的远程访问。为了安全地远程访问存储节点、现在会在存储节点的RTFI期间创建一个名为`sfreadonly`的新的有限权限本地用户帐户。使用`sfreadonly`帐户可以访问存储节点后端、以便进行基本维护或故障排除。现在、您可以为集群管理员用户配置`supportAdmin`访问类型、以允许NetApp支持根据需要访问集群。
+
+
+
+=== 增强了自定义保护域的易管理性
+
+Element 12.5提供了一个新的用户界面、可用于快速轻松地查看现有的自定义保护域并配置新的自定义保护域。
+
+
+
+=== 新增并改进了集群故障、事件和警报
+
+Element 12.5引入了新的集群故障代码`BmcSelfTestFailed`和`CpuThermalEventThreshold`、从而增强了系统故障排除的能力。Element 12.5还改进了现有集群事件和警报的可靠性、例如`nodeOffline`、`volumeOffline`、`driveHealthFault`、`networkEvent`、 和`cSumEvent`。
+
+
+
+=== 从创建集群UI启用空闲软件加密
+
+在创建集群UI中添加了一个新复选框、Element 12.5允许您在创建集群期间为SolidFire 全闪存存储集群启用集群范围的空闲软件加密。
+
+
+
+=== 存储节点固件更新
+
+Element 12.5包括存储节点的固件更新。 link:https://docs.netapp.com/us-en/element-software/concepts/concept_rn_relatedrn_element.html#storage-firmware["了解更多信息。"^]。
+
+
+
+=== 增强的安全性
+
+Element 12.5提供了一种缓解方法、可消除Element软件受到Apache Log4j漏洞的影响。启用了虚拟卷(VVol)功能的NetApp SolidFire 存储集群受到Apache Log4j漏洞的影响。有关NetApp Element 软件中Apache Log4j漏洞的临时解决策 的信息、请参见 link:++https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/Element_Software_-_Apache_Log4j_Vulnerability_-_Workaround++["知识库文章"^]。
+
+如果您运行的是Element 11.x、12.0或12.2、或者您的存储集群已位于Element 12.3或12.3.1中且已启用VVol功能、则强烈建议升级到12.5。
+
+Element 12.5还包括120多个CVE安全漏洞修复。
+
+
+
+== 使用Ansible自动升级
+
+在Element 12.5中、您可以使用Ansible对整个存储集群执行滚动升级、从而自动执行Element软件升级工作流。要开始使用，请导航到 https://github.com/NetApp-Automation["NetApp Ansible存储库"^] 在GitHub上下载`NAR_solidfire_SDS_upgrade`角色和文档。
 
 [discrete]
 == 了解更多信息

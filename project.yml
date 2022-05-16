@@ -83,6 +83,8 @@ sidebar:
       url: "/docs/hci_prereqs_protection_domains.html"
     - title: 见证双节点存储集群的节点资源要求
       url: "/docs/hci_prereqs_witness_nodes.html"
+    - title: 部署配置限制
+      url: "/docs/hci_prereqs_deployment_configuration_restriction.html"
   - title: 开始使用 NetApp HCI
     entries:
     - title: NetApp HCI 安装和部署概述
@@ -261,7 +263,7 @@ sidebar:
       url: "/docs/task_hcc_activeiq.html"
     - title: 收集日志以进行故障排除
       url: "/docs/task_hcc_collectlogs.html"
-  - title: 升级 NetApp HCI 系统版本 1.9 或 1.9P1
+  - title: 升级NetApp HCI 系统版本1.10
     entries:
     - title: 升级顺序概述
       url: "/docs/concept_hci_upgrade_overview.html"
@@ -269,8 +271,6 @@ sidebar:
       entries:
       - title: 更新管理服务
         url: "/docs/task_hcc_update_management_services.html"
-      - title: 升级到最新的 HealthTools
-        url: "/docs/task_upgrade_element_latest_healthtools.html"
       - title: 在升级存储之前，请运行 Element 存储运行状况检查
         url: "/docs/task_hcc_upgrade_element_prechecks.html"
       - title: 升级 Element 软件

@@ -2,14 +2,17 @@
 sidebar: sidebar 
 permalink: docs/task_hcc_upgrade_element_software.html 
 summary: 在 NetApp HCI 系统升级过程中，您可以升级 NetApp Element 软件。 
-keywords: netapp, hci, HealthTools, cluster, element, H610S upgrade, hcc 
+keywords: netapp, hci, cluster, element, H610S upgrade, hcc 
 ---
 = 升级 Element 软件
 :allow-uri-read: 
 
 
 [role="lead"]
-要升级 NetApp Element 软件，您可以使用 NetApp 混合云控制 UI ， REST API 或 HealthTools 工具套件。Element 软件升级期间会禁止某些操作，例如添加和删除节点，添加和删除驱动器以及与启动程序，卷访问组和虚拟网络等关联的命令。
+要升级NetApp Element 软件、您可以使用NetApp混合云控制UI或REST API。Element 软件升级期间会禁止某些操作，例如添加和删除节点，添加和删除驱动器以及与启动程序，卷访问组和虚拟网络等关联的命令。
+
+
+NOTE: 从Element 12.5开始、Element软件升级不再支持NetApp HealthTools。如果您运行的是Element 11.0或11.1、则必须先执行此操作 link:link:https://docs.netapp.com/us-en/element-software-123/upgrade/task_hcc_upgrade_element_software.html#upgrade-element-software-at-connected-sites-using-healthtools["使用HealthTools升级到Element 12.3"^] 然后使用NetApp Hybrid Cloud Control升级到Element 12.5。
 
 .您需要什么？ #8217 ；将需要什么
 * * 管理员权限 * ：您拥有执行升级的存储集群管理员权限。
@@ -21,10 +24,31 @@ keywords: netapp, hci, HealthTools, cluster, element, H610S upgrade, hcc
 
 
 
-IMPORTANT: 在将 Element 软件升级到 12.3.x 之前，您必须升级到最新的管理服务包如果要将 Element 软件更新到 12.3.x 版，则需要使用管理服务 2.14.60 或更高版本才能继续。
+IMPORTANT: 在将Element软件升级到版本12.5之前、您必须升级到最新的管理服务包。如果要将Element软件更新到版本12.5、则需要使用管理服务2.20.69或更高版本继续操作。
 
 * * 集群运行状况 * ：您已验证集群是否已做好升级准备。请参见 link:task_hcc_upgrade_element_prechecks.html["在升级存储之前，请运行 Element 存储运行状况检查"]。
-* * 已更新 H610S 节点的 BMC * ：您已升级 H610S 节点的 BMC 版本。请参见 link:rn_H610S_BMC_3.84.07.html["发行说明和升级说明"^]。
+* *已更新H610S节点的基板管理控制器(BMC)*：您已升级H610S节点的BMC版本。请参见 link:rn_H610S_BMC_3.84.07.html["发行说明和升级说明"^]。
+* *升级过程时间*：您已计划足够的时间执行升级。升级到Element软件12.5时、升级过程时间会因您当前的Element软件版本和固件更新而异。
++
+[cols="20,20,20,20,20"]
+|===
+| 存储节点 | 当前Element软件版本 | 每个节点的大致软件和固件安装时间^1^ | 每个节点的大致数据同步时间^2^ | 每个节点的大致升级总时间 
+
+
+| 具有最新固件的所有SolidFire 和NetApp H系列节点 | 12.x | 15 分钟 | 10到15分钟 | 20到30分钟 
+
+
+| H610S和H410S | 12.x和11.8 | 60分钟 | 30到60分钟 | 90到120分钟 
+
+
+| H610S | 11.7及更早版本 | 90分钟 | 40到70分钟 | 您还必须花费130到160分钟 https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure["完全关闭节点并断开电源"^] 对于每个H610S节点。 
+|===
++
+^1^有关适用于您的硬件的完整固件和驱动程序固件列表、请参见此内容 https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software["知识库文章"^] （需要登录）。
+
++
+^2^如果将写入IOPS负载较重的集群与较长的固件更新时间结合使用、则数据同步时间将会增加。
+
 * *最终用户许可协议(EULA)*：从管理服务2.2开始、您必须先接受并保存EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级Element软件：
 +
 .. 在Web浏览器中打开管理节点的IP地址：
@@ -48,12 +72,10 @@ NOTE: 如果您接受EULA、则会在所有未来更新中记录此EULA、并启
 
 * <<Use NetApp Hybrid Cloud Control UI to upgrade Element storage>>
 * <<Use NetApp Hybrid Cloud Control API to upgrade Element storage>>
-* <<Upgrade Element software at connected sites using HealthTools>>
-* <<Upgrade Element software at dark sites using HealthTools>>
 
 
 
-IMPORTANT: 如果您要将 H610S 系列节点升级到 Element 12.3.x ，并且此节点运行的 Element 版本早于 11.8 ，则需要执行其他升级步骤（<<Upgrading H610S storage nodes to Element 12.3.x (phase 2),第 2 阶段>>）。如果您运行的是 Element 11.8 或更高版本，则不需要执行其他升级步骤（第 2 阶段）。
+IMPORTANT: 如果您要将H610S系列节点升级到Element 12.5、并且此节点运行的Element软件版本早于11.8、则需要执行此中的其他升级步骤 https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure["知识库文章"^] 用于每个存储节点。如果您运行的是Element 11.8或更高版本、则不需要执行其他升级步骤。
 
 
 
@@ -64,10 +86,7 @@ IMPORTANT: 如果您要将 H610S 系列节点升级到 Element 12.3.x ，并且�
 如果您的管理节点未连接到 Internet ，则表示您已下载 https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["适用于 NetApp HCI 存储集群的 NetApp HCI 软件包"^]。
 
 
-CAUTION: 有关使用 NetApp Hybrid Cloud Control 升级存储集群时的潜在问题及其解决方法，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control["知识库文章"^]。
-
-
-TIP: 对于非 H610S 平台，每个节点的升级过程大约需要 30 分钟。
+CAUTION: 有关使用NetApp Hybrid Cloud Control升级存储集群时的潜在问题及其解决方法、请参见此部分 https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Potential_issues_and_workarounds_when_running_storage_upgrades_using_NetApp_Hybrid_Cloud_Control["知识库文章"^]。
 
 .步骤
 . 在Web浏览器中打开管理节点的IP地址：
@@ -118,8 +137,8 @@ CAUTION: 如果您离开浏览器窗口，则文件上传将丢失。
 
 | 您要升级运行的 Element 版本早于 11.8 的 H610S 集群。  a| 
 .. 选择要升级的集群旁边的下拉箭头，然后从可用的升级版本中进行选择。
-.. 选择 * 开始升级 * 。升级完成后， UI 将提示您执行此过程的第 2 阶段。
-.. 完成中所需的其他步骤（第 2 阶段） https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure["知识库文章"^]，并在用户界面中确认您已完成第 2 阶段。
+.. 选择 * 开始升级 * 。升级完成后、UI将提示您执行其他升级步骤。
+.. 完成中所需的其他步骤 https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure["知识库文章"^]、并在用户界面中确认您已完成这些操作。
 
 
 升级完成后，您可以下载日志。有关各种升级状态更改的信息，请参见 <<Upgrade status changes>>。
@@ -159,7 +178,7 @@ CAUTION: 如果您离开浏览器窗口，则文件上传将丢失。
 | 无法检测 | 如果 NetApp Hybrid Cloud Control 无法通过外部连接访问联机软件存储库，则会显示此状态，而不是显示 * 可用版本 * 。如果您已建立外部连接，但仍看到此消息，请检查 link:task_mnode_configure_proxy_server.html["代理配置："^]。 
 
 
-| 完成并进行跟进 | 仅适用于从早于 118 的 Element 版本升级的 H610S 节点。升级过程的第 1 阶段完成后，此状态将提示您执行升级的第 2 阶段（请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure["知识库文章"^]）。完成第 2 阶段并确认已完成后，状态将变为 * 最新 * 。 
+| 完成并进行跟进 | 仅适用于从早于 118 的 Element 版本升级的 H610S 节点。升级过程的第1阶段完成后、此状态将提示您执行其他升级步骤(请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure["知识库文章"^]）。完成这些附加步骤并确认已完成后、状态将更改为*最新*。 
 |===
 
 
@@ -414,8 +433,8 @@ https://<ManagementNodeIP>/storage/1/
 
 
 
-| 如果要升级运行的 Element 版本早于 11.8 的 H610S 集群，则会在响应正文中看到状态 `finishedNeedsAck` 。您需要对每个 H610S 存储节点执行其他升级步骤（第 2 阶段）。  a| 
-... 请参见 <<Upgrading H610S storage nodes to Element 12.3.x or later (phase 2)>> 并完成每个节点的过程。
+| 如果要升级运行的 Element 版本早于 11.8 的 H610S 集群，则会在响应正文中看到状态 `finishedNeedsAck` 。您必须对每个H610S存储节点执行其他升级步骤。  a| 
+... 完成此中的其他升级步骤 https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure["知识库文章"^] 对于每个节点。
 ... 如果需要，请重新进行身份验证并选择 * PUT ​ /upgrades/｛ upgradeId ｝ * 。
 ... 选择 * 试用 * 。
 ... 在 * 升级 Id* 中输入上一步中的升级 ID 。
@@ -457,305 +476,6 @@ NetApp Hybrid Cloud Control 具有预先设置的三小时等待时间，在此�
 
 
 CAUTION: 在更新节点时中止集群升级可能会导致驱动器异常地从节点中删除。如果驱动器被异常删除，则在升级期间重新添加驱动器需要 NetApp 支持部门手动干预。节点执行固件更新或更新后同步活动可能需要较长时间。如果升级进度似乎停滞，请联系 NetApp 支持部门以获得帮助。
-
-
-
-== 使用 HealthTools 升级已连接站点上的 Element 软件
-
-.步骤
-. 下载存储升级软件包；转到 NetApp HCI 软件 https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["下载页面"^] 并将最新的存储节点映像下载到非管理节点设备。
-+
-
-NOTE: 要升级 Element 存储软件，您需要最新版本的 HealthTools 。
-
-. 将 ISO 文件复制到可访问位置（如 /tmp ）的管理节点。
-+
-上传 ISO 文件时，请确保文件名不会更改，否则后续步骤将失败。
-
-. * 可选 * ：在升级之前，将 ISO 从管理节点下载到集群节点。
-+
-此步骤可在存储节点上预暂存 ISO 并运行额外的内部检查以确保集群处于可升级的良好状态，从而缩短升级时间。执行此操作不会将集群置于 " 升级 " 模式或限制任何集群操作。
-
-+
-[listing]
-----
-sfinstall <MVIP> -u <cluster_username> <path-toinstall-file-ISO> --stage
-----
-+
-
-NOTE: 在命令行中省略密码，以允许 `sfinstall` 提示输入信息。对于包含特殊字符的密码，请在每个特殊字符之前添加反斜杠（` \` ）。例如， `mypass ！@1` 应输入为 `mypass\ ！ \@` 。
-
-+
-* 示例 * 请参见以下示例输入：
-
-+
-[listing]
-----
-sfinstall 10.117.0.244 -u admin /tmp/solidfire-rtfisodium-11.0.0.345.iso --stage
-----
-+
-此示例的输出显示， `sfinstall` 尝试验证是否提供了更高版本的 `sfinstall` ：
-
-+
-[listing]
-----
-sfinstall 10.117.0.244 -u admin
-/tmp/solidfire-rtfisodium-11.0.0.345.iso 2018-10-01 16:52:15:
-Newer version of sfinstall available.
-This version: 2018.09.01.130, latest version: 2018.06.05.901.
-The latest version of the HealthTools can be downloaded from:
-https:// mysupport.netapp.com/NOW/cgi-bin/software/
-or rerun with --skip-version-check
-----
-+
-请参见以下成功预处理操作示例摘录：
-
-+
-
-NOTE: 暂存完成后，升级事件发生后，此消息将显示 `Storage Node Upgrade Staging Successful` 。
-
-+
-[listing]
-----
-flabv0004 ~ # sfinstall -u admin
-10.117.0.87 solidfire-rtfi-sodium-patch3-11.3.0.14171.iso --stage
-2019-04-03 13:19:58: sfinstall Release Version: 2019.01.01.49 Management Node Platform:
-Ember Revision: 26b042c3e15a Build date: 2019-03-12 18:45
-2019-04-03 13:19:58: Checking connectivity to MVIP 10.117.0.87
-2019-04-03 13:19:58: Checking connectivity to node 10.117.0.86
-2019-04-03 13:19:58: Checking connectivity to node 10.117.0.87
-...
-2019-04-03 13:19:58: Successfully connected to cluster and all nodes
-...
-2019-04-03 13:20:00: Do you want to continue? ['Yes', 'No']: Yes
-...
-2019-04-03 13:20:55: Staging install pack on cluster nodes
-2019-04-03 13:20:55: newVersion: 11.3.0.14171
-2019-04-03 13:21:01: nodeToStage: nlabp2814, nlabp2815, nlabp2816, nlabp2813
-2019-04-03 13:21:02: Staging Node nlabp2815 mip=[10.117.0.87] nodeID=[2] (1 of 4 nodes)
-2019-04-03 13:21:02: Node Upgrade serving image at
-http://10.117.0.204/rtfi/solidfire-rtfisodium-
-patch3-11.3.0.14171/filesystem.squashfs
-...
-2019-04-03 13:25:40: Staging finished. Repeat the upgrade command without the --stage option to start the upgrade.
-----
-+
-升级完成后，暂存的 ISO 将被自动删除。但是，如果升级尚未启动且需要重新计划，则可以使用以下命令手动取消暂存 ISO ：
-
-+
-`sfinstall <MVIP> -u <cluster_username> -destage`
-
-+
-升级开始后，降级选项将不再可用。
-
-. 使用 `sfinstall` 命令和 ISO 文件的路径开始升级：
-+
-`sfinstall <MVIP> -u <cluster_username> <path-toinstall-file-ISO>`
-
-+
-* 示例 *
-
-+
-请参见以下输入命令示例：
-
-+
-[listing]
-----
-sfinstall 10.117.0.244 -u admin /tmp/solidfire-rtfi-sodium-11.0.0.345.iso
-----
-+
-此示例的输出显示， `sfinstall` 尝试验证是否提供了更高版本的 `sfinstall` ：
-
-+
-[listing]
-----
-sfinstall 10.117.0.244 -u admin /tmp/solidfire-rtfi-sodium-11.0.0.345.iso
-2018-10-01 16:52:15: Newer version of sfinstall available.
-This version: 2018.09.01.130, latest version: 2018.06.05.901.
-The latest version of the HealthTools can be downloaded from:
-https://mysupport.netapp.com/NOW/cgi-bin/software/ or rerun with --skip-version-check
-----
-+
-请参见以下成功升级示例摘录。升级事件可用于监控升级进度。
-
-+
-[listing]
-----
-# sfinstall 10.117.0.161 -u admin solidfire-rtfi-sodium-11.0.0.761.iso
-2018-10-11 18:28
-Checking connectivity to MVIP 10.117.0.161
-Checking connectivity to node 10.117.0.23
-Checking connectivity to node 10.117.0.24
-...
-Successfully connected to cluster and all nodes
-###################################################################
-You are about to start a new upgrade
-10.117.0.161
-10.3.0.161
-solidfire-rtfi-sodium-11.0.0.761.iso
-Nodes:
-10.117.0.23 nlabp1023 SF3010 10.3.0.161
-10.117.0.24 nlabp1025 SF3010 10.3.0.161
-10.117.0.26 nlabp1027 SF3010 10.3.0.161
-10.117.0.28 nlabp1028 SF3010 10.3.0.161
-###################################################################
-Do you want to continue? ['Yes', 'No']: yes
-...
-Watching for new network faults. Existing fault IDs are set([]).
-Checking for legacy network interface names that need renaming
-Upgrading from 10.3.0.161 to 11.0.0.761 upgrade method=rtfi
-Waiting 300 seconds for cluster faults to clear
-Waiting for caches to fall below threshold
-...
-Installing mip=[10.117.0.23] nodeID=[1] (1 of 4 nodes)
-Starting to move primaries.
-Loading volume list
-Moving primary slice=[7] away from mip[10.117.0.23] nodeID[1] ssid[11] to new ssid[15]
-Moving primary slice=[12] away from mip[10.117.0.23] nodeID[1] ssid[11] to new ssid[15]
-...
-Installing mip=[10.117.114.24] nodeID=[2] (2 of 4 nodes)
-Starting to move primaries.
-Loading volume list
-Moving primary slice=[5] away from mip[10.117.114.24] nodeID[2] ssid[7] to new ssid[11]
-...
-Install of solidfire-rtfi-sodium-11.0.0.761 complete.
-Removing old software
-No staged builds present on nodeID=[1]
-No staged builds present on nodeID=[2]
-...
-Starting light cluster block service check
-----
-
-
-
-IMPORTANT: 如果您要将 H610S 系列节点升级到 Element 12.3.x ，并且此节点运行的 Element 版本早于 11.8 ，则需要执行其他升级步骤（<<Upgrading H610S storage nodes to Element 12.3.x (phase 2),第 2 阶段>>）。如果您运行的是 Element 11.8 或更高版本，则不需要执行其他升级步骤（第 2 阶段）。
-
-
-
-== 使用 HealthTools 升级非公开站点上的 Element 软件
-
-您可以使用 HealthTools 工具套件在没有外部连接的非公开站点上更新 NetApp Element 软件。
-
-.您需要什么？ #8217 ；将需要什么
-. 转到 NetApp HCI 软件 https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["下载页面"^]。
-. 选择正确的软件版本并将最新的存储节点映像下载到非管理节点计算机。
-+
-
-NOTE: 要升级 Element 存储软件，您需要最新版本的 HealthTools 。
-
-. 下载此 https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740["JSON 文件"^] (https://library.netapp.com/ecm/ecm_get_file/ECMLP2840740)[] 从 NetApp 支持站点的非管理节点计算机上，将其重命名为 `metadata 。 json` 。
-. 将此 ISO 文件复制到管理节点中可访问的位置，例如 ` /tmp` 。
-+
-
-TIP: 例如，您可以使用 SCP 来执行此操作。上传 ISO 文件时，请确保文件名不会更改，否则后续步骤将失败。
-
-
-
-.步骤
-. 运行 `sfupdate-healthtools` 命令：
-+
-[listing]
-----
-sfupdate-healthtools <path-to-healthtools-package>
-----
-. 检查安装的版本：
-+
-[listing]
-----
-sfupdate-healthtools -v
-----
-. 根据元数据 JSON 文件检查最新版本：
-+
-[listing]
-----
-sfupdate-healthtools -l --metadata=<path-to-metadata-json>
-----
-. 确保集群已准备就绪：
-+
-[listing]
-----
-sudo sfupgradecheck -u <cluster_username> -p <cluster_password> MVIP --metadata=<path-to-metadata-json>
-----
-. 使用 ISO 文件和元数据 JSON 文件的路径运行 `sfinstall` 命令：
-+
-[listing]
-----
-sfinstall -u <cluster_username> <MVIP> <path-toinstall-file-ISO> --metadata=<path-to-metadata-json-file>
-----
-+
-请参见以下输入命令示例：
-
-+
-[listing]
-----
-sfinstall -u admin 10.117.78.244 /tmp/solidfire-rtfi-11.3.0.345.iso --metadata=/tmp/metadata.json
-----
-+
-* 可选 * 您可以将 ` -stage` 标志添加到 `sfinstall` 命令中，以便预先暂存升级。
-
-
-
-
-IMPORTANT: 如果您要将 H610S 系列节点升级到 Element 12.3.x ，并且此节点运行的 Element 版本早于 11.8 ，则需要执行其他升级步骤（<<Upgrading H610S storage nodes to Element 12.3.x (phase 2),第 2 阶段>>）。如果您运行的是 Element 11.8 或更高版本，则不需要执行其他升级步骤（第 2 阶段）。
-
-
-
-== 使用 HealthTools 升级失败时会发生什么情况
-
-如果软件升级失败，您可以暂停升级。
-
-
-TIP: 只能使用 Ctrl-C 暂停升级这样，系统就可以自行清理。
-
-当 `sfinstall` 等待集群故障清除时，如果任何故障导致故障仍然存在，则 `sfinstall` 不会继续到下一个节点。
-
-.步骤
-. 您应使用 Ctrl+C 停止 `sfinstall`
-. 请联系 NetApp 支持部门以协助进行故障调查。
-. 使用相同的 `sfinstall` 命令恢复升级。
-. 使用 Ctrl+C 暂停升级时，如果升级当前正在升级节点，请选择以下选项之一：
-+
-** * 等待 * ：允许当前升级节点完成，然后再重置集群常量。
-** * 继续 * ：继续升级，此操作将取消暂停。
-** * 中止 * ：重置集群常量并立即中止升级。
-+
-
-NOTE: 在更新节点时中止集群升级可能会导致驱动器异常地从节点中删除。如果驱动器被异常删除，则在升级期间重新添加驱动器需要 NetApp 支持部门手动干预。节点执行固件更新或更新后同步活动可能需要较长时间。如果升级进度似乎停滞，请联系 NetApp 支持部门以获得帮助。
-
-
-
-
-
-
-
-== 将 H610S 存储节点升级到 Element 12.3.x （第 2 阶段）
-
-如果您要将 H610S 系列节点升级到 Element 12.3.x ，而该节点运行的 Element 版本早于 11.8 ，则升级过程将包括两个阶段。
-
-首先执行的第 1 阶段与标准升级到 Element 12.3.x 的过程相同。它会以滚动方式在集群中逐个节点安装 Element 软件和所有 5 个固件更新。由于固件有效负载，每个 H610S 节点的此过程预计大约需要 1.5 到 2 小时，包括在升级结束时为每个节点执行一个冷启动周期。
-
-第 2 阶段涉及完成所需步骤，以便对每个 H610S 节点执行完全关闭节点和断开电源的操作 https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure["知识库"^]。此阶段预计每个 H610S 节点大约需要一小时。
-
-
-IMPORTANT: 完成第 1 阶段后，五个固件更新中的四个将在每个 H610S 节点的冷启动期间激活；但是，复杂可编程逻辑设备（ CPLD ）固件需要完全断开电源并重新连接才能完全安装。CPLD 固件更新可防止在未来重新启动或重新启动期间发生 NVDIMM 故障和元数据驱动器逐出。此电源重置预计每个 H610S 节点大约需要一小时。它需要关闭节点，拔下电源线或通过智能 PDU 断开电源，等待大约 3 分钟，然后重新连接电源。
-
-.开始之前
-* 您已完成 H610S 升级过程的第 1 阶段，并已使用一个标准 Element 存储升级过程升级存储节点。
-
-
-
-NOTE: 第 2 阶段需要现场人员。
-
-.步骤
-. （第 2 阶段）完成集群中每个 H610S 节点所需的电源重置过程：
-
-
-
-NOTE: 如果集群还具有非 H610S 节点，则这些非 H610S 节点将免于进入第 2 阶段，无需关闭或断开其电源。
-
-. 请联系 NetApp 支持部门以获得帮助并计划此升级。
-. 按照此步骤中的第 2 阶段升级操作步骤进行操作 https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure["知识库"^] 完成每个 H610S 节点的升级所需的时间。
-
 
 [discrete]
 == 了解更多信息

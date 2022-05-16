@@ -558,7 +558,6 @@
   <block id="2f81f1b5bf706c50ec3a59d0de214061" category="section-title">配置时间同步</block>
   <block id="dfa921e1a8d1ecc5798d976447ec498d" category="list-text">确保使用 NTP 在管理节点和存储集群之间同步时间：</block>
   <block id="4ff9fc7c23fbbdf410e784b18625c201" category="inline-xref">子步骤（ f ）</block>
-  <block id="ebb10f305c99ec7bfab143a8e38bdcc7" category="admonition">从 Element 12.3.1 开始，系统会自动执行子步骤（ a ）到（ e ）。对于管理节点 12.3.1 ，请继续执行 <block ref="e7aead760c231b389589c93842d555c1" category="inline-xref-macro-rx"></block> 以完成时间同步配置。</block>
   <block id="95f677ec3d6290caa67730d5209b4cc2" category="list-text">使用 SSH 或虚拟机管理程序提供的控制台登录到管理节点。</block>
   <block id="5c64c907c80a4eaf523f296d26d13989" category="list-text">停止 NTPD ：</block>
   <block id="5c6c4538d95e26d538800e50027bee98" category="list-text">编辑 NTP 配置文件 ` /etc/ntp.conf` ：</block>
@@ -780,13 +779,6 @@
   <block id="3cde2accf79d956e63cccb8e3aaac14a" category="list-text"><block ref="3cde2accf79d956e63cccb8e3aaac14a" category="inline-link-rx"></block></block>
   <block id="0a5712c2113fc4db522b6907519135e6" category="summary">了解此版本的 NetApp HCI 中的新增功能。</block>
   <block id="9cea15d48c9b5a9632827b358396e207" category="doc">NetApp HCI 中的新增功能</block>
-  <block id="8ad579f12befe29ce104da3b73ad5f9e" category="paragraph">NetApp 会定期更新 NetApp HCI ，为您提供新功能，增强功能和错误修复。NetApp HCI 1.9P1 包括适用于存储集群的 Element 12.3.2 。</block>
-  <block id="d6d2b79e6ba2037bd02bb8dc96a0070a" category="list-text">。 <block ref="15276d500e7181fc56781568a7378926" category="inline-xref-macro-rx"></block> 第节介绍 NetApp HCI 1.9P1 版中的新增功能和更新。</block>
-  <block id="071ecc128a953b7cb24ca890062184c9" category="list-text">。 <block ref="170a7411c50609b648767f9b69e4306b" category="inline-xref-macro-rx"></block> 第节介绍 NetApp Element 12.3.2 中的新增功能和更新。</block>
-  <block id="db4297e95de51344c8962b36e46e0558" category="section-title">NetApp HCI 1.9P1</block>
-  <block id="b4f3f16bceaa5cf561ca23082b3b8f3f" category="paragraph">NetApp HCI 1.9P1 改进了安全性和稳定性。</block>
-  <block id="46b078af9bac91704627a9aca75db024" category="section-title">Element 12.3.2</block>
-  <block id="a0e08077e5a0fd5b8a4e6778d5172eae" category="paragraph">Element 软件 12.3.2 版包含一些缓解措施，可消除 Element 软件受到 Apache Log4j 漏洞的影响。已启用虚拟卷（ VVol ）功能的 NetApp SolidFire 存储集群会受到此漏洞的影响。</block>
   <block id="44b0209ace608ab3332e7d7917cfc3c2" category="inline-link">《 NetApp 混合云控制和管理服务发行说明》</block>
   <block id="8c62a8856619185a333cdec6cc116a79" category="list-text"><block ref="8c62a8856619185a333cdec6cc116a79" category="inline-link-rx"></block></block>
   <block id="311f4aa48c89c4e8754b8d93a8d5c0d5" category="inline-link">NetApp HCI 和 NetApp Element 软件的固件和驱动程序版本</block>
@@ -832,7 +824,6 @@
   <block id="03c7d4785e3fa93f72c7101bdd0dbdb6" category="summary">您可以升级 NetApp HCI 及其所有组件。</block>
   <block id="59a003ce49b82fe00de09fe03510553f" category="doc">升级顺序概述</block>
   <block id="ecaabfdd234216b22da5d6313e48fd94" category="paragraph">您可以通过按顺序升级所有 NetApp HCI 软件组件，在部署后使 NetApp HCI 系统保持最新。</block>
-  <block id="a4b75050ff69b0483ec3d9e8727ee92e" category="paragraph">这些组件包括管理服务， HealthTools ， NetApp Hybrid Cloud Control ， Element 软件，管理节点，计算固件，计算驱动程序， 和适用于 vCenter Server 的 Element 插件。​</block>
   <block id="d38f48e8e196e92a833076faf76e21bc" category="inline-xref">系统升级顺序</block>
   <block id="ad56c46e8e9f8e0bb939f50f5e76805b" category="paragraph">。 <block ref="73cba4e8b2341cec7edfdf3782fd4351" category="inline-xref-macro-rx"></block> 内容介绍了完成 NetApp HCI 系统升级所需的任务。理想情况下，您可以在较大的升级序列中执行这些过程，而不是孤立执行这些过程。如果需要基于组件的升级或更新，请参见操作步骤前提条件以确保解决其他复杂问题。</block>
   <block id="7ce03284a3322764084b916532f7b97d" category="inline-xref-macro">vSphere 升级顺序</block>
@@ -849,9 +840,6 @@
   <block id="c43409e402c491faff614694ff49b45b" category="list-text"><block ref="d96c5e393dc7f7cfcba5644a67a6ff8a" category="inline-link-macro-rx"></block>。</block>
   <block id="9cd44430d13c7f6664a4e628ee6d90e4" category="admonition">如果要将管理服务更新到版本 2.16 或更高版本，并且运行的是管理节点 11.3 到 11.8 ，则在更新管理服务之前，需要增加管理节点 VM 的 RAM 。</block>
   <block id="17a2ec8576298e274b3b59e46ff67ea2" category="admonition">在升级 Element 软件之前，您必须更新到最新的管理服务包。</block>
-  <block id="c11f2883e5873fe6014828f863f7ba41" category="inline-link-macro">（可选）升级到最新的 HealthTools</block>
-  <block id="49cd70bbae5767fa07e3c247f5bbc6b8" category="list-text"><block ref="e369e337fa7ec72eace155f2553c6f73" category="inline-link-macro-rx"></block>。</block>
-  <block id="60175530d17f19da9530d61fcc12b771" category="admonition">只有在运行的管理节点和 Element 软件为 11.1 或更早版本时，才需要升级 HealthTools 。使用 NetApp Hybrid Cloud Control 执行 Element 升级不需要 HealthTools 。</block>
   <block id="0a4b0244a62a3d26a27fd761630e0952" category="inline-link-macro">在升级存储之前，请运行 Element 存储运行状况检查</block>
   <block id="109d7dba2c92c9420fece3ae278874f4" category="list-text"><block ref="bdcf6db43efb3c82b174a0c4c0a65c66" category="inline-link-macro-rx"></block>。</block>
   <block id="77f5518534e304c43787d59aa8f3ed00" category="inline-link-macro">升级 Element 软件和存储固件</block>
@@ -1166,7 +1154,6 @@
   <block id="39e0115b52067ca373c2974cabbedb66" category="inline-link">GitHub 上的 NetApp Ansible 存储库</block>
   <block id="5c43103944569fd8012409d26d35ae27" category="paragraph">要开始使用，请导航到<block ref="800625a9fb0814935e48340d0d4931ee" category="inline-link-rx"></block> 并下载 `NAR_compute_nodes_firmware_upgrades` 角色和文档。</block>
   <block id="c4d41483c4ebb2063097b14712424742" category="doc">升级 Element 软件</block>
-  <block id="b62290ff53a518e59ca66a10ffbbe80f" category="paragraph">要升级 NetApp Element 软件，您可以使用 NetApp 混合云控制 UI ， REST API 或 HealthTools 工具套件。Element 软件升级期间会禁止某些操作，例如添加和删除节点，添加和删除驱动器以及与启动程序，卷访问组和虚拟网络等关联的命令。</block>
   <block id="af97413bfe0fcaebbe8c8bbf7a552c1e" category="list-text">* 管理员权限 * ：您拥有执行升级的存储集群管理员权限。</block>
   <block id="992d266839a579e9b62b9fbb2193d3bf" category="inline-link">NetApp 知识库：运行 NetApp Element 软件的存储集群的升级表</block>
   <block id="1f530b0c76d9de4275104c651b6d5411" category="list-text">* 有效升级路径 * ：您已检查要升级到的 Element 版本的升级路径信息并验证升级路径是否有效。<block ref="b87eae6ace29db9b17ab7b20ed6745f5" category="inline-link-rx"></block></block>
@@ -1175,23 +1162,16 @@
   <block id="dfa30feec8b64a244b445bfd33b6271a" category="list-text">* 系统端口 * ：如果您使用 NetApp Hybrid Cloud Control 进行升级，则已确保必要的端口处于打开状态。请参见 <block ref="580a730e8363f1cd8dbb520150bdd1d9" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="0a0bd77f761dabcb31d2bd26cb088c47" category="list-text">* 管理节点 * ：对于 NetApp Hybrid Cloud Control UI 和 API ，您环境中的管理节点运行的是 11.3 版。</block>
   <block id="7272db62c1a436743292f47d71c5e96e" category="list-text">* 管理服务 * ：您已将管理服务捆绑包更新到最新版本。</block>
-  <block id="7cccd916bcdac08ea30e7c32df58e516" category="admonition">在将 Element 软件升级到 12.3.x 之前，您必须升级到最新的管理服务包如果要将 Element 软件更新到 12.3.x 版，则需要使用管理服务 2.14.60 或更高版本才能继续。</block>
   <block id="eb3ef9d3145086e8447906c0ff28c122" category="list-text">* 集群运行状况 * ：您已验证集群是否已做好升级准备。请参见 <block ref="bdcf6db43efb3c82b174a0c4c0a65c66" category="inline-link-macro-rx"></block>。</block>
   <block id="d12abcbed858bffa82e8d643aeac1e4f" category="inline-link-macro">发行说明和升级说明</block>
-  <block id="dd82181cc424f5eed09a7ff367ff51d1" category="list-text">* 已更新 H610S 节点的 BMC * ：您已升级 H610S 节点的 BMC 版本。请参见 <block ref="f04f9a521fc4fd678cdbd3d698415a24" category="inline-link-macro-rx"></block>。</block>
   <block id="0e7647873b3166c20d4bb762ef96b543" category="paragraph">选择以下 Element 软件升级选项之一：</block>
   <block id="f04c2dffe18d2f3b135204db9355705a" category="list-text"><block ref="d671d4153cf8124770baff9fa1830cd7" category="inline-xref-macro-rx"></block></block>
   <block id="c68d0cefaf6daaa0eddd2f2ab63ba5c8" category="list-text"><block ref="910aaaa5a5f6089f423c0c681bb2f1ce" category="inline-xref-macro-rx"></block></block>
-  <block id="96f94eb5604759d8f66835aee38436dc" category="list-text"><block ref="271a86b04483f9a3dd8257e5616dda99" category="inline-xref-macro-rx"></block></block>
-  <block id="46fd0342837386653216785e15172aa8" category="list-text"><block ref="7f0352aaa429921b3305e52393f62807" category="inline-xref-macro-rx"></block></block>
-  <block id="5cd97fe4faf6302b47e426dc527001bd" category="inline-xref">第 2 阶段</block>
-  <block id="18efefbb7dfc549a016b6c88a83bd60d" category="admonition">如果您要将 H610S 系列节点升级到 Element 12.3.x ，并且此节点运行的 Element 版本早于 11.8 ，则需要执行其他升级步骤（<block ref="705f7add14cc7784392a1a0405b32daa" category="inline-xref-macro-rx"></block>）。如果您运行的是 Element 11.8 或更高版本，则不需要执行其他升级步骤（第 2 阶段）。</block>
   <block id="1a1c6d70aec56ed56fdc5c3ac8162a8b" category="section-title">使用 NetApp Hybrid Cloud Control UI 升级 Element 存储</block>
   <block id="a544a5293c147dec832e983a6fbad504" category="paragraph">您可以使用 NetApp Hybrid Cloud Control UI 升级存储集群。</block>
   <block id="358a3ff6d008d52e4a816f3c9f4d8d5f" category="inline-link">适用于 NetApp HCI 存储集群的 NetApp HCI 软件包</block>
   <block id="dd76252ea7a50def2a98f218cb1505b4" category="inline-link">知识库文章</block>
   <block id="2882996895673f16b2fcf0cabfb994f1" category="admonition">有关使用 NetApp Hybrid Cloud Control 升级存储集群时的潜在问题及其解决方法，请参见<block ref="385c83615df1d77fbf0bae3f06fabb3d" category="inline-link-rx"></block>。</block>
-  <block id="7fad05c5548f9989eaee59a54633305a" category="admonition">对于非 H610S 平台，每个节点的升级过程大约需要 30 分钟。</block>
   <block id="d64a6336a39c9f27c33956f187d79c87" category="list-text">通过提供存储集群管理员凭据登录到 NetApp Hybrid Cloud Control 。</block>
   <block id="8d2b20731c568a1d9a02267e5d20edb7" category="list-text">在 * 升级 * 页面上，选择 * 存储 * 。</block>
   <block id="eced5161fd4b5a5d98480da44ccabc87" category="paragraph">* 存储 * 选项卡列出了安装过程中的存储集群。如果 NetApp Hybrid Cloud Control 无法访问某个集群，则该集群将不会显示在 * 升级 * 页面上。</block>
@@ -1205,7 +1185,6 @@
   <block id="4109e9de1e5e5e6a88e7ab1943736894" category="admonition">如果您离开浏览器窗口，则文件上传将丢失。</block>
   <block id="effc57e6ad213336e96f00439b792658" category="paragraph">成功上传并验证文件后，将显示一条屏幕消息。验证可能需要几分钟时间。如果在此阶段离开浏览器窗口，则会保留文件上传。</block>
   <block id="2b96c3916188bec9de822541d9cf623f" category="cell">您要升级运行的 Element 版本早于 11.8 的 H610S 集群。</block>
-  <block id="2351c1e27093e71da7b231f5059cc476" category="list-text">完成中所需的其他步骤（第 2 阶段）<block ref="f89d7bc8c94108aeb49b4fdeac4ce106" category="inline-link-rx"></block>，并在用户界面中确认您已完成第 2 阶段。</block>
   <block id="d215420632f75acd5be40e1f61fad92e" category="paragraph">升级完成后，您可以下载日志。有关各种升级状态更改的信息，请参见 <block ref="963ffe23b927e51707381f60a050d9f4" category="inline-xref-macro-rx"></block>。</block>
   <block id="d3e7182b84a940e7db18b7fb84516b9d" category="section-title">升级状态更改</block>
   <block id="03f25bbad83c64043f813d6fad6846de" category="paragraph">以下是用户界面中的 * 升级状态 * 列在升级过程之前，期间和之后显示的不同状态：</block>
@@ -1223,7 +1202,6 @@
   <block id="25026455f4896275dc71ea344eae7273" category="inline-link-macro">代理配置：</block>
   <block id="583f3e650ef38070d35da27a89c06904" category="cell">如果 NetApp Hybrid Cloud Control 无法通过外部连接访问联机软件存储库，则会显示此状态，而不是显示 * 可用版本 * 。如果您已建立外部连接，但仍看到此消息，请检查 <block ref="6ff9e66037288034fea8427eccd4ef4c" category="inline-link-macro-rx"></block>。</block>
   <block id="c25db468e3487f49a3fe8a8fd3ee6fca" category="cell">完成并进行跟进</block>
-  <block id="35be88b3f15b8f03a1b80ac136a5039d" category="cell">仅适用于从早于 118 的 Element 版本升级的 H610S 节点。升级过程的第 1 阶段完成后，此状态将提示您执行升级的第 2 阶段（请参见<block ref="f89d7bc8c94108aeb49b4fdeac4ce106" category="inline-link-rx"></block>）。完成第 2 阶段并确认已完成后，状态将变为 * 最新 * 。</block>
   <block id="c46945f40a6b2e92964b73d6d398f9d3" category="section-title">使用 NetApp Hybrid Cloud Control API 升级 Element 存储</block>
   <block id="13381b43a34c53873fa3ea94ea881f65" category="paragraph">您可以使用 API 将集群中的存储节点升级到最新的 Element 软件版本。您可以使用自己选择的自动化工具来运行 API 。此处介绍的 API 工作流使用管理节点上提供的 REST API UI 作为示例。</block>
   <block id="8c641b6be2c77d41b861c68406aa882e" category="list-text">根据您的连接执行以下操作之一：</block>
@@ -1262,8 +1240,6 @@
   <block id="c3b2d48205919d9b80e19bd9010720cc" category="list-text">在请求正文中输入 ` action" ： "resume"` 。</block>
   <block id="15e4b27c3ddbd4f6284b6fb714f764c3" category="cell">由于维护窗口正在关闭或其他原因，您需要暂停升级。</block>
   <block id="0f449201481f814f1674b02766850303" category="list-text">在请求正文中输入 ` action" ： "pause"` 。</block>
-  <block id="ecfc48ecc069bce7a3654faa3d90f6ba" category="cell">如果要升级运行的 Element 版本早于 11.8 的 H610S 集群，则会在响应正文中看到状态 `finishedNeedsAck` 。您需要对每个 H610S 存储节点执行其他升级步骤（第 2 阶段）。</block>
-  <block id="8d00e90838fe38374a95fae1a5bd94ba" category="list-text">请参见 <block ref="3d9982c2d057e73df2291b5532839d41" category="inline-xref-macro-rx"></block> 并完成每个节点的过程。</block>
   <block id="81175df6f619617903d93fd97b35f2a3" category="list-text">在请求正文中输入 ` action" ： "acknowledge "` 。</block>
   <block id="0dc6c0e63057b6a7522f5bbf03ae2e48" category="list-text">根据需要多次运行 * 获取​ /upgrades/｛ upgradeId ｝ * API ，直到此过程完成。</block>
   <block id="05e1370c6bc841bbf10001b3bec41c0e" category="paragraph">在升级期间，如果未遇到任何错误，则 `stStatus` 会指示 `Running` 。升级每个节点后， `step` 值将更改为 `NodeFinished` 。</block>
@@ -1273,61 +1249,7 @@
   <block id="dc10d6ac703c7987da8e206f17bfba19" category="list-text">集群故障将在三小时内得到解决，升级将继续进行。在这种情况下，您无需执行任何操作。</block>
   <block id="59176eee36815639c56b916d1ee6d2b9" category="list-text">NetApp 支持部门已确定需要暂时中止升级，以便在三小时内采取更正措施。支持人员将使用 API 中止升级。</block>
   <block id="e0cac02c93ade1b7ecc2eb64907171a8" category="admonition">在更新节点时中止集群升级可能会导致驱动器异常地从节点中删除。如果驱动器被异常删除，则在升级期间重新添加驱动器需要 NetApp 支持部门手动干预。节点执行固件更新或更新后同步活动可能需要较长时间。如果升级进度似乎停滞，请联系 NetApp 支持部门以获得帮助。</block>
-  <block id="f7cb949e38e4d529492a7a05aae8a9db" category="section-title">使用 HealthTools 升级已连接站点上的 Element 软件</block>
-  <block id="2d95a5cefb4bb26e6c4f585e36b7dd0a" category="admonition">要升级 Element 存储软件，您需要最新版本的 HealthTools 。</block>
-  <block id="0ec4573ec12f9825d509316cd1dca61c" category="list-text">将 ISO 文件复制到可访问位置（如 /tmp ）的管理节点。</block>
-  <block id="f2c453451cde52ee9d2593c6e63274eb" category="paragraph">上传 ISO 文件时，请确保文件名不会更改，否则后续步骤将失败。</block>
-  <block id="897472b951e965022b0064dfc63a0f4a" category="list-text">* 可选 * ：在升级之前，将 ISO 从管理节点下载到集群节点。</block>
-  <block id="8c342106dd75068c48617d5dc840663d" category="paragraph">此步骤可在存储节点上预暂存 ISO 并运行额外的内部检查以确保集群处于可升级的良好状态，从而缩短升级时间。执行此操作不会将集群置于 " 升级 " 模式或限制任何集群操作。</block>
-  <block id="9fee9abc7b69dd07fa1a831af57ff9f5" category="admonition">在命令行中省略密码，以允许 `sfinstall` 提示输入信息。对于包含特殊字符的密码，请在每个特殊字符之前添加反斜杠（` \` ）。例如， `mypass ！@1` 应输入为 `mypass\ ！ \@` 。</block>
-  <block id="c0f48060c6a1a380e510690cb8ad23a3" category="paragraph">* 示例 * 请参见以下示例输入：</block>
-  <block id="29774ba2969a9ed257824aea7b1d0e83" category="paragraph">此示例的输出显示， `sfinstall` 尝试验证是否提供了更高版本的 `sfinstall` ：</block>
-  <block id="6a2b7aeb8ab6b3c4290959fdc9ff1fe4" category="paragraph">请参见以下成功预处理操作示例摘录：</block>
-  <block id="5c51b050e2e731f34aacfaae2af1d74c" category="admonition">暂存完成后，升级事件发生后，此消息将显示 `Storage Node Upgrade Staging Successful` 。</block>
-  <block id="721d0077b7ed51a5880bf327fe87c25e" category="paragraph">升级完成后，暂存的 ISO 将被自动删除。但是，如果升级尚未启动且需要重新计划，则可以使用以下命令手动取消暂存 ISO ：</block>
-  <block id="20e277048d3d0bf030f1632276169fd4" category="paragraph">`sfinstall &lt;MVIP&gt; -u &lt;cluster_username&gt; -destage`</block>
-  <block id="c35f4ff71db325d5c3ccaa43e225dab4" category="paragraph">升级开始后，降级选项将不再可用。</block>
-  <block id="25dad1338668aacbcb8afbd3cdea0d1f" category="list-text">使用 `sfinstall` 命令和 ISO 文件的路径开始升级：</block>
-  <block id="3297b1b5dfa3e2129f1d657f2c682785" category="paragraph">`sfinstall &lt;MVIP&gt; -u &lt;cluster_username&gt; &lt;path-toinstall-file-ISO&gt;`</block>
-  <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">* 示例 *</block>
-  <block id="b429e8489b3eec4ac94daad30d905906" category="paragraph">请参见以下输入命令示例：</block>
-  <block id="d91b070c7f8d6b290722e056d7aff9ce" category="paragraph">请参见以下成功升级示例摘录。升级事件可用于监控升级进度。</block>
-  <block id="503d85929978f593abfff70c30d833a9" category="section-title">使用 HealthTools 升级非公开站点上的 Element 软件</block>
-  <block id="dda57880ebc4e427f14795d16b1ee0ad" category="paragraph">您可以使用 HealthTools 工具套件在没有外部连接的非公开站点上更新 NetApp Element 软件。</block>
-  <block id="33ff5a5d635fbe38905932dd4b045967" category="list-text">选择正确的软件版本并将最新的存储节点映像下载到非管理节点计算机。</block>
-  <block id="a6c9e3a7671c1fd9d7328c3be5d107b5" category="inline-link">JSON 文件</block>
-  <block id="d862ce84c0cf2ec154f546bffc1c8204" category="list-text">将此 ISO 文件复制到管理节点中可访问的位置，例如 ` /tmp` 。</block>
-  <block id="22e106a3b8f9362d811fda2079e6b8db" category="admonition">例如，您可以使用 SCP 来执行此操作。上传 ISO 文件时，请确保文件名不会更改，否则后续步骤将失败。</block>
-  <block id="1ef2f7a3b01bf7110273e9236fe54c5f" category="list-text">运行 `sfupdate-healthtools` 命令：</block>
-  <block id="490193edf4b0a3ee585d80801462b05d" category="list-text">检查安装的版本：</block>
-  <block id="dbb4aef8d48a834601a0005f61d97520" category="list-text">根据元数据 JSON 文件检查最新版本：</block>
-  <block id="28eae133d242c1568712c3d66fb589c1" category="list-text">确保集群已准备就绪：</block>
-  <block id="5353ac2ddf78bfec1f324dc1ca4a3897" category="list-text">使用 ISO 文件和元数据 JSON 文件的路径运行 `sfinstall` 命令：</block>
-  <block id="edb52d55fa4e1671264020c943f5d142" category="paragraph">* 可选 * 您可以将 ` -stage` 标志添加到 `sfinstall` 命令中，以便预先暂存升级。</block>
-  <block id="ebb27dfdf3051caa1846a27f5d3d2f10" category="admonition">如果您要将 H610S 系列节点升级到 Element 12.3.x ，并且此节点运行的 Element 版本早于 11.8 ，则需要执行其他升级步骤（<block ref="a5130687e57e8817eb0a5750138c4a5d" category="inline-xref-macro-rx"></block>）。如果您运行的是 Element 11.8 或更高版本，则不需要执行其他升级步骤（第 2 阶段）。</block>
-  <block id="b70733b60dd9e413d06436acea52c35f" category="section-title">使用 HealthTools 升级失败时会发生什么情况</block>
-  <block id="3b49bce18ca96bf4f13654859689dc77" category="paragraph">如果软件升级失败，您可以暂停升级。</block>
-  <block id="fcf06359111371e9dfb5f83b2c9b54e4" category="admonition">只能使用 Ctrl-C 暂停升级这样，系统就可以自行清理。</block>
-  <block id="3c330e1adb1ca6c3bd128f474aaf71a4" category="paragraph">当 `sfinstall` 等待集群故障清除时，如果任何故障导致故障仍然存在，则 `sfinstall` 不会继续到下一个节点。</block>
-  <block id="36eb9f386bd0dec17f38604d863ef7b5" category="list-text">您应使用 Ctrl+C 停止 `sfinstall`</block>
-  <block id="93e83f02023d196b290fe8c8c1561d92" category="list-text">请联系 NetApp 支持部门以协助进行故障调查。</block>
-  <block id="55cc2093a3a8b322989ca25e66eaaded" category="list-text">使用相同的 `sfinstall` 命令恢复升级。</block>
-  <block id="84d461992a02b71c14698346b8e98ecf" category="list-text">使用 Ctrl+C 暂停升级时，如果升级当前正在升级节点，请选择以下选项之一：</block>
-  <block id="d167f82509b4775dc2e4f0591d367688" category="list-text">* 等待 * ：允许当前升级节点完成，然后再重置集群常量。</block>
-  <block id="5bdc5e3ee7757312a04a2fa4277b16fa" category="list-text">* 继续 * ：继续升级，此操作将取消暂停。</block>
-  <block id="bf47816b7afaf79380fac533b44f3274" category="list-text">* 中止 * ：重置集群常量并立即中止升级。</block>
-  <block id="7946671b5ea23ad41d0dc6ba37b5af51" category="section-title">将 H610S 存储节点升级到 Element 12.3.x （第 2 阶段）</block>
-  <block id="dc060618420764cdfc7790fdeb1e33e8" category="paragraph">如果您要将 H610S 系列节点升级到 Element 12.3.x ，而该节点运行的 Element 版本早于 11.8 ，则升级过程将包括两个阶段。</block>
-  <block id="5e44a1903ec70087cd72eac7efa174b3" category="paragraph">首先执行的第 1 阶段与标准升级到 Element 12.3.x 的过程相同。它会以滚动方式在集群中逐个节点安装 Element 软件和所有 5 个固件更新。由于固件有效负载，每个 H610S 节点的此过程预计大约需要 1.5 到 2 小时，包括在升级结束时为每个节点执行一个冷启动周期。</block>
   <block id="ab57fd0432e25d5b3013133a1c910d56" category="inline-link">知识库</block>
-  <block id="7d9b0c6e23092c34bac9505f8cb8d42c" category="paragraph">第 2 阶段涉及完成所需步骤，以便对每个 H610S 节点执行完全关闭节点和断开电源的操作<block ref="30b30908e7d32799d6c615b58aa4901f" category="inline-link-rx"></block>。此阶段预计每个 H610S 节点大约需要一小时。</block>
-  <block id="da67066390c502751474cd0e4f74740c" category="admonition">完成第 1 阶段后，五个固件更新中的四个将在每个 H610S 节点的冷启动期间激活；但是，复杂可编程逻辑设备（ CPLD ）固件需要完全断开电源并重新连接才能完全安装。CPLD 固件更新可防止在未来重新启动或重新启动期间发生 NVDIMM 故障和元数据驱动器逐出。此电源重置预计每个 H610S 节点大约需要一小时。它需要关闭节点，拔下电源线或通过智能 PDU 断开电源，等待大约 3 分钟，然后重新连接电源。</block>
-  <block id="1b93ab1b5459eb73d25ad06d2fcff83c" category="list-text">您已完成 H610S 升级过程的第 1 阶段，并已使用一个标准 Element 存储升级过程升级存储节点。</block>
-  <block id="c74c1e6252d1029f4588b6fffd575b29" category="admonition">第 2 阶段需要现场人员。</block>
-  <block id="b04835ea05c5105d613b7fb4a9101224" category="list-text">（第 2 阶段）完成集群中每个 H610S 节点所需的电源重置过程：</block>
-  <block id="d11f8cc6c1645d770c8cdaa2a8979e5b" category="admonition">如果集群还具有非 H610S 节点，则这些非 H610S 节点将免于进入第 2 阶段，无需关闭或断开其电源。</block>
-  <block id="933f74a3885353a5d5a55ba2720e3434" category="list-text">请联系 NetApp 支持部门以获得帮助并计划此升级。</block>
-  <block id="370ad5e096ae3a6d595b48d9baa50889" category="list-text">按照此步骤中的第 2 阶段升级操作步骤进行操作<block ref="30b30908e7d32799d6c615b58aa4901f" category="inline-link-rx"></block> 完成每个 H610S 节点的升级所需的时间。</block>
   <block id="c86a0177e4fefa73a875ca59c8743d2a" category="summary">借助 NetApp HCI ，您可以使用 NetApp 混合云控制来管理存储资产。</block>
   <block id="0deab839774d49992d9def2607587e9b" category="doc">管理 NetApp HCI 存储概述</block>
   <block id="aab9f7e2348f4625e75e4950993dc8d9" category="paragraph">借助 NetApp HCI ，您可以使用 NetApp 混合云控制来管理这些存储资产。</block>
@@ -2596,10 +2518,8 @@
   <block id="520e54b191d9f32833ed20cf5d810399" category="list-text"><block ref="520e54b191d9f32833ed20cf5d810399" category="inline-link-macro-rx"></block></block>
   <block id="f5734d4e8acdeb186a1c22c351c4a0bf" category="paragraph">您必须在升级 Element 存储之前运行运行运行状况检查，以确保集群中的所有存储节点均已准备好进行下一次 Element 存储升级。</block>
   <block id="1b4d7862ca62ac0691b197c1c4e48017" category="admonition">在升级 Element 软件之前，您必须升级到最新的管理服务包。</block>
-  <block id="a42a5f062307c65656fb022b1bc38224" category="paragraph">您可以使用 NetApp Hybrid Cloud Control （ HCC ） UI ， HCC API 或 HealthTools 套件运行运行状况检查：</block>
   <block id="0096c254c62197f713da16cbb8cf17bf" category="list-text"><block ref="43e2712ac16e77262f42113e91f41bfc" category="inline-xref-macro-rx"></block> （首选方法）</block>
   <block id="c0ce03ffdb1b2eaf2997d4b003a6c398" category="list-text"><block ref="33b5a46d5ad547c7160d2877495cd388" category="inline-xref-macro-rx"></block></block>
-  <block id="2321e5c974e77f58ee923d1e00e01167" category="list-text"><block ref="2afbc4735288b232693d6654f053bf83" category="inline-xref-macro-rx"></block></block>
   <block id="d9072e37167baf145bc5655975039b9c" category="paragraph">您还可以了解有关此服务运行的存储运行状况检查的更多信息：</block>
   <block id="62a5effb348b201359f9288178063353" category="list-text"><block ref="b9c91f9aab75a470a42dbb291a17df8d" category="inline-xref-macro-rx"></block></block>
   <block id="dd2a5a4091be5700ab6001e60a9a6483" category="section-title">在升级存储之前，请使用 NetApp Hybrid Cloud Control 运行 Element 存储运行状况检查</block>
@@ -2633,34 +2553,6 @@
   <block id="2531dd1ed0ade9f475e182123de3f411" category="list-text">选择 * 获取​ /health-t checks​ / ｛ healthCheckId ｝ /log*</block>
   <block id="d84036b22a23f84fa8de705bbe508b0b" category="list-text">查看任何特定错误并获取相关知识库文章链接。</block>
   <block id="ebf662609bd0c670a5048adf12e5dd87" category="list-text">解决集群问题后，请再次运行 * 获取​ /health-m checks​ / ｛ healthCheckId ｝ /log* 。</block>
-  <block id="59a71894f03a45e8e483f46324a0cbe2" category="section-title">在升级存储之前，请使用 HealthTools 运行 Element 存储运行状况检查</block>
-  <block id="0d1274d4382b6170548bfed6eb0a1d26" category="paragraph">您可以使用 `sfupgradecheck` 命令验证存储集群是否已做好升级准备。此命令可验证待定节点，磁盘空间和集群故障等信息。</block>
-  <block id="a1a601d4e91ec78d6ee10f6ac40a77bb" category="inline-link-macro">HealthTools 升级</block>
-  <block id="9496f5e851814299d82846f22feafc17" category="paragraph">如果您的管理节点位于没有外部连接的非公开站点上，则升级就绪检查需要使用您在期间下载的 `metadata .json` 文件 <block ref="6108af9ca5aa4fda7c0167fbe5ccda18" category="inline-link-macro-rx"></block> 以成功运行。</block>
-  <block id="b862b2474fa07cc404db84c594efce4c" category="paragraph">此操作步骤介绍了如何处理升级检查，这些检查会产生以下结果之一：</block>
-  <block id="f57425902a7823604b07d6956e06c26f" category="list-text">已成功运行 `sfupgradecheck` 命令。您的集群已做好升级准备。</block>
-  <block id="b0008019e4765a0f5ce8ca1d8597d8b1" category="list-text">在 `sfupgradecheck` 工具中执行的检查失败，并显示错误消息。您的集群尚未做好升级准备，需要执行其他步骤。</block>
-  <block id="6ce8ca8ee619e4a32bceee7175e95782" category="list-text">升级检查失败，并显示一条错误消息，指出 HealthTools 已过期。</block>
-  <block id="9ea9403d66dae4b0e908c51cfd2a7be2" category="list-text">升级检查失败，因为管理节点位于非公开站点上。</block>
-  <block id="0a69c13118585a503647b3be20d5a08a" category="list-text">运行 `sfupgradecheck` 命令：</block>
-  <block id="fa6045d558d5baa7ab9838009cef768f" category="admonition">对于包含特殊字符的密码，请在每个特殊字符之前添加反斜杠（` \` ）。例如， `mypass ！@1` 应输入为 `mypass\ ！ \@` 。</block>
-  <block id="0bdc41a025449ddded34db9e8baf2c2f" category="paragraph">示例输入命令，其中包含示例输出，不会显示任何错误，并且您已做好升级准备：</block>
-  <block id="8d060391508bf3d854a0dadcdf737f08" category="list-text">如果出现错误，则需要执行其他操作。有关详细信息，请参见以下子部分。</block>
-  <block id="2765a68e0b7fa1dfee8eacec129751a2" category="section-title">您的集群未做好升级准备</block>
-  <block id="72ebb859cf858bcc59023f2756c6ea4a" category="paragraph">如果您看到与其中一项运行状况检查相关的错误消息，请按照以下步骤进行操作：</block>
-  <block id="d6cedf59cf0dcf37abf8616ab9744ff6" category="list-text">查看 `sfupgradecheck` 错误消息。</block>
-  <block id="6d55356ca8cb9b27cfa6e2bb46ebb089" category="paragraph">响应示例：</block>
-  <block id="9d6bc68df898deff926bd4b077e87b8e" category="inline-link">知识库</block>
-  <block id="d296deed038a1f8a9962fb531a41747b" category="paragraph">在此示例中，节点 1 的磁盘空间不足。有关详细信息，请参见<block ref="ff839b68b5f4e065b661cc5001da7603" category="inline-link-rx"></block> （ KB ）错误消息中列出的文章。</block>
-  <block id="af5cc3d7837dbef7c533c7c7ce58c08d" category="section-title">HealthTools 已过期</block>
-  <block id="1b0e4c7bd6b181bb824ab983e1072e08" category="paragraph">如果您看到指示 HealthTools 不是最新版本的错误消息，请按照以下说明进行操作：</block>
-  <block id="ff54cfd9a3047abf13081499a1664fdf" category="list-text">查看错误消息，并注意升级检查失败。</block>
-  <block id="7dffbd2f21931076fdb29acaf8ae26f0" category="list-text">按照响应中所述的说明进行操作。</block>
-  <block id="5415d26aa4e82d38e1a9e3b034df122a" category="section-title">您的管理节点位于非公开站点上</block>
-  <block id="58bbc3933c0ddb7478a26f7552520e97" category="list-text">查看此消息，并注意升级检查失败：</block>
-  <block id="337d79852891a37d41285c9101c3fff4" category="list-text">运行以下命令：</block>
-  <block id="fcc491914f2a9b039c0cf0193fff10b3" category="list-text">有关详细信息，请参见其他 <block ref="6108af9ca5aa4fda7c0167fbe5ccda18" category="inline-link-macro-rx"></block> 非公开站点的信息。</block>
-  <block id="611547aaaf1aef29fd97e330f0d053dc" category="list-text">运行以下命令，验证 HealthTools 套件是否为最新版本：</block>
   <block id="ebc4fee5e985fa852c3148f175eacd9c" category="section-title">服务执行的存储运行状况检查</block>
   <block id="4e783874df68d59144696858bafed8b7" category="paragraph">存储运行状况检查会对每个集群进行以下检查。</block>
   <block id="d2d05e4a06ebcd5bb81adfc286280a87" category="cell">检查名称</block>
@@ -2878,7 +2770,6 @@
   <block id="2b25aeb8c7f6b5acc086216f641291e8" category="admonition">系统将提示您使用 NetApp 支持站点凭据登录。</block>
   <block id="08edd2123939d5309dced149763a50ee" category="section-title">NetApp HCI</block>
   <block id="54866f3f5260905d8cc6b998d85fee46" category="inline-link">《 NetApp HCI 1.9P1 发行说明》</block>
-  <block id="5f123fb5072e8736326c928e2de971af" category="list-text"><block ref="9676fc811bea74225536cdd128daebc0" category="inline-link-rx"></block> _new_</block>
   <block id="ad486ba7980ca0df1937d7f26f4ce12b" category="inline-link">NetApp HCI 1.9 发行说明</block>
   <block id="633cc64117e19d8cdd0def00cc27e8f5" category="list-text"><block ref="633cc64117e19d8cdd0def00cc27e8f5" category="inline-link-rx"></block></block>
   <block id="93c90752aba7edbf5a9fd2d0543c08d3" category="inline-link">NetApp HCI 1.8P1 发行说明</block>
@@ -2888,7 +2779,6 @@
   <block id="4eed15839b8c708f78b2b696364ff0aa" category="list-text"><block ref="4eed15839b8c708f78b2b696364ff0aa" category="inline-link-rx"></block></block>
   <block id="3938cfdbe176bad61cedb25bdb572858" category="section-title">NetApp Element 软件</block>
   <block id="56570048e2475ec7b64ee91388743714" category="inline-link">《 NetApp Element 软件 12.3.2 发行说明》</block>
-  <block id="3903fc6a9f0bcbe1f49608f5110cf661" category="list-text"><block ref="9de5606ae9b23ff6651244b85bd5dae8" category="inline-link-rx"></block> _new_</block>
   <block id="7199e7988a06a61dd6614783601855bd" category="inline-link">《 NetApp Element 软件 12.3.1 发行说明》</block>
   <block id="9add94ad0bafb6a0c0977e09efa22b79" category="list-text"><block ref="9add94ad0bafb6a0c0977e09efa22b79" category="inline-link-rx"></block></block>
   <block id="325c4db41bea4b4c5bc841d336b08e32" category="inline-link">《 NetApp Element 软件 12.3 发行说明》</block>
@@ -3047,37 +2937,13 @@
   <block id="3500be2d6452b665360ea9b308c6c109" category="inline-link">SolidFire 和 Element 文档</block>
   <block id="06ace0d3bf47e1a95240223bce9b2125" category="list-text"><block ref="06ace0d3bf47e1a95240223bce9b2125" category="inline-link-rx"></block></block>
   <block id="1761ea607c3f8d002099290408801187" category="doc">升级管理节点</block>
-  <block id="1d9f05f083ca394b7aa3fbee6b4ba1c9" category="paragraph">您可以将管理节点从 11.0 或更高版本升级到管理节点 12.3.x 版。</block>
-  <block id="c3215740fa940d9b86ab9435fcad9e83" category="paragraph">升级存储集群上的 Element 软件不再需要升级管理节点操作系统。如果管理节点为 11.3 或更高版本，您只需将管理服务升级到最新版本，即可使用 NetApp Hybrid Cloud Control 执行 Element 升级。如果您希望出于安全修复等其他原因升级管理节点操作系统，请按照适用于您的方案的管理节点升级操作步骤进行操作。</block>
-  <block id="5b6ab4d3c53ec5567002938471c9c120" category="admonition">vCenter 插件 4.4 或更高版本需要使用模块化架构创建的管理节点 11.3 或更高版本，并提供各个服务。</block>
-  <block id="7876c958d2731a283bba894ce3294f21" category="paragraph">选择以下管理节点升级选项之一：</block>
-  <block id="728469310b9db013f8d3ad56547efdaa" category="list-text">管理节点 12.3.2 为启用了虚拟卷（ VVOL ）功能的存储集群提供了一个安全缓解措施。如果存储集群已位于 Element 12.3 上且已启用 VVol 功能，则强烈建议升级到 12.3.2 。</block>
-  <block id="2c191a2c0c7197808c880518728ba922" category="list-text">管理节点 12.3.1 中没有其他功能更改或错误修复。如果您已运行管理节点 12.3 ，则无需将其升级到 12.3.1 。</block>
-  <block id="507aad5e8d9a5b9cec1425ebbb057653" category="list-text">如果要从管理节点 12.3 升级：管理节点 12.3.1 中没有其他功能更改或错误修复。如果您已运行管理节点 12.3 ，则无需将其升级到 12.3.1 。</block>
-  <block id="dc99de080f9f92750fce3ddadf55c54c" category="admonition">如果您选择继续对使用 NDE 部署的管理节点 12.3 进行升级，则升级到 12.3.x 将完成。但是，升级可能会在重新启动期间遇到错误。如果发生这种情况，请重新启动管理节点，使其正确显示 12.3.x</block>
-  <block id="877752a02a9a723465e45e0699c0408a" category="list-text">如果要从管理节点 12.2 升级：<block ref="13ca98900fab2e9dc617ec4e80e5ef22" category="inline-xref-macro-rx"></block></block>
-  <block id="c385c319a88b75509bcd9e965511f832" category="list-text">如果要从管理节点 12.0 升级：<block ref="837fd47411e60554dd964007e7b1f57c" category="inline-xref-macro-rx"></block></block>
-  <block id="d9ce85fadb1d93ae48ece9ac5d9093f9" category="list-text">如果要从管理节点 11.3 ， 11.5 ， 11.7 或 11.8 升级：<block ref="3a74f9f0175a11af5a47bdad606bbcd5" category="inline-xref-macro-rx"></block></block>
-  <block id="22b193ec933652dd527b89b17c80d83d" category="list-text">如果要从管理节点 11.0 或 11.1 升级：<block ref="b1903eda12feed7e11fce1fdc8305f3f" category="inline-xref-macro-rx"></block></block>
-  <block id="d227cc2a1a7967b0993aca8c1632ef06" category="list-text">如果要从管理节点 10.x 版升级：<block ref="ea1d9591bcd49e83ebef91210d8c75f6" category="inline-xref-macro-rx"></block></block>
-  <block id="bc9f9d7d7718066607614ff9ec0392da" category="paragraph">如果您已按 * 顺序 * 更新（ 1 ）管理服务版本和（ 2 ） Element 存储版本，并希望 * 保留 * 现有管理节点，请选择以下选项：</block>
   <block id="1edc36bdf08bca8bac4f78d104c92780" category="admonition">如果您未依次更新管理服务和 Element 存储，则无法使用此操作步骤重新配置身份验证。请改用相应的升级操作步骤。</block>
-  <block id="2317b568bcd918edcf31949bac7267a8" category="list-text">如果要保留现有管理节点：<block ref="35b702a8c6556d6de2f367adef3740ff" category="inline-xref-macro-rx"></block></block>
-  <block id="da6d397cfaaa44a28698a3bcfd23a4da" category="section-title">将管理节点从 12.2 升级到 12.3.x 版</block>
-  <block id="66e1e9a986e9982a40d12dab1294fd2d" category="paragraph">您可以将管理节点从 12.2 版原位升级到 12.3.x 版，而无需配置新的管理节点虚拟机。</block>
-  <block id="87c45a5003b849072d83b4e02ba24f38" category="admonition">Element 12.3.x 管理节点是一种可选升级。现有部署不需要此功能。</block>
   <block id="ec29698b029ebdc0e8d965b404b70339" category="list-text">管理节点 VM 的 RAM 为 24 GB 。</block>
-  <block id="8546c62730d8cfcda5a49868756174b8" category="list-text">您要升级的管理节点为 12.0 版，并使用 IPv4 网络。管理节点版本 12.3.x 不支持 IPv6 。</block>
   <block id="d6db6ab6b83c4d33fe8d22d8155fd5df" category="admonition">要检查管理节点的版本，请登录到管理节点并在登录横幅中查看 Element 版本号。</block>
-  <block id="ddfbd12eec449726725cab59aec3dc3b" category="list-text">您已使用 NetApp Hybrid Cloud Control （ HCC ）将管理服务捆绑包更新为最新版本。您可以从以下 IP 地址访问 HCC ： `https://&lt;ManagementNodeIP&gt;`</block>
-  <block id="af893cd5d7f5dc057af51cccbf8db284" category="list-text">如果要将管理节点更新到 12.3.x 版，则需要使用管理服务 2.14.60 或更高版本继续操作。</block>
   <block id="580c35d1b4dc1d63073ae537ce0f28ab" category="inline-link-macro">配置其他存储 NIC</block>
-  <block id="2af95608d9fd504ee8d4e0f92619eb96" category="list-text">您已按照中的说明配置了一个额外的网络适配器（如果需要） <block ref="be46399bf51a96ee544de66528d12203" category="inline-link-macro-rx"></block>。</block>
   <block id="97badad042e3a18dd496d204994f3a2f" category="admonition">如果 eth0 无法路由到 SVIP ，则永久性卷可能需要额外的网络适配器。在 iSCSI 存储网络上配置一个新的网络适配器，以便配置永久性卷。</block>
-  <block id="2759cbca8a5572fe6fdc10d347df91c2" category="list-text">存储节点正在运行 Element 11.3 或更高版本。</block>
   <block id="1a6ffd97834fd7495156f52f3058e50b" category="list-text">使用 SSH 或控制台访问登录到管理节点虚拟机。</block>
   <block id="e097e26564fa470c938b5aa9cb375497" category="admonition">此 ISO 的名称类似于 `solidfire-fdva-&lt;element release&gt;-px-XX.X.x.XXXX.iso`</block>
-  <block id="f077979ddc9a2f599964924e1fd96e46" category="list-text">对下载的文件运行 md5sum 以检查下载的完整性，并将输出与 NetApp NetApp HCI 支持站点或 Element 软件上提供的输出进行比较，如以下示例所示：</block>
   <block id="4e82f8cfbdbaab82d0c8c7e65d59b756" category="paragraph">`sudo md5sum -b &lt;path to ISO&gt;/solidfire-fdva-&lt;element release&gt;-supx-XX.X.XXXX.iso`</block>
   <block id="ef1f8a0bdf5e0ada11b243c380cd427e" category="list-text">使用以下命令挂载管理节点 ISO 映像并将其内容复制到文件系统：</block>
   <block id="e385f51c5bf92f134a624896e0c9bcee" category="list-text">切换到主目录，然后从 ` /mnt` 卸载 ISO 文件：</block>
@@ -3087,39 +2953,11 @@
   <block id="8bce974438769fbac12eab13496c79d6" category="admonition">运行此步骤中所述的 sudo 命令后， SSH 会话将被终止。要继续监控，需要访问控制台。如果在执行升级时无法访问控制台，请在 15 到 30 分钟后重试 SSH 登录并验证连接。登录后，您可以在 SSH 横幅中确认新的操作系统版本，以指示升级已成功。</block>
   <block id="91f8485e670b52a7db8bd6e03c9ea22c" category="list-text">在管理节点上，运行 `redeploy-mnode` 脚本以保留先前的管理服务配置设置：</block>
   <block id="26b94eab828f09c4a896ceea69341e72" category="admonition">此脚本会保留先前的管理服务配置，包括来自 Active IQ 收集器服务，控制器（ vCenter ）或代理的配置，具体取决于您的设置。</block>
-  <block id="73f0b06b075dc2c13caded9ae137e4cf" category="admonition">如果先前已在管理节点上禁用 SSH 功能，则需要 <block ref="5b81c87a44b075e9194cc26f66c2b99f" category="inline-link-macro-rx"></block> 在已恢复的管理节点上。提供的 SSH 功能 <block ref="6bb28df38aa0844e287b2e23fc581879" category="inline-link-macro-rx"></block> 默认情况下，在管理节点上处于启用状态。</block>
-  <block id="bf4fe82ff2e76a42004dfe57ca39c520" category="section-title">将管理节点从 12.0 升级到 12.3.x 版</block>
-  <block id="1e6acaab5ffbb0dd6933f75ea2a0c42f" category="paragraph">您可以将管理节点从 12.0 版原位升级到 12.3.x 版，而无需配置新的管理节点虚拟机。</block>
-  <block id="f9412ec565dbf89e3de8549cd6a8b45f" category="list-text">配置管理节点 VM RAM ：</block>
   <block id="eb6e06188d05a494c7bef0f5114cda80" category="list-text">关闭管理节点虚拟机。</block>
   <block id="aa7fe87f431f9beda0578202ac3fd7f2" category="list-text">将管理节点虚拟机的 RAM 从 12 GB 更改为 24 GB 。</block>
   <block id="8f6d7a4937d5ef994024ec37d0af96db" category="list-text">打开管理节点虚拟机的电源。</block>
-  <block id="47d387f60650fa536ff6800d0a63fcfa" category="admonition">提供的 SSH 功能 <block ref="6bb28df38aa0844e287b2e23fc581879" category="inline-link-macro-rx"></block> 默认情况下，在运行管理服务 2.18 及更高版本的管理节点上处于禁用状态。如果先前已在管理节点上启用 SSH 功能，则可能需要 <block ref="5b81c87a44b075e9194cc26f66c2b99f" category="inline-link-macro-rx"></block> 在升级后的管理节点上。</block>
-  <block id="5f3f7ed38dd7e8e5abc2a1b8ebbec089" category="section-title">将管理节点从 11.3 升级到 11.3.x 版</block>
-  <block id="7ea6f441f843139309e6039039c14585" category="paragraph">您可以将管理节点从 11.3 ， 11.5 ， 11.7 或 11.8 原位升级到 12.3.x 版，而无需配置新的管理节点虚拟机。</block>
-  <block id="c227e5ec21b433f1d94bd39158ccc826" category="list-text">您要升级的管理节点为 11.3 ， 11.5 ， 11.7 或 11.8 版，并使用 IPv4 网络。管理节点版本 12.3.x 不支持 IPv6 。</block>
-  <block id="5db80cf9c51d272c8b8ab5662b7656d1" category="list-text">在 11.3 ， 11.5 ， 11.7 或 11.8 管理节点上，运行以下命令以升级管理节点操作系统版本。此脚本会在升级后保留所有必要的配置文件，例如 Active IQ 收集器和代理设置。</block>
-  <block id="438c35cd352fee993b72c08b374a6acf" category="section-title">将管理节点从 11.1 或 11.0 升级到 12.3.x 版</block>
-  <block id="93ed26ee1117aa5cedb29715f0312265" category="paragraph">您可以将管理节点从 11.0 或 11.1 原位升级到 12.3.x 版，而无需配置新的管理节点虚拟机。</block>
-  <block id="b6ce91a628d7a7c2eeb09aeb657c0fe7" category="admonition">使用最新的 HealthTools 升级 Element 软件。</block>
-  <block id="81044b834120f4f6ae976694410c56b7" category="list-text">您要升级的管理节点为 11.0 或 11.1 版，并使用 IPv4 网络。管理节点版本 12.3.x 不支持 IPv6 。</block>
-  <block id="f02d775433239dd5573e9a026931277b" category="list-text">对于管理节点 11.0 ，需要手动将 VM 内存增加到 12 GB 。</block>
-  <block id="8f68616172f6cfbee32b6852f5186f55" category="list-text">您已按照产品管理节点用户指南中有关配置存储 NIC （ eth1 ）的说明配置了其他网络适配器（如果需要）。</block>
-  <block id="00310028c5a8403863008de7035f409a" category="list-text">切换到主目录，然后从 /mnt 卸载 ISO 文件：</block>
-  <block id="c50867193a4d12b8bfb87a2df8c47a71" category="list-text">运行以下脚本之一并选择升级管理节点操作系统版本。请仅运行适用于您的版本的脚本。升级后，每个脚本都会保留所有必要的配置文件，例如 Active IQ 收集器和代理设置。</block>
-  <block id="8ac775eb8d83e9b53e94ef90e582d8fb" category="list-text">在 11.1 （ 11.1.0.73 ）管理节点上，运行以下命令：</block>
-  <block id="15514a6685b97d4827063f392005ada9" category="list-text">在 11.1 （ 11.1.0.72 ）管理节点上，运行以下命令：</block>
-  <block id="cea70f8d3d71cc93e034ab091aba6cca" category="list-text">在 11.0 （ 11.0.0.781 ）管理节点上，运行以下命令：</block>
-  <block id="c9440d3431e64f8d1456fbd256043dc5" category="list-text">在 12.3.x 管理节点上，运行 `upgrade-mnode` 脚本以保留先前的配置设置。</block>
-  <block id="2f6d9d217b8454c59235a5281310e1ac" category="admonition">如果要从 11.0 或 11.1 管理节点迁移，此脚本会将 Active IQ 收集器复制到新的配置格式。</block>
-  <block id="56ca7bc89bee5837759eb13fcc22f8d5" category="list-text">对于由具有永久性卷的现有管理节点 11.0 或 11.1 管理的单个存储集群：</block>
-  <block id="1c36429bc21514f52ce4c34e52699be1" category="list-text">对于由现有管理节点 11.0 或 11.1 管理且无永久性卷的单个存储集群：</block>
-  <block id="1d0dd1d7212314cbec4589ef288c9451" category="list-text">对于由具有永久性卷的现有管理节点 11.0 或 11.1 管理的多个存储集群：</block>
-  <block id="efc71656b9c688dd8b024426e9fac6f5" category="list-text">对于由现有管理节点 11.0 或 11.1 管理且无永久性卷的多个存储集群（ ` -pVM` 标志用于提供集群的 MVIP 地址之一）：</block>
   <block id="9e31323b5cbbe61c6c8c43ad2755958b" category="inline-link-macro">升级适用于 vCenter Server 的 Element 插件</block>
-  <block id="49fe4cc83f5673ee4313707be652fb5a" category="list-text">使用管理节点 API 查找安装的资产 ID ：</block>
   <block id="81b4d8ce3b6d3d31bcc065c5589192ab" category="list-text">从浏览器登录到管理节点 REST API UI ：</block>
-  <block id="c1d91df00a0c3fac54e32076a41126ac" category="list-text">转至存储 MVIP 并登录。此操作将接受证书以执行下一步。</block>
   <block id="53c2c27c3b3fb674bd0285146df5b77b" category="list-text">从代码 200 响应正文中，复制安装的 `id` 。</block>
   <block id="05c59d2489c111c7947e09976e2c1d9a" category="paragraph">您的安装具有在安装或升级期间创建的基本资产配置。</block>
   <block id="7c6477f25c22d13e15a77d85b6584b69" category="list-text">在 vSphere Web Client 导航器中选择主机。</block>
@@ -3128,46 +2966,8 @@
   <block id="4fc766d515cef70e327bbefb8f32007e" category="list-text">在 * asset_id* 字段中输入复制到剪贴板的父基本资产 ID 。</block>
   <block id="e2e193a380a16845739e1445cfe23fde" category="list-text">输入类型为 `vCenter` 和 vCenter 凭据的所需有效负载值。</block>
   <block id="421226b233bd18f9c1f8d179419a2f39" category="list-text">（仅限 NetApp HCI ）将计算节点资产添加到管理节点的已知资产：</block>
-  <block id="05d6c35ef525375d16c0c0ed228b8280" category="list-text">在有效负载中，输入 " 型号 " 选项卡中定义的所需有效负载值。输入 `ESXi Host` as `type` ，然后粘贴您在上一步中为 `hardware_tag` 保存的硬件标记。</block>
-  <block id="1128aaca3a95604af9f4e6f46e755aa7" category="section-title">从管理节点 10.x 版迁移到 11.x</block>
-  <block id="aa85ba7b60fc5a8d160bcac4e76602a7" category="inline-link-macro">最新 HealthTools</block>
-  <block id="4fa4a4a88296bc1c5f7da6db9c42ec09" category="paragraph">如果您的管理节点版本为 10.x ，则无法从 10.x 升级到 11.x您可以改用此迁移操作步骤将配置从 10.x 复制到新部署的 11.1 管理节点。如果管理节点当前为 11.0 或更高版本，则应跳过此操作步骤。您需要管理节点 11.0 或 11.1 以及 <block ref="3960d1c84dafac3bed344e6af98b8878" category="inline-link-macro-rx"></block> 将 Element 软件从 10.3 + 升级到 11.x</block>
-  <block id="5ddc21147ef02867c28649242e850a5d" category="list-text">在 VMware vSphere 界面中，部署管理节点 11.1 OVA 并打开其电源。</block>
-  <block id="df97bbffb2e220794d2b919824938c8e" category="list-text">打开管理节点 VM 控制台，此时将显示终端用户界面（ Terminal User Interface ， TUI ）。</block>
-  <block id="701707589c0dd91a43f6fc5b1ebe2396" category="list-text">使用 TUI 创建新的管理员 ID 并分配密码。</block>
-  <block id="de8fb9a417e5ff3f4cf6f4376300aedb" category="list-text">在管理节点 TUI 中，使用新 ID 和密码登录到管理节点并验证其是否正常工作。</block>
-  <block id="f91d0a737a08806ffd3053b00e324760" category="list-text">从 vCenter 或管理节点 TUI 中，获取管理节点 11.1 IP 地址并浏览到端口 9443 上的 IP 地址以打开管理节点 UI 。</block>
-  <block id="9f9e2eada94a2b513e7ea2fd2070a26f" category="list-text">在 vSphere 中，选择 * NetApp Element Configuration* &gt; * mNode Settings* 。（在较旧版本中，顶级菜单为 * NetApp SolidFire Configuration* 。）</block>
-  <block id="56a32dd49a6dbb0e0348a840882069b1" category="admonition">首次转到 * mNode Settings* 选项卡时， mNode Status 字段可能会显示为 * 未配置 * ，而不是预期的 * 启动 * ；您可能无法选择 * 操作 * &gt; * 清除 * 。刷新浏览器。mNode Status 字段最终将显示 * 启动 * 。</block>
-  <block id="bcc7cd82367090bebeb1a81f71b20707" category="list-text">从 vSphere 中注销。</block>
-  <block id="6bc08ff2c798923f83399b466e83828c" category="list-text">在 Web 浏览器中，打开管理节点注册实用程序并选择 * QoSSIOC Service Management* ：</block>
-  <block id="b142f691f9ca32840a06262706751854" category="list-text">设置新的 QoSSIOC 密码。</block>
-  <block id="7d175f707658ab8d8d7209eef36c531b" category="admonition">默认密码为 SolidFire` 。要设置新密码，必须提供此密码。</block>
-  <block id="d620125983dc5f2427e48ef8cf64e05d" category="list-text">选择 * 更新插件 * 。</block>
-  <block id="d2ba2536a729c91022a8866cb76aa0d0" category="list-text">登录到 vSphere 并选择 * NetApp Element Configuration* &gt; * mNode Settings* 。</block>
-  <block id="39bcb493b71e1252cc79ed60aca98b72" category="list-text">提供管理节点 IP 地址，管理节点用户 ID （用户名为 `admin` ），您在注册实用程序的 * QoSSIOC Service Management* 选项卡上设置的密码以及 vCenter 用户 ID 和密码。</block>
-  <block id="394f33ee158efaf5b14e0d18c2f943ed" category="paragraph">在 vSphere 中， "mNode Settings* " 选项卡应将 mNode 状态显示为 "*UP" ，表示管理节点 11.1 已注册到 vCenter 。</block>
-  <block id="df3dc388ad6c26081374f74d856f9abd" category="list-text">从管理节点注册实用程序（`https://&lt;mNode 11.1 IP address&gt; ： 9443` ）中，从 * QoSSIOC Service Management* 重新启动 SIOC 服务。</block>
-  <block id="7d9376db0a395aba952d3115a2d3e0a0" category="list-text">等待一分钟，然后检查 * NetApp Element Configuration* &gt; * mNode Settings* 选项卡。此操作应将 mNode 状态显示为 * 启动 * 。</block>
-  <block id="aa6036dbf6cc3ab20918cf83049c5f05" category="paragraph">如果状态为 * 已关闭 * ，请检查 ` /sf/packages/sioc/app.properties` 的权限。此文件应具有文件所有者的读取，写入和执行权限。正确的权限应如下所示：</block>
-  <block id="4055776ed89046d8a419faa68b1ff692" category="list-text">在 SIOC 进程启动且 vCenter 将 mNode 状态显示为 * 启动 * 后，检查管理节点上的 `sf-HCI-NMA` 服务的日志。不应显示任何错误消息。</block>
-  <block id="9340a1ef5ccd5faf2b0cdde0538a7d6b" category="list-text">（仅限管理节点 11.1 ）使用 root 权限通过 SSH 连接到管理节点 11.1 版，然后使用以下命令启动 NMA 服务：</block>
-  <block id="fc203d76381532a9354d7843d302c6d2" category="list-text">从 vCenter 执行操作以删除驱动器，添加驱动器或重新启动节点。此操作将触发存储警报，此警报应在 vCenter 中报告。如果正常运行，则 NMA 系统警报将按预期运行。</block>
-  <block id="2c006b8117a2062434d9558b860cffe9" category="list-text">如果在 vCenter 中配置了 ONTAP Select ，请在 NMA 中配置 ONTAP Select 警报，方法是将 `.ots.properties` 文件从先前的管理节点复制到管理节点 11.1 ` /sf/packages/nma/conf/.ots.properties` 文件，然后使用以下命令重新启动 NMA 服务：</block>
-  <block id="448a911dfb4872dba88fdc912fe3c930" category="list-text">使用以下命令查看日志，以验证 ONTAP Select 是否正常工作：</block>
-  <block id="d41a50f38b3094e878d30b80d8cb2dd0" category="list-text">通过执行以下操作配置 Active IQ ：</block>
-  <block id="dce36c2de2f9b7e677158933fe286b84" category="list-text">通过 SSH 连接到管理节点 11.1 版，然后转到 ` /sf/packages/collector` 目录。</block>
-  <block id="a7e684f6e673c62db23cd556a0bed754" category="list-text">出现提示时，输入管理节点 UI 密码。</block>
-  <block id="62e3899fe2adfc651dc44b617edd0895" category="list-text">运行以下命令：</block>
-  <block id="0de2f4579939a041b4a4bc0b73ea7714" category="list-text">验证 `sfcollector` 日志以确认其是否正常工作。</block>
-  <block id="c99a89b8b61e8c400aa4ad70d1c419a0" category="list-text">在 vSphere 中， * NetApp Element Configuration* &gt; * mNode Settings* 选项卡应将 mNode 状态显示为 * 启动 * 。</block>
-  <block id="a6111d07decd41df4a8fc7d16a7ea211" category="list-text">验证 NMA 是否正在报告系统警报和 ONTAP Select 警报。</block>
-  <block id="d1c20969ac5c1bd141ec1b70920ff9d8" category="list-text">如果一切正常，请关闭并删除管理节点 10.x VM 。</block>
   <block id="4b0a80de8336b03c597eb9e339a88503" category="section-title">使用管理节点 REST API 重新配置身份验证</block>
   <block id="3f171b923ed811e8ed015dcad2a9829a" category="paragraph">如果已按顺序升级（ 1 ）个管理服务和（ 2 ）个 Element 存储，则可以保留现有管理节点。如果您遵循了其他升级顺序，请参见原位管理节点升级过程。</block>
-  <block id="ef20e9e4192e944ceb425ad094982b81" category="list-text">您已将管理服务更新到 2.10.29 或更高版本。</block>
-  <block id="7d77f30dd6c3619cac922b1bf9fc7a7c" category="list-text">存储集群运行的是 Element 12.0 或更高版本。</block>
-  <block id="69bfe4b77f2e59784e9a7c91881f1161" category="list-text">您的管理节点为 11.3 或更高版本。</block>
   <block id="69f5442caf6936145cd4f73e7c83f2a4" category="list-text">您已按顺序更新管理服务，然后升级 Element 存储。除非按照所述顺序完成升级，否则无法使用此操作步骤重新配置身份验证。</block>
   <block id="d4d6be65d679aa54296e16328ec041bf" category="list-text">对于 * load_images* 参数，选择 `true` 。</block>
   <block id="2a1519db00ab50aa3a0e4964f93a27f8" category="paragraph">响应正文指示重新配置成功。</block>
@@ -3311,18 +3111,6 @@
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
   <block id="4ba16aa779bc8ad075658a848d8a534f" category="inline-link-macro">计算升级的 Ansible 角色注意事项</block>
   <block id="92650cf5badd89aace1461d0525236fd" category="list-text"><block ref="92650cf5badd89aace1461d0525236fd" category="inline-link-macro-rx"></block></block>
-  <block id="24e9da091f15f10b8da793e19b340302" category="inline-link-macro">Ember OS 12.3.1 注意事项</block>
-  <block id="7c37ff93ea224cdfb5fcc8ad277d67ef" category="list-text"><block ref="7c37ff93ea224cdfb5fcc8ad277d67ef" category="inline-link-macro-rx"></block></block>
-  <block id="fbcc1cb0e2a70eff701965a5f3e0d76b" category="inline-link-macro">Ember OS 12.3 注意事项</block>
-  <block id="b155ed748bc74699fbb05db3502ed3a6" category="list-text"><block ref="b155ed748bc74699fbb05db3502ed3a6" category="inline-link-macro-rx"></block></block>
-  <block id="26c74f7a8ac6a7c8cdb0def0e876263d" category="inline-link-macro">管理节点 12.3.1 注意事项</block>
-  <block id="cf6217d0b70c3e9e193eb51bdc471aab" category="list-text"><block ref="cf6217d0b70c3e9e193eb51bdc471aab" category="inline-link-macro-rx"></block></block>
-  <block id="43551c29e9ac231743a69c265f5ef85c" category="inline-link-macro">管理节点 12.3 通知</block>
-  <block id="6927fa09b89de9365631c15a2e8a8758" category="list-text"><block ref="6927fa09b89de9365631c15a2e8a8758" category="inline-link-macro-rx"></block></block>
-  <block id="8824580064fbf037016d45df0afe1c64" category="inline-link-macro">NetApp HCI 1.9P1 注意事项</block>
-  <block id="c98c104489f4e60f30b087bb51b053ed" category="list-text"><block ref="c98c104489f4e60f30b087bb51b053ed" category="inline-link-macro-rx"></block></block>
-  <block id="a994c7955992607e240e906376c847ea" category="inline-link-macro">NetApp HCI 1.9 注意事项</block>
-  <block id="fad7d8ef106d72300d9ae8dca0665982" category="list-text"><block ref="fad7d8ef106d72300d9ae8dca0665982" category="inline-link-macro-rx"></block></block>
   <block id="2e5993f9d970daebf225967bb1e45acc" category="inline-link-macro">存储固件包 2.99.2 注意事项</block>
   <block id="9b66050651411f30ce4e4e60cd49154f" category="list-text"><block ref="9b66050651411f30ce4e4e60cd49154f" category="inline-link-macro-rx"></block></block>
   <block id="4b07ee081088aae3fb4d0eecd6d5e33c" category="inline-link-macro">计算固件包 2.76 的注意事项</block>
@@ -3353,8 +3141,6 @@
   <block id="fd999dd89e89cb1746ef798211092cf3" category="list-text"><block ref="fd999dd89e89cb1746ef798211092cf3" category="inline-link-macro-rx"></block></block>
   <block id="d3fd8f720b6d6e4fea8273c72a7bbcc7" category="inline-link-macro">管理服务 2.11 通知（ VCP 4.4.72 ）</block>
   <block id="f050f7b6ab1083e601d67bc20dda05f3" category="list-text"><block ref="f050f7b6ab1083e601d67bc20dda05f3" category="inline-link-macro-rx"></block></block>
-  <block id="6878153064f983e50fe1538332b04875" category="inline-link">NetApp HCI 1.8 注意事项</block>
-  <block id="1b5e451286af92db851650172906487b" category="list-text"><block ref="1b5e451286af92db851650172906487b" category="inline-link-rx"></block></block>
   <block id="df65f5c1d0a5896f87e664b9add16f32" category="summary">了解 NetApp HCI 的 DNS 和计时要求。</block>
   <block id="a37125410851f68e5cc89a60c957a863" category="paragraph">在部署之前，您需要为 NetApp HCI 系统准备域名系统（ DNS ）记录并收集 NTP 服务器信息。要成功部署 NetApp HCI ，需要具有正确 DNS 条目的 DNS 服务器和 NTP 服务器。</block>
   <block id="24f2891c7e9fdb24ca996d92b73e6a39" category="paragraph">在部署 NetApp HCI 之前，请做好以下 DNS 和时间服务器准备：</block>
@@ -3367,7 +3153,6 @@
   <block id="d202289742d17f7ee5292dbdc580c12f" category="doc">NetApp HCI 上的 Rancher 的要求</block>
   <block id="d18495ea55e4fc04be659f9f7654cfeb" category="paragraph">在 NetApp HCI 上安装 Rancher 之前，请确保您的环境和 NetApp HCI 系统满足这些要求。</block>
   <block id="3ce2bef2cfe4dfb79b63805a94d94455" category="inline-link-macro">删除 NetApp HCI 上的 Rancher 安装</block>
-  <block id="7d3e57eea7cff0b098bfce4a410d8643" category="admonition">如果在 NetApp HCI 上意外部署 Rancher 时信息不正确（例如 Rancher 服务器 FQDN 不正确），则在删除此部署并重新部署之前，无法更正此部署。您需要删除 NetApp HCI 实例上的 Rancher ，然后从 NetApp 混合云控制 UI 中重新部署 NetApp HCI 上的 Rancher 。请参见 <block ref="356d0e04a998863a14e64add6c24b2fb" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="90ab3e774415f0dcefd1c9d338cdbd38" category="section-title">节点要求</block>
   <block id="f8f561fc5b9d026f2ae554e149c70761" category="list-text">确保您的 NetApp HCI 系统至少具有三个计算节点；这是实现完全故障恢复能力所必需的。仅存储配置不支持 NetApp HCI 上的 Rancher 。</block>
   <block id="1c775ac4e1eb07330d8e02239a97851e" category="list-text">确保要用于 NetApp HCI 上的 Rancher 部署的数据存储库至少具有 60GB 的可用空间。</block>
@@ -3507,7 +3292,6 @@
   <block id="26db8374256abd97a337e0f9af2f21c8" category="admonition">在升级存储节点上的固件之前，您必须升级到最新的管理服务包。如果要将 Element 软件更新到 12.2 或更高版本，则需要使用管理服务 2.14.60 或更高版本才能继续。</block>
   <block id="1162dd84e55b1e6c2517bf0323faf96b" category="admonition">要更新 iDRAC 或 BIOS 固件，请联系 NetApp 支持部门。对于追加信息，请参见此内容 <block ref="ce98bbbd0598351d03b47f370ea3b773" category="inline-link-macro-rx"></block>。</block>
   <block id="736c409b380383ee8843715d26079c63" category="list-text">* 集群运行状况 * ：您已运行运行运行状况检查。请参见 <block ref="bdcf6db43efb3c82b174a0c4c0a65c66" category="inline-link-macro-rx"></block>。</block>
-  <block id="ebf60ae83a327f8be16b2010df1010c2" category="list-text">* 已更新 H610S 节点的 BMC * ：您已升级 H610S 节点的 BMC 版本。请参见 <block ref="f04f9a521fc4fd678cdbd3d698415a24" category="inline-link-macro-rx"></block>。</block>
   <block id="5212e4232f93722ce70d3ed042cd25c1" category="paragraph">选择以下存储固件升级选项之一：</block>
   <block id="71894c0623112f371e3598666af16695" category="list-text"><block ref="c67f607f0c5a6b98a7e28e151694a09a" category="inline-xref-macro-rx"></block></block>
   <block id="b8cff0b41605e83e8a12999dd0a4ca92" category="list-text"><block ref="bd241c643056b4027f18f8f059752b73" category="inline-xref-macro-rx"></block></block>
@@ -3943,15 +3727,11 @@
   <block id="7da3260445161dbf5a25323371a40301" category="list-text">选择 * 驱动器 * 。</block>
   <block id="aac4599d2ddb667785a1c298457d59c0" category="list-text">从下拉列表中选择 * 可用 * 以查看可用驱动器。</block>
   <block id="f0e14b1789b6827b6e3f798577d20ae3" category="list-text">选择要添加的驱动器，然后选择 * 添加 * 。</block>
-  <block id="62d7c05c1f2ce86ed4829bb0d8ede77b" category="paragraph">部署 NetApp HCI 后，您可以对默认网络配置进行有限的更改。但是，要实现平稳运行和正确的网络检测，需要进行某些设置。更改这些设置将导致发生原因出现意外行为，并可能阻止您扩展计算和存储资源。</block>
   <block id="29abdc81c8b27091c96b142921501ee0" category="paragraph">部署系统后，您可以根据网络要求对 VMware vSphere 中的默认网络配置进行以下更改：</block>
   <block id="47b5430745085a2323c1e7d46941934b" category="list-text">更改 vSwitch 名称</block>
   <block id="452f518831d0c87f752e511c28abc425" category="list-text">更改端口组名称</block>
   <block id="8d190dd8e2558372b262e859ad9c58ca" category="list-text">添加和删除其他端口组</block>
   <block id="eb5a5fc516de664d2d10357228a21456" category="list-text">更改已添加的任何其他端口组的 vmnic 接口故障转移顺序</block>
-  <block id="ebda01a43c1155712d39c79554f61caf" category="section-title">H300E ， H500E ， H700E 和 H410C 计算节点</block>
-  <block id="14dcd7ca007e36b5a1f5ead4c8473ddd" category="paragraph">NetApp HCI 要求 H300E ， H500E ， H700E 和 H410C 节点采用以下网络配置。</block>
-  <block id="48e608a18ea9a6abd696bbca5ad5c054" category="paragraph">以下是采用 VMware vSphere 分布式交换（ VDS ）的六接口配置。只有在与 VMware vSphere 分布式交换机结合使用时，才支持此配置，并且需要获得 VMware vSphere Enterprise Plus 许可。</block>
   <block id="34cbcb73025925208b631a2990859c96" category="cell">网络功能</block>
   <block id="6705572b9c82de4741d582d52a498c46" category="cell">VMkernel</block>
   <block id="d4b2b4562440ccc8706aa8f9b6a263c9" category="cell">vmnic （物理接口）</block>
@@ -3972,14 +3752,11 @@
   <block id="29f79f28ba5771dde82ea8a9a6d5a61f" category="cell">vmnic1 （端口 D ）， vmnic5 （端口 E ）</block>
   <block id="98505c9d2a0ca7bc7d9f26ca8b4c37a1" category="cell">vmnic1 （端口 C ）， vmnic5 （端口 F ）</block>
   <block id="364140da0e1f8583f44608e03b530ea3" category="section-title">H610C 计算节点</block>
-  <block id="e8a36f78c62ccda738d63db8981d6bd2" category="paragraph">NetApp HCI 要求 H610C 节点采用以下网络配置。</block>
-  <block id="0fe778c604a30eb19766da83405e2316" category="paragraph">只有在与 VMware vSphere 分布式交换机（ VDS ）结合使用时，才支持此配置，并且需要获得 VMware vSphere Enterprise Plus 许可。</block>
   <block id="960f0875677149295d20674320933665" category="admonition">H610C 上未使用端口 A 和 B 。</block>
   <block id="21d8ee6b34c759de7d9f242882b6e4e2" category="cell">vmnic2 （端口 C ）， vmnic3 （端口 D ）</block>
   <block id="389fb5b927fd9e1acbc4771783f0d63d" category="cell">vmnic3 （端口 D ）</block>
   <block id="12c72828bee85815159e32a0eee10962" category="cell">vmnic2 （端口 C ）</block>
   <block id="f84c48c8d097b8554d84b8484b455ab7" category="section-title">H615C 计算节点</block>
-  <block id="246effb18dae997548f86f0cc7845a2a" category="paragraph">NetApp HCI 要求 H615C 节点采用以下网络配置。</block>
   <block id="b7ea51fcbcd966c8096b27fcdb0c3d76" category="cell">vmnic0 （端口 A ）， vmnic1 （端口 B ）</block>
   <block id="616c8951192dfd588a3c1162d57c47af" category="cell">vmnic0 （端口 B ）</block>
   <block id="2e0547db26e42bd567888ecceba6a93c" category="cell">vmnic1 （端口 A ）</block>
@@ -4412,7 +4189,6 @@
   <block id="4cb04e22051dcc88da6d140ef391aab8" category="list-text">存储适配器类型设置为 LSI Logic Parallel</block>
   <block id="1fde8564c11be0856ccf9a21a1d1430c" category="admonition">管理节点的默认值可能为 LSI Logic SAS 。在 * 新建虚拟机 * 窗口中，选择 * 自定义硬件 * &gt; * 虚拟硬件 * 以验证存储适配器配置。如果需要，请将 LSI Logic SAS 更改为 * LSI Logic Parallel * 。</block>
   <block id="f894cbc944582e1f10fec4bf2a0639f0" category="section-title">创建管理节点管理员并配置网络</block>
-  <block id="26e6608a1d4408ec1913111c30b06508" category="admonition">从 Element 12.3.1 开始，系统会自动执行子步骤（ a ）到（ e ）。对于管理节点 12.3.1 ，请继续执行 <block ref="745b7d927b75ef73b131f4d1b2da0731" category="inline-xref-macro-rx"></block> 以完成时间同步配置。</block>
   <block id="148f57c4f729acea3c3d95b35553a056" category="list-text">为要添加的每个默认时间服务器添加一个新行。默认时间服务器必须与要在中使用的存储集群上使用的 NTP 服务器相同 <block ref="1d132a4516f2aafec8e6c256f33f26a5" category="inline-link-macro-rx"></block>。</block>
   <block id="e7538fbaab3148e24ff8ae41d09df5ce" category="list-text">【 substed_f_install_config_time_sync]] 通过虚拟机管理程序禁用与主机的时间同步（以下是 VMware 示例）：</block>
   <block id="2d80cb22364fea2daaca797ae1d938cb" category="inline-link-macro">设置命令</block>
@@ -5232,22 +5008,6 @@
   <block id="13004d9ad6d187899e4c8b913c50f2cf" category="list-text">* 2 缆线选项 * ：双缆线选项将两个绑定端口上的管理，虚拟机和存储流量组合在一起。此布线选项需要 VDS ，并会自动启用它。您必须准备好 vSphere Enterprise Plus 许可证，以便在部署后应用。</block>
   <block id="5c562dc8940c1926534320d7954ae6ee" category="list-text">某些布线选项会显示不同类型节点硬件的多个背面板视图。浏览背面板视图，了解如何根据特定节点型号和布线选项连接网络缆线。</block>
   <block id="a8b6dee16fc90fd95888b26871a0a869" category="list-text">完成后，单击 * 继续 * 。</block>
-  <block id="f1ffb8126e34ff6fabbff0f1306dcd3f" category="summary">在系统升级过程中，您应升级到适用于 NetApp Element 的最新 HealthTools 软件。</block>
-  <block id="65674d989e868e2706984a87202166be" category="doc">升级到最新的 HealthTools</block>
-  <block id="bf809731b1c0be0233b39fe81ef846b1" category="inline-link-macro">使用 NetApp Hybrid Cloud Control 执行 Element 升级</block>
-  <block id="b35902713b25bf713fe3ad5e9d3eb99e" category="paragraph">在从 11.1 或更早版本开始 Element 存储升级之前，您应先升级 HealthTools 套件。只有在运行的管理节点和 Element 软件为 11.1 或更早版本时，才需要升级 HealthTools 。不需要 HealthTools <block ref="109fec2a48373fee9d14f8ad0b3783ff" category="inline-link-macro-rx"></block>。</block>
-  <block id="f8945dbfb9c59a4484f33852cc6f95c9" category="admonition">Element 软件 12.3.2 是可使用 NetApp HealthTools 升级到的最终版本。如果您运行的是 Element 软件 11.3 或更高版本，则应使用 NetApp Hybrid Cloud Control 升级 Element 软件。您可以使用 NetApp HealthTools 升级 Element 11.1 或更早版本。</block>
-  <block id="497e1101c9e2f864d2e2dda128ecb452" category="list-text">您正在运行管理节点 11.0 ， 11.1 或更高版本。</block>
-  <block id="dad7cfe229aa9e4b9f9b9cf0e87704cc" category="paragraph">NetApp Hybrid Cloud Control 升级在早期的服务包版本中不可用。</block>
-  <block id="9def504d64ab69879cb0311556fe8cc3" category="inline-link">HealthTools</block>
-  <block id="903d0f97d11dd5ed20516ec36dd2abc7" category="admonition">您可以运行 `sfupdate-healthtools -v` 命令来检查本地安装的 HealthTools 版本。</block>
-  <block id="10fbc8fd3ac1a011e7631cdf01332562" category="list-text">要对非公开站点使用 HealthTools ，您需要执行以下附加步骤：</block>
-  <block id="f86ddd2fb45950e1479e5ffde319cb8f" category="list-text">在非公开站点上启动并运行管理节点。</block>
-  <block id="895333aab6636a8486b9a716f660d6fe" category="paragraph">运行 HealthTools 套件中的命令需要升级权限。请在命令前面加上 `sUdo` 或将您的用户升级到 root 权限。</block>
-  <block id="0d692bdd6a5dd4a91353f66453e4d0fa" category="admonition">您使用的 HealthTools 版本可能比下面的示例输入和响应更新版。</block>
-  <block id="30fe2ad230fe89cd62c8899957b80fc0" category="list-text">运行 `sfupdate-healthtools &lt;path to install file&gt;` 命令安装新的 HealthTools 软件。</block>
-  <block id="2b39b17bd91d29a7c2e44d0eb5d9f505" category="paragraph">输入示例：</block>
-  <block id="52c024f42502475a786f1217e16b22dc" category="list-text">运行 `sfupdate-healthtools -v` 命令以验证已安装的版本是否已升级。</block>
   <block id="0a13f81a8c28eff02ecfbcd59702e048" category="summary">了解如何在 NetApp HCI 部署中删除 Rancher 安装以进行重新部署。</block>
   <block id="01b8d76a05424c5a48cc7fe45bbdc046" category="paragraph">如果在 NetApp HCI 上意外部署 Rancher 时信息不正确（例如 Rancher 服务器 FQDN 不正确），则需要删除安装，然后重新部署。按照以下步骤删除 NetApp HCI 实例上的 Rancher 安装。</block>
   <block id="b92d7a4a5be32cf1401dd0a8279c1b50" category="paragraph">此操作不会删除用户集群。</block>
@@ -5882,7 +5642,6 @@
   <block id="2417aad223df4b0722eff2a33cc20e2c" category="sidebar">使用 NetApp Hybrid Cloud Control 编辑 BMC 连接信息</block>
   <block id="767682e703a28fefdc1067e1fcf04243" category="sidebar">使用 NetApp Hybrid Cloud Control 监控存储集群上的卷</block>
   <block id="9e6d5cb31997e61cfefc1ff5a039bc47" category="sidebar">使用 NetApp Hybrid Cloud Control 连接到 Active IQ ，监控性能，容量和集群运行状况</block>
-  <block id="9bba670b644f8f3341309eb7f392ac44" category="sidebar">升级 NetApp HCI 系统版本 1.9 或 1.9P1</block>
   <block id="b837bae0f441ebacd86887d737939282" category="sidebar">系统升级过程</block>
   <block id="3623b8057931ba9642b12ea90d31b438" category="sidebar">升级适用于 vCenter Server 的 NetApp Element 插件</block>
   <block id="d971e713c76154ca542300913469fe2d" category="sidebar">扩展 NetApp HCI 系统</block>
@@ -5959,7 +5718,6 @@
   <block id="28891145b6c39ff95afbdf5c47061837" category="inline-link">NetApp HCI 计算固件包</block>
   <block id="ad20855a10bcb28bd96d1134e8e2d09e" category="paragraph">要下载计算固件包，请转到<block ref="9e726c85d19808fe7c4afbfe8514b543" category="inline-link-rx"></block> 页面。</block>
   <block id="68baec1bded108851f5cb6cb9332b5fb" category="paragraph">如果您的管理节点未连接到 Internet ，则表示您已下载<block ref="f0f7b836568f7e533a3947b76da1a20e" category="inline-link-rx"></block>。</block>
-  <block id="cabc168d31fc4c314cb500b86813e131" category="list-text">下载此<block ref="747556e0149f6188670059abaeb4fd3e" category="inline-link-rx"></block> <block ref="53034c8197fc6f1049d26569a56db918" category="inline-link-rx"></block> 从 NetApp 支持站点的非管理节点计算机上，将其重命名为 `metadata 。 json` 。</block>
   <block id="6f0fdd346038a9e820296de3d9746c93" category="inline-link">已下载 NetApp HCI 存储集群的存储固件包</block>
   <block id="68591212ccf64f918a02a9a99d9b17cb" category="paragraph">如果您的管理节点未连接到 Internet ，则表示您已连接到 Internet<block ref="aafe992914552d0a3aa0655fa1abc52d" category="inline-link-rx"></block>。</block>
   <block id="34c8eaed7bf9fcb94a9fec8fc99e01f5" category="inline-link">Element 软件存储固件捆绑包页面</block>
@@ -5967,11 +5725,8 @@
   <block id="084b0131bd480b2202263e1d2feee26f" category="summary">在 NetApp HCI 系统升级过程中，您可以升级 NetApp Element 软件。</block>
   <block id="28915945fea0308bbd2cdf191b79dd68" category="list-text">选择要升级的集群旁边的下拉箭头，然后从 * 元素 * 选项卡下提供的升级版本中进行选择。</block>
   <block id="b6d17024c4c99e0348e4d802e2508b6b" category="list-text">选择要升级的集群旁边的下拉箭头，然后从可用的升级版本中进行选择。</block>
-  <block id="6c0526aed8944efbe6192f67a288210b" category="list-text">选择 * 开始升级 * 。升级完成后， UI 将提示您执行此过程的第 2 阶段。</block>
   <block id="814733d416c95bcc389df46e42881e26" category="inline-link">下载页面</block>
   <block id="f512f8e6b128b8f7bff6fcc1ef0cae59" category="list-text">将存储升级软件包下载到可供管理节点访问的设备；转到 NetApp HCI 软件<block ref="af9e5e5835f26953a003c9bfeff1e72d" category="inline-link-rx"></block> 并下载最新的存储节点映像。</block>
-  <block id="72d6d922116ab2c5c4e00582da6636fe" category="list-text">下载存储升级软件包；转到 NetApp HCI 软件<block ref="af9e5e5835f26953a003c9bfeff1e72d" category="inline-link-rx"></block> 并将最新的存储节点映像下载到非管理节点设备。</block>
-  <block id="33877e64a4f252eccfc0cd9a26c42e8e" category="list-text">转到 NetApp HCI 软件<block ref="af9e5e5835f26953a003c9bfeff1e72d" category="inline-link-rx"></block>。</block>
   <block id="e9e291beb54413fecd8975237eb4bb64" category="list-text">在 * 计算运行状况检查 * 页面上，选择 * 运行状况检查 * 。</block>
   <block id="b63360b381f2f4d20abc8c6e41ad03e9" category="list-text">从 REST API UI 中，选择 * 获取​ / installations​ / ｛ id ｝ * 。</block>
   <block id="0244d8caf66b9412467f25ad4401d48f" category="list-text">选择 * 发布 / compute​ / ｛ controller_ID ｝​ /health-checks* 。</block>
@@ -5983,7 +5738,6 @@
   <block id="3c9edce8deb164b2bcb5a4c0edb19031" category="cell"><block ref="438a0bd6ae60534499b49dc869c9923c" category="inline-link-macro-rx"></block>。</block>
   <block id="493dbf808140d6e440e6d71d077c313b" category="cell"><block ref="493dbf808140d6e440e6d71d077c313b" category="inline-link-rx"></block></block>
   <block id="a5b37844a6e9e768f0ce85640b2581b5" category="summary">在 NetApp HCI 系统升级过程中，您需要对 NetApp Element 软件运行状况检查。</block>
-  <block id="6a2367272d7df1e3bc820ae7cd85cca3" category="list-text">下载 <block ref="a8a51581fa7186019dceaf790825b165" category="inline-link-macro-rx"></block> 从 NetApp 支持站点的非管理节点计算机上，将其重命名为 `metadata 。 json` 。</block>
   <block id="735339172aeec7b940204188ab8289fb" category="list-text">* 计算驱动程序 * ：您已升级计算节点驱动程序。如果计算节点驱动程序与新固件不兼容，则升级将无法启动。请参见<block ref="2b761b14db6e131ceb5a9ee87e5e085a" category="inline-link-rx"></block> 有关驱动程序和固件兼容性的信息，请查看最新信息 <block ref="8e52b55ffa3dd99e7231384e5c6e0fa1" category="inline-link-macro-rx"></block> 了解重要的最新固件和驱动程序详细信息。</block>
   <block id="b24f3db75077a578765967e0b8ffa295" category="admonition">有关适用于您的硬件的完整固件和驱动程序固件列表，请参见<block ref="54a79ab153742147d13ffd4ac16bf6ba" category="inline-link-rx"></block> （需要登录）。</block>
   <block id="a6c551bfacbff9bc6d510d240a1f729e" category="list-text">* BIOS 启动顺序 * ：在 BIOS 设置中手动更改每个节点的启动顺序，以确保启动列表中显示 `USB CD/DVD` 。请参见此内容 <block ref="40fb6836e33e97dd94fb747393132791" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
@@ -6018,16 +5772,6 @@
   <block id="81fa3392dafdab901ebeed86d16e4abe" category="list-text">如果与控制台断开连接，请选择 * 远程控制 * 并选择 * 启动 KVM* 或 * 启动 KVM （ Java ） * 以重新连接并验证节点何时完成启动备份。您可能需要多次重新连接，以验证节点是否已成功启动。</block>
   <block id="f7658c00205041bd6da6d27dbaa7fe7b" category="summary">在 NetApp HCI 系统升级过程中，您可以升级管理节点。</block>
   <block id="303c7d52b5c18e714947ecd4996594a2" category="inline-link">管理节点 ISO</block>
-  <block id="5454c55e4483c81c83dc88e7d51b7235" category="list-text">下载<block ref="81f96ab5ebaacae5f09640e77583a876" category="inline-link-rx"></block> 将 NetApp HCI 从 NetApp 支持站点连接到管理节点虚拟机。</block>
-  <block id="d142097cec7b7123937c2ec16e09998c" category="list-text">（对于使用适用于 vCenter Server 的 NetApp Element 插件的所有 NetApp HCI 安装）按照中的步骤更新 12.3.x 管理节点上的 vCenter 插件 <block ref="61768f3798a436486dacb908355263cd" category="inline-link-macro-rx"></block> 主题。</block>
-  <block id="3af4bea014b0f1b76a3603ae6f5957ff" category="list-text">在 vSphere 中找到计算节点的硬件标记：</block>
-  <block id="a8e5aea5105effb7b748821e3735f2bb" category="list-text">将用于 HCI 监控和 Hybrid Cloud Control 的 vCenter 控制器资产添加到管理节点的已知资产中：</block>
-  <block id="cbda5d4a711e27c7bcc1c2cc1d2b18ac" category="list-text">将计算节点资产添加到管理节点的已知资产：</block>
-  <block id="94ab457d92269ad56ccbd284e4f2d66e" category="list-text">选择 * 操作 * &gt; * 清除 * 。</block>
-  <block id="d12a393c1ac6d6c4feb3dcc671803e35" category="list-text">要确认，请选择 * 是 * 。mNode Status 字段应报告 Not Configured 。</block>
-  <block id="7b837430d09749101caac8ac6929be11" category="list-text">选择 * vCenter 插件注册 * 选项卡。</block>
-  <block id="6387feb1f0b906aebdb1cafedac7cc98" category="list-text">输入所需的值。完成后，选择 * 更新 * 。</block>
-  <block id="f4c7104fec7161266ebc2750f99bf53e" category="list-text">选择 * 操作 * &gt; * 配置 * 。</block>
   <block id="b8e3af673664eb79ebe128d1f309bdd6" category="list-text">从 REST API UI 中，选择 * POST /services/reuse-auth* 。</block>
   <block id="de3741b094be24deccfc553754ce0a3a" category="paragraph">请参见中适用于您的硬件的固件和驱动程序列表<block ref="69b1d186a6529d94f61dae13551aa3aa" category="inline-link-rx"></block> （需要登录）。</block>
   <block id="477a3e44a347d971185a2c3a5140588e" category="list-text">浏览到<block ref="d4caed46ff739416e1ca7149df2744c7" category="inline-link-rx"></block> 页面并选择正确版本的 NetApp HCI 的下载链接。</block>
@@ -6051,7 +5795,6 @@
   <block id="b48c8e3e654392e94eba7ff80f2a9810" category="list-text">如果您的安装可以访问 Internet ，并且可以进行管理服务升级，请选择 * 开始升级 * 。</block>
   <block id="59ab5341afeb797e4cbab599e21e347f" category="list-text">选择 * 浏览 * 以找到您保存的软件包并上传它。</block>
   <block id="9d89df9ed11d9d07aa2a21fce8623b87" category="list-text">您已从下载服务包更新<block ref="1c68cef0c53db6ec1d50d3b221c314cd" category="inline-link-rx"></block> 可在非公开站点中使用的设备。</block>
-  <block id="36d419edc3b1ab2e45efc2685e55bd65" category="list-text">您已下载最新版本的<block ref="ca5118192781a2e9e031eb3a76fde869" category="inline-link-rx"></block> 并将安装文件复制到管理节点。</block>
   <block id="a4f0b4cd8ed43da899bf23d0cc006ec8" category="inline-link-macro">存储固件包 2.146 的注意事项</block>
   <block id="976f425b451919895bc3cde2d81dd6c3" category="list-text"><block ref="976f425b451919895bc3cde2d81dd6c3" category="inline-link-macro-rx"></block></block>
   <block id="7ca92aa55af86adcb8e4f02055e5d1f3" category="inline-link-macro">计算固件包 2.146 的通知</block>
@@ -6145,10 +5888,6 @@
   <block id="ea024efd7263c6d9ce03100f21009e74" category="list-text">CVE-2020-35508 ， CVE-2020-36312</block>
   <block id="e795a437c10bf5f507140024b096bd0e" category="list-text">CVE-2020-15436</block>
   <block id="bfbc343f663cd48849da8b3b6240a9c0" category="list-text">CVE-2020-29372</block>
-  <block id="7d00d7b09c7fcde97c11f675daf7ae62" category="inline-link-macro">计算固件包 2.146 发行说明（最新）</block>
-  <block id="e45bcf0f15e92deae2cfb38777071218" category="list-text"><block ref="e45bcf0f15e92deae2cfb38777071218" category="inline-link-macro-rx"></block></block>
-  <block id="78f6798eb036b3dd12c871ca38087892" category="inline-link-macro">存储固件包 2.146 发行说明（最新）</block>
-  <block id="ffd0fc3ed0aa2dae6e9d6c7cd57e6888" category="list-text"><block ref="ffd0fc3ed0aa2dae6e9d6c7cd57e6888" category="inline-link-macro-rx"></block></block>
   <block id="c7faa307a21de68e6b2b579eb4dd6238" category="list-text"><block ref="c7faa307a21de68e6b2b579eb4dd6238" category="inline-link-macro-rx"></block></block>
   <block id="17a3f3fcb25f60a1e4c1a40f1e7eace3" category="list-text">对于 VMware ESXi 7.0 ， NetApp H610C ， H615C ， H410C 和 Hx00E 计算节点及其内置系统组件的所有必要驱动程序均包含在标准 VMware ESXi 7.0 安装 ISO 映像中。对于运行 VMware ESXi 7.0 （和更新）的 NetApp HCI 计算节点，您不需要其他或更新驱动程序。</block>
   <block id="3df9942375d4c2463d762d41ec77a6e1" category="list-text">对于 VMware ESXi 6.x ，请执行以下步骤以导入驱动程序脱机捆绑包文件：</block>
@@ -6199,7 +5938,6 @@
   <block id="9631693d741b4476dc21a28cec874b0a" category="list-text"><block ref="9631693d741b4476dc21a28cec874b0a" category="inline-link-macro-rx"></block></block>
   <block id="573d529ded9f2b66a55c1d25a9498c72" category="paragraph">从管理服务2.2开始、您必须先接受并保存最终用户许可协议(EULA)、然后才能使用NetApp Hybrid Cloud Control UI或API升级管理服务：</block>
   <block id="c7c27143d481078e23cd4144c0df2f10" category="inline-link">vCenter插件4.9发行说明</block>
-  <block id="6452d1b3e56fe38fdc537aeb6fe8d1c8" category="list-text"><block ref="779aeeb0a67ee84cae70c2361654111d" category="inline-link-rx"></block>_new_</block>
   <block id="07cc0d856c010a1ee3ff9ee8f5157778" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.2开始、您必须先接受并保存EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级存储固件：</block>
   <block id="0b2f19b801c71ab42a03e5347b8302ee" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.2开始、您必须先接受并保存EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级计算节点固件：</block>
   <block id="62403656f60d86891c7c9ad1ffa2f44f" category="summary">您可以使用NetApp Hybrid Cloud Control UI或REST API UI在管理节点上禁用和启用SSH功能、或者使用REST API UI确定SSH支持连接功能的状态。</block>
@@ -6239,4 +5977,143 @@
   <block id="fe7edd9e3b4efc71766ba03d23b51c44" category="list-text">您要升级到适用于VMware vCenter Server 4.9、4.8、4.7、4.6、4.5或4.4的Element插件。</block>
   <block id="8eeabd6de4a231c731b82c27ee25bbdb" category="admonition">此插件与适用于VMware vCenter Server 4.6、4.7和4.8的VMware vCenter Server 6.5 for Element插件不兼容。</block>
   <block id="f31daff1bed8bc4fec4119d69f3093d9" category="paragraph">使用VMware vCenter Server 6.7U1升级到VCP 4.8或更高版本后、如果NetApp Element 配置的*集群*和* QoSSIOC设置*部分未列出存储集群或显示服务器错误、请参见 <block ref="ccd6ffc15d371ab994b0e9dff04cb8c2" category="inline-link-macro-rx"></block> 有关对这些错误进行故障排除的文档。</block>
+  <block id="54aa7f2dcdc54ac5abd932a5b6c8b3d7" category="list-text">*升级过程时间*：您已计划足够的时间执行升级。升级到Element软件12.5时、升级过程时间会因您当前的Element软件版本和固件更新而异。</block>
+  <block id="778b8320a31f425d9021c72ba59dd8bd" category="cell">存储节点</block>
+  <block id="c4303966c5d95835840cedbb4010f17d" category="cell">当前Element软件版本</block>
+  <block id="0eb587cb5fd7c18c359cc306f978cd9d" category="cell">每个节点的大致软件和固件安装时间^1^</block>
+  <block id="67578343d744d824d2ae7f1f0780853f" category="cell">每个节点的大致数据同步时间^2^</block>
+  <block id="16ac89e788575fb90e5d952ce28c7d05" category="cell">每个节点的大致升级总时间</block>
+  <block id="ff99582146f5f2ab14948a290d24066e" category="cell">具有最新固件的所有SolidFire 和NetApp H系列节点</block>
+  <block id="94a391e7535162277a17a069254b24c6" category="cell">12.x</block>
+  <block id="2a7bb67d9681d8b5c8241cd49c734772" category="cell">15 分钟</block>
+  <block id="5e1ee2491e0c0ac6da474bab9124ae95" category="cell">10到15分钟</block>
+  <block id="a8de7c03d441770c74ae9b9ccba40b67" category="cell">20到30分钟</block>
+  <block id="f895765237de084e69976cab12f91061" category="cell">H610S和H410S</block>
+  <block id="47d948a57b74ee5b8ebaec952b335efd" category="cell">12.x和11.8</block>
+  <block id="3cd6f0fb46bc2a1cbbe6f6f0d69cd998" category="cell">60分钟</block>
+  <block id="f856309d24142607d2015bf524e6cfa8" category="cell">30到60分钟</block>
+  <block id="5b32188537eabd96a4520f00d1209b81" category="cell">90到120分钟</block>
+  <block id="44544027fae46da7f5ad07a0183d9767" category="cell">11.7及更早版本</block>
+  <block id="83f14533ddbfe1c18f197818300ea1fb" category="cell">90分钟</block>
+  <block id="a0fc274442d4c69dfe575d357ce015e2" category="cell">40到70分钟</block>
+  <block id="9b2b1e8f398acbac5493461c590118f6" category="inline-link">完全关闭节点并断开电源</block>
+  <block id="2233d6c0637a0dd985141fefd60451a0" category="cell">您还必须花费130到160分钟<block ref="b75cb1417453c96f34f9e695ad57b88f" category="inline-link-rx"></block> 对于每个H610S节点。</block>
+  <block id="6ed1151a1c81c87309cd82c96457f044" category="paragraph">^1^有关适用于您的硬件的完整固件和驱动程序固件列表、请参见此内容<block ref="919d0da258d2c9346bfb11f078cfd474" category="inline-link-rx"></block> （需要登录）。</block>
+  <block id="0fe84530e14d6cb77f51c3d2cc85aa18" category="paragraph">^2^如果将写入IOPS负载较重的集群与较长的固件更新时间结合使用、则数据同步时间将会增加。</block>
+  <block id="b68a4e1779a52c676f0786aad0f27387" category="paragraph">NetApp 会定期更新 NetApp HCI ，为您提供新功能，增强功能和错误修复。NetApp HCI 1.10包括适用于存储集群的Element 12.5。</block>
+  <block id="53f59c169b2bb48ac0b8253252a06467" category="list-text">。 <block ref="72c4f5351976259ad654b85496cb20be" category="inline-xref-macro-rx"></block> 第节介绍NetApp HCI 1.10版中的新增功能和更新。</block>
+  <block id="2a0ce9a56c6130320cccb8a7f34ec593" category="list-text">。 <block ref="18a6515b1da0f2a2d89c5832cee91752" category="inline-xref-macro-rx"></block> 第节介绍Element 12.5中的新增功能和更新。</block>
+  <block id="3f1ab5f7c40b8fa8fd0a42ff36510c23" category="section-title">NetApp HCI 1.10</block>
+  <block id="4ce67d818014fbb0d4365ca34a03e94b" category="paragraph">NetApp HCI 1.10提高了安全性和稳定性、并提高了部署后扩展的灵活性。</block>
+  <block id="e50bf22cf7a2ba351095c17153b2126c" category="section-title">部署后扩展灵活性</block>
+  <block id="511789ca19852f6452e10924af2f8f26" category="paragraph">NetApp HCI 1.10不再要求满足计算节点上的默认部署VMK和vmnic配置设置、从而提高了扩展NetApp HCI 计算资源的灵活性。从NetApp HCI 1.10开始、扩展计算资源时、NetApp HCI 只需要在计算节点上配置常规VMK。 <block ref="22ea0effcb7ee5243930d3fb3420b9f3" category="inline-link-macro-rx"></block>。</block>
+  <block id="faabe297398dc5d787f07ec486c552b0" category="section-title">适用于vCenter Server 4.9的NetApp Element 插件可用性</block>
+  <block id="3e6fe464c998eaa1105f1b112769498f" category="inline-link-macro">NetApp HCI 升级</block>
+  <block id="ac5c4ec1bb76fb14d5809c20b1a4cc4f" category="paragraph">适用于vCenter Server 4.9的NetApp Element 插件在管理节点12.5和NetApp HCI 1.10版之外提供。要升级此插件，请按照中的说明进行操作 <block ref="51ad9e85b7393880dd040f9c081097fa" category="inline-link-macro-rx"></block> 文档。</block>
+  <block id="7aab6ae5d6855e05f5670d50fcf98047" category="section-title">NetApp Hybrid Cloud Control增强功能</block>
+  <block id="dc7967076c0eb6abc60118b24504b99e" category="paragraph">NetApp Hybrid Cloud Control在版本1.10中进行了增强。 <block ref="0cd9983eb639ec81f784295cf4366b9c" category="inline-link-macro-rx"></block>。</block>
+  <block id="9f6258d30d974feb3e6c49ac47bd59e2" category="section-title">已解决的问题和已知问题</block>
+  <block id="69893000f4da30e1e42922cbcf8dac0e" category="inline-link">NetApp Bug Online</block>
+  <block id="b2cf1a48c470d1f9a5455fd4fe122cc5" category="paragraph">NetApp Bug Online工具可提供有关NetApp HCI 、Element软件和其他产品的已解决问题和已知问题。您可以在中使用关键字或版本浏览这些问题<block ref="a8fe3f7a65736a97f03b5f406d913562" category="inline-link-rx"></block>。</block>
+  <block id="ead415acc7fb08b9638080abb257a21a" category="section-title">Element软件12.5.</block>
+  <block id="204a78c5e79decb53e0582fa0d1aacd9" category="paragraph">Element 12.5引入了改进的存储节点访问、增强的自定义保护域易管理性、新增的和改进的集群故障和事件、增强的集群UI功能、增强的安全性以及使用Ansible的自动升级。</block>
+  <block id="632a0cf5bff2b4038d81ba8a87bedf56" category="section-title">改进了存储节点访问</block>
+  <block id="36c6fef8b472466a86d8c04fae14b83a" category="paragraph">Element 12.5通过使用签名SSH证书改进了对单个节点的远程访问。为了安全地远程访问存储节点、现在会在存储节点的RTFI期间创建一个名为`sfreadonly`的新的有限权限本地用户帐户。使用`sfreadonly`帐户可以访问存储节点后端、以便进行基本维护或故障排除。现在、您可以为集群管理员用户配置`supportAdmin`访问类型、以允许NetApp支持根据需要访问集群。</block>
+  <block id="c4850a0256fd94385624e245ebb4e3f5" category="section-title">增强了自定义保护域的易管理性</block>
+  <block id="eb73d06199e0195278a22dc87438e368" category="paragraph">Element 12.5提供了一个新的用户界面、可用于快速轻松地查看现有的自定义保护域并配置新的自定义保护域。</block>
+  <block id="0e27b16c9344debf9aac5e256fb5b1ab" category="section-title">新增并改进了集群故障、事件和警报</block>
+  <block id="c79a5bf1dff4262bf335e3dd949493ed" category="paragraph">Element 12.5引入了新的集群故障代码`BmcSelfTestFailed`和`CpuThermalEventThreshold`、从而增强了系统故障排除的能力。Element 12.5还改进了现有集群事件和警报的可靠性、例如`nodeOffline`、`volumeOffline`、`driveHealthFault`、`networkEvent`、 和`cSumEvent`。</block>
+  <block id="ca0dff7605fd85912062034c9370dcdd" category="section-title">从创建集群UI启用空闲软件加密</block>
+  <block id="fa2658a3ab727d225eec2ee50b847fff" category="paragraph">在创建集群UI中添加了一个新复选框、Element 12.5允许您在创建集群期间为SolidFire 全闪存存储集群启用集群范围的空闲软件加密。</block>
+  <block id="a4377e2a5c151e23b56034c95f4a740c" category="section-title">存储节点固件更新</block>
+  <block id="a6c2a34150c9dc72f43456ea478ab625" category="paragraph">Element 12.5包括存储节点的固件更新。 <block ref="eeef2310c9176486cc519bcd07b92743" category="inline-link-macro-rx"></block>。</block>
+  <block id="9ae00a023d80f22436817ac40b5dd0e7" category="section-title">增强的安全性</block>
+  <block id="4a9cfbb068604f707209b30ffaf09bfd" category="paragraph">Element 12.5提供了一种缓解方法、可消除Element软件受到Apache Log4j漏洞的影响。启用了虚拟卷(VVol)功能的NetApp SolidFire 存储集群受到Apache Log4j漏洞的影响。有关NetApp Element 软件中Apache Log4j漏洞的临时解决策 的信息、请参见 <block ref="1a773160f1e444399f0d836f4fb45d69" category="inline-link-macro-rx"></block>。</block>
+  <block id="5b9ef84ab53bc8e514e0cea0dbfd914c" category="paragraph">如果您运行的是Element 11.x、12.0或12.2、或者您的存储集群已位于Element 12.3或12.3.1中且已启用VVol功能、则强烈建议升级到12.5。</block>
+  <block id="7d22dc13d9443150a483a9d1bcc19811" category="paragraph">Element 12.5还包括120多个CVE安全漏洞修复。</block>
+  <block id="0a4e6eb7e62cc9a7906b041a5daa8314" category="section-title">使用Ansible自动升级</block>
+  <block id="0f3c5d5fd99d58a3db49e358303b6aa1" category="inline-link">NetApp Ansible存储库</block>
+  <block id="05815c7d362a881d86d68bc8cfd44ab2" category="paragraph">在Element 12.5中、您可以使用Ansible对整个存储集群执行滚动升级、从而自动执行Element软件升级工作流。要开始使用，请导航到<block ref="6657f4ab7e7e02ccfa155e58f184d7f8" category="inline-link-rx"></block> 在GitHub上下载`NAR_solidfire_SDS_upgrade`角色和文档。</block>
+  <block id="6843ce754f7d34a9639dfdbc27be9255" category="summary">了解部署配置限制。</block>
+  <block id="deefecbfacd45b0f95f5ba317ac30d77" category="doc">部署配置限制</block>
+  <block id="dd58ec6d8b1048b01f1e4c8879375ecd" category="paragraph">根据VMware vSphere版本、计算节点类型和存储节点数量、NetApp部署引擎中的某些配置会受到限制。受限配置适用于采用H610C或H615C计算节点以及两个或三个存储节点的VMware vSphere 7.0。如果要继续进行受限配置、则必须选择其他vSphere版本、例如vSphere 6.7、或者通过配置中至少有四个存储节点来阻止部署见证节点。</block>
+  <block id="af2326f70cdc2c6645865d9ca96816e3" category="inline-link-macro">从*清单*页面中选择受限配置</block>
+  <block id="9773572368ae23ac8ac1aa5e5315facd" category="paragraph">如果您 <block ref="4c1bbef8d8f72a738716db6d868d8f06" category="inline-link-macro-rx"></block> 在部署期间、会显示一条错误消息、其中包含其他有效配置选项。</block>
+  <block id="62771bd83d8aca3aeed51ebebe93c63e" category="inline-link-macro">NetApp HCI 1.10注意事项</block>
+  <block id="729f847bf2e659800d5ab8165369d80d" category="list-text"><block ref="729f847bf2e659800d5ab8165369d80d" category="inline-link-macro-rx"></block></block>
+  <block id="d15380f01867fb0f66a13165a708bf5c" category="inline-link-macro">Element软件12.5.</block>
+  <block id="423799f17e78311081590d2442b613a4" category="list-text"><block ref="423799f17e78311081590d2442b613a4" category="inline-link-macro-rx"></block></block>
+  <block id="fe69a3287756ee47fc4650a84806448a" category="inline-link-macro">NetApp SolidFire 企业版SDS 12.5.</block>
+  <block id="cea5e0a644db9d6823bca6c05e5ee050" category="list-text"><block ref="cea5e0a644db9d6823bca6c05e5ee050" category="inline-link-macro-rx"></block></block>
+  <block id="5b86bf0a1903cc9047cd68ef97be17fa" category="inline-link-macro">管理节点12.5.</block>
+  <block id="45b91251436ab38cfb4661d9970ae5ad" category="list-text"><block ref="45b91251436ab38cfb4661d9970ae5ad" category="inline-link-macro-rx"></block></block>
+  <block id="fc281fb206ca38089d4a4a726ab1dd99" category="admonition">受限配置包括具有H610C或H615C计算节点以及两个或三个存储节点的vSphere 7.0。如果要继续进行受限配置、则必须选择其他vSphere版本、例如vSphere 6.7、或者通过配置中至少有四个存储节点来阻止部署见证节点。</block>
+  <block id="4af68147a22cc3d80f4eb4f02b5b14a7" category="inline-link">NetApp HCI 1.10发行说明</block>
+  <block id="9203ca429e11584ecc455e2f24e8ab6b" category="list-text"><block ref="2485371e710ec4ea8989c22e13c02067" category="inline-link-rx"></block> _new_</block>
+  <block id="9676fc811bea74225536cdd128daebc0" category="list-text"><block ref="9676fc811bea74225536cdd128daebc0" category="inline-link-rx"></block></block>
+  <block id="875455659aea2dfd3f63e40de150b31c" category="inline-link">《NetApp Element 软件12.5发行说明》</block>
+  <block id="f8e8ebc61e5eb8b12488dfac5a827259" category="list-text"><block ref="6a881248d046a90f573e41d5ebe1362e" category="inline-link-rx"></block> _new_</block>
+  <block id="9de5606ae9b23ff6651244b85bd5dae8" category="list-text"><block ref="9de5606ae9b23ff6651244b85bd5dae8" category="inline-link-rx"></block></block>
+  <block id="e2b4747c263485de7011e8018c523cdd" category="list-text"><block ref="779aeeb0a67ee84cae70c2361654111d" category="inline-link-rx"></block> _new_</block>
+  <block id="cb6823679c925abe1a3f3ca07396e866" category="list-text"><block ref="97107deca957b5e4a6b53d3c09cc1c16" category="inline-link-macro-rx"></block> _new_</block>
+  <block id="04796d249df9edf8061eee03c29d96f4" category="list-text"><block ref="67a13cf9dcb3321b59f28def3726ce13" category="inline-link-macro-rx"></block> _new_</block>
+  <block id="fe2bcf6f89f4e1eec12e45df5946ee12" category="admonition">从 Element 12.3.1 开始，系统会自动执行子步骤（ a ）到（ e ）。对于管理节点12.3.1或更高版本、请继续执行 <block ref="e7aead760c231b389589c93842d555c1" category="inline-xref-macro-rx"></block> 以完成时间同步配置。</block>
+  <block id="90c2dc9b8e4f7b029c80f8c7488a4b58" category="paragraph">您可以将管理节点从12.3.x版升级到管理节点12.5.</block>
+  <block id="2ee9526aa61dc0808ea0ccf6ccfa2412" category="paragraph">升级存储集群上的 Element 软件不再需要升级管理节点操作系统。您只需将管理服务升级到最新版本、即可使用NetApp Hybrid Cloud Control执行Element升级。如果您希望出于安全修复等其他原因升级管理节点操作系统，请按照适用于您的方案的管理节点升级操作步骤进行操作。</block>
+  <block id="659098b38f32597a4df2de3b3c60c8e9" category="inline-link">NetApp HCI 1.9管理节点升级文档</block>
+  <block id="7d6a6cceee213c63840b67e13f471a11" category="admonition">如果您需要有关升级管理节点12.2或更早版本的信息、请参见<block ref="83fdd3f608650352e9761aa31f9e5391" category="inline-link-rx"></block>。</block>
+  <block id="8802b9126d6080e36bb95641f40cfab3" category="list-text"><block ref="54df05cfe3df35112175e19c0aa861b7" category="inline-xref-macro-rx"></block></block>
+  <block id="4ec79ca5d6408d326fb4a58b0c3b2e40" category="list-text"><block ref="35b702a8c6556d6de2f367adef3740ff" category="inline-xref-macro-rx"></block></block>
+  <block id="f3bac24ec8b72ab99e38f7ecb167cc25" category="paragraph">如果您已按*顺序*更新(1)管理服务版本和(2) Element存储版本、并希望*保留*现有管理节点、请选择此选项：</block>
+  <block id="e94fb483edf44bcb1d0066bfff1ffe18" category="section-title">将管理节点从12.3.x升级到版本12.5.</block>
+  <block id="e071a52c7e2ea747fe3b237e04bcec11" category="paragraph">您可以将管理节点从12.3.x版原位升级到版本12.5、而无需配置新的管理节点虚拟机。</block>
+  <block id="cd6641a5f66844b15e37f50c79eafa6e" category="admonition">Element 12.5管理节点是一种可选升级。现有部署不需要此功能。</block>
+  <block id="02bd6928c03c8f53c18f8a5143bdd5f4" category="list-text">您要升级的管理节点为 12.0 版，并使用 IPv4 网络。管理节点版本12.5不支持IPv6。</block>
+  <block id="37a42081cc0d0c72d69723b5792a6c73" category="list-text">您已使用 NetApp Hybrid Cloud Control 将管理服务捆绑包更新为最新版本。您可以从以下 IP 地址访问 NetApp Hybrid Cloud Control ： ` https://&lt;ManagementNodeIP&gt;`</block>
+  <block id="1e92b13cdf15b50caf5e299263e754d4" category="list-text">如果要将管理节点更新到版本12.5、则需要管理服务2.20.69或更高版本才能继续。</block>
+  <block id="4733d6f93dbca188e79e25900eaeacb7" category="list-text">您已按照中的说明配置了一个额外的网络适配器（如果需要） <block ref="1f5ebd4d6fe6b214007c2692b1a22cfb" category="inline-link-macro-rx"></block>。</block>
+  <block id="dfa645595ef398bf7b6f3c49d39a3426" category="list-text">存储节点正在运行Element 12.3或更高版本。</block>
+  <block id="bc6733dc102d98376848617102ed0352" category="list-text">下载<block ref="ef86b20d3f4c031a449af5dec98fb6d8" category="inline-link-rx"></block> 从 NetApp 支持站点到管理节点虚拟机的 Element 软件。</block>
+  <block id="7af3e8bcf74bc743e6d42428a1ef8e84" category="list-text">对下载的文件运行 md5sum 以检查下载的完整性，并将输出与 NetApp 支持站点上提供的 Element 软件进行比较，如以下示例所示：</block>
+  <block id="a2f6f7c35b138d94e9b2424fdbb2d5c7" category="admonition">如果先前已在管理节点上禁用 SSH 功能，则需要 <block ref="babf2b858a12e4314c7067787e8a0fcb" category="inline-link-macro-rx"></block> 在已恢复的管理节点上。提供的 SSH 功能 <block ref="9dd7f5719fe61d2f4608af99c83acda9" category="inline-link-macro-rx"></block> 默认情况下，在管理节点上处于启用状态。</block>
+  <block id="2914d2e1549f2ef461f9b040823e6218" category="list-text">您已将管理服务更新到2.20.69或更高版本。</block>
+  <block id="311e83625ce0c896e7a3f811f3ac48c2" category="list-text">存储集群运行的是Element 12.3或更高版本。</block>
+  <block id="fa74c37a30199ebd12f7aa7320d0cc0f" category="inline-link">NetApp HCI 1.9和1.9P1</block>
+  <block id="b1943b2045cf1614e825d3581d335512" category="list-text"><block ref="b1943b2045cf1614e825d3581d335512" category="inline-link-rx"></block></block>
+  <block id="6c529facc953c911e43fb9725bdef1f8" category="list-text">*已更新H610S节点的基板管理控制器(BMC)*：您已升级H610S节点的BMC版本。请参见 <block ref="f04f9a521fc4fd678cdbd3d698415a24" category="inline-link-macro-rx"></block>。</block>
+  <block id="477832301b5ab810e59d16b6d6cf05dc" category="paragraph">这些组件包括管理服务、NetApp Hybrid Cloud Control、Element软件、管理节点、计算固件、计算驱动程序、 和适用于vCenter Server的Element插件。​</block>
+  <block id="abad8a22ec62bb4befaee820afb760ef" category="inline-link-macro">使用HealthTools升级到Element 12.3</block>
+  <block id="e4f2f9baf039ea62b7a0740e3ba88a7a" category="admonition">从Element 12.5开始、Element软件升级不再支持NetApp HealthTools。如果您运行的是Element 11.0或11.1、则必须先执行此操作 <block ref="d9103b755f8af19a5128488b4c389687" category="inline-link-macro-rx"></block> 然后使用NetApp Hybrid Cloud Control升级到Element 12.5。</block>
+  <block id="27bb76bfb1e4f9966c31f5042348cd1e" category="inline-link-macro">Element 软件</block>
+  <block id="85aed6fa173952d69db4c99c1290921b" category="inline-link-macro">存储固件</block>
+  <block id="a8c7f4c70c59120de0b33efda8af8aa5" category="list-text">您已为计划了足够的时间 <block ref="cff6d63ff47747e8e31df90baa037fdf" category="inline-link-macro-rx"></block> 和 <block ref="64ca0a1c0466cb0bbd500939e8f353f3" category="inline-link-macro-rx"></block> 升级。升级到Element软件12.5时、升级过程时间因Element软件版本和固件更新而异。</block>
+  <block id="356747bc1580f5d7e13f9055ae1f02df" category="paragraph">要升级NetApp Element 软件、您可以使用NetApp混合云控制UI或REST API。Element 软件升级期间会禁止某些操作，例如添加和删除节点，添加和删除驱动器以及与启动程序，卷访问组和虚拟网络等关联的命令。</block>
+  <block id="ffd4aa64d8f4496c6bf5fe71098c57dd" category="admonition">从Element 12.5开始、Element软件升级不再支持NetApp HealthTools。如果您运行的是Element 11.0或11.1、则必须先执行此操作 <block ref="4f4fa541f4efe424c14199907bc39f9a" category="inline-link-macro-rx"></block> 然后使用NetApp Hybrid Cloud Control升级到Element 12.5。</block>
+  <block id="7970314795c697c589f52cd629d4a341" category="admonition">在将Element软件升级到版本12.5之前、您必须升级到最新的管理服务包。如果要将Element软件更新到版本12.5、则需要使用管理服务2.20.69或更高版本继续操作。</block>
+  <block id="c89140006bf75078f844d017f1b6efe6" category="list-text">*已更新H610S节点的基板管理控制器(BMC)*：您已升级H610S节点的BMC版本。请参见 <block ref="f04f9a521fc4fd678cdbd3d698415a24" category="inline-link-macro-rx"></block>。</block>
+  <block id="5698bc375e8d546422c418c82337e349" category="admonition">如果您要将H610S系列节点升级到Element 12.5、并且此节点运行的Element软件版本早于11.8、则需要执行此中的其他升级步骤<block ref="f89d7bc8c94108aeb49b4fdeac4ce106" category="inline-link-rx"></block> 用于每个存储节点。如果您运行的是Element 11.8或更高版本、则不需要执行其他升级步骤。</block>
+  <block id="a901d2b8512ddf5cf3b7654718ea92a4" category="admonition">有关使用NetApp Hybrid Cloud Control升级存储集群时的潜在问题及其解决方法、请参见此部分<block ref="385c83615df1d77fbf0bae3f06fabb3d" category="inline-link-rx"></block>。</block>
+  <block id="981a393a1b5619c45c3545ca7373b5cf" category="list-text">选择 * 开始升级 * 。升级完成后、UI将提示您执行其他升级步骤。</block>
+  <block id="5ff2938bcb86709675e06bd3f3b76fc0" category="list-text">完成中所需的其他步骤<block ref="f89d7bc8c94108aeb49b4fdeac4ce106" category="inline-link-rx"></block>、并在用户界面中确认您已完成这些操作。</block>
+  <block id="e4e132d8201e150e9499ed469ac16092" category="cell">仅适用于从早于 118 的 Element 版本升级的 H610S 节点。升级过程的第1阶段完成后、此状态将提示您执行其他升级步骤(请参见<block ref="f89d7bc8c94108aeb49b4fdeac4ce106" category="inline-link-rx"></block>）。完成这些附加步骤并确认已完成后、状态将更改为*最新*。</block>
+  <block id="dfd0dbcc69b48a973f522e75818b594d" category="cell">如果要升级运行的 Element 版本早于 11.8 的 H610S 集群，则会在响应正文中看到状态 `finishedNeedsAck` 。您必须对每个H610S存储节点执行其他升级步骤。</block>
+  <block id="fb9099604c3233c77b3c8b5487c99eb3" category="list-text">完成此中的其他升级步骤<block ref="f89d7bc8c94108aeb49b4fdeac4ce106" category="inline-link-rx"></block> 对于每个节点。</block>
+  <block id="8a349ff2c81cf34e4da016aa1dd77e97" category="admonition">从 Element 12.3.1 开始，系统会自动执行子步骤（ a ）到（ e ）。对于管理节点12.3.1或更高版本、请继续执行 <block ref="745b7d927b75ef73b131f4d1b2da0731" category="inline-xref-macro-rx"></block> 以完成时间同步配置。</block>
+  <block id="2fa7dfb88e1cb5cf745edc36604f73fd" category="paragraph">您可以使用NetApp Hybrid Cloud Control UI或NetApp Hybrid Cloud Control API运行运行状况检查：</block>
+  <block id="7d25e05d224fca2eb306788617dd64c8" category="admonition">如果在 NetApp HCI 上意外部署 Rancher 时信息不正确（例如 Rancher 服务器 FQDN 不正确），则在删除此部署并重新部署之前，无法更正此部署。您需要删除 NetApp HCI 实例上的 Rancher ，然后从 NetApp 混合云控制 UI 中重新部署 NetApp HCI 上的 Rancher 。请参见 <block ref="3121dc1b9111bb157a7a952ee2ca3268" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="d4197debfb75901bf599a0905cf94d87" category="paragraph">部署 NetApp HCI 后，您可以对默认网络配置进行有限的更改。但是、您必须满足某些要求、才能平稳运行并正确检测网络。如果不满足这些要求、则会出现发生原因 意外行为、并可能阻止您扩展计算和存储资源。</block>
+  <block id="01a00843c7e4c6ef84440322c10dcdbe" category="paragraph">在扩展H300E、H500E、H700E、H410C、H610C、 和H615C计算节点、NetApp HCI 希望该节点上的现有计算集群满足以下要求：</block>
+  <block id="0bd0d9905d24a664c9ae98f0146d69ec" category="list-text">至少四个VMK接口</block>
+  <block id="c41f5412a962a53a7f46ffb1577a94a2" category="list-text">一个管理VMK接口</block>
+  <block id="0c271762f0967f72c97c505145878e9a" category="list-text">一个VMotion VMK接口</block>
+  <block id="c5564f90a59f3627da0b350b0dab77a6" category="list-text">同一子网上的两个vmks、并通过iSCSI绑定到软件iSCSI启动程序</block>
+  <block id="cbebfb66b5801ebff99238f19e7b8e21" category="paragraph">从NetApp HCI 1.10开始、在扩展集群时、NetApp HCI 预计不会满足默认节点配置。</block>
+  <block id="2703a8a8f437afe3ee40c0dc99b11fe3" category="paragraph">在VMware vSphere中更改现有计算集群中一个或多个节点的默认设置后、新节点的设置将与集群中大多数节点的设置一致。</block>
+  <block id="cf7fbb340d8d146f027d009d6d0dd0e6" category="section-title">NetApp部署引擎默认配置</block>
+  <block id="7dc9940d2e6549397ae196a99d3fdd93" category="paragraph">NetApp部署引擎会根据系统和缆线配置为计算主机设置默认配置。</block>
+  <block id="a26b520b82f0a4e0ec0f2b0f65109ea7" category="section-title">H300E、H500E、H700E和H410C计算节点</block>
+  <block id="06d56d445d97e58756674ac0f6d44ed5" category="paragraph">以下是采用VMware vSphere分布式交换(VDS)的H300E、H500E、H700E和H410C节点的六接口配置。只有在与 VMware vSphere 分布式交换机结合使用时，才支持此配置，并且需要获得 VMware vSphere Enterprise Plus 许可。</block>
+  <block id="96e3de2dc958815b04ec4fa9637d6c82" category="paragraph">只有在与VMware vSphere分布式交换机(VDS)结合使用时、才支持H610C节点的此配置、并且需要获得VMware vSphere Enterprise Plus许可。</block>
+  <block id="3f8dc42473404a03daf2d9c6bea23bab" category="paragraph">只有在与VMware vSphere分布式交换机(VDS)结合使用时、才支持H615C节点的此配置、并且需要获得VMware vSphere Enterprise Plus许可。</block>
+  <block id="c43e9c45e3f5fec93d3d81eb3dfd26b8" category="sidebar">升级NetApp HCI 系统版本1.10</block>
 </blocks>

@@ -11,7 +11,10 @@ keywords: netapp, hci, on premise, cluster, upgrade, element
 [role="lead"]
 您可以通过按顺序升级所有 NetApp HCI 软件组件，在部署后使 NetApp HCI 系统保持最新。
 
-这些组件包括管理服务， HealthTools ， NetApp Hybrid Cloud Control ， Element 软件，管理节点，计算固件，计算驱动程序， 和适用于 vCenter Server 的 Element 插件。​
+这些组件包括管理服务、NetApp Hybrid Cloud Control、Element软件、管理节点、计算固件、计算驱动程序、 和适用于vCenter Server的Element插件。​
+
+
+NOTE: 从Element 12.5开始、Element软件升级不再支持NetApp HealthTools。如果您运行的是Element 11.0或11.1、则必须先执行此操作 link:https://docs.netapp.com/us-en/element-software-123/upgrade/task_hcc_upgrade_element_software.html#upgrade-element-software-at-connected-sites-using-healthtools["使用HealthTools升级到Element 12.3"^] 然后使用NetApp Hybrid Cloud Control升级到Element 12.5。
 
 。 <<sys_upgrade_seq,系统升级顺序>> 内容介绍了完成 NetApp HCI 系统升级所需的任务。理想情况下，您可以在较大的升级序列中执行这些过程，而不是孤立执行这些过程。如果需要基于组件的升级或更新，请参见操作步骤前提条件以确保解决其他复杂问题。
 
@@ -28,6 +31,7 @@ TIP: 要检查版本，请登录到管理节点并在登录横幅中查看 Eleme
 早期版本的服务包不支持使用 NetApp Hybrid Cloud Control 进行升级。
 
 * 您已确保所有节点上的系统时间均已同步，并且已为存储集群和节点正确配置 NTP 。必须在每个节点 Web UI （`https://[IP address] ： 442` ）中为每个节点配置一个 DNS 命名服务器，并且不会出现与时间偏差相关的未解决集群故障。
+* 您已为计划了足够的时间 link:task_hcc_upgrade_element_software.html#element-upgrade-time["Element 软件"] 和 link:task_hcc_upgrade_storage_firmware.html#storage-firmware-upgrade["存储固件"] 升级。升级到Element软件12.5时、升级过程时间因Element软件版本和固件更新而异。
 
 
 
@@ -45,11 +49,6 @@ IMPORTANT: 如果要将管理服务更新到版本 2.16 或更高版本，并且
 +
 
 IMPORTANT: 在升级 Element 软件之前，您必须更新到最新的管理服务包。
-
-. link:task_upgrade_element_latest_healthtools.html["（可选）升级到最新的 HealthTools"]。
-+
-
-NOTE: 只有在运行的管理节点和 Element 软件为 11.1 或更早版本时，才需要升级 HealthTools 。使用 NetApp Hybrid Cloud Control 执行 Element 升级不需要 HealthTools 。
 
 . link:task_hcc_upgrade_element_prechecks.html["在升级存储之前，请运行 Element 存储运行状况检查"]。
 . link:task_hcc_upgrade_element_software.html["升级 Element 软件和存储固件"]。
