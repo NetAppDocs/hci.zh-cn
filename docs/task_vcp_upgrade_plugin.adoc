@@ -79,13 +79,9 @@ NOTE: 此操作将创建一个新数据库并在 vSphere Web Client 中完成安
 image::vcp_shortcuts_page_accessing_plugin.png[描述了成功升级或安装后的插件扩展点]
 
 +
-[NOTE]
-====
-如果不显示 vCenter 插件图标，请参见 link:https://docs.netapp.com/us-en/vcp/vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client["适用于 vCenter Server 的 Element 插件"^] 有关插件故障排除的文档。
 
-使用VMware vCenter Server 6.7U1升级到VCP 4.8或更高版本后、如果NetApp Element 配置的*集群*和* QoSSIOC设置*部分未列出存储集群或显示服务器错误、请参见 link:https://docs.netapp.com/us-en/vcp/vcp_reference_troubleshoot_vcp.html#errors-after-vcp-4-8-upgrade-with-vmware-vcenter-server-6-7u1["适用于 vCenter Server 的 Element 插件"^] 有关对这些错误进行故障排除的文档。
+NOTE: 如果不显示 vCenter 插件图标，请参见 link:https://docs.netapp.com/us-en/vcp/vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client["适用于 vCenter Server 的 Element 插件"^] 有关插件故障排除的文档。使用VMware vCenter Server 6.7U1升级到VCP 4.8或更高版本后、如果NetApp Element 配置的*集群*和* QoSSIOC设置*部分未列出存储集群或显示服务器错误、请参见 link:https://docs.netapp.com/us-en/vcp/vcp_reference_troubleshoot_vcp.html#errors-after-vcp-4-8-upgrade-with-vmware-vcenter-server-6-7u1["适用于 vCenter Server 的 Element 插件"^] 有关对这些错误进行故障排除的文档。
 
-====
 . 在插件的 * NetApp Element Configuration* 扩展点中的 * 关于 * 选项卡中验证版本更改。
 +
 您应看到以下版本详细信息或较新版本的详细信息：

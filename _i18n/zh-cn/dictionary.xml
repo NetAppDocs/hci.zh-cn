@@ -2768,11 +2768,9 @@
   <block id="3aa4b17575032362b7124d4aeb9c09f1" category="inline-link">《 NetApp Element 软件 12.0.1 发行说明》</block>
   <block id="49cbef4a1c4e82dba59d5c67759bce8e" category="list-text"><block ref="49cbef4a1c4e82dba59d5c67759bce8e" category="inline-link-rx"></block></block>
   <block id="1cace3c036a290ab8ee91dddebd361d0" category="inline-link">《 NetApp Element 软件 12.0 发行说明》</block>
-  <block id="4530ac947ab244332016237ecd5be386" category="list-text"><block ref="4530ac947ab244332016237ecd5be386" category="inline-link-rx"></block></block>
   <block id="c238b8c4c43e1a2c0a7fa4b0128df200" category="inline-link">NetApp Element 软件 11.8 发行说明</block>
   <block id="cd4b0abd6f1976f7d6b641eb6432cebc" category="list-text"><block ref="cd4b0abd6f1976f7d6b641eb6432cebc" category="inline-link-rx"></block></block>
   <block id="de0f0c49b842adda3c5183c2ee2304e8" category="inline-link">《 NetApp Element 软件 11.7 发行说明》</block>
-  <block id="c16491ff91ceba0f9e002a099673aaaa" category="list-text"><block ref="c16491ff91ceba0f9e002a099673aaaa" category="inline-link-rx"></block></block>
   <block id="a287e6799739729404ccb132fbbb1739" category="inline-link">《 NetApp Element 软件 11.5.1 发行说明》</block>
   <block id="84f9569ec486aa9adfb1b73d2a0e3c9f" category="list-text"><block ref="84f9569ec486aa9adfb1b73d2a0e3c9f" category="inline-link-rx"></block></block>
   <block id="87043baf81d739284bd0146e19728ce7" category="inline-link">《 NetApp Element 软件 11.3P1 发行说明》</block>
@@ -3107,18 +3105,6 @@
   <block id="f71a4c12dcb50499d5053c0b98873237" category="list-text"><block ref="f71a4c12dcb50499d5053c0b98873237" category="inline-link-macro-rx"></block></block>
   <block id="9fb45d65282cc3f96e819596e5e394dd" category="inline-link-macro">管理服务 2.18.91 通知（ VCP 4.7.10 ）</block>
   <block id="f69014f6080d5a2f562899c09650901c" category="list-text"><block ref="f69014f6080d5a2f562899c09650901c" category="inline-link-macro-rx"></block></block>
-  <block id="4dc58eed88195e2dee9ef97cb0900fcc" category="inline-link-macro">管理服务 2.17.56 （ VCP 4.6.32 ）通知</block>
-  <block id="1989e0779940cbcf0c65f9cf43d47818" category="list-text"><block ref="1989e0779940cbcf0c65f9cf43d47818" category="inline-link-macro-rx"></block></block>
-  <block id="2916cda094e8e99dde87d679e5faf4af" category="inline-link-macro">管理服务注意事项 2.17.52 （ VCP 4.6.29 ）</block>
-  <block id="617dfeaa943c584c80f6893ede302f73" category="list-text"><block ref="617dfeaa943c584c80f6893ede302f73" category="inline-link-macro-rx"></block></block>
-  <block id="3e7b640ad20b44c0dc8fac94c0950302" category="inline-link-macro">管理服务通知 2.16 （ VCP 4.6.29 ）</block>
-  <block id="5209993fc11774e9d9b0846e8aa63841" category="list-text"><block ref="5209993fc11774e9d9b0846e8aa63841" category="inline-link-macro-rx"></block></block>
-  <block id="d4771ef289c9be15770d7434653c2259" category="inline-link-macro">管理服务声明 2.14 （ VCP 4.5.42 ）</block>
-  <block id="366d8e5be621e86d29d0b195a08e2f61" category="list-text"><block ref="366d8e5be621e86d29d0b195a08e2f61" category="inline-link-macro-rx"></block></block>
-  <block id="8905ab1c0ad30471bfb792d567577041" category="inline-link-macro">管理服务通知 2.13 （ VCP 4.5.42 ）</block>
-  <block id="fd999dd89e89cb1746ef798211092cf3" category="list-text"><block ref="fd999dd89e89cb1746ef798211092cf3" category="inline-link-macro-rx"></block></block>
-  <block id="d3fd8f720b6d6e4fea8273c72a7bbcc7" category="inline-link-macro">管理服务 2.11 通知（ VCP 4.4.72 ）</block>
-  <block id="f050f7b6ab1083e601d67bc20dda05f3" category="list-text"><block ref="f050f7b6ab1083e601d67bc20dda05f3" category="inline-link-macro-rx"></block></block>
   <block id="df65f5c1d0a5896f87e664b9add16f32" category="summary">了解 NetApp HCI 的 DNS 和计时要求。</block>
   <block id="a37125410851f68e5cc89a60c957a863" category="paragraph">在部署之前，您需要为 NetApp HCI 系统准备域名系统（ DNS ）记录并收集 NTP 服务器信息。要成功部署 NetApp HCI ，需要具有正确 DNS 条目的 DNS 服务器和 NTP 服务器。</block>
   <block id="24f2891c7e9fdb24ca996d92b73e6a39" category="paragraph">在部署 NetApp HCI 之前，请做好以下 DNS 和时间服务器准备：</block>
@@ -5894,7 +5880,6 @@
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
-  <block id="5e98629f8afe2eee1c27355eb45a80e0" category="paragraph">如果不显示 vCenter 插件图标，请参见 <block ref="ab9b282dbdbe327f4195d1f5d71c406f" category="inline-link-macro-rx"></block> 有关插件故障排除的文档。</block>
   <block id="f6a63a9052785a40e6a7b718acb627b9" category="list-text">*管理服务*：您已更新到最新的管理服务包(2.11或更高版本)。</block>
   <block id="2ce38f720dba5ff083bfe1933d11eacc" category="list-text">*管理节点*：正在运行管理节点11.3或更高版本。</block>
   <block id="a141fe1c6179ed3e09aa6043ad364ac6" category="list-text">* Element Software*：您的存储集群运行的是NetApp Element 软件11.3或更高版本。</block>
@@ -5949,7 +5934,6 @@
   <block id="651784e7a6ddc6534201a6e8d1fbf248" category="paragraph">对于已注册适用于vCenter Server的NetApp Element 插件的现有vSphere环境、您可以在首次更新包含此插件服务的管理服务包后更新此插件注册。</block>
   <block id="fe7edd9e3b4efc71766ba03d23b51c44" category="list-text">您要升级到适用于VMware vCenter Server 4.9、4.8、4.7、4.6、4.5或4.4的Element插件。</block>
   <block id="8eeabd6de4a231c731b82c27ee25bbdb" category="admonition">此插件与适用于VMware vCenter Server 4.6、4.7和4.8的VMware vCenter Server 6.5 for Element插件不兼容。</block>
-  <block id="f31daff1bed8bc4fec4119d69f3093d9" category="paragraph">使用VMware vCenter Server 6.7U1升级到VCP 4.8或更高版本后、如果NetApp Element 配置的*集群*和* QoSSIOC设置*部分未列出存储集群或显示服务器错误、请参见 <block ref="ccd6ffc15d371ab994b0e9dff04cb8c2" category="inline-link-macro-rx"></block> 有关对这些错误进行故障排除的文档。</block>
   <block id="54aa7f2dcdc54ac5abd932a5b6c8b3d7" category="list-text">*升级过程时间*：您已计划足够的时间执行升级。升级到Element软件12.5时、升级过程时间会因您当前的Element软件版本和固件更新而异。</block>
   <block id="778b8320a31f425d9021c72ba59dd8bd" category="cell">存储节点</block>
   <block id="c4303966c5d95835840cedbb4010f17d" category="cell">当前Element软件版本</block>
@@ -6028,8 +6012,6 @@
   <block id="f8e8ebc61e5eb8b12488dfac5a827259" category="list-text"><block ref="6a881248d046a90f573e41d5ebe1362e" category="inline-link-rx"></block> _new_</block>
   <block id="9de5606ae9b23ff6651244b85bd5dae8" category="list-text"><block ref="9de5606ae9b23ff6651244b85bd5dae8" category="inline-link-rx"></block></block>
   <block id="e2b4747c263485de7011e8018c523cdd" category="list-text"><block ref="779aeeb0a67ee84cae70c2361654111d" category="inline-link-rx"></block> _new_</block>
-  <block id="cb6823679c925abe1a3f3ca07396e866" category="list-text"><block ref="97107deca957b5e4a6b53d3c09cc1c16" category="inline-link-macro-rx"></block> _new_</block>
-  <block id="04796d249df9edf8061eee03c29d96f4" category="list-text"><block ref="67a13cf9dcb3321b59f28def3726ce13" category="inline-link-macro-rx"></block> _new_</block>
   <block id="fe2bcf6f89f4e1eec12e45df5946ee12" category="admonition">从 Element 12.3.1 开始，系统会自动执行子步骤（ a ）到（ e ）。对于管理节点12.3.1或更高版本、请继续执行 <block ref="e7aead760c231b389589c93842d555c1" category="inline-xref-macro-rx"></block> 以完成时间同步配置。</block>
   <block id="90c2dc9b8e4f7b029c80f8c7488a4b58" category="paragraph">您可以将管理节点从12.3.x版升级到管理节点12.5.</block>
   <block id="2ee9526aa61dc0808ea0ccf6ccfa2412" category="paragraph">升级存储集群上的 Element 软件不再需要升级管理节点操作系统。您只需将管理服务升级到最新版本、即可使用NetApp Hybrid Cloud Control执行Element升级。如果您希望出于安全修复等其他原因升级管理节点操作系统，请按照适用于您的方案的管理节点升级操作步骤进行操作。</block>
@@ -6119,4 +6101,54 @@
   <block id="df8bcceb7ddee511e9494f0afd8c95a7" category="list-text">重新启动期间、按* F11 *选择启动选项并加载计算固件包。在显示启动菜单之前，您可能需要按几次 F11 。</block>
   <block id="b56a80b47ffbf4eda21aa52a14a1c0d9" category="paragraph">根据节点是独立节点还是集群的一部分，步骤会有所不同。操作步骤 可能需要大约25分钟、其中包括关闭节点电源、上传计算固件包、刷新设备以及在升级后重新启动节点。</block>
   <block id="94accfc9ce60fbdbc6b912533ff89998" category="list-text">重新启动期间、按* F11 *选择启动选项并加载计算固件包。</block>
+  <block id="4489a95481ba0e8e951ca2cdc4403b89" category="list-text"><block ref="4489a95481ba0e8e951ca2cdc4403b89" category="inline-link-rx"></block></block>
+  <block id="b7fe022e3d13a1a7248fb1583851f437" category="inline-link">《 NetApp Element 软件 11.8.2 发行说明》</block>
+  <block id="96a6137975cbcfe6dbff95b85cf1b6bf" category="list-text"><block ref="5ed2b0be7714cf9bfe94c6d0660549bb" category="inline-link-rx"></block> _new_</block>
+  <block id="0f0e809fbd346b6319776f0b02355216" category="inline-link">《 NetApp Element 软件 11.8.1 发行说明》</block>
+  <block id="6ae2e484807ab9e500e1e9aa73aa6354" category="list-text"><block ref="6ae2e484807ab9e500e1e9aa73aa6354" category="inline-link-rx"></block></block>
+  <block id="7941eda6d75aeac7fd5d3f88cb08cb39" category="list-text"><block ref="7941eda6d75aeac7fd5d3f88cb08cb39" category="inline-link-rx"></block></block>
+  <block id="e7c54ed43221b67b988af5312c783bb4" category="inline-link-macro">计算固件包2.154.1发行说明</block>
+  <block id="1ede45b15f29951945dbf9a93aff5d13" category="list-text"><block ref="da7af753dc484a3dd141f979cd511421" category="inline-link-macro-rx"></block> _new_</block>
+  <block id="97107deca957b5e4a6b53d3c09cc1c16" category="list-text"><block ref="97107deca957b5e4a6b53d3c09cc1c16" category="inline-link-macro-rx"></block></block>
+  <block id="f73f11dc118d0773193fe38ff975e133" category="inline-link-macro">存储固件包2.150发行说明</block>
+  <block id="9b85276bde33152eca1f76222abdb811" category="list-text"><block ref="dd9a6aa21d9f1f41ef6fc5f7516fd509" category="inline-link-macro-rx"></block> _new_</block>
+  <block id="67a13cf9dcb3321b59f28def3726ce13" category="list-text"><block ref="67a13cf9dcb3321b59f28def3726ce13" category="inline-link-macro-rx"></block></block>
+  <block id="7ab1151c4498ab191b7470333595b532" category="admonition">如果不显示 vCenter 插件图标，请参见 <block ref="ab9b282dbdbe327f4195d1f5d71c406f" category="inline-link-macro-rx"></block> 有关插件故障排除的文档。使用VMware vCenter Server 6.7U1升级到VCP 4.8或更高版本后、如果NetApp Element 配置的*集群*和* QoSSIOC设置*部分未列出存储集群或显示服务器错误、请参见 <block ref="ccd6ffc15d371ab994b0e9dff04cb8c2" category="inline-link-macro-rx"></block> 有关对这些错误进行故障排除的文档。</block>
+  <block id="2ce86d9c954f97c282bf8eed5bf20807" category="paragraph">存储固件包版本2.150包含一个严重错误修复。您可以按照中的说明升级存储固件 <block ref="7b278358318478c3f88cee9434341a35" category="inline-link-macro-rx"></block>。</block>
+  <block id="3e94ced9564aa4fd2c0b54fde5c1108f" category="paragraph">此固件包包含以下硬件组件固件版本：</block>
+  <block id="9671fe0cd1cee15ffc6e623894e0c90c" category="cell">3B11</block>
+  <block id="d7d76e22f94a7f97f91de8b48bb8e450" category="cell">3.94.07</block>
+  <block id="bca66716b9ca2d13a4c28be69b276777" category="cell">3.3</block>
+  <block id="0150391f6be250d4938acbe27c8a6334" category="cell">EDA5602Q</block>
+  <block id="d2a3d6fbce3a3051dfc130e0011c1e3f" category="cell">EDA5900Q</block>
+  <block id="fd6f31936af2e04f06eeb0526b85d107" category="cell">PM9A3、SED</block>
+  <block id="f9eaf28d7f6afbf4436dc40e7bcd160d" category="cell">GDC5502Q</block>
+  <block id="4919b2e69242d2c21c7f28f1ba86db29" category="cell">PE8010、SED</block>
+  <block id="37ac0290be70b74cc8f652c94b244484" category="cell">11092A10</block>
+  <block id="8e70a489b4770b5e0761a6fc215c6fec" category="cell">PE8010、N-SED</block>
+  <block id="223b1fa9e807b6e3241516bda5bf6d35" category="cell">110B2A10</block>
+  <block id="1ad071257f715e496a87659f9a2669a6" category="cell">NAT3.4</block>
+  <block id="ddfac71abd839b54517b13500ce7ecbf" category="cell">6.98.00</block>
+  <block id="8a80462f5d95f3e749a944e16740bc37" category="cell">HXT7A04Q</block>
+  <block id="a3f866670127939ba6ddb0e8c20fa97e" category="admonition">自存储固件包2.146以来、未进行任何有效负载更新。</block>
+  <block id="c04379119f71302691848047a912bf77" category="paragraph">可下载的计算节点固件包可为所有受支持的 NetApp HCI 计算节点提供最新的 BIOS 和 BMC 功能增强功能，错误修复以及硬件支持。</block>
+  <block id="378aaff6867e23f7925def4480926513" category="admonition">NetApp Hybrid Cloud Control需要最新的管理服务包。在将计算节点上的固件升级到版本2.154.1之前、您必须升级到最新的管理服务包。如果要将计算节点上的固件升级到版本2.154.1、则需要使用管理服务2.2才能继续。</block>
+  <block id="5746efe5d0d96d6572f432c534c7beca" category="paragraph">2.154.1版包含常规错误修复。</block>
+  <block id="bdbab1d48a4851cccf015292b45adbf8" category="cell">NATP3.10</block>
+  <block id="4ec7d13445d466c69ee100663627dc2c" category="cell">2007年3月</block>
+  <block id="ebe24792adc96d87b6e6b9654b5d7528" category="cell">B12.CO</block>
+  <block id="06256e5582720eda745869273808e24a" category="cell">4.04.07</block>
+  <block id="b37301451c2b79b500bfd38628f1abeb" category="cell">4.72.07</block>
+  <block id="f7c4262c3c6a1e993d139e2fe33eef0e" category="cell">*。14.29.1016*</block>
+  <block id="8305ff7d6a08337f4cea8d86d8b1f7f4" category="paragraph">更新的Mellanox固件版本14.29.1016要求最低版本的VMware ESXi驱动程序、如下所示：</block>
+  <block id="ae543af4a45ea963a2ebf8c216e994ee" category="list-text">* ESXi 7.0*：版本4.21.71.1</block>
+  <block id="49a3c987bd11c2c62328caa9569895b0" category="list-text">* ESXi 6.7*：版本4.17.71.1</block>
+  <block id="e3c8775ae388ad911a24c3ded5ffd470" category="list-text">* ESXi 6.5*：版本4.16.71.1</block>
+  <block id="417a2d61c56d02cbdeab31e1cdfcde74" category="admonition">在升级到版本2.154.1之前、请确保检查当前的ESXi驱动程序版本。如果此驱动程序已过期，请先升级此驱动程序。然后、将计算节点的计算固件升级到版本2.154.1。请访问 <block ref="325436a4e666ed53574c87eb30870a4b" category="inline-link-macro-rx"></block> 有关更新计算节点驱动程序的说明，其中包括 ESXi 驱动程序。</block>
+  <block id="9a6c5a1f43def2114175181a7990cd49" category="paragraph">手动安装或升级主机操作系统时， NetApp 无法控制这些操作系统的驱动程序和固件。</block>
+  <block id="e678afceed55b1dcc8ebe2ece545090a" category="section-title">下载计算固件包2.154.1</block>
+  <block id="831b7fafcb48c5cdc3232392066936d8" category="inline-link-macro">存储固件包2.150注意事项</block>
+  <block id="ce22f95c04c4b1b4db9fa2b54e703681" category="list-text"><block ref="ce22f95c04c4b1b4db9fa2b54e703681" category="inline-link-macro-rx"></block></block>
+  <block id="45bcc1809d993bf4834cacf8a3723536" category="inline-link-macro">计算固件包2.154.1注意事项</block>
+  <block id="85c8fe6ae514fde647235db86ba4c0a4" category="list-text"><block ref="85c8fe6ae514fde647235db86ba4c0a4" category="inline-link-macro-rx"></block></block>
 </blocks>
