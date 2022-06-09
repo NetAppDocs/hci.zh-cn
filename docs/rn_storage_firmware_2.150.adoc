@@ -21,7 +21,7 @@ keywords: netapp, hci, storage firmware
 
 == 新增功能
 
-存储固件包版本2.150包含一个严重错误修复。您可以按照中的说明升级存储固件 link:task_hcc_upgrade_storage_firmware.html["升级存储固件"]。
+存储固件包版本2.150包含H410S (PE-14168)的严重错误修复。请参见 https://mysupport.netapp.com/site/bugs-online/product["Bug Online 工具"^] 了解更多详细信息。您可以按照中的说明升级存储固件 link:task_hcc_upgrade_storage_firmware.html["升级存储固件"]。
 
 
 
