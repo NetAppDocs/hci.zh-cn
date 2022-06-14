@@ -276,7 +276,6 @@
   <block id="005c3b430cc655f7555388f91ebb3859" category="summary">您可以配置设置以监控 NetApp HCI 系统上的警报。</block>
   <block id="5d1a6601685609e0a2ecafa21b0f4854" category="doc">在 NetApp HCI 上配置警报监控</block>
   <block id="fdde616d64984e5c52201bf2f1a02adc" category="paragraph">NetApp HCI 警报监控功能会将 NetApp HCI 存储集群系统警报转发到 vCenter Server ，使您能够从 vSphere Web Client 界面查看 NetApp HCI 的所有警报。</block>
-  <block id="36cad81bfa070b7f125b05d13a28ba87" category="admonition">这些工具不会配置或用于纯存储集群，例如 SolidFire 全闪存存储。运行这些集群的工具会导致以下 405 错误，在配置下，此错误是预期的： `webUIParseError ：服务器响应无效。405`</block>
   <block id="97419dde0c44604b20e803f7b92bbbe3" category="list-text">打开每节点管理节点 UI （`https://[IP address] ： 442` ）。</block>
   <block id="77dd0d5c839caa7098834171deb013f6" category="list-text">单击 * 警报监控 * 选项卡。</block>
   <block id="aba0876edc6160b9de4bd36d336440ee" category="list-text">配置警报监控选项。</block>
@@ -545,7 +544,6 @@
   <block id="00229b6ae28a3c795d4220f972583794" category="list-text">24 GB RAM</block>
   <block id="ffd08ee6f575adf47c4b8596e51d4fda" category="list-text">400 GB 虚拟磁盘，精简配置</block>
   <block id="950d6089bab8dc5f0af7f788b69458ce" category="list-text">一个可访问 Internet 和存储 MVIP 的虚拟网络接口。</block>
-  <block id="307bf29a25a4ac6cd9b4cb744bd5901a" category="list-text">（对于 SolidFire 全闪存存储为可选）一个可通过管理网络访问存储集群的虚拟网络接口。如果存储集群与管理节点（ eth0 ）位于不同的子网中，并且您希望使用永久性卷，请向存储子网（ eth1 ）上的虚拟机添加另一个网络接口控制器（ Network Interface Controller ， NIC ），或者确保管理网络可以路由到存储网络。</block>
   <block id="527b1f1493e835bb654427d120dff5ec" category="admonition">请勿在此操作步骤中指示稍后启动虚拟机的步骤之前启动虚拟机。</block>
   <block id="95772984255fd54c3458a948ba42af1a" category="list-text">将 ISO 连接到虚拟机并启动到 .iso 安装映像。</block>
   <block id="61106ad2e01de8b06da3caf17edacd33" category="admonition">使用映像安装管理节点可能会导致在显示启动屏幕之前出现 30 秒的延迟。</block>
@@ -940,7 +938,6 @@
   <block id="cd5d219a8e6ff0f8b46dd4b216f4cf97" category="list-text"><block ref="cd5d219a8e6ff0f8b46dd4b216f4cf97" category="inline-link-macro-rx"></block></block>
   <block id="d40819e9e843e97335bf320aeb8d5ac1" category="summary">您可以使用管理节点启用 NetApp 支持访问以进行故障排除。</block>
   <block id="e606a329fd1c8e2f2543e5fd1dce6af5" category="doc">启动远程 NetApp 支持会话</block>
-  <block id="0d37152cb4d274796e3ac32a73cf3b30" category="paragraph">如果您需要 NetApp HCI 或 SolidFire 全闪存存储系统的技术支持， NetApp 支持部门可以远程连接到您的系统。要启动会话并获得远程访问， NetApp 支持部门可以与您的环境建立反向安全 Shell （ SSH ）连接。</block>
   <block id="8e5cda5f4d9f852ba16378a9749b0fba" category="paragraph">您可以与 NetApp 支持部门为 SSH 反向通道连接打开 TCP 端口。通过此连接， NetApp 支持部门可以登录到您的管理节点。</block>
   <block id="38bfc79ee5a8c36f9e9a8af1c01ba34c" category="list-text">对于管理服务 2.18 及更高版本，默认情况下，管理节点上的远程访问功能处于禁用状态。要启用远程访问功能，请参见 <block ref="b699ffaa70a5cdf708fca1e6ce6761c0" category="inline-link-macro-rx"></block>。</block>
   <block id="4767b00dd0eab027ad48a79407d1aeb5" category="list-text">如果您的管理节点位于代理服务器之后，则 sshd.config 文件中需要以下 TCP 端口：</block>
@@ -3797,7 +3794,6 @@
   <block id="82d5e97cf3f8dbd4f5b186241471c027" category="inline-link">NetApp SolidFire Active IQ ，用于提供历史数据</block>
   <block id="190bca0068c88c9e353ca03aae0ff821" category="list-text">有关计算信息的进一步分析，请参见<block ref="8a4d68998933a7ef36f897ad0afe7e4d" category="inline-link-rx"></block>。</block>
   <block id="5950c53f8d241e1e95440d518521b075" category="summary">您可以使用管理节点（ mNode ）启用 NetApp Active IQ 和 NetApp HCI 遥测。</block>
-  <block id="e97fd0a705753a7f17bccd9bf489a092" category="paragraph">如果在安装或升级期间未启用 Active IQ 存储监控（适用于 SolidFire 全闪存存储和 NetApp HCI ）和 NetApp HCI 计算监控（仅适用于 NetApp HCI ），则可以启用此功能。如果您使用 NetApp HCI 部署引擎禁用了遥测功能，或者在安装 SolidFire 全闪存存储系统期间未设置 SolidFire Active IQ ，则可能需要使用此操作步骤。</block>
   <block id="6ac1a1d4d559f5629848b5d88e68e733" category="paragraph">Active IQ 收集器服务会将配置数据和基于 Element 软件的集群性能指标转发到 NetApp Active IQ ，以便进行历史报告和近乎实时的性能监控。通过 NetApp HCI 监控服务，可以将存储集群故障转发到 vCenter 以发送警报通知。</block>
   <block id="b28e179f94097b207a2dc9172aa4b4d0" category="list-text">您可以访问 Internet 。不能从没有外部连接的非公开站点使用 Active IQ 收集器服务。</block>
   <block id="82a2b40d5c47d3f7c952492cdb40edd6" category="list-text">获取安装的基本资产 ID ：</block>
@@ -4138,7 +4134,6 @@
   <block id="c9e517189f9145947b217747ce1df4fa" category="list-text">运行以下命令退出维护模式并重新启动主机： `esxcli system maintenanceMode set – enable false` `reboot -f`</block>
   <block id="5eca06837292fdb7aace3e8b6b16124f" category="summary">您可以为运行 NetApp Element 软件的集群安装管理节点。</block>
   <block id="618b2a6a492417a6fd149f483c611dd6" category="paragraph">您可以使用适用于您的配置的映像为运行 NetApp Element 软件的集群手动安装管理节点。</block>
-  <block id="39d054f16665efd662cb5551e7cdab2f" category="paragraph">此手动过程适用于未使用 NetApp 部署引擎安装管理节点的 SolidFire 全闪存存储管理员和 NetApp HCI 管理员。</block>
   <block id="7e6093e52119f18464fc862a969c9f6a" category="admonition">如果需要 IPv6 支持，可以使用管理节点 11.1 。</block>
   <block id="9385b032418674e92472a8b4a2ae5cdf" category="list-text">（使用代理服务器的管理节点 12.0 及更高版本）在配置代理服务器之前，您已将 NetApp Hybrid Cloud Control 更新为管理服务版本 2.16 。</block>
   <block id="0406c3e25004e3d1dddbc367d2c4010f" category="paragraph">Element 12.2 管理节点是一种可选升级。现有部署不需要此功能。</block>
@@ -6156,4 +6151,8 @@
   <block id="007f90b7875049f66b3609b089201095" category="list-text"><block ref="007f90b7875049f66b3609b089201095" category="inline-link-macro-rx"></block></block>
   <block id="24ebb39da100996506dfec70b3c18c3e" category="inline-link-macro">计算固件ISO注意事项</block>
   <block id="0a3fa8cc98ca1fccda9e33f500cd1a33" category="list-text"><block ref="0a3fa8cc98ca1fccda9e33f500cd1a33" category="inline-link-macro-rx"></block></block>
+  <block id="1b0f1fe17217f456f0c7b1311a828304" category="paragraph">如果您需要NetApp HCI 系统的技术支持、NetApp支持部门可以远程连接到您的系统。要启动会话并获得远程访问， NetApp 支持部门可以与您的环境建立反向安全 Shell （ SSH ）连接。</block>
+  <block id="af6fe236a646e80d8ae873b7b19bbd32" category="paragraph">此手动过程适用于未使用NetApp部署引擎安装管理节点的NetApp HCI 管理员。</block>
+  <block id="7de1d355aeba73e5332d59c786d355f9" category="list-text">一个可通过管理网络访问存储集群的虚拟网络接口。如果存储集群与管理节点（ eth0 ）位于不同的子网中，并且您希望使用永久性卷，请向存储子网（ eth1 ）上的虚拟机添加另一个网络接口控制器（ Network Interface Controller ， NIC ），或者确保管理网络可以路由到存储网络。</block>
+  <block id="50a6b66c3df70071e486b3d636f036b7" category="paragraph">如果您在安装或升级期间尚未启用Active IQ 存储监控以进行NetApp HCI 和NetApp HCI 计算监控、则可以启用此功能。如果您使用NetApp HCI 部署引擎禁用了遥测功能、则可能需要使用此操作步骤。</block>
 </blocks>
