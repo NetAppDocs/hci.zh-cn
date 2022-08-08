@@ -27,7 +27,7 @@ NOTE: 从Element 12.5开始、Element软件升级不再支持NetApp HealthTools�
 IMPORTANT: 在将Element软件升级到版本12.5之前、您必须升级到最新的管理服务包。如果要将Element软件更新到版本12.5、则需要使用管理服务2.20.69或更高版本继续操作。
 
 * * 集群运行状况 * ：您已验证集群是否已做好升级准备。请参见 link:task_hcc_upgrade_element_prechecks.html["在升级存储之前，请运行 Element 存储运行状况检查"]。
-* *已更新H610S节点的基板管理控制器(BMC)*：您已升级H610S节点的BMC版本。请参见 link:rn_H610S_BMC_3.84.07.html["发行说明和升级说明"^]。
+* *已更新H610S节点的基板管理控制器(BMC)*：您已升级H610S节点的BMC版本。请参见 link:rn_H610S_BMC_3.84.07.html["发行说明和升级说明"]。
 * *升级过程时间*：您已计划足够的时间执行升级。升级到Element软件12.5时、升级过程时间会因您当前的Element软件版本和固件更新而异。
 +
 [cols="20,20,20,20,20"]
@@ -175,7 +175,7 @@ CAUTION: 如果您离开浏览器窗口，则文件上传将丢失。
 | error | 升级期间发生错误。您可以下载错误日志并将其发送给 NetApp 支持部门。解决此错误后，您可以返回到页面并选择 * 恢复 * 。恢复升级时，进度条会后退几分钟，而系统会运行运行状况检查并检查升级的当前状态。 
 
 
-| 无法检测 | 如果 NetApp Hybrid Cloud Control 无法通过外部连接访问联机软件存储库，则会显示此状态，而不是显示 * 可用版本 * 。如果您已建立外部连接，但仍看到此消息，请检查 link:task_mnode_configure_proxy_server.html["代理配置："^]。 
+| 无法检测 | 如果 NetApp Hybrid Cloud Control 无法通过外部连接访问联机软件存储库，则会显示此状态，而不是显示 * 可用版本 * 。如果您已建立外部连接，但仍看到此消息，请检查 link:task_mnode_configure_proxy_server.html["代理配置："]。 
 
 
 | 完成并进行跟进 | 仅适用于从早于 118 的 Element 版本升级的 H610S 节点。升级过程的第1阶段完成后、此状态将提示您执行其他升级步骤(请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/H_Series/NetApp_H610S_storage_node_power_off_and_on_procedure["知识库文章"^]）。完成这些附加步骤并确认已完成后、状态将更改为*最新*。 

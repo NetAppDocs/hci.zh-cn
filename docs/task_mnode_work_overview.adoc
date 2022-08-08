@@ -5,7 +5,12 @@ summary: 您可以使用管理节点（ mNode ）使用系统服务，管理集�
 keywords: netapp, mnode, api, rest api, mnode ui, management node ui 
 ---
 = 管理节点概述
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

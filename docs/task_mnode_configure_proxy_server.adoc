@@ -5,7 +5,12 @@ summary: 您可以使用 REST API UI 将计算和控制器资产添加到管理�
 keywords: netapp, hci, mnode, api, management node, add proxy, proxy server 
 ---
 = 配置代理服务器
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -56,7 +56,7 @@ NOTE: NetApp Hybrid Cloud Control需要最新的管理服务包。在将计算�
 
 
 
-NOTE: 在升级到版本2.154.4之前、请务必检查当前的ESXi驱动程序版本。如果此驱动程序已过期，请先升级此驱动程序。然后、将计算节点的计算固件升级到版本2.154.4。请访问 link:task_hcc_upgrade_compute_node_drivers.html["更新计算节点驱动程序"^] 有关更新计算节点驱动程序的说明，其中包括 ESXi 驱动程序。
+NOTE: 在升级到版本2.154.4之前、请务必检查当前的ESXi驱动程序版本。如果此驱动程序已过期，请先升级此驱动程序。然后、将计算节点的计算固件升级到版本2.154.4。请访问 link:task_hcc_upgrade_compute_node_drivers.html["更新计算节点驱动程序"] 有关更新计算节点驱动程序的说明，其中包括 ESXi 驱动程序。
 
 手动安装或升级主机操作系统时， NetApp 无法控制这些操作系统的驱动程序和固件。
 
@@ -71,7 +71,7 @@ NOTE: 在升级到版本2.154.4之前、请务必检查当前的ESXi驱动程序
 . 单击 * 执行 * 。
 
 
-请访问 link:task_hcc_upgrade_compute_node_firmware.html#use-the-baseboard-management-controller-bmc-user-interface-ui["更新计算节点固件"^] 有关更新计算节点固件的说明。
+请访问 link:task_hcc_upgrade_compute_node_firmware.html#use-the-baseboard-management-controller-bmc-user-interface-ui["更新计算节点固件"] 有关更新计算节点固件的说明。
 
 
 

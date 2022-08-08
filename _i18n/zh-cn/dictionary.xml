@@ -9,7 +9,6 @@
   <block id="0c32b206df419b829deb3f4b518e5c49" category="paragraph">存储节点中支持加密的所有驱动器都在驱动器级别使用 AES 256 位加密。每个驱动器都有自己的加密密钥，该密钥是在首次初始化驱动器时创建的。启用加密功能后，系统将创建一个存储集群范围的密码，然后将该密码块分发到集群中的所有节点。没有一个节点存储整个密码。然后，使用此密码对所有驱动器访问进行密码保护。您需要使用密码来解锁驱动器，由于驱动器正在对所有数据进行加密，因此您的数据始终是安全的。</block>
   <block id="ffa5acac53ac39cd2054f6c2e4c922f7" category="paragraph">启用空闲加密后，存储集群的性能和效率不受影响。此外，如果使用 Element API 或 Element UI 从存储集群中删除启用了加密的驱动器或节点，则驱动器上会禁用空闲加密，并且驱动器会安全擦除，从而保护先前存储在这些驱动器上的数据。删除驱动器后，您可以使用 `SecureEraseDrives` API 方法安全地擦除该驱动器。如果您强制从存储集群中删除某个驱动器或节点，则数据仍受集群范围密码和驱动器的各个加密密钥的保护。</block>
   <block id="5a795bfd58bdaeba800eddfcf7e0b50f" category="inline-link">为集群启用和禁用加密</block>
-  <block id="7d4069c0c5bbc1894440d9cbeb94d7ef" category="paragraph">有关启用和禁用空闲加密的信息，请参见<block ref="09ef4076ec543d98513be6e784e56a73" category="inline-link-rx"></block> 在 SolidFire 和 Element 文档中心中。</block>
   <block id="88172bb650068ca20ae89796e76e69fe" category="section-title">空闲软件加密</block>
   <block id="d934c786ccf51d05a913999f0019c8e8" category="paragraph">通过软件空闲加密，可以对写入存储集群中 SSD 的所有数据进行加密。这样可以在 SolidFire 企业 SDS 节点中提供一个主加密层，其中不包括自加密驱动器（ SED ）。</block>
   <block id="370c6dde461cc5827c330619a80ca24b" category="section-title">外部密钥管理</block>
@@ -20,19 +19,15 @@
   <block id="5171cfdb575bfc1d27ebec7468b6150a" category="list-text">Vormetric Data Security Manager</block>
   <block id="01d28f8e0c3ec8b4f080e6bc1ea2cac8" category="list-text">IBM 安全密钥生命周期管理器</block>
   <block id="63a2c5c7bce9206062397fa2aad0b383" category="inline-link">外部密钥管理入门</block>
-  <block id="bf0c15eca4dae3066b3cc22a3c45518b" category="paragraph">有关配置外部密钥管理的详细信息，请参见<block ref="c0b65c8667e3cdf3f346df94d9117768" category="inline-link-rx"></block> 在 SolidFire 和 Element 文档中心中。</block>
   <block id="1a504cebc3822fd967eb6426a7ff0a31" category="section-title">多因素身份验证</block>
   <block id="14f80a3127882d325445f00ad8260203" category="paragraph">通过多因素身份验证（ Multi-Factor Authentication ， MFA ），您可以要求用户在登录时提供多种类型的证据，以便通过 NetApp Element Web UI 或存储节点 UI 进行身份验证。您可以将 Element 配置为仅接受与现有用户管理系统和身份提供程序集成的登录的多因素身份验证。您可以将 Element 配置为与现有 SAML 2.0 身份提供程序集成，此身份提供程序可强制实施多种身份验证方案，例如密码和文本消息，密码和电子邮件消息或其他方法。</block>
   <block id="0f9b01423fb128ce00d5a6fae664b566" category="paragraph">您可以将多因素身份验证与通用 SAML 2.0 兼容身份提供程序（ IdP ）配对，例如 Microsoft Active Directory 联合身份验证服务（ Active Directory Federation Services ， ADFS ）和 Shibboleth 。</block>
   <block id="1348aa661be537e0f78e7e6f8ba8dcec" category="inline-link">启用多因素身份验证</block>
-  <block id="f84d93ec6a5c00e80d7f9086a801c968" category="paragraph">要配置 MFA ，请参见<block ref="21a754af75122b21f73894703cbf9dde" category="inline-link-rx"></block> 在 SolidFire 和 Element 文档中心中。</block>
   <block id="4d4b6f242adb4fc4e84fe33ca56f9f5c" category="section-title">用于 HTTPS 和空闲数据加密的 FIPS 140-2</block>
   <block id="fef2f05c99c38487c549260f892c51a4" category="paragraph">NetApp SolidFire 存储集群和 NetApp HCI 系统支持符合联邦信息处理标准（ FIPS ） 140-2 加密模块要求的加密。您可以在 NetApp HCI 或 SolidFire 集群上为 HTTPS 通信和驱动器加密启用 FIPS 140-2 合规性。</block>
   <block id="7f89ab7caf46679f148781ae0236ae02" category="paragraph">在集群上启用 FIPS 140-2 操作模式后，集群将激活 NetApp 加密安全模块（ NetApp Cryptographic Security Module ， NCSM ），并利用 FIPS 140-2 1 级认证加密通过 HTTPS 与 NetApp Element UI 和 API 进行所有通信。您可以将 `EnableFeature` Element API 与 `FIPS` 参数结合使用，以启用 FIPS 140-2 HTTPS 加密。在具有 FIPS 兼容硬件的存储集群上，您还可以使用 `EnableFeature` Element API 和 `FipsDrives` 参数为空闲数据启用 FIPS 驱动器加密。</block>
   <block id="d640d68c0a9a05863d67fe4c94138264" category="inline-link">创建支持 FIPS 驱动器的集群</block>
-  <block id="ba05c588bab63bfd9c2b5a835c8d925b" category="paragraph">有关为 FIPS 140-2 加密准备新存储集群的详细信息，请参见<block ref="c7cdf21d29f87788c3dfdfabb398ea9c" category="inline-link-rx"></block>。</block>
   <block id="1c337717d6208a12caf7e07e628a39f2" category="inline-link">EnableFeature Element API</block>
-  <block id="a925e462bbc7bd453df6bb086bd89056" category="paragraph">有关在已准备好的现有集群上启用 FIPS 140-2 的详细信息，请参见<block ref="928b34922c0946c1228f9a2464c6587e" category="inline-link-rx"></block>。</block>
   <block id="67b5bd6ce3ff9e8f5296cb29c4514bcf" category="summary">在 NetApp HCI 上部署 Rancher 可部署 Rancher 控制平面（也称为 Rancher 服务器），从而可以创建内部 Kubernetes 集群。</block>
   <block id="8211faa645efca9f476617d0cf044b3b" category="doc">NetApp HCI 上的 Rancher 概述</block>
   <block id="5bcd5219127af1f7d2f06b8de54afece" category="paragraph">Rancher 是一个完整的软件堆栈，适用于采用容器的团队。Rancher 可解决跨不同基础架构管理多个 Kubernetes 集群所面临的操作和安全挑战，同时为 DevOps 团队提供用于运行容器化工作负载的集成工具。</block>
@@ -142,7 +137,6 @@
   <block id="0c06b376558e1430024d8a566a84067a" category="paragraph">您可以在 NetApp HCI 添加和配置资源时监控进度。</block>
   <block id="61dfc712d6e3605cfa8c03816883a956" category="list-text">* 可选 * ：验证是否在 VMware vSphere Web Client （适用于计算节点）或适用于 vCenter Server 的 Element 插件（适用于存储节点）中显示任何新节点。</block>
   <block id="f48a06284a0df48dae9a67886037b154" category="inline-link-macro">手动删除</block>
-  <block id="8683fa63badd4b4bb7e437431fc27b31" category="admonition">如果将双节点存储集群扩展为四个或更多节点，则存储集群先前使用的见证节点对仍可在 vSphere 中显示为备用虚拟机。新扩展的存储集群不使用它们；如果要回收 VM 资源，可以 <block ref="d6b0dacf49df2f4da2cc161f4f213536" category="inline-link-macro-rx"></block> 见证节点虚拟机。</block>
   <block id="a83404b3b2ca8b3c39459b719d7844d7" category="inline-link">NetApp HCI 资源页面</block>
   <block id="efb3497df51898324a04d1329dc9b9ae" category="list-text"><block ref="efb3497df51898324a04d1329dc9b9ae" category="inline-link-rx"></block></block>
   <block id="de8f3c57f62ff5861214b8103726109f" category="inline-link">《 NetApp HCI 计算和存储节点安装和设置说明》</block>
@@ -153,7 +147,6 @@
   <block id="f5bee34d8efcc268df11e9b404d64ab4" category="doc">更换计算节点中的 DIMM</block>
   <block id="a711863513c11f3a6d86294acc7be0ba" category="list-title">您需要什么？ #8217 ；将需要什么</block>
   <block id="db5eb84117d06047c97c9a0191b5fffe" category="inline-link">支持</block>
-  <block id="2b9d2f4b68717ea6ab65d767b125cd19" category="list-text">在启动此操作步骤之前，您应已联系 NetApp 支持部门并收到更换部件。在安装更换件期间，将会提供支持。如果您尚未执行此操作，请联系<block ref="f9fadb76c6d1900d54ced071435a8d90" category="inline-link-rx"></block>。</block>
   <block id="02483916c2b8b4e2157a6b33019e9b14" category="list-text">您已计划系统停机，因为您需要关闭节点电源或重新启动节点，然后将节点启动到 NetApp 安全模式以访问终端用户界面（ TUI ）。</block>
   <block id="137e2bc9c60fafbc63a75788202d131e" category="paragraph">此操作步骤适用场景支持以下计算节点型号：</block>
   <block id="b68f21bcf771598bcab68314acc4bae1" category="list-text">H410C 节点。H410C 节点插入 2U NetApp HCI 机箱。</block>
@@ -481,7 +474,6 @@
   <block id="a1a20e48c6b33d54067bc9f82be85325" category="list-text">在 NetApp Hybrid Cloud Control 中，选择在 Rancher 部署结束时为您提供的 URL 。</block>
   <block id="4eca7112a8ddccdb8eea23dc6752cfbc" category="list-text">在 Rancher UI 中，创建用户集群。</block>
   <block id="64d112be0af3c89e55d039ab4e700a94" category="inline-link">适用于 Rancher 的 Kubernetes 术语</block>
-  <block id="fd08f5470e2431f8e7d02ae64cbcd019" category="list-text"><block ref="fd08f5470e2431f8e7d02ae64cbcd019" category="inline-link-rx"></block></block>
   <block id="451ea6f06481d8471ac166075c39c8cd" category="summary">您可以使用管理节点（ mNode ）使用系统服务，管理集群资产和设置，运行系统测试和实用程序，配置 Active IQ 以进行系统监控以及启用 NetApp 支持访问以进行故障排除。</block>
   <block id="f721f1533adf835d2617ea3e7084ab4c" category="doc">管理节点概述</block>
   <block id="e9065488ba04db892848ac25fd8592aa" category="admonition">最佳实践是，仅将一个管理节点与一个 VMware vCenter 实例相关联，并避免在多个管理节点中定义相同的存储和计算资源或 vCenter 实例。</block>
@@ -589,7 +581,6 @@
   <block id="447a2c77b25a29c4b95502c7ce068a00" category="admonition">您可以添加用户名或允许脚本提示您输入信息。</block>
   <block id="cad0c5c8ceda74235801d01a1f9fd1c9" category="list-text">运行 `redeploy-mnode` 命令。重新部署完成后，此脚本将显示一条成功消息。</block>
   <block id="1ca15a17f59b2f41a1d0fa788065de9d" category="inline-link-macro">重新配置管理节点的身份验证</block>
-  <block id="6ed199402fd34d40f5cfc8b4d70276e7" category="list-text">如果您使用系统的完全限定域名（ FQDN ）访问 Element 或 NetApp HCI Web 界面（例如管理节点或 NetApp 混合云控制）， <block ref="5e2d305083f3807db61c20192a50ebf4" category="inline-link-macro-rx"></block>。</block>
   <block id="1ff95dcbc18b37a5ced1333dc80463dc" category="inline-link-macro">NetApp 支持远程支持通道（ RST ）会话访问</block>
   <block id="5586aaabd0a6d3e90ba91ecb4aabc919" category="inline-link-macro">再次禁用 SSH</block>
   <block id="24260d30caec4399226e019ec2a8a7d4" category="admonition">提供的 SSH 功能 <block ref="6bb28df38aa0844e287b2e23fc581879" category="inline-link-macro-rx"></block> 默认情况下，在运行管理服务 2.18 及更高版本的管理节点上处于禁用状态。如果先前已在管理节点上启用 SSH 功能，则可能需要 <block ref="5b81c87a44b075e9194cc26f66c2b99f" category="inline-link-macro-rx"></block> 在已恢复的管理节点上。</block>
@@ -630,7 +621,6 @@
   <block id="057ef59e5d5ed30266fce390d141e87b" category="list-text">* ESXi 6.7* ：版本 4.17.15.16</block>
   <block id="967d694d1f92f13ca66b6e185710f00f" category="list-text">* ESXi 6.5* ：版本 4.16.13.5</block>
   <block id="97e031805f88ffd636599f5586493ab3" category="inline-link-macro">更新计算节点驱动程序</block>
-  <block id="40b6b042e91d765e0955c9bd57051567" category="admonition">在升级到版本 2.76 之前，请确保检查当前的 ESXi 驱动程序版本。如果此驱动程序已过期，请先升级此驱动程序。然后，将计算节点的计算固件升级到版本 2.76 。请访问 <block ref="325436a4e666ed53574c87eb30870a4b" category="inline-link-macro-rx"></block> 有关更新计算节点驱动程序的说明，其中包括 ESXi 驱动程序。</block>
   <block id="e335575a2edc0f1a0a3fb7b76918fa94" category="paragraph">虽然 NetApp 部署引擎 1.8P1 不部署 ESXi 7.0 版，但支持将 ESXi 7.0 作为自安装或手动升级选项。手动安装或升级主机操作系统时， NetApp 无法控制这些操作系统的驱动程序和固件。</block>
   <block id="2d694ffc8438215748ab404c27b90c4a" category="section-title">下载计算固件包 2.76</block>
   <block id="eaca9680a0a2978b1ede83548674ce9a" category="inline-link-macro">更新计算节点固件</block>
@@ -886,7 +876,6 @@
   <block id="bcb6f7f6d78dbf85a54538e9072015cf" category="section-title">双节点存储集群</block>
   <block id="a25577f98a416c68537ba5d36173b3cd" category="paragraph">从 NetApp HCI 1.8 开始，您可以设置一个包含两个存储节点的存储集群。</block>
   <block id="169529280d59fa19257685252a99970c" category="inline-link">NetApp HCI 1.8 发行说明</block>
-  <block id="b85bb4664dc2035fb8f04e60d3206424" category="list-text">您可以使用某些类型的节点来构成双节点存储集群。请参见<block ref="6fe76529472a52e5056e058b90349b40" category="inline-link-rx"></block>。</block>
   <block id="99e3fe6b1b0d4b6123b3de5cb0f80ae6" category="list-text">双节点存储集群最适合工作负载不依赖于大容量和高性能要求的小型部署。</block>
   <block id="23b7b2dd0ee19144ebd9f156459bbb9f" category="list-text">除了两个存储节点之外，一个双节点存储集群还包括两个 * NetApp HCI 见证节点 * 。</block>
   <block id="5e44c9f9fb6609015e92611ca9985429" category="inline-link-macro">见证节点。</block>
@@ -904,12 +893,10 @@
   <block id="a3e16aa4ac1698b65d6005fa91bd3492" category="inline-link-macro">NetApp Hybrid Cloud Control UI</block>
   <block id="a885de4e6e46ef7a6c6b7ec0524a0f21" category="paragraph">将两个存储节点扩展到三个存储节点可以在发生节点和驱动器故障时自动修复，从而提高集群的故障恢复能力，但不会提供额外容量。您可以使用扩展 <block ref="c9283f0c090697a273d480df89a17f56" category="inline-link-macro-rx"></block>。从双节点集群扩展到三节点集群时，容量可能会处于孤立状态（请参见 <block ref="96f8d2b76b31af31fd87fbd8b636d167" category="inline-xref-macro-rx"></block>）。在安装之前， UI 向导会显示有关孤立容量的警告。在存储节点发生故障时，仍可使用一个见证节点来保持集合仲裁，而另一个见证节点处于备用状态。将三节点存储集群扩展为四节点集群时，容量和性能将会提高。在四节点集群中，不再需要见证节点来构成集群仲裁。您可以扩展到多达 64 个计算节点和 40 个存储节点。</block>
   <block id="1886c33029d6a5f67a53baeb16356d18" category="inline-link">NetApp HCI 双节点存储集群 | TR-4823</block>
-  <block id="3748ba4180e5e67341e21b26cd051850" category="list-text"><block ref="3748ba4180e5e67341e21b26cd051850" category="inline-link-rx"></block></block>
   <block id="65e6adcff1000b03a078e05d54c700f1" category="summary">了解如何在部署 Rancher on NetApp HCI 后配置监控。</block>
   <block id="729e3399d869de5540bc06d71a6bcf81" category="doc">启用监控</block>
   <block id="aad6cd40798f943aaf25e268a77af03c" category="paragraph">在 NetApp HCI 上部署 Rancher 后，如果在安装或升级期间尚未启用 Active IQ 存储监控（对于 SolidFire 全闪存存储和 NetApp HCI ）和 NetApp HCI 计算监控（仅适用于 NetApp HCI ），则可以启用此功能。</block>
   <block id="bdfb39867dffbc06698f3cbba2891fce" category="inline-link-macro">启用 Active IQ 和 NetApp HCI 监控</block>
-  <block id="50f24be8af34082a66669e0f976af4ad" category="paragraph">有关如何启用监控的说明，请参见 <block ref="92e5d3489225d4ca0640e94de05bd4ad" category="inline-link-macro-rx"></block>。</block>
   <block id="728b9f30c45d9b5490bc14eac2e5a7ee" category="summary">您可以使用 REST API UI 编辑 vCenter 管理节点控制器。</block>
   <block id="13a12eaece4fc3e5cb8a8919844ca623" category="doc">查看或编辑现有控制器资产</block>
   <block id="b0f01550232ca27c04dbc0644b6f5690" category="paragraph">您可以使用 REST API 查看和编辑管理节点配置中现有 VMware vCenter 控制器的信息。控制器是指在 NetApp HCI 安装中注册到管理节点的 VMware vCenter 实例。</block>
@@ -1064,7 +1051,6 @@
   <block id="1587f6667afe5b768dfe958cc33c0348" category="doc">在节点页面上查看清单</block>
   <block id="fde3b3c9faf9cb9a3df7c86052f8c308" category="paragraph">您可以查看系统中的存储和计算资产，并确定其 IP 地址，名称和软件版本。</block>
   <block id="f0a87811e8be55bf94672bdc19729182" category="inline-link-macro">自定义保护域</block>
-  <block id="5629a2ac1157dc8c4e04967fe01f5a1e" category="paragraph">您可以查看多节点系统以及与双节点或三节点集群关联的任何 NetApp HCI 见证节点的存储信息。条件 <block ref="6751b312804e6cd07962df767727db4f" category="inline-link-macro-rx"></block> 对于已分配的，您可以查看哪些保护域已分配给特定节点。</block>
   <block id="3fa62ec6cab8d08330da755c1f9d0f5c" category="paragraph">见证节点管理集群中的仲裁；它们不用于存储。见证节点仅适用于 NetApp HCI ，而不适用于全闪存存储环境。</block>
   <block id="c0c07cff61df9e4ef7f15c87bcc8e797" category="inline-link-macro">节点定义</block>
   <block id="e8f5064ddd0e8b3e8a09db69e2f635e5" category="paragraph">有关见证节点的详细信息，请参见 <block ref="c4c9fbedd43246ad2cd53a873e38ac92" category="inline-link-macro-rx"></block>。</block>
@@ -1114,22 +1100,13 @@
   <block id="ca6dc880d763aa72d512147bad46a59d" category="paragraph">您应执行硬件维护任务，例如更换故障节点，更换存储节点中的故障驱动器等，以确保系统以最佳状态运行。</block>
   <block id="85583f52dfb2cfcc9c0166993836c13b" category="paragraph">下面是硬件维护任务的链接：</block>
   <block id="112bc924dba51cfada5e4bb3a146598a" category="inline-link-macro">更换 2U H 系列机箱</block>
-  <block id="6a8d8c802e0281e429475b9498e78811" category="list-text"><block ref="6a8d8c802e0281e429475b9498e78811" category="inline-link-macro-rx"></block></block>
   <block id="49a2166ee15bb4b20cac851e6b983466" category="inline-link-macro">更换 H615C 和 H610S 节点中的直流电源设备</block>
-  <block id="c3afd74931a33fb5221a46a2ebae8cee" category="list-text"><block ref="c3afd74931a33fb5221a46a2ebae8cee" category="inline-link-macro-rx"></block></block>
-  <block id="b25e5b57221e3e08fca57be4dca92b16" category="list-text"><block ref="b25e5b57221e3e08fca57be4dca92b16" category="inline-link-macro-rx"></block></block>
   <block id="75ec7e73d66c5080707b379e6eb28e91" category="inline-link-macro">更换存储节点的驱动器</block>
-  <block id="1c9bc3b048bbfa1baadf3e43eebac889" category="list-text"><block ref="1c9bc3b048bbfa1baadf3e43eebac889" category="inline-link-macro-rx"></block></block>
   <block id="d00ce0eb9a31330acb61eea1205c9a2e" category="inline-link-macro">更换 H410C 节点</block>
-  <block id="5b1e067fbe2757a710433aeee3a17956" category="list-text"><block ref="5b1e067fbe2757a710433aeee3a17956" category="inline-link-macro-rx"></block></block>
   <block id="fdf87519a46ab204ad17ab0f86163321" category="inline-link-macro">更换 H410S 节点</block>
-  <block id="6c024d40f60c8dd100f21bb7a28ec06f" category="list-text"><block ref="6c024d40f60c8dd100f21bb7a28ec06f" category="inline-link-macro-rx"></block></block>
   <block id="07c870f1372e5600ea5050ab1c366e0e" category="inline-link-macro">更换 H610C 和 H615C 节点</block>
-  <block id="fa48aa9239efb694d55ec2dd7bdc0b6f" category="list-text"><block ref="fa48aa9239efb694d55ec2dd7bdc0b6f" category="inline-link-macro-rx"></block></block>
   <block id="410c2e0f6fd43f9d2d93f0fdda486132" category="inline-link-macro">更换 H610S 节点</block>
-  <block id="69377d9b370ccd071424f4725e4224ed" category="list-text"><block ref="69377d9b370ccd071424f4725e4224ed" category="inline-link-macro-rx"></block></block>
   <block id="b84a36d5b117ccbcc8079334d25bd5e1" category="inline-link-macro">更换电源设备</block>
-  <block id="4825faa0398f6c61586d46168b994d53" category="list-text"><block ref="4825faa0398f6c61586d46168b994d53" category="inline-link-macro-rx"></block></block>
   <block id="7a4dd69b33ba0cb526b3f529660227ed" category="inline-link-macro">更换 SN2010 ， SN2100 和 SN2700 交换机</block>
   <block id="9345b76867dd96005ed1e404ca6e256f" category="list-text"><block ref="9345b76867dd96005ed1e404ca6e256f" category="inline-link-macro-rx"></block></block>
   <block id="7f874a6debff4d8e3670b59ddfdf3bd0" category="inline-link-macro">更换双节点集群中的存储节点</block>
@@ -1137,14 +1114,12 @@
   <block id="c94f753aa1baf797e0eea49696404564" category="inline-link">_TR-4820 ：《 NetApp HCI 网络快速规划指南》</block>
   <block id="42f1d5fbe05e1bdd25e119b9262b7dbd" category="list-text"><block ref="42f1d5fbe05e1bdd25e119b9262b7dbd" category="inline-link-rx"></block></block>
   <block id="1f9e8829ba3f07efa25b77f1eb0d6c07" category="inline-link">NetApp Configuration Advisor</block>
-  <block id="d7bdef7a2c52c0dd825d473b3d2047d2" category="list-text"><block ref="694e0cf9189653ec892c63b5e9aa3dd0" category="inline-link-rx"></block> 5.8.1 或更高版本的网络验证工具</block>
   <block id="00415b6fb565410eea76dc891605762c" category="summary">对于 H 系列计算节点， NetApp 提供了 Ansible 角色，可帮助您自动对 BMC ， BIOS 和 NIC 等硬件组件进行固件升级。</block>
   <block id="eacf1eb0cf3662016ce47146687bec73" category="doc">利用 Ansible 自动升级计算节点固件</block>
   <block id="14427a22f723384059c45e3e1e6b5fcd" category="paragraph">您可以使用 NetApp 混合云控制中的工作流更新 NetApp HCI 计算节点上的系统固件，包括 BMC ， BIOS 和 NIC 等组件的固件。对于具有大型计算集群的安装，您可以使用 Ansible 对整个集群执行滚动升级，从而自动执行工作流。</block>
   <block id="e23426bcb203e258a965b5a6229d58ca" category="admonition">虽然 NetApp 提供了自动化计算节点固件升级的 Ansible 角色，但自动化是一个辅助组件，需要额外的设置和软件组件才能运行。只有在尽力而为的情况下，才支持修改 Ansible 自动化。</block>
   <block id="7c9cebcdff1799392ec97d17aea37372" category="admonition">用于升级的 Ansible 角色仅适用于 NetApp HCI H 系列计算节点。您不能使用此角色升级第三方计算节点。</block>
   <block id="ada468cc15057fe172438bfd87c04f0f" category="inline-link-macro">正在执行固件升级</block>
-  <block id="f03a00011dc315dde060309081399447" category="list-text">* 固件升级的准备情况和前提条件 * ：您的 NetApp HCI 安装必须准备好进行固件升级，如的说明所述 <block ref="a3ff980f82a3d1c0c391deb12394e2dd" category="inline-link-macro-rx"></block>。</block>
   <block id="737fbda59a4f5d2c9f5eb38c650c419e" category="list-text">* 准备在 Ansible 控制节点上运行自动化 * ：在 Ansible 中运行固件更新自动化的物理或虚拟服务器。</block>
   <block id="a1c6e7e95c797346381866e156460cb0" category="paragraph">在生产环境中，您应以滚动方式更新 NetApp HCI 安装中集群中的计算节点；一个节点一个节点，一个节点一个节点。NetApp Hybrid Cloud Control 中的 API 可为单个计算节点编排整体计算节点固件升级过程，包括运行运行状况检查，将计算节点上的 ESXi 置于维护状态以及重新启动计算节点以应用固件升级。Ansible 角色提供了一个选项，用于为一组计算节点或整个集群编排固件升级。</block>
   <block id="39e0115b52067ca373c2974cabbedb66" category="inline-link">GitHub 上的 NetApp Ansible 存储库</block>
@@ -1196,7 +1171,6 @@
   <block id="902b0d55fddef6f8d651fe1035b7d4bd" category="cell">error</block>
   <block id="6fc59d6889d5ac60b02946bb6b8b8898" category="cell">无法检测</block>
   <block id="25026455f4896275dc71ea344eae7273" category="inline-link-macro">代理配置：</block>
-  <block id="583f3e650ef38070d35da27a89c06904" category="cell">如果 NetApp Hybrid Cloud Control 无法通过外部连接访问联机软件存储库，则会显示此状态，而不是显示 * 可用版本 * 。如果您已建立外部连接，但仍看到此消息，请检查 <block ref="6ff9e66037288034fea8427eccd4ef4c" category="inline-link-macro-rx"></block>。</block>
   <block id="c25db468e3487f49a3fe8a8fd3ee6fca" category="cell">完成并进行跟进</block>
   <block id="c46945f40a6b2e92964b73d6d398f9d3" category="section-title">使用 NetApp Hybrid Cloud Control API 升级 Element 存储</block>
   <block id="13381b43a34c53873fa3ea94ea881f65" category="paragraph">您可以使用 API 将集群中的存储节点升级到最新的 Element 软件版本。您可以使用自己选择的自动化工具来运行 API 。此处介绍的 API 工作流使用管理节点上提供的 REST API UI 作为示例。</block>
@@ -1269,20 +1243,16 @@
   <block id="caba5f1180480863ba21ac9b6f9af133" category="paragraph">为了确保每个 VM 及其资源都保留在不同的物理主机上，您可以创建 VMware vSphere Distributed Resource Scheduler （ DRS ）反关联性规则。在 NetApp HCI 上的 Rancher 部署中，此功能不会自动执行。</block>
   <block id="f12702d50ce18a2d66f79b938aae7ec0" category="paragraph">有关如何配置 DRS 反关联性规则的说明，请参见以下 VMware 文档资源：</block>
   <block id="41e08ba66f98045d039e9d5e7201099c" category="inline-link">创建虚拟机反关联性规则</block>
-  <block id="5c952c4f72861e0879ba22d607b6ce94" category="paragraph"><block ref="5c952c4f72861e0879ba22d607b6ce94" category="inline-link-rx"></block></block>
   <block id="83f1331eb7a42b38646006abc2dee529" category="inline-link">vSphere HA 和 DRS 关联性规则</block>
-  <block id="ea6679340c2d38f436b65b4e42fe543c" category="paragraph"><block ref="ea6679340c2d38f436b65b4e42fe543c" category="inline-link-rx"></block></block>
   <block id="c7bc15401e60cafe10794d83f9b6cd85" category="summary">了解在 NetApp HCI 上安装 Rancher 后可能需要执行的任务。</block>
   <block id="9b7bb36b310f8ee8e2e028e42b095b77" category="doc">Rancher on NetApp HCI 概念</block>
   <block id="46d2eed8ffa3441771a3cebe7d1f1a05" category="paragraph">了解与 NetApp HCI 上的 Rancher 相关的基本概念。</block>
   <block id="e2fb643ff693958331473dfe3fcd9263" category="list-text">* Rancher 服务器 * 或 * 控制平面 * ： Rancher 控制平面（有时称为 _Rancher 服务器 _ ）可配置，管理和监控开发和运营团队使用的 Kubernetes 集群。</block>
   <block id="e31d2b60da791c899f94bb4cb73679ca" category="inline-link">有关目录的 Rancher 文档</block>
-  <block id="a4a436b167a141ff7d4bdc088838780f" category="list-text">* 目录 * ：目录是指 GitHub 存储库或 Helm 图表存储库，其中填充了可随时部署的应用程序。Rancher 可以使用 Helm 图表目录，以便重复部署应用程序。Rancher 包含两种类型的目录：内置全局目录和自定义目录。Trident 作为目录进行部署。请参见<block ref="fd02f55ea9c013500b36e10271c72859" category="inline-link-rx"></block>。</block>
   <block id="46f00c1f2b2f504fa180b6a0a8549857" category="list-text">* 管理集群 * ： NetApp HCI 上的 Rancher 在 Rancher 管理集群上部署三个虚拟机，您可以使用 Rancher ，混合云控制和 vCenter 插件查看这些虚拟机。管理集群虚拟机托管 Rancher 服务器， Rancher Kubernetes 引擎（ RKEE ）和 Linux 操作系统。</block>
   <block id="b469059473293c3804d2330f46b0ff4c" category="list-text">* 用户集群 * ：这些下游 Kubernetes 集群运行您的应用程序和服务。在 Rancher 的 Kubernetes 安装中，管理集群应与用户集群分开。Rancher 用户从 Rancher 部署或导入到 Rancher 的任何集群均视为用户集群。</block>
   <block id="10f7387c33a67c92542de362d9246058" category="list-text">* Rancher 节点模板 * ：混合云控制使用 Rancher 节点模板简化部署。</block>
   <block id="c0f5988a355d70bc72528826b19d4c26" category="inline-link">有关节点模板的 Rancher 文档</block>
-  <block id="8f33004025ca12195280445f540a61b2" category="paragraph">请参见 <block ref="c7ce1c3119100c7438ab9ce756921170" category="inline-link-rx"></block>。</block>
   <block id="20fb03d5b7e1bdf31a9e4e7a5186cdaa" category="section-title">Trident 软件和永久性存储概念</block>
   <block id="d80da136ed74275246f9bb62bcb18fd5" category="paragraph">Trident 本身是 Kubernetes 本机应用程序，直接在 Kubernetes 集群中运行。借助 Trident ， Kubernetes 用户（例如开发人员，数据科学家和 Kubernetes 管理员）可以采用他们已熟悉的标准 Kubernetes 格式创建，管理永久性存储卷并与其交互。借助 Trident ， NetApp 解决方案可以满足 Kubernetes 集群提出的永久性卷要求。</block>
   <block id="34082ca8b85231a5ceadeca185de3f43" category="paragraph">使用 Rancher ，您可以使用永久性卷，该卷独立于任何特定 Pod 并具有自己的生命周期。使用 Trident 管理永久性卷声明（ Persistent Volume Claim ， PVC ）可以使创建 Pod 的开发人员免受其所访问存储的较低级别的实施详细信息的影响。</block>
@@ -1291,7 +1261,6 @@
   <block id="fb083b9e2b00271809e7c5daaeed4034" category="inline-link-macro">在 NetApp HCI 上安装带有 Rancher 的 Trident</block>
   <block id="245992ff42ba518324a42fc0a5a5c00e" category="paragraph">请参见 <block ref="e699403e446949a61b34fc895e0cd096" category="inline-link-macro-rx"></block>。</block>
   <block id="40ef3fb23e015d9b4b46a16fa50f10d3" category="inline-link">Trident 文档</block>
-  <block id="6c49fbea54f7bf3119583145c6292f3d" category="paragraph">有关详细信息，请访问<block ref="61069a8f8df2cc6284c88d5eb1bd37a6" category="inline-link-rx"></block>。</block>
   <block id="249c15328bd4cf976c941d1cf52d673d" category="summary">如果 CPU 出现故障，出现其他主板问题或未打开电源，则应更换计算节点。这些说明适用于 H410C 节点。如果您的 H410C 计算节点运行的是 NetApp HCI Bootstrap OS 1.6P1 或更高版本，则在内存 DIMM 发生故障时无需更换此节点；您只需要更换发生故障的 DIMM 。如果节点中的 DIMM 未出现故障，您可以在替代节点中使用它们。</block>
   <block id="5f3cb5162c9a9751c213a3d0a39bdf22" category="admonition">替代节点应与 NetApp HCI 安装中的其余计算节点具有相同版本的 NetApp HCI 启动操作系统。</block>
   <block id="ca95c8f5204e5a242f4884f897492da4" category="list-text">您已确定需要更换此计算节点。</block>
@@ -1705,7 +1674,6 @@
   <block id="4be69240e4b64b58ac6ac62ddbd41e5b" category="paragraph">NetApp HCI 提供一系列计算和存储配置选项。从 NetApp HCI 1.8 开始，您可以至少配置两个存储节点和两个计算节点。在 NetApp HCI 1.8 之前，所需的最低配置为四个存储节点和两个计算节点。</block>
   <block id="2914ee1492ae95decb6dc5b1ba747138" category="list-text">NetApp HCI 支持各种 H 系列存储节点型号，例如 H300S ， H500S ， H700S ， H410S 和 H610S 。</block>
   <block id="370831702824a6ffd0f751751b0a7abd" category="inline-link">NetApp HCI 型号和规格</block>
-  <block id="3de8a5261b15a838c7137f4ed30529ff" category="paragraph">请参见<block ref="8a6f5beca0d8572a8dcf5ed48b9bd723" category="inline-link-rx"></block></block>
   <block id="631bd7184123b11f7f365defe6fa545b" category="list-text">NetApp HCI 中的存储层由 NetApp Element 软件提供，管理层由适用于 vCenter Server 的 NetApp Element 插件提供。</block>
   <block id="f8fb6bac5ba20e545aa8b2b0b3a9b6b0" category="list-text">存储节点是指包含一组驱动器的服务器，这些驱动器通过绑定 10G 网络接口相互通信。</block>
   <block id="897bf23068e6ee0619ee25a71c7b532f" category="list-text">每个存储节点都连接到两个网络：存储和管理，每个网络都有两个独立的链路，用于实现冗余和性能。每个节点在每个网络上都需要一个 IP 地址。</block>
@@ -1716,7 +1684,6 @@
   <block id="305ec65f2799af7b0a8625ee7409b1e4" category="paragraph">部署 NetApp HCI 后，您应使用 VMware vSphere Lifecycle Manager 为与 NetApp HCI 配合使用的 VMware vSphere 版本应用最新的安全修补程序。</block>
   <block id="918d32b75f0ab883abba3a8dc0c3ae8d" category="inline-link">互操作性表工具</block>
   <block id="77e9f7fa1147aa6decd04de72f0ebab3" category="inline-link">VMware vSphere Lifecycle Manager 文档</block>
-  <block id="f89bb01744ecdad96096ab9e5b2d1ed3" category="paragraph">使用<block ref="8d006c87830f7172fd7400f1c17c0928" category="inline-link-rx"></block> 以确保所有版本的软件均兼容。请参见<block ref="64f5a8fcc1ac358f23a009158b9d0b5e" category="inline-link-rx"></block> 有关详细信息 ...</block>
   <block id="176d9ae1b8e18dc2cedc534e1da45e7c" category="doc">存储固件包 2.99.2 发行说明</block>
   <block id="7bb9848301f8ece6cf7cd1a03218b8ff" category="paragraph">从 Element 12.0 和管理服务版本 2.14 开始，您可以使用 NetApp Hybrid Cloud Control UI 和 REST API 在存储节点上执行纯固件升级。此操作步骤不会升级 Element 软件，您可以通过它在主要 Element 版本之外升级存储固件。</block>
   <block id="1d1633bfe72bbc8d0c4b0a029ebed057" category="inline-link-macro">升级存储固件</block>
@@ -1917,13 +1884,10 @@
   <block id="088f2225be7630de7bb024bb63149cd2" category="paragraph">部署完成后，开发和运营团队便可部署其 Kubernetes 用户集群，就像部署任何 Rancher 一样，他们可以在其中部署应用程序。</block>
   <block id="f7e374f64d520b4e1b3e20da4479cc75" category="list-text">使用 Rancher 部署结束时提供的 URL 访问 Rancher UI 。</block>
   <block id="6de5ea620854d6ef00f0472c2627c0de" category="inline-link">部署工作负载</block>
-  <block id="330a4e8a700b160898898789bd2afec1" category="list-text">创建用户集群。请参见 Rancher 文档<block ref="45da08da4a4212388e7e424c7051bbaa" category="inline-link-rx"></block>。</block>
   <block id="d8bf91c01a11c7eb2d2b9f401ecfaf66" category="inline-link">在 Rancher 中设置 Kubernetes 集群</block>
-  <block id="38060ddf439a7e4d4a827f66dca2c059" category="list-text">在 NetApp HCI 上的 Rancher 中配置用户集群。请参见 Rancher 文档<block ref="e5f2ce9e1c8a128571db899600bab7fa" category="inline-link-rx"></block>。</block>
   <block id="930925e67b4f31f371692edcf5e02312" category="section-title">在用户集群上部署应用程序</block>
   <block id="c7ba6659ee3453e072a20d61ffa3ee7e" category="paragraph">与任何 Rancher 部署类似，您可以在 Kubernetes 集群上添加应用程序。</block>
   <block id="002edcf32ae0a52094dea43914490912" category="inline-link">跨集群部署应用程序</block>
-  <block id="cdcef0540c2e516c408be2ece9299b21" category="paragraph">请参见 Rancher 文档<block ref="32d19c20b0b7b25eedabc75c9a5a671c" category="inline-link-rx"></block>。</block>
   <block id="be03f79fc587170366cede6d4134dfb1" category="summary">了解如何配置系统 FQDN Web UI 访问并对其进行故障排除。</block>
   <block id="94db4abd5a2fea199024f9d7355490bd" category="paragraph">使用安装了 Element 软件 12.2 或更高版本的 NetApp HCI ，您可以使用完全限定域名（ FQDN ）访问存储集群 Web 界面。如果要使用 FQDN 访问 Web 用户界面，例如 Element Web UI ，每节点 UI 或管理节点 UI ，则必须先添加存储集群设置以确定集群使用的 FQDN 。</block>
   <block id="e93b12b8c33d9327e4e273fb49ae1eea" category="paragraph">现在，您可以使用完全限定域名（ FQDN ）访问存储集群 Web 界面。如果要使用 FQDN 访问 Web 用户界面，例如 Element Web UI ，每节点 UI 或管理节点 UI ，则必须先添加存储集群设置以确定集群使用的 FQDN 。这样，集群就可以正确重定向登录会话，并改进与外部服务（例如密钥管理器和身份提供程序）的集成，以实现多因素身份验证。</block>
@@ -2430,14 +2394,9 @@
   <block id="9090d3e8403bbe1674477e73359f917c" category="list-text">NetApp HCI 可提供存储和计算资源。您可以使用 * NetApp 部署引擎 * 向导部署 NetApp HCI 。成功部署后，计算节点将显示为 ESXi 主机，您可以在 VMware vSphere Web Client 中对其进行管理。</block>
   <block id="11e185939022e03940a5c6433053dc11" category="list-text">* 管理服务 * 或微服务包括 Active IQ 收集器，适用于 vCenter 插件的 QoSSIOC 和 mNode 服务；它们会作为服务包进行频繁更新。从 Element 11.3 版开始， * 管理服务 * 托管在管理节点上，以便在主要版本之外更快地更新选定的软件服务。管理节点 * （ mNode ）是一个虚拟机，它与一个或多个基于 Element 软件的存储集群并行运行。它用于升级和提供系统服务，包括监控和遥测，管理集群资产和设置，运行系统测试和实用程序，以及启用 NetApp 支持访问以进行故障排除。</block>
   <block id="257409197ae1a07404e333be63986ac6" category="inline-link-macro">管理服务版本</block>
-  <block id="4651d824b0048b0eb592cc60e9dd3977" category="admonition">了解更多信息 <block ref="873adfb4e707b3b5ed2423771a9400e1" category="inline-link-macro-rx"></block>。</block>
   <block id="1f72c0ea898c6bccb45f71600392d1a0" category="list-text">使用 * NetApp 混合云控制 * ，您可以管理 NetApp HCI 。您可以使用 NetApp SolidFire Active IQ 升级管理服务，扩展系统，收集日志以及监控安装。您可以通过浏览到管理节点的 IP 地址登录到 NetApp Hybrid Cloud Control 。</block>
-  <block id="000c91f7046903e3eaa2997a675040cf" category="list-text">适用于 vCenter Server* 的 NetApp Element 插件（ VCP ）是一个与 vSphere 用户界面（ UI ）集成的基于 Web 的工具。此插件是 VMware vSphere 的一个扩展，可扩展且用户友好的界面，可管理和监控运行 * NetApp Element 软件 * 的存储集群。此插件可替代 Element UI 。您可以使用此插件用户界面发现和配置集群，并管理，监控和分配集群容量中的存储，以配置数据存储库和虚拟数据存储库（对于虚拟卷）。集群在网络上显示为一个本地组，该组通过虚拟 IP 地址呈现给主机和管理员。您还可以通过实时报告功能监控集群活动，包括执行各种操作时可能发生的任何事件的错误和警报消息。</block>
-  <block id="66e96423819dd99274f4a2c2ebc02f61" category="inline-link">VCP</block>
-  <block id="17676873b246ef1ca7ddfca3495a684a" category="admonition">了解更多信息<block ref="36e099dc97bde9f4e281c0646e56c296" category="inline-link-rx"></block>。</block>
   <block id="846a41950b8619574980936697b94c3f" category="list-text">默认情况下， NetApp HCI 会将性能和警报统计信息发送到 * NetApp SolidFire Active IQ * 服务。在您的正常支持合同中， NetApp 支持部门会监控这些数据，并在出现任何性能瓶颈或潜在系统问题时向您发出警报。如果您还没有 NetApp 支持帐户，则需要创建一个（即使您已有 SolidFire Active IQ 帐户），以便可以利用此服务。</block>
   <block id="cd7ee3a7eb57fefdba5349f5a38d1d67" category="inline-link-macro">NetApp SolidFire Active IQ</block>
-  <block id="1bb8c2e50256d3b4d4a6f810ba101cde" category="admonition">了解更多信息 <block ref="e187d2646395ce4fae5f27608d50a226" category="inline-link-macro-rx"></block>。</block>
   <block id="258a65716fe697bfc397e4533749116d" category="section-title">NetApp HCI URL</block>
   <block id="134f5f891c1e415c98625721bb5d3f55" category="paragraph">以下是您在 NetApp HCI 中使用的常见 URL ：</block>
   <block id="e6b391a8d2c4d45902a23a8b6585703d" category="cell">URL</block>
@@ -2447,7 +2406,6 @@
   <block id="85da0aa194b3836a01e1fcc86737bb23" category="cell">`https://&lt;ManagementNodeIP&gt;`</block>
   <block id="1426a14d282b02c953edd5f4f077691a" category="cell">访问 NetApp 混合云控制以升级，扩展和监控 NetApp HCI 安装以及更新管理服务。 <block ref="a1c11cad5b609b760f3755aa65408949" category="inline-link-macro-rx"></block></block>
   <block id="5f4d0cf334dbb7b7e88793d53168ae18" category="cell">`https://[IP address] ： 442`</block>
-  <block id="492eabcd4d5c52a3da4f0a3ddcbaba8a" category="cell">从每节点 UI 访问网络和集群设置，并利用系统测试和实用程序。<block ref="92c32659ebda0049a938c593172037b2" category="inline-link-rx"></block></block>
   <block id="74efb1b4cb9a8967d035cd3cd2830fda" category="cell">`https://[management node IP address] ： 9443`</block>
   <block id="b0692672c692f202a0fbb91ba7ae408c" category="cell">在 vSphere Web Client 中注册 vCenter 插件软件包。</block>
   <block id="22af5c1dbed33fa68c93caf10941c67f" category="cell">`https://activeiq.solidfire.com`</block>
@@ -2458,7 +2416,6 @@
   <block id="ff62c349e13c6c96f92a1e0db03b7101" category="summary">了解 NetApp HCI 存储集群的保护域功能。</block>
   <block id="3fc23f34e36d05f9e3d062c71bacd2f0" category="doc">保护域</block>
   <block id="a1dd4e46f9941cb2ace7d1d90b8b6ce2" category="inline-link">保护域</block>
-  <block id="230837ce224cf253f323247047558ca6" category="paragraph">NetApp Element 软件支持<block ref="99d84f657c89d22f3aaefa8088f2acef" category="inline-link-rx"></block> 功能，用于优化存储节点上的数据布局，以获得最佳数据可用性。要使用此功能，您应在三个或更多 NetApp H 系列机箱中均匀地拆分存储容量，以获得最佳存储可靠性。在这种情况下，存储集群会自动启用保护域。</block>
   <block id="ee5e91bac60dc803970bf1207421ecb6" category="summary">了解如何关闭 NetApp HCI 计算节点。</block>
   <block id="fd5d6610e148f45951da170eda2c4be6" category="doc">启动 NetApp HCI 系统的存储资源</block>
   <block id="0c7109e1484c52d1923fd7529b58057c" category="paragraph">您可以在计划内中断完成后启动 NetApp HCI 。</block>
@@ -3096,10 +3053,6 @@
   <block id="628635daa878466322430a063a3be8a2" category="list-text"><block ref="628635daa878466322430a063a3be8a2" category="inline-link-macro-rx"></block></block>
   <block id="a04e943dbcdb750d041999712b0c3468" category="inline-link-macro">H610S BMC 注意事项</block>
   <block id="c0897cc71834939a3e05ac01145a60a3" category="list-text"><block ref="c0897cc71834939a3e05ac01145a60a3" category="inline-link-macro-rx"></block></block>
-  <block id="8b1a6c95fed8363998ed5d7eae965f1a" category="inline-link-macro">管理服务注意事项 2.19.48 （ VCP 4.8.34 ）</block>
-  <block id="f71a4c12dcb50499d5053c0b98873237" category="list-text"><block ref="f71a4c12dcb50499d5053c0b98873237" category="inline-link-macro-rx"></block></block>
-  <block id="9fb45d65282cc3f96e819596e5e394dd" category="inline-link-macro">管理服务 2.18.91 通知（ VCP 4.7.10 ）</block>
-  <block id="f69014f6080d5a2f562899c09650901c" category="list-text"><block ref="f69014f6080d5a2f562899c09650901c" category="inline-link-macro-rx"></block></block>
   <block id="df65f5c1d0a5896f87e664b9add16f32" category="summary">了解 NetApp HCI 的 DNS 和计时要求。</block>
   <block id="a37125410851f68e5cc89a60c957a863" category="paragraph">在部署之前，您需要为 NetApp HCI 系统准备域名系统（ DNS ）记录并收集 NTP 服务器信息。要成功部署 NetApp HCI ，需要具有正确 DNS 条目的 DNS 服务器和 NTP 服务器。</block>
   <block id="24f2891c7e9fdb24ca996d92b73e6a39" category="paragraph">在部署 NetApp HCI 之前，请做好以下 DNS 和时间服务器准备：</block>
@@ -3247,7 +3200,6 @@
   <block id="cbc6bc00687b09827f841102ff79b99c" category="list-text">同一型号的计算节点的网络布线配置必须在一个计算集群中匹配。</block>
   <block id="63b242a9aa4eafd6278e80e8d62418ac" category="inline-link">SolidFire 和 Element 软件文档</block>
   <block id="574fec4c923cfe8953b14b138adec28e" category="list-text"><block ref="574fec4c923cfe8953b14b138adec28e" category="inline-link-rx"></block></block>
-  <block id="28d43e5e13ecfc96dece6248ba9a0e4f" category="admonition">对于运行 Element 软件 12.0 版的 H610S 存储节点，在升级到存储固件包 2.27 之前，应应用 D-patch SUST-909 。在升级之前，请联系 NetApp 支持部门获取 D-patch 。请参见 <block ref="f5af28c84f405696357f61b6dbcf298d" category="inline-link-macro-rx"></block>。</block>
   <block id="26db8374256abd97a337e0f9af2f21c8" category="admonition">在升级存储节点上的固件之前，您必须升级到最新的管理服务包。如果要将 Element 软件更新到 12.2 或更高版本，则需要使用管理服务 2.14.60 或更高版本才能继续。</block>
   <block id="1162dd84e55b1e6c2517bf0323faf96b" category="admonition">要更新 iDRAC 或 BIOS 固件，请联系 NetApp 支持部门。对于追加信息，请参见此内容 <block ref="ce98bbbd0598351d03b47f370ea3b773" category="inline-link-macro-rx"></block>。</block>
   <block id="736c409b380383ee8843715d26079c63" category="list-text">* 集群运行状况 * ：您已运行运行运行状况检查。请参见 <block ref="bdcf6db43efb3c82b174a0c4c0a65c66" category="inline-link-macro-rx"></block>。</block>
@@ -3445,7 +3397,6 @@
   <block id="6278dd89bb92f73312cbf2054d93c376" category="inline-link-macro">监控 NetApp HCI 上的 Rancher</block>
   <block id="d02a7642ad872d8357ae09eaeff5fb70" category="list-text"><block ref="d02a7642ad872d8357ae09eaeff5fb70" category="inline-link-macro-rx"></block></block>
   <block id="71ad76db061a5d9fefe0c32bc31810c1" category="inline-link">Rancher 部署故障排除</block>
-  <block id="514282653416901650c0b2e9996d6d05" category="list-text"><block ref="514282653416901650c0b2e9996d6d05" category="inline-link-rx"></block></block>
   <block id="474c6800f0719d621f24fc2682a27460" category="summary">您可以使用管理节点（ mNode ） API 升级系统服务，管理集群资产和设置，运行系统测试和实用程序，配置 Active IQ 以进行系统监控以及启用或禁用 NetApp 支持 SSH 访问以进行故障排除。</block>
   <block id="f092926fa32883d124eb34471b6d25b2" category="paragraph">通过使用内置的 REST API UI （`https://&lt;managementNodeIP&gt;/mnode` ），您可以运行或了解与管理节点服务相关的 API ，包括代理服务器配置，服务级别更新或资产管理。</block>
   <block id="79ed200d3fdf33f90ac7bacae1bcd0b9" category="paragraph">可以使用 REST API 执行的任务：</block>
@@ -3471,7 +3422,6 @@
   <block id="6d87ab8a4146897fc42c7206f9a8e527" category="paragraph">2.76.10 版包含常规错误修复。</block>
   <block id="0f24412e4ffe8570e662187ede29e938" category="cell">NATP3.9</block>
   <block id="c112d8a6d18320ba865a2f16c6161d8c" category="cell">* 。 6.71.20</block>
-  <block id="b85924f01b8856c717c2055338665fd3" category="admonition">在升级到 2.76.10 版之前，请确保检查当前的 ESXi 驱动程序版本。如果此驱动程序已过期，请先升级此驱动程序。然后，将计算节点的计算固件升级到版本 2.99 。请访问 <block ref="325436a4e666ed53574c87eb30870a4b" category="inline-link-macro-rx"></block> 有关更新计算节点驱动程序的说明，其中包括 ESXi 驱动程序。</block>
   <block id="14847821469b75e97842f3b3b659d33f" category="section-title">下载计算固件包 2.76.10</block>
   <block id="c0b463cbd41df59f6382ed14cfa1847f" category="section-title">H410C BMC 6.71.20</block>
   <block id="a1cea245b8c0c135f94686cb958182c1" category="list-text">CVE-2019-1010022 ， CVE-2019-9169 ， CVE-2017-15804 ， CVE-2018-11236 ， CVE-2017-156.7 ， CVE-2019-1010023 ， CVE-2015-8982 ， CVE-2015-8983 ， CVE-2017-16997 ， CVE-2019-20838 ，</block>
@@ -3595,7 +3545,6 @@
   <block id="1973311d7283b9826b51752afe99f076" category="paragraph">在更换属于双节点集群一部分的存储节点之前，您应先添加第三个存储节点（需要一组新的 IP 地址），并允许完成同步，然后删除故障节点。在替代节点加入集群之前，集群将保持降级状态。</block>
   <block id="f3bd5e930061c785160a4a9d931efcc9" category="list-text">您有新的管理 IP 和存储 IP 地址。</block>
   <block id="8284cc961a1f6ea06432a8e48d6e0fae" category="list-text">您已验证集群在节点脱机后是否显示 `ClusterCannotSync` 警报。这样可以确保在将新节点重新添加回集群时，集群执行完全重新同步。此警报将在存储节点脱机大约六分钟后显示。</block>
-  <block id="89a8681510bcaa0a1821a69ad1ade723" category="list-text">从机架中物理卸下故障节点。这些步骤取决于您的存储节点类型。请参见 <block ref="6c024d40f60c8dd100f21bb7a28ec06f" category="inline-link-macro-rx"></block> 和 <block ref="69377d9b370ccd071424f4725e4224ed" category="inline-link-macro-rx"></block>。</block>
   <block id="e7d2c36a9ff632f63784e1aeee7e4b5c" category="admonition">此时，请勿从集群中删除此节点。</block>
   <block id="506173ea089c83fa67ec4443030cf9c8" category="list-text">在同一插槽中安装替代节点。</block>
   <block id="5301a6080bcfbf67d865d4a75753f7af" category="list-text">为节点布线。</block>
@@ -3605,7 +3554,6 @@
   <block id="90332f3d762d3c34fc0ec9d3b5da5cfb" category="list-text">使用新的管理 IP 和存储 IP 地址以及集群名称配置新节点。</block>
   <block id="a7053c79ba30533d9348039ad2986b6a" category="list-text">将节点添加到集群后，添加驱动器。</block>
   <block id="781e0d80722a71259b8097f7edd3b30a" category="list-text">同步完成后，从集群中删除故障驱动器和故障节点。</block>
-  <block id="16011d6c152eb09a3d7947b851647b75" category="list-text">使用 NetApp Hybrid Cloud Control 配置您添加的新存储节点。请参见 <block ref="ec74d034b2322c67954f06e2ac42b7ef" category="inline-link-macro-rx"></block>。</block>
   <block id="1a1bc57a8bba4ae3b3aa6def4721dad7" category="list-text"><block ref="1a1bc57a8bba4ae3b3aa6def4721dad7" category="inline-link-rx"></block></block>
   <block id="6444109456f3c7df8d0f0dec9657caec" category="summary">如果双列直插式内存模块（ DIMM ）发生故障， CPU 故障， Radian 卡问题，其他主板问题或无法通电，则应更换存储节点。</block>
   <block id="800249e1df70ad338bbe52103b572a00" category="paragraph">如果双列直插式内存模块（ DIMM ）发生故障， CPU 故障， Radian 卡问题，其他主板问题或无法通电，则应更换存储节点。当存储节点出现故障时， VMware vSphere Web Client 中的警报会向您发出警报。您应使用 NetApp Element 软件 UI 获取故障节点的序列号（服务标签）。要在机箱中找到故障节点，您需要此信息。</block>
@@ -3682,7 +3630,6 @@
   <block id="d37209c3cd56f63c46bd9d1f13bc8c3b" category="list-text">从下拉列表中选择 * 待定 * 以查看可用节点的列表。</block>
   <block id="a7c606f7fd36e45abbf6fb16ec00a26e" category="list-text">选择要添加的节点，然后选择 * 添加 * 。</block>
   <block id="5417a1e46d2a49de66a41fa203490ad5" category="admonition">可能需要长达 2 分钟的时间，才能将节点添加到集群中并显示在 "Nodes" （节点） &gt;"Active" （活动）下。</block>
-  <block id="1ece2a53514d0a5a2e2d79d3658c354f" category="admonition">一次添加所有驱动器可能会导致中断。有关添加和删除驱动器的最佳实践，请参见<block ref="5efdfed3e3ee218c0937724134d9005d" category="inline-link-rx"></block> （需要登录）。</block>
   <block id="7da3260445161dbf5a25323371a40301" category="list-text">选择 * 驱动器 * 。</block>
   <block id="aac4599d2ddb667785a1c298457d59c0" category="list-text">从下拉列表中选择 * 可用 * 以查看可用驱动器。</block>
   <block id="f0e14b1789b6827b6e3f798577d20ae3" category="list-text">选择要添加的驱动器，然后选择 * 添加 * 。</block>
@@ -3767,7 +3714,6 @@
   <block id="50bdddc90dcdcbe3759654eefe06e164" category="inline-link-macro">扩展概述</block>
   <block id="4ef6bfab089dcd7cc33c0b4eac92f9e3" category="paragraph">请参见 <block ref="ea0388f4727b1e26ed8af22c80272230" category="inline-link-macro-rx"></block>。</block>
   <block id="3e9005fa760e228892106c64eed3097c" category="inline-link">NetApp SolidFire Active IQ 详细信息</block>
-  <block id="9033971e7d459489ef9a89be112164c8" category="list-text">有关详细分析和历史背景信息，请查看<block ref="3a2fb15c545c657f4a18dd4d09c07d46" category="inline-link-rx"></block>。</block>
   <block id="44755f0fbb788033ad9fcd54884ce16f" category="section-title">监控存储性能</block>
   <block id="2ee536a53d85151ecc2befd3d4024aa2" category="paragraph">您可以使用存储性能窗格查看可以从集群中获得多少 IOPS 或吞吐量，而不会超过该资源的有用性能。存储性能是指在延迟变为问题描述之前获得最大利用率的时间点。</block>
   <block id="94938181c864098bf4ebfb7abcf28623" category="paragraph">存储性能窗格可帮助您确定工作负载增加时性能是否会下降。</block>
@@ -3792,7 +3738,6 @@
   <block id="9bddef8fc14eaff697a66cec58bb76b7" category="list-text">* CPU * 选项卡：查看计算集群上的当前 CPU 利用率平均值。</block>
   <block id="2520aed8e8da95ec6b6ee52b60cecada" category="list-text">* 内存 * 选项卡：查看计算集群上的当前平均内存使用量。</block>
   <block id="82d5e97cf3f8dbd4f5b186241471c027" category="inline-link">NetApp SolidFire Active IQ ，用于提供历史数据</block>
-  <block id="190bca0068c88c9e353ca03aae0ff821" category="list-text">有关计算信息的进一步分析，请参见<block ref="8a4d68998933a7ef36f897ad0afe7e4d" category="inline-link-rx"></block>。</block>
   <block id="5950c53f8d241e1e95440d518521b075" category="summary">您可以使用管理节点（ mNode ）启用 NetApp Active IQ 和 NetApp HCI 遥测。</block>
   <block id="6ac1a1d4d559f5629848b5d88e68e733" category="paragraph">Active IQ 收集器服务会将配置数据和基于 Element 软件的集群性能指标转发到 NetApp Active IQ ，以便进行历史报告和近乎实时的性能监控。通过 NetApp HCI 监控服务，可以将存储集群故障转发到 vCenter 以发送警报通知。</block>
   <block id="b28e179f94097b207a2dc9172aa4b4d0" category="list-text">您可以访问 Internet 。不能从没有外部连接的非公开站点使用 Active IQ 收集器服务。</block>
@@ -3862,7 +3807,6 @@
   <block id="879ac2b1251779d94e95d9cd05b42c47" category="summary">了解如何减少 NetApp HCI 计算节点上的启动介质损耗。</block>
   <block id="7ab52d98cd6887c2c442ba9d789757a7" category="paragraph">如果将闪存或 NVDIMM 启动介质与 NetApp HCI 计算节点结合使用，则在该介质上保留系统日志会导致频繁写入该介质。这最终会导致闪存降级。按照以下知识库文章中的说明将主机日志记录和核心转储文件移动到共享存储位置，这有助于防止启动介质随时间推移而降级，并有助于防止完整启动磁盘错误。</block>
   <block id="351493e583a3e8dfa07c4463e1bc9db4" category="inline-link">如何减少 NetApp HCI 计算节点启动驱动器的损耗</block>
-  <block id="cdc8b637cdf35ab66e5fa9b8855351c8" category="paragraph"><block ref="cdc8b637cdf35ab66e5fa9b8855351c8" category="inline-link-rx"></block></block>
   <block id="839ff18e4b338f808e22e4d0a4c70094" category="summary">您可以使用 NetApp 混合云控制从 NetApp HCI 或 Element 安装中收集日志，以帮助进行故障排除。</block>
   <block id="756909f99bc1a720d318a5f5b94eb094" category="doc">收集日志以进行故障排除</block>
   <block id="2a4218d09bfcf2b665c034eb84b5e91c" category="paragraph">如果您在安装 NetApp HCI 或 SolidFire 全闪存存储时遇到问题，可以收集日志并发送给 NetApp 支持部门，以帮助进行诊断。您可以使用 NetApp 混合云控制或 REST API 收集 NetApp HCI 或 Element 系统上的日志。</block>
@@ -3956,7 +3900,6 @@
   <block id="6b42784c557c3f5a1a952c899f760b43" category="paragraph">阅读以下资源：</block>
   <block id="2fbd4cfd16900b4f22e7f4097fc857d1" category="list-text">在安装之前，请使用 NetApp HCI 安装发现工作簿 _ 配置网络。</block>
   <block id="886bc05c9156ba9a0ef0e59bbe922cc0" category="inline-link">_NetApp HCI 安装和设置说明 _</block>
-  <block id="7f4fa2c8c28a3fd7841d10e97d90c6f7" category="list-text">有关详细信息以及其他支持的配置，请参见<block ref="d52809cad5d4eb99ca9e1f4537d1acb3" category="inline-link-rx"></block> 和<block ref="861dce0dd0555db2948ff3437e27deac" category="inline-link-rx"></block>。</block>
   <block id="edeed001a7f09dfe7e394923f01fabcb" category="inline-link">_TR-4823 ： NetApp HCI 双节点存储集群 _</block>
   <block id="800b3008a6000b89c3546a67908cb985" category="list-text">有关小于四个存储节点的 NetApp HCI 配置的信息，请参见<block ref="1f9877144b35a10963cfdabe34a39b35" category="inline-link-rx"></block>。</block>
   <block id="2ddcd8d0a81226eb8f35042ac6c6e593" category="inline-link-macro">配置 LCAP 以获得最佳存储性能</block>
@@ -3975,7 +3918,6 @@
   <block id="b410fe93d9b4a00a9e9ff571daee5718" category="section-title">使用 NetApp Active IQ Config Advisor 验证网络就绪情况</block>
   <block id="37acfedc77493c79d90ee109f5d2b3bd" category="inline-link-macro">NetApp 支持工具</block>
   <block id="b76aa0334a5bf691193722f4b7aca320" category="paragraph">要确保 NetApp HCI 网络就绪，请安装 NetApp Active IQ Config Advisor 5.8.1 或更高版本。此网络验证工具与其他一起提供 <block ref="008f4a997e8374cd477fa070ee223e4f" category="inline-link-macro-rx"></block>。使用此工具可验证连接， VLAN ID ， IP 地址要求，交换机连接等。</block>
-  <block id="5c101e5f15ae5e13ebaf9cf45d76ca52" category="paragraph">有关详细信息，请参见 <block ref="aadf487819eba2c7633cf481d9cde909" category="inline-link-macro-rx"></block></block>
   <block id="9dce321e45f095fe93830bd3331052b0" category="section-title">与您的 NetApp 团队合作</block>
   <block id="3a60921912f67b57dca98de8e6dbb52b" category="paragraph">您的 NetApp 团队使用 NetApp Active IQ Config Advisor 报告和 _Discovery 工作簿 _ 来验证您的网络环境是否已准备就绪。</block>
   <block id="70805dc2724d4910059101dee22818e3" category="section-title">安装 NetApp HCI 硬件</block>
@@ -4242,7 +4184,6 @@
   <block id="971513afceb1f4109b676dd765ce8780" category="paragraph">使用 Rancher UI ，您可以查看有关 NetApp HCI 管理集群和用户集群上的 Rancher 的信息。</block>
   <block id="788d89959ce2b7d8a53516afb1ec30c1" category="admonition">在 Rancher UI 中，管理集群称为 " 本地集群 " 。</block>
   <block id="fc5f9f675ea2c8f52d6eba7d183d3b21" category="inline-link">在 Rancher v2.5 中进行监控</block>
-  <block id="03160e46bf786eef56ea10a28001355b" category="list-text">请参见<block ref="8763b86b41ed886243bc4e252ff51644" category="inline-link-rx"></block>。</block>
   <block id="cb7be35dc06b88ecaf2448424de19c04" category="section-title">使用 NetApp Active IQ 监控 Rancher</block>
   <block id="1b7b4164c920ad52a2757fc2eb1f54dd" category="paragraph">使用 NetApp Active IQ ，您可以查看 Rancher 遥测，例如安装信息，节点，集群，状态，命名空间信息， 等等。</block>
   <block id="fd94f5de9314aeeb79fbbce95c76a515" category="list-text">从右上角的菜单中选择 * NetApp Active IQ * 。</block>
@@ -4374,8 +4315,6 @@
   <block id="13637fc461c216e2f133872aa68284f3" category="paragraph">NetApp HCI 见证节点是指在计算节点上与基于 Element 软件的存储集群并行运行的 VM 。见证节点不托管分区或块服务。见证节点可在存储节点发生故障时启用存储集群可用性。您可以按照与其他存储节点相同的方式管理和升级见证节点。一个存储集群最多可以有四个见证节点。其主要目的是确保存在足够的集群节点以构成有效的集合仲裁。</block>
   <block id="ebd9bcbadb9c9789b855381b4b3c91a1" category="inline-link-macro">见证节点资源要求</block>
   <block id="ed227f04b96772f206d5427ed842cdf1" category="inline-link-macro">见证节点 IP 地址要求</block>
-  <block id="8625403690840d272c440cb55d94d1dc" category="admonition">了解更多信息 <block ref="89e09228b3fab130467e907f6f51a08c" category="inline-link-macro-rx"></block> 和 <block ref="928b75d5563d22bd4a824c39b5bfffb3" category="inline-link-macro-rx"></block>。</block>
-  <block id="a14d86f6e1b539c968e4bd45fb67c0a1" category="admonition">在双节点存储集群中，至少会部署两个见证节点，以便在见证节点出现故障时实现冗余。在 NetApp HCI 安装过程安装见证节点时， VMware vCenter 中会存储一个 VM 模板，您可以使用该模板重新部署见证节点，以防其意外删除，丢失或损坏。如果您需要更换托管见证节点的计算节点出现故障，也可以使用此模板重新部署见证节点。有关说明，请参见 * 重新部署双节点和三节点存储集群的见证节点 * 一节 <block ref="0deb95019659c8847f806617fd301765" category="inline-link-macro-rx"></block>。</block>
   <block id="73f332ad9496bbf6676033bbac0209f9" category="summary">您可以使用 REST API UI 将计算和控制器资产添加到管理节点配置中。</block>
   <block id="72e9c60a82606c5e5b157cc82e336351" category="doc">配置代理服务器</block>
   <block id="74a1d7331f871dd4368ce3714be08b71" category="paragraph">如果集群使用代理服务器，则必须配置代理设置，以便可以访问公有网络。</block>
@@ -4458,7 +4397,6 @@
   <block id="245dea9ce6077b2fa1c519f4e82b0774" category="list-text">将节点添加到集群时，系统会自动从硬件确定机箱级别布局。</block>
   <block id="4955b339c381c3355161ea5b7c1af363" category="list-text">在每个节点位于单独机箱中的集群中，这两个级别在功能上是相同的。</block>
   <block id="39858e2a10dc2225b0065e16554f65e1" category="inline-link">启用保护域监控</block>
-  <block id="f1b97c29e421f3b6599d68f810457151" category="paragraph">您可以手动执行此操作<block ref="7effaefb97ec2a0e1d8d1fe0e338a34e" category="inline-link-rx"></block> 使用适用于 vCenter Server 的 NetApp Element 插件。您可以根据节点或机箱域选择保护域阈值。</block>
   <block id="6cb03c98c76534df27d193a6f33f65b1" category="paragraph">创建新集群时，如果您使用的存储节点位于共享机箱中，则可能需要考虑使用保护域功能设计机箱级别的故障保护。</block>
   <block id="30bf48918e558b2df1d38f79b26a1ba6" category="paragraph">您可以定义自定义保护域布局，其中每个节点都与一个且仅与一个自定义保护域相关联。默认情况下，每个节点都分配到相同的默认自定义保护域。</block>
   <block id="980179142e595d55f1d5d1281611417d" category="section-title">双 Helix 高可用性</block>
@@ -4467,16 +4405,12 @@
   <block id="7897a8f898a641b61ec2d7521c14e598" category="paragraph">了解如何在 NetApp HCI 上安装 Rancher 后安装 Trident 。Trident 是一款存储编排程序，可与 Docker 和 Kubernetes 以及基于这些技术构建的平台相集成，例如 Red Hat OpenShift ， Rancher 和 IBM Cloud Private 。Trident 的目标是使存储的配置，连接和使用对应用程序透明，无摩擦。Trident 是一个由 NetApp 维护的完全受支持的开源项目。使用 Trident ，您可以按照您熟悉的标准 Kubernetes 格式创建，管理永久性存储卷并与之进行交互。</block>
   <block id="b15ad636ad40907a2ca34ffebb86ae28" category="admonition">有关 Trident 的详细信息，请参见<block ref="9488620c3498c6d0bb53483131890d10" category="inline-link-rx"></block>。</block>
   <block id="a16e80cd53753228460383e2bf367729" category="list-text">您已部署用户集群。</block>
-  <block id="83e0166a06c1e4d297d13fcab9ad6313" category="list-text">您已为 Trident 配置用户集群网络。请参见 <block ref="9d1d5963f8fee095e9b9a2e8c711199f" category="inline-link-macro-rx"></block> 有关说明，请参见。</block>
-  <block id="0442fbd6b2af369a742994c9ba536107" category="list-text">您已完成为 Trident 准备工作节点所需的前提步骤。请参见<block ref="b4458dd8754e46d1c1a988671c6ce73c" category="inline-link-rx"></block>。</block>
-  <block id="a871fd71ffebda5cde03863514a5f38d" category="paragraph">Trident 安装程序目录是在使用 NetApp Hybrid Cloud Control 安装 Rancher 的过程中安装的。在此任务中，您将使用安装程序目录安装和配置 Trident 。在 Rancher 安装过程中， NetApp 提供了一个节点模板。如果您不打算使用 NetApp 提供的节点模板，而您希望在 RHEL 或 CentOS 上进行配置，则可能还需要满足其他要求。如果将工作节点更改为 RHEL 或 CentOS ，则应满足多个前提条件。请参见<block ref="b4458dd8754e46d1c1a988671c6ce73c" category="inline-link-rx"></block>。</block>
   <block id="50d3b12130e56c1873ce3b4fbad32bbc" category="list-text">从 Rancher UI 中，为您的用户集群选择一个项目。</block>
   <block id="5054f5b17e3bf02d8eba619579e55f24" category="admonition">有关项目和命名空间的信息，请参见<block ref="2a0c99e5a4166290159375f4999d96b8" category="inline-link-rx"></block>。</block>
   <block id="25c6103728551568c71fecb7269c7e5a" category="list-text">选择 * 应用程序 * ，然后选择 * 启动 * 。</block>
   <block id="7b4fbe070a4cf05945c7d1d84fc8a370" category="image-alt">显示了用于启动 Trident 安装程序的导航。</block>
   <block id="dee3524805f2daab1f94fad50063730c" category="list-text">在 * 目录 * 页面上，选择 Trident 安装程序。</block>
   <block id="384dabcfd215329a80ac9f4d922c11ac" category="image-alt">Rancher 中 " 目录 " 页面上的 Trident 安装程序。</block>
-  <block id="1b8548ccacf3a81b6bad3184ef4e7bc1" category="admonition">在打开的页面上，您可以选择 * 详细说明 * 箭头以了解有关 Trident 应用程序的更多信息，也可以找到指向的链接<block ref="61069a8f8df2cc6284c88d5eb1bd37a6" category="inline-link-rx"></block>。</block>
   <block id="5c97f5d07cd2639b98490f73ec5bd7ef" category="list-text">选择 * 配置选项 * 箭头，然后输入凭据和存储配置信息。</block>
   <block id="81009053d337418c3280749fb5d9d5ed" category="image-alt">显示了应为 Trident 输入的存储配置信息。</block>
   <block id="2dad51bcd20d5b17efbbd1b0192af080" category="admonition">默认存储租户为 NetApp HCI 。您可以更改此值。您也可以更改后端名称。但是，请勿更改默认存储驱动程序值，即 * solidfire-san* 。</block>
@@ -4675,7 +4609,6 @@
   <block id="6f8d51085304b558982d4d82f504f019" category="cell">H610C BMC 4.00.07</block>
   <block id="ad3d0bbc3777daa4098e5e6b078efe97" category="cell">添加远程系统日志支持</block>
   <block id="cbb589fbeaea2811fe47f84e6087eba3" category="cell">H615C BMC 4.68.07</block>
-  <block id="038893298efc59d52fe9013ef81f2c4e" category="admonition">在升级到版本 2.27 之前，请务必检查当前的 ESXi 驱动程序版本。如果此驱动程序已过期，请先升级此驱动程序。然后，将计算节点的计算固件升级到版本 2.27 。请访问 <block ref="325436a4e666ed53574c87eb30870a4b" category="inline-link-macro-rx"></block> 有关更新计算节点驱动程序的说明，其中包括 ESXi 驱动程序。</block>
   <block id="172272be491257d5e9649aae32be7182" category="section-title">下载计算固件包 2.27</block>
   <block id="f176ca71eb5adda90aa0cacc8ffedf81" category="paragraph">以下是此版本中已解决的问题。</block>
   <block id="eb8034156b4c020c586415655e88ec79" category="cell">BMC 可能会挂起并无法访问，并显示错误 `BMC Self Test Failed` 。此问题已在 H610C BMC 4.00.07 和 H615C BMC 4.68.07 中得到解决。</block>
@@ -4829,7 +4762,6 @@
   <block id="eb14c460c42e2431f5cb65f7ccd332a3" category="paragraph">管理员可以使用这些凭据登录到 VMware vSphere Client 。如果 vCenter 是 NetApp HCI 安装的一部分，则凭据会在 NetApp 部署引擎中配置如下：</block>
   <block id="08e11856f5d494afae6bbac88cad11c3" category="list-text">使用指定密码 username@vsphere.local ，和</block>
   <block id="b113fce1c54ea047d337754b8119fb83" category="list-text">使用指定密码 administrator@vsphere.local 。使用现有 vCenter 部署 NetApp HCI 时， vSphere 单点登录凭据由 IT VMware 管理员管理。</block>
-  <block id="856647ef64129a42d52908f33bd76519" category="paragraph"><block ref="cc164809b84d3f4bc3771205183c57d0" category="inline-link-rx"></block>。 </block>
   <block id="454444340865058db0b2b8a3c023348d" category="paragraph">基板管理控制器（ BMC ）凭据</block>
   <block id="b290872541b3dd0830b11448cb517af7" category="image-alt">黑色锁定图标</block>
   <block id="f9949ba68068b15cca0f1d704de2c091" category="paragraph">* 适用场景 * ：仅限 NetApp HCI</block>
@@ -4837,20 +4769,16 @@
   <block id="42ed428e8355312e305c0a7427eee420" category="paragraph">每个 NetApp 计算节点的 BMC （有时称为 _ipmi_ ）凭据都安全地存储在 NetApp HCI 部署中的 mnode 上。在计算节点固件升级期间， NetApp Hybrid Cloud Control 使用服务帐户容量中的 BMC 凭据与计算节点中的 BMC 进行通信。</block>
   <block id="1aa40455e07be846e5833b2879500ea8" category="paragraph">更改 BMC 凭据后，还必须在 mnode 上更新相应计算节点的凭据，以保留所有 Hybrid Cloud Control 功能。</block>
   <block id="ebc88d67d81fcec6f63815a7b6ef0da4" category="inline-link-macro">为 NetApp HCI 上的每个节点配置 IPMI</block>
-  <block id="96868ea0ccc214103d583e74d6bc5c53" category="list-text"><block ref="60566cd0af928d76e98de7b04facf851" category="inline-link-macro-rx"></block>。</block>
   <block id="94d1207223d97d0a0a9877e887c40d29" category="inline-link-macro">更改默认 IPMI 密码</block>
-  <block id="32e62139bbbb0f217e78e3fee6bc9dde" category="list-text">对于 H410C ， H610C 和 H615C 节点， <block ref="c877ce50f0b3ca42bc07fd15561a0aea" category="inline-link-macro-rx"></block>。</block>
   <block id="9ef4592bcb5c2379e3e631deeae02163" category="inline-link">更改默认 IPM 密码</block>
   <block id="f584241c36a6c8616faa524574e410ee" category="list-text">对于 H410S 和 H610S 节点，<block ref="770a04802abd02d3dda9b71f5635bb0c" category="inline-link-rx"></block>。</block>
   <block id="5da96725b80167a4658f4e9057a4cb45" category="inline-link-macro">更改管理节点上的 BMC 凭据</block>
-  <block id="57137c1e68d7300587dc9d9e4c6d107c" category="list-text"><block ref="5215e9d1d5c62231ce2eff57e0d99e18" category="inline-link-macro-rx"></block>。</block>
   <block id="409517b29e406b86b0f2e96d825034ac" category="paragraph">ESXi 凭据</block>
   <block id="8c061ea4e9408dcde925e7e31fd85c9d" category="image-alt">深绿色锁定图标</block>
   <block id="ee99e507b577da5030f6c9821274fa27" category="paragraph">管理员可以使用 SSH 或本地 DCUI 使用本地 root 帐户登录到 ESXi 主机。在 NetApp HCI 部署中，用户名为 "root" ，密码是在 NetApp 部署引擎中首次安装该计算节点期间指定的。</block>
   <block id="cddd421de4a1d393e579fcc212742efe" category="paragraph">每个 NetApp 计算节点的 ESXi 根凭据都安全地存储在 NetApp HCI 部署中的 mnode 上。在计算节点固件升级和运行状况检查期间， NetApp Hybrid Cloud Control 使用服务帐户容量中的凭据直接与 ESXi 主机进行通信。</block>
   <block id="b71af5eff19f1b6797f45735454fa5ef" category="paragraph">如果 VMware 管理员更改了 ESXi 根凭据，则必须在 mnode 上更新相应计算节点的凭据，才能保留 Hybrid Cloud Control 功能。</block>
   <block id="3aab879e3bcfc8188abcb59a8ec4bdf4" category="inline-link-macro">更新 vCenter 和 ESXi 主机的凭据</block>
-  <block id="bffd886e7c781b4b9911727a5e4b5e4f" category="paragraph"><block ref="c8583b27003a529ee41c1a1933ea9fd2" category="inline-link-macro-rx"></block>。</block>
   <block id="011a5a98dc7c974a31637162a37c951f" category="paragraph">QoS 集成密码</block>
   <block id="fa4fb01cf582514642134c46477dda0d" category="image-alt">紫色锁定图标</block>
   <block id="ae251009605bb5127a88fb05a2486a8d" category="paragraph">* 适用场景 * ： NetApp HCI ，在 SolidFire 中可选</block>
@@ -4862,9 +4790,6 @@
   <block id="d3bdc2c0a9764cf125483113979d12d2" category="paragraph">不会对其他组件造成影响。</block>
   <block id="095e2c8b26135a469fdae8c0057aead0" category="inline-link-macro">在适用于 vCenter Server 的 NetApp Element 插件中更新 QoSSIOC 凭据</block>
   <block id="ea2794c29716f095ee0310404ccb71f0" category="paragraph"><block ref="a8a16614cbd0ee686a49394371dee0cf" category="inline-link-macro-rx"></block>。 </block>
-  <block id="a97d54dcc3e46eb9176e67a954c0b19c" category="paragraph">VCP SIOC 密码也称为 _QoSSIOC 密码 _ 。 </block>
-  <block id="97e193e7c6e307568ecf402e7b8f0609" category="inline-link-macro">适用于 vCenter Server 的 Element 插件知识库文章</block>
-  <block id="e349ff402c3ffd6ae661a2336ba8cc12" category="paragraph">查看 <block ref="543d60c584849597984745ae3361028b" category="inline-link-macro-rx"></block>。</block>
   <block id="2934529b54bf139bea417b927ff80f41" category="paragraph">vCenter Service Appliance 凭据</block>
   <block id="8ce27442944e15f5732cd79f09a76988" category="image-alt">深灰色锁定图标</block>
   <block id="67850677f6be30126bfebf3be4151172" category="paragraph">* NetApp 部署引擎 * ：仅在 NetApp HCI 部署引擎设置的情况下才支持适用场景</block>
@@ -5157,8 +5082,6 @@
   <block id="cd01b577211626f40fb00014ea3e0fcd" category="summary">了解如何确保 Rancher 使用的许可证与您购买的许可证一致。</block>
   <block id="76a1a114dd85548ee517a8189832850d" category="paragraph">在 NetApp HCI 上部署 Rancher 后，您需要确保购买的 Rancher 支持核心数量与用于 Rancher 管理 VM 和用户集群的 CPU 核心数量一致。</block>
   <block id="b823f176b294e16e1fa857ec3ef1c067" category="paragraph">如果您仅为部分 NetApp HCI 计算资源购买了 Rancher 支持，则需要在 VMware vSphere 中采取措施，以确保 NetApp HCI 上的 Rancher 及其受管用户集群仅在您已购买 Rancher 支持的主机上运行。有关如何通过将计算工作负载限制在特定主机上来帮助确保这一点的信息，请参见 VMware vSphere 文档。</block>
-  <block id="2a20bfcbedcef210a36e38877403a8f9" category="list-text"><block ref="2a20bfcbedcef210a36e38877403a8f9" category="inline-link-rx"></block></block>
-  <block id="c6cb628fa14d13efd427a0ec5b5f1ea7" category="list-text"><block ref="c6cb628fa14d13efd427a0ec5b5f1ea7" category="inline-link-rx"></block></block>
   <block id="4890b06e0bef2ccd30ddebf19fa9e652" category="summary">您可以使用 REST API 从管理 ndoe 上运行的服务检索日志。</block>
   <block id="7eada9b3aeba75afea1bb6e56efd98a1" category="paragraph">您可以使用 REST API 从管理节点上运行的服务检索日志。您可以从所有公有服务中提取日志，也可以指定特定服务并使用查询参数更好地定义返回结果。</block>
   <block id="4ac581155f2c6a4a3a056078e2b122a1" category="list-text">在管理节点上打开 REST API UI ：</block>
@@ -5777,7 +5700,6 @@
   <block id="98a5a52eeae3e1b12e0b7cc7519df270" category="list-text">在 BMC SEL 中解析 BIOS PPR 事件日志</block>
   <block id="04a00bae7381f155d65745275af6737a" category="list-text">LDAP 长度的组域为 128 个字符</block>
   <block id="f5e6b92cb761618778441a16c6e75e83" category="cell">* H615C 4.72.07*</block>
-  <block id="66b804729a3dd941a5370a08dd10616b" category="admonition">在升级到版本 2.146 之前，请确保检查当前的 ESXi 驱动程序版本。如果此驱动程序已过期，请先升级此驱动程序。然后，将计算节点的计算固件升级到版本 2.146 。请访问 <block ref="325436a4e666ed53574c87eb30870a4b" category="inline-link-macro-rx"></block> 有关更新计算节点驱动程序的说明，其中包括 ESXi 驱动程序。</block>
   <block id="0fe29fcc1c128c574f5b599b936ca7b1" category="section-title">下载计算固件包 2.146</block>
   <block id="6dd74001120be10211b1aa60f90e3a86" category="paragraph">要下载计算固件包，请执行以下操作：</block>
   <block id="ad39e5da85569c96dc672b1696606668" category="inline-link">NetApp HCI 下载页面</block>
@@ -5885,8 +5807,6 @@
   <block id="c36b19231a4d44de8c3649310ba038d9" category="paragraph">计算运行状况检查、无论是通过NetApp Hybrid Cloud Control还是API方法执行、都要对每个节点执行以下检查。根据您的环境，可能会跳过其中一些检查。您应在解决检测到的任何问题后重新运行运行运行运行状况检查。</block>
   <block id="f9ebc0753ac68177e6d0f29d964386bb" category="list-text">在Web浏览器中打开管理节点的IP地址。例如：</block>
   <block id="b7d9a056c7aac680c6cb5b95799e2642" category="list-text">在Web浏览器中打开管理节点的IP地址。</block>
-  <block id="00bbf849ee83f2b3ea6c67bb7bd6c6f8" category="inline-link-macro">管理服务2.20.69通知(VCP 4.9.14)</block>
-  <block id="9631693d741b4476dc21a28cec874b0a" category="list-text"><block ref="9631693d741b4476dc21a28cec874b0a" category="inline-link-macro-rx"></block></block>
   <block id="573d529ded9f2b66a55c1d25a9498c72" category="paragraph">从管理服务2.2开始、您必须先接受并保存最终用户许可协议(EULA)、然后才能使用NetApp Hybrid Cloud Control UI或API升级管理服务：</block>
   <block id="c7c27143d481078e23cd4144c0df2f10" category="inline-link">vCenter插件4.9发行说明</block>
   <block id="07cc0d856c010a1ee3ff9ee8f5157778" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.2开始、您必须先接受并保存EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级存储固件：</block>
@@ -5950,7 +5870,6 @@
   <block id="2233d6c0637a0dd985141fefd60451a0" category="cell">您还必须花费130到160分钟<block ref="b75cb1417453c96f34f9e695ad57b88f" category="inline-link-rx"></block> 对于每个H610S节点。</block>
   <block id="6ed1151a1c81c87309cd82c96457f044" category="paragraph">^1^有关适用于您的硬件的完整固件和驱动程序固件列表、请参见此内容<block ref="919d0da258d2c9346bfb11f078cfd474" category="inline-link-rx"></block> （需要登录）。</block>
   <block id="0fe84530e14d6cb77f51c3d2cc85aa18" category="paragraph">^2^如果将写入IOPS负载较重的集群与较长的固件更新时间结合使用、则数据同步时间将会增加。</block>
-  <block id="b68a4e1779a52c676f0786aad0f27387" category="paragraph">NetApp 会定期更新 NetApp HCI ，为您提供新功能，增强功能和错误修复。NetApp HCI 1.10包括适用于存储集群的Element 12.5。</block>
   <block id="53f59c169b2bb48ac0b8253252a06467" category="list-text">。 <block ref="72c4f5351976259ad654b85496cb20be" category="inline-xref-macro-rx"></block> 第节介绍NetApp HCI 1.10版中的新增功能和更新。</block>
   <block id="2a0ce9a56c6130320cccb8a7f34ec593" category="list-text">。 <block ref="18a6515b1da0f2a2d89c5832cee91752" category="inline-xref-macro-rx"></block> 第节介绍Element 12.5中的新增功能和更新。</block>
   <block id="3f1ab5f7c40b8fa8fd0a42ff36510c23" category="section-title">NetApp HCI 1.10</block>
@@ -5978,7 +5897,6 @@
   <block id="a4377e2a5c151e23b56034c95f4a740c" category="section-title">存储节点固件更新</block>
   <block id="a6c2a34150c9dc72f43456ea478ab625" category="paragraph">Element 12.5包括存储节点的固件更新。 <block ref="eeef2310c9176486cc519bcd07b92743" category="inline-link-macro-rx"></block>。</block>
   <block id="9ae00a023d80f22436817ac40b5dd0e7" category="section-title">增强的安全性</block>
-  <block id="4a9cfbb068604f707209b30ffaf09bfd" category="paragraph">Element 12.5提供了一种缓解方法、可消除Element软件受到Apache Log4j漏洞的影响。启用了虚拟卷(VVol)功能的NetApp SolidFire 存储集群受到Apache Log4j漏洞的影响。有关NetApp Element 软件中Apache Log4j漏洞的临时解决策 的信息、请参见 <block ref="1a773160f1e444399f0d836f4fb45d69" category="inline-link-macro-rx"></block>。</block>
   <block id="5b9ef84ab53bc8e514e0cea0dbfd914c" category="paragraph">如果您运行的是Element 11.x、12.0或12.2、或者您的存储集群已位于Element 12.3或12.3.1中且已启用VVol功能、则强烈建议升级到12.5。</block>
   <block id="7d22dc13d9443150a483a9d1bcc19811" category="paragraph">Element 12.5还包括120多个CVE安全漏洞修复。</block>
   <block id="0a4e6eb7e62cc9a7906b041a5daa8314" category="section-title">使用Ansible自动升级</block>
@@ -6025,7 +5943,6 @@
   <block id="2914d2e1549f2ef461f9b040823e6218" category="list-text">您已将管理服务更新到2.20.69或更高版本。</block>
   <block id="311e83625ce0c896e7a3f811f3ac48c2" category="list-text">存储集群运行的是Element 12.3或更高版本。</block>
   <block id="fa74c37a30199ebd12f7aa7320d0cc0f" category="inline-link">NetApp HCI 1.9和1.9P1</block>
-  <block id="6c529facc953c911e43fb9725bdef1f8" category="list-text">*已更新H610S节点的基板管理控制器(BMC)*：您已升级H610S节点的BMC版本。请参见 <block ref="f04f9a521fc4fd678cdbd3d698415a24" category="inline-link-macro-rx"></block>。</block>
   <block id="477832301b5ab810e59d16b6d6cf05dc" category="paragraph">这些组件包括管理服务、NetApp Hybrid Cloud Control、Element软件、管理节点、计算固件、计算驱动程序、 和适用于vCenter Server的Element插件。​</block>
   <block id="abad8a22ec62bb4befaee820afb760ef" category="inline-link-macro">使用HealthTools升级到Element 12.3</block>
   <block id="27bb76bfb1e4f9966c31f5042348cd1e" category="inline-link-macro">Element 软件</block>
@@ -6033,7 +5950,6 @@
   <block id="a8c7f4c70c59120de0b33efda8af8aa5" category="list-text">您已为计划了足够的时间 <block ref="cff6d63ff47747e8e31df90baa037fdf" category="inline-link-macro-rx"></block> 和 <block ref="64ca0a1c0466cb0bbd500939e8f353f3" category="inline-link-macro-rx"></block> 升级。升级到Element软件12.5时、升级过程时间因Element软件版本和固件更新而异。</block>
   <block id="356747bc1580f5d7e13f9055ae1f02df" category="paragraph">要升级NetApp Element 软件、您可以使用NetApp混合云控制UI或REST API。Element 软件升级期间会禁止某些操作，例如添加和删除节点，添加和删除驱动器以及与启动程序，卷访问组和虚拟网络等关联的命令。</block>
   <block id="7970314795c697c589f52cd629d4a341" category="admonition">在将Element软件升级到版本12.5之前、您必须升级到最新的管理服务包。如果要将Element软件更新到版本12.5、则需要使用管理服务2.20.69或更高版本继续操作。</block>
-  <block id="c89140006bf75078f844d017f1b6efe6" category="list-text">*已更新H610S节点的基板管理控制器(BMC)*：您已升级H610S节点的BMC版本。请参见 <block ref="f04f9a521fc4fd678cdbd3d698415a24" category="inline-link-macro-rx"></block>。</block>
   <block id="5698bc375e8d546422c418c82337e349" category="admonition">如果您要将H610S系列节点升级到Element 12.5、并且此节点运行的Element软件版本早于11.8、则需要执行此中的其他升级步骤<block ref="f89d7bc8c94108aeb49b4fdeac4ce106" category="inline-link-rx"></block> 用于每个存储节点。如果您运行的是Element 11.8或更高版本、则不需要执行其他升级步骤。</block>
   <block id="a901d2b8512ddf5cf3b7654718ea92a4" category="admonition">有关使用NetApp Hybrid Cloud Control升级存储集群时的潜在问题及其解决方法、请参见此部分<block ref="385c83615df1d77fbf0bae3f06fabb3d" category="inline-link-rx"></block>。</block>
   <block id="981a393a1b5619c45c3545ca7373b5cf" category="list-text">选择 * 开始升级 * 。升级完成后、UI将提示您执行其他升级步骤。</block>
@@ -6105,7 +6021,6 @@
   <block id="f73f11dc118d0773193fe38ff975e133" category="inline-link-macro">存储固件包2.150发行说明</block>
   <block id="9b85276bde33152eca1f76222abdb811" category="list-text"><block ref="dd9a6aa21d9f1f41ef6fc5f7516fd509" category="inline-link-macro-rx"></block> _new_</block>
   <block id="67a13cf9dcb3321b59f28def3726ce13" category="list-text"><block ref="67a13cf9dcb3321b59f28def3726ce13" category="inline-link-macro-rx"></block></block>
-  <block id="7ab1151c4498ab191b7470333595b532" category="admonition">如果不显示 vCenter 插件图标，请参见 <block ref="ab9b282dbdbe327f4195d1f5d71c406f" category="inline-link-macro-rx"></block> 有关插件故障排除的文档。使用VMware vCenter Server 6.7U1升级到VCP 4.8或更高版本后、如果NetApp Element 配置的*集群*和* QoSSIOC设置*部分未列出存储集群或显示服务器错误、请参见 <block ref="ccd6ffc15d371ab994b0e9dff04cb8c2" category="inline-link-macro-rx"></block> 有关对这些错误进行故障排除的文档。</block>
   <block id="3e94ced9564aa4fd2c0b54fde5c1108f" category="paragraph">此固件包包含以下硬件组件固件版本：</block>
   <block id="9671fe0cd1cee15ffc6e623894e0c90c" category="cell">3B11</block>
   <block id="d7d76e22f94a7f97f91de8b48bb8e450" category="cell">3.94.07</block>
@@ -6145,7 +6060,6 @@
   <block id="a4f57cecae9cc51dbe0e706f0c125ec9" category="paragraph">存储固件包版本2.150包含H410S (PE-14168)的严重错误修复。请参见<block ref="864249002c2349e2873390db3f84414f" category="inline-link-rx"></block> 了解更多详细信息。您可以按照中的说明升级存储固件 <block ref="7b278358318478c3f88cee9434341a35" category="inline-link-macro-rx"></block>。</block>
   <block id="04435ca341320fdf8ae3f7ed2b34efab" category="admonition">NetApp Hybrid Cloud Control需要最新的管理服务包。在将计算节点上的固件升级到版本2.154.4之前、您必须升级到最新的管理服务包。如果要将计算节点上的固件升级到版本2.154.4、则需要使用管理服务2.2才能继续。</block>
   <block id="1c1dee2a250a78c000e763a2c9f3c413" category="paragraph">2.154.4版包含常规错误修复。</block>
-  <block id="7a8c3a3ea58590f9691275c93e28e645" category="admonition">在升级到版本2.154.4之前、请务必检查当前的ESXi驱动程序版本。如果此驱动程序已过期，请先升级此驱动程序。然后、将计算节点的计算固件升级到版本2.154.4。请访问 <block ref="325436a4e666ed53574c87eb30870a4b" category="inline-link-macro-rx"></block> 有关更新计算节点驱动程序的说明，其中包括 ESXi 驱动程序。</block>
   <block id="d6f24a7c552da781cf54bcf584415bba" category="section-title">下载计算固件包2.154.4</block>
   <block id="5eb0bcdf6eff7a408414590c81d98183" category="inline-link-macro">计算固件包2.154.4的通知</block>
   <block id="007f90b7875049f66b3609b089201095" category="list-text"><block ref="007f90b7875049f66b3609b089201095" category="inline-link-macro-rx"></block></block>
@@ -6155,4 +6069,92 @@
   <block id="af6fe236a646e80d8ae873b7b19bbd32" category="paragraph">此手动过程适用于未使用NetApp部署引擎安装管理节点的NetApp HCI 管理员。</block>
   <block id="7de1d355aeba73e5332d59c786d355f9" category="list-text">一个可通过管理网络访问存储集群的虚拟网络接口。如果存储集群与管理节点（ eth0 ）位于不同的子网中，并且您希望使用永久性卷，请向存储子网（ eth1 ）上的虚拟机添加另一个网络接口控制器（ Network Interface Controller ， NIC ），或者确保管理网络可以路由到存储网络。</block>
   <block id="50a6b66c3df70071e486b3d636f036b7" category="paragraph">如果您在安装或升级期间尚未启用Active IQ 存储监控以进行NetApp HCI 和NetApp HCI 计算监控、则可以启用此功能。如果您使用NetApp HCI 部署引擎禁用了遥测功能、则可能需要使用此操作步骤。</block>
+  <block id="91973e8fa965f2bdba61e9b8919b4ee5" category="inline-link-macro">管理服务2.20.69通知(适用于vCenter Server的NetApp Element 插件4.9.14)</block>
+  <block id="55e4360e9b62728478e508dd54c47f2e" category="list-text"><block ref="55e4360e9b62728478e508dd54c47f2e" category="inline-link-macro-rx"></block></block>
+  <block id="c6df14aa71e88712620087ef3c0051b8" category="inline-link-macro">管理服务2.19.48通知(适用于vCenter Server的NetApp Element 插件4.8.34)</block>
+  <block id="9d3d776c7146d1b002c55948105f2248" category="list-text"><block ref="9d3d776c7146d1b002c55948105f2248" category="inline-link-macro-rx"></block></block>
+  <block id="e9ddfae2256b1bb9c9a0f68ff44e48e4" category="inline-link-macro">管理服务2.18.91通知(适用于vCenter Server 4.7.10的NetApp Element 插件)</block>
+  <block id="06b9516dcd92ed07013c1b7a7a44c596" category="list-text"><block ref="06b9516dcd92ed07013c1b7a7a44c596" category="inline-link-macro-rx"></block></block>
+  <block id="757ee5041dab5c44f2d1327cd0f760ae" category="list-text"><block ref="757ee5041dab5c44f2d1327cd0f760ae" category="inline-link-rx"></block></block>
+  <block id="101f6b845f71c73ac7fbf4922f825d17" category="list-text">有关详细分析和历史背景信息，请查看<block ref="44afd1f3ef2498687a919e55190bfc2d" category="inline-link-rx"></block>。</block>
+  <block id="ab330582aba37a305404f73f3ea56abd" category="list-text">有关计算信息的进一步分析，请参见<block ref="f1f077cd29c39ed6d4c812cbd32dffd4" category="inline-link-rx"></block>。</block>
+  <block id="d2c221d3761cc05e7a4101aee7b6ba01" category="list-text">请参见<block ref="8ed5ec599c1540524106641c1878ee26" category="inline-link-rx"></block>。</block>
+  <block id="921561ec262e185544490434633fed0f" category="list-text"><block ref="921561ec262e185544490434633fed0f" category="inline-link-rx"></block></block>
+  <block id="752e3c55fe31911c926d43b2b70671b4" category="list-text"><block ref="752e3c55fe31911c926d43b2b70671b4" category="inline-link-rx"></block></block>
+  <block id="30b6cbdd36bc8a9bb8ba940717869b5f" category="paragraph">NetApp Element 软件支持 <block ref="a55edd10823e56dc1fbd8507c9763168" category="inline-link-macro-rx"></block> 功能，用于优化存储节点上的数据布局，以获得最佳数据可用性。要使用此功能，您应在三个或更多 NetApp H 系列机箱中均匀地拆分存储容量，以获得最佳存储可靠性。在这种情况下，存储集群会自动启用保护域。</block>
+  <block id="afde714080ac1fe221a69ff664991df5" category="admonition">一次添加所有驱动器可能会导致中断。有关添加和删除驱动器的最佳实践，请参见<block ref="e5a621cb9e241baa7c2d331f853e65e6" category="inline-link-rx"></block> （需要登录）。</block>
+  <block id="0d4b8eddcdeb5a25195c2e6412a8f38e" category="list-text">在启动此操作步骤之前，您应已联系 NetApp 支持部门并收到更换部件。在安装更换件期间，将会提供支持。如果您尚未执行此操作，请联系<block ref="98d845834ac9e1a9127f330339ecea9b" category="inline-link-rx"></block>。</block>
+  <block id="09335542e6fb8fe91126771e47605ba2" category="list-text"><block ref="09335542e6fb8fe91126771e47605ba2" category="inline-link-macro-rx"></block></block>
+  <block id="63695aa0849707798651ae322ae394ed" category="list-text"><block ref="63695aa0849707798651ae322ae394ed" category="inline-link-macro-rx"></block></block>
+  <block id="060f2d3652ce69463a68e80dbf153b87" category="list-text"><block ref="060f2d3652ce69463a68e80dbf153b87" category="inline-link-macro-rx"></block></block>
+  <block id="960251c045d1eedcef920da21014a582" category="list-text"><block ref="960251c045d1eedcef920da21014a582" category="inline-link-macro-rx"></block></block>
+  <block id="3bdd51d731a01e5c3a15ad496a5edc77" category="list-text"><block ref="3bdd51d731a01e5c3a15ad496a5edc77" category="inline-link-macro-rx"></block></block>
+  <block id="22268cae5c79b327558b5acefb524b62" category="list-text"><block ref="22268cae5c79b327558b5acefb524b62" category="inline-link-macro-rx"></block></block>
+  <block id="21d232bad39700f260dafb1d528b20fd" category="list-text"><block ref="21d232bad39700f260dafb1d528b20fd" category="inline-link-macro-rx"></block></block>
+  <block id="04e6f25ecadf1d5213318ff0863162b7" category="list-text"><block ref="04e6f25ecadf1d5213318ff0863162b7" category="inline-link-macro-rx"></block></block>
+  <block id="8effc184c7b625fe9e41cc27401b980c" category="list-text"><block ref="8effc184c7b625fe9e41cc27401b980c" category="inline-link-macro-rx"></block></block>
+  <block id="61ef7316fec99b866e4908a20af06e08" category="inline-link">NetApp Configuration Advisor</block>
+  <block id="0f60bab2e5199a2a170f3a2a45c881a6" category="list-text"><block ref="6e3eeeb26eacee460355bd5f8c854330" category="inline-link-rx"></block> 5.8.1 或更高版本的网络验证工具</block>
+  <block id="afb54c94a5e9aef322532eabe176c2d4" category="admonition">了解更多信息 <block ref="8a1a0a32384afdd6d93db2e7c4f512ad" category="inline-link-macro-rx"></block>。</block>
+  <block id="be14526a26059bab9604a4dc5056ca86" category="list-text">适用于vCenter Server*的NetApp Element 插件是一个与vSphere用户界面(UI)集成的基于Web的工具。此插件是 VMware vSphere 的一个扩展，可扩展且用户友好的界面，可管理和监控运行 * NetApp Element 软件 * 的存储集群。此插件可替代 Element UI 。您可以使用此插件用户界面发现和配置集群，并管理，监控和分配集群容量中的存储，以配置数据存储库和虚拟数据存储库（对于虚拟卷）。集群在网络上显示为一个本地组，该组通过虚拟 IP 地址呈现给主机和管理员。您还可以通过实时报告功能监控集群活动，包括执行各种操作时可能发生的任何事件的错误和警报消息。</block>
+  <block id="2f071adefcac0181be5f4b8cd9a5ca38" category="admonition">了解更多信息<block ref="2bff74e0d72e73a3a1bf993744683a85" category="inline-link-rx"></block>。</block>
+  <block id="69f62275c49d78f7ceac9db3f0497d6e" category="admonition">了解更多信息 <block ref="694d6bc2c166b8de5e6f59269ef5415e" category="inline-link-macro-rx"></block>。</block>
+  <block id="9c6922841435a46a2edccbe5bdc3b9a6" category="cell">从每节点 UI 访问网络和集群设置，并利用系统测试和实用程序。 <block ref="3560bb302b5b977f25884bdb1a7dc5d9" category="inline-link-macro-rx"></block>。</block>
+  <block id="6185d522566bca6babef053c2bc1f53d" category="list-text">* 目录 * ：目录是指 GitHub 存储库或 Helm 图表存储库，其中填充了可随时部署的应用程序。Rancher 可以使用 Helm 图表目录，以便重复部署应用程序。Rancher 包含两种类型的目录：内置全局目录和自定义目录。Trident 作为目录进行部署。请参见<block ref="ba870d4de503a3f035878d62b86bb946" category="inline-link-rx"></block>。</block>
+  <block id="499c79030e29f88105a315c240050806" category="paragraph">请参见 <block ref="502a349939ea68203db76329f0b74f74" category="inline-link-rx"></block>。</block>
+  <block id="b8ab206de7473fae6f35c2f16c0992e0" category="paragraph">有关详细信息，请访问<block ref="9488620c3498c6d0bb53483131890d10" category="inline-link-rx"></block>。</block>
+  <block id="3f67e5faa8d61856d62fd3bf38d1d1f0" category="list-text">创建用户集群。请参见 Rancher 文档<block ref="de37c412eaa4ed32c09885b710770c8d" category="inline-link-rx"></block>。</block>
+  <block id="ab3b64f6fb89cdcf991607729d1d2e6b" category="list-text">在 NetApp HCI 上的 Rancher 中配置用户集群。请参见 Rancher 文档<block ref="8f23a5a737100faa947353c1709144ae" category="inline-link-rx"></block>。</block>
+  <block id="0dfc151b6b432582cded32c687420bb1" category="paragraph">请参见 Rancher 文档<block ref="24f6419d6880471b27f9717bc8197f35" category="inline-link-rx"></block>。</block>
+  <block id="92818ce684886b2ba72d43c127697474" category="paragraph"><block ref="92818ce684886b2ba72d43c127697474" category="inline-link-rx"></block></block>
+  <block id="8ef345d1b0a160d3aad5657a5cfe2f28" category="paragraph"><block ref="8ef345d1b0a160d3aad5657a5cfe2f28" category="inline-link-rx"></block></block>
+  <block id="f4221abc2b58236d6dcf5b616d55c40b" category="admonition">在升级到版本 2.146 之前，请确保检查当前的 ESXi 驱动程序版本。如果此驱动程序已过期，请先升级此驱动程序。然后，将计算节点的计算固件升级到版本 2.146 。请访问 <block ref="ba79adf2a648aae596ba5c5e0a50002c" category="inline-link-macro-rx"></block> 有关更新计算节点驱动程序的说明，其中包括 ESXi 驱动程序。</block>
+  <block id="8ed393a166c484f88b83cce5f801e297" category="paragraph">请访问 <block ref="c16fc6148bdf6b83594dbef1823a9c1c" category="inline-link-macro-rx"></block> 有关更新计算节点固件的说明。</block>
+  <block id="1425f95bd9d84293120d76eaa5bc3f60" category="admonition">对于运行 Element 软件 12.0 版的 H610S 存储节点，在升级到存储固件包 2.27 之前，应应用 D-patch SUST-909 。在升级之前，请联系 NetApp 支持部门获取 D-patch 。请参见 <block ref="d088a1f4d001e2296c444d0510f58474" category="inline-link-macro-rx"></block>。</block>
+  <block id="e242edb20d19e966685dc82f8968dab4" category="list-text">*已更新H610S节点的基板管理控制器(BMC)*：您已升级H610S节点的BMC版本。请参见 <block ref="03b6e6df0597f52053c340579d50c0c6" category="inline-link-macro-rx"></block>。</block>
+  <block id="e33f4a72a3e17778955364a9a2a89392" category="list-text">您已为 Trident 配置用户集群网络。请参见 <block ref="20b7eb4c8716c434ebac083926d84626" category="inline-link-macro-rx"></block> 有关说明，请参见。</block>
+  <block id="7798ea29a535b3406dded336a5ad3aba" category="list-text">您已完成为 Trident 准备工作节点所需的前提步骤。请参见<block ref="0709800eb8cf192160203401eaaf8586" category="inline-link-rx"></block>。</block>
+  <block id="225967e69a2329ba771d5a7a43ea4e07" category="paragraph">Trident 安装程序目录是在使用 NetApp Hybrid Cloud Control 安装 Rancher 的过程中安装的。在此任务中，您将使用安装程序目录安装和配置 Trident 。在 Rancher 安装过程中， NetApp 提供了一个节点模板。如果您不打算使用 NetApp 提供的节点模板，而您希望在 RHEL 或 CentOS 上进行配置，则可能还需要满足其他要求。如果将工作节点更改为 RHEL 或 CentOS ，则应满足多个前提条件。请参见<block ref="0709800eb8cf192160203401eaaf8586" category="inline-link-rx"></block>。</block>
+  <block id="ec60b1fc169f63d74fb4b22710d4770a" category="admonition">在打开的页面上，您可以选择 * 详细说明 * 箭头以了解有关 Trident 应用程序的更多信息，也可以找到指向的链接<block ref="9488620c3498c6d0bb53483131890d10" category="inline-link-rx"></block>。</block>
+  <block id="3120ce0d00a4b86a5ba12e93a4c31f79" category="paragraph">请参见<block ref="40cbf9d1e7027c2bcb6695a5a1c05717" category="inline-link-rx"></block></block>
+  <block id="818bec8299e4b608cc96a66549bf940d" category="list-text">* 固件升级的准备情况和前提条件 * ：您的 NetApp HCI 安装必须准备好进行固件升级，如的说明所述 <block ref="032fdaf1008d9c5b1594091e01fa6a40" category="inline-link-macro-rx"></block>。</block>
+  <block id="6a1963c30f9c0d2c687641bd503fbc60" category="paragraph">有关如何启用监控的说明，请参见 <block ref="f0c3d1a05db024d7d19e48b5f5584b1b" category="inline-link-macro-rx"></block>。</block>
+  <block id="ca7f01a5bb3b461515e89a0d37b4bfdb" category="admonition">在升级到版本2.154.4之前、请务必检查当前的ESXi驱动程序版本。如果此驱动程序已过期，请先升级此驱动程序。然后、将计算节点的计算固件升级到版本2.154.4。请访问 <block ref="ba79adf2a648aae596ba5c5e0a50002c" category="inline-link-macro-rx"></block> 有关更新计算节点驱动程序的说明，其中包括 ESXi 驱动程序。</block>
+  <block id="a9003fbd8d635ea82e36a99b75403340" category="paragraph">您可以查看多节点系统以及与双节点或三节点集群关联的任何 NetApp HCI 见证节点的存储信息。条件 <block ref="3eaaa26badaf5c2948e63a436f8a303b" category="inline-link-macro-rx"></block> 对于已分配的，您可以查看哪些保护域已分配给特定节点。</block>
+  <block id="9e7f85792d512cae6438c01093dd8f13" category="admonition">在升级到版本 2.27 之前，请务必检查当前的 ESXi 驱动程序版本。如果此驱动程序已过期，请先升级此驱动程序。然后，将计算节点的计算固件升级到版本 2.27 。请访问 <block ref="ba79adf2a648aae596ba5c5e0a50002c" category="inline-link-macro-rx"></block> 有关更新计算节点驱动程序的说明，其中包括 ESXi 驱动程序。</block>
+  <block id="2558aa1c4b088a01ebbd23c6a72472a3" category="admonition">了解更多信息 <block ref="0614c1798bfcf6fa1dd2b630cd83d6d6" category="inline-link-macro-rx"></block> 和 <block ref="9f9f24cd869308f40f7cad49c3f42972" category="inline-link-macro-rx"></block>。</block>
+  <block id="88b68b205e674e3025849d8b5b19d8d0" category="admonition">在双节点存储集群中，至少会部署两个见证节点，以便在见证节点出现故障时实现冗余。在 NetApp HCI 安装过程安装见证节点时， VMware vCenter 中会存储一个 VM 模板，您可以使用该模板重新部署见证节点，以防其意外删除，丢失或损坏。如果您需要更换托管见证节点的计算节点出现故障，也可以使用此模板重新部署见证节点。有关说明，请参见 * 重新部署双节点和三节点存储集群的见证节点 * 一节 <block ref="29ec30455b40779461eab8434f6212ca" category="inline-link-macro-rx"></block>。</block>
+  <block id="23d36a99e35a6625ac76fe1f034e722a" category="list-text"><block ref="23d36a99e35a6625ac76fe1f034e722a" category="inline-link-rx"></block></block>
+  <block id="9919e22324d983d998afd33f187a0a61" category="paragraph">NetApp 会定期更新 NetApp HCI ，为您提供新功能，增强功能和错误修复。NetApp HCI 1.10包括适用于存储集群的Element软件12.5。</block>
+  <block id="f4acceab098d15c508ef563bc36e37fe" category="paragraph">Element 12.5提供了一种缓解方法、可消除Element软件受到Apache Log4j漏洞的影响。启用了虚拟卷(VVol)功能的NetApp SolidFire 存储集群受到Apache Log4j漏洞的影响。有关NetApp Element 软件中Apache Log4j漏洞的临时解决策 的信息、请参见｛url-peak｝｛知识库文章^。</block>
+  <block id="89cf55eeb9f34a1a360f23ce53a22331" category="paragraph">上传软件包后、升级将自动开始。</block>
+  <block id="5b03e02f493134c5e8cead0b86b3b358" category="paragraph">使用<block ref="b77f230f2effb14751e6164ceee6da3f" category="inline-link-rx"></block> 以确保所有版本的软件均兼容。请参见<block ref="ae9ce20e74e3db4b16220de45ebf2fd0" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="5e98629f8afe2eee1c27355eb45a80e0" category="paragraph">如果不显示 vCenter 插件图标，请参见 <block ref="ab9b282dbdbe327f4195d1f5d71c406f" category="inline-link-macro-rx"></block> 有关插件故障排除的文档。</block>
+  <block id="726e3510e2c172eed6861f3e6d271360" category="paragraph">使用VMware vCenter Server 6.7U1升级到适用于vCenter Server 4.8或更高版本的NetApp Element 插件后、如果NetApp Element 配置的*集群*和* QoSSIOC设置*部分未列出存储集群或显示服务器错误、请参见 <block ref="c907b125bbc711015f83b735f4697e97" category="inline-link-macro-rx"></block> 有关对这些错误进行故障排除的文档。</block>
+  <block id="c36b368af7c827d8bb3a4d8c46e97a75" category="admonition">在升级到 2.76.10 版之前，请确保检查当前的 ESXi 驱动程序版本。如果此驱动程序已过期，请先升级此驱动程序。然后，将计算节点的计算固件升级到版本 2.99 。请访问 <block ref="ba79adf2a648aae596ba5c5e0a50002c" category="inline-link-macro-rx"></block> 有关更新计算节点驱动程序的说明，其中包括 ESXi 驱动程序。</block>
+  <block id="7ea876a6c1e6e26458a429794b25cdb3" category="list-text"><block ref="7ea876a6c1e6e26458a429794b25cdb3" category="inline-link-rx"></block></block>
+  <block id="c70e7fb85a0bbb75d626cb1d7966ab03" category="admonition">如果将双节点存储集群扩展为四个或更多节点，则存储集群先前使用的见证节点对仍可在 vSphere 中显示为备用虚拟机。新扩展的存储集群不使用它们；如果要回收 VM 资源，可以 <block ref="b068a43ec0931fd63c3030d857c1d3cb" category="inline-link-macro-rx"></block> 见证节点虚拟机。</block>
+  <block id="82fd08126fae06d6277e6d275f22adee" category="list-text">有关详细信息以及其他支持的配置，请参见<block ref="6bea819619d5f9270163ce0543e87e1e" category="inline-link-rx"></block> 和<block ref="a72ae021af8843b5883c31a3cf48fdbb" category="inline-link-rx"></block>。</block>
+  <block id="d921f4dac25eaa654020043661ebf1d8" category="paragraph">有关详细信息，请参见 <block ref="aadf487819eba2c7633cf481d9cde909" category="inline-link-macro-rx"></block>。</block>
+  <block id="dd41e54aa84e335e4ee862a13b5e6a0c" category="paragraph">有关启用和禁用空闲加密的信息，请参见<block ref="599a70c288c4ec9eda9a2cc053c403eb" category="inline-link-rx"></block> 在 SolidFire 和 Element 文档中心中。</block>
+  <block id="e64faf772063d25cbb0caf6a1bb47d1f" category="paragraph">有关配置外部密钥管理的详细信息，请参见<block ref="64b5968354f6f57943cb4a3dfcc320f7" category="inline-link-rx"></block> 在 SolidFire 和 Element 文档中心中。</block>
+  <block id="6c60e196ea99059d28cb796ee1cc6a30" category="paragraph">要配置 MFA ，请参见<block ref="bb2d99c83e95002d4c1dda7e5fd7a171" category="inline-link-rx"></block> 在 SolidFire 和 Element 文档中心中。</block>
+  <block id="4db2dc797ccfe2bf4a811e7fd00733e3" category="paragraph">有关为 FIPS 140-2 加密准备新存储集群的详细信息，请参见<block ref="398e80f1186004f1b957a6f673905aff" category="inline-link-rx"></block>。</block>
+  <block id="615e7ae9b86010b2032e7787e74aaf9f" category="paragraph">有关在已准备好的现有集群上启用 FIPS 140-2 的详细信息，请参见<block ref="68f4840b6a5a548f08d946055c6911aa" category="inline-link-rx"></block>。</block>
+  <block id="8b8499d9844eda9fa70edc0802a66522" category="admonition">在升级到版本 2.76 之前，请确保检查当前的 ESXi 驱动程序版本。如果此驱动程序已过期，请先升级此驱动程序。然后，将计算节点的计算固件升级到版本 2.76 。请访问 <block ref="ba79adf2a648aae596ba5c5e0a50002c" category="inline-link-macro-rx"></block> 有关更新计算节点驱动程序的说明，其中包括 ESXi 驱动程序。</block>
+  <block id="d420665e1d82d1224e21ba470afa3e6f" category="paragraph"><block ref="9c6163485e872b399b512abbf9691146" category="inline-link-macro-rx"></block>。 </block>
+  <block id="94fb62d9516863316b92e2bf53911bce" category="list-text"><block ref="d6a2d8b61be866ad09b286b7f2ff7d30" category="inline-link-macro-rx"></block>。</block>
+  <block id="25bc0eaf24f05f014b5a22e6cb3c3ee0" category="list-text">对于 H410C ， H610C 和 H615C 节点， <block ref="003405940fb11fda7caa22bbd0900a62" category="inline-link-macro-rx"></block>。</block>
+  <block id="76ef55f268f9e8c537a13a8bdcff4a23" category="list-text"><block ref="a7fdda79c0d112d1e20d7aa847382277" category="inline-link-macro-rx"></block>。</block>
+  <block id="bf98d31f43d10440f3b2fcae7d1772fa" category="paragraph"><block ref="5a5ec2237ded5a598f748fc2406eb309" category="inline-link-macro-rx"></block>。</block>
+  <block id="0ea391471e626f95079246bfd0ab48f9" category="paragraph">适用于vCenter Server SIOC的NetApp Element 插件密码也称为_QoSSIOC密码_。 </block>
+  <block id="0ba7ef8feca0e0b45134473e9c3182d4" category="paragraph">查看｛url-peak｝[适用于vCenter Server的Element插件知识库文章^。</block>
+  <block id="b2798e0e0569643ee305e7af28818f1d" category="list-text">*已更新H610S节点的基板管理控制器(BMC)*：您已升级H610S节点的BMC版本。请参见 <block ref="03b6e6df0597f52053c340579d50c0c6" category="inline-link-macro-rx"></block>。</block>
+  <block id="a2f6ced866722067f22e1130c2639dde" category="cell">如果 NetApp Hybrid Cloud Control 无法通过外部连接访问联机软件存储库，则会显示此状态，而不是显示 * 可用版本 * 。如果您已建立外部连接，但仍看到此消息，请检查 <block ref="b9bac541d597e7014a15225ca94a9598" category="inline-link-macro-rx"></block>。</block>
+  <block id="81a079101c76d57a2b62d46bc2d6fedc" category="paragraph"><block ref="81a079101c76d57a2b62d46bc2d6fedc" category="inline-link-rx"></block></block>
+  <block id="59b4cfafb6ffcd7eca610c28c2ae36e9" category="list-text">如果您使用系统的完全限定域名（ FQDN ）访问 Element 或 NetApp HCI Web 界面（例如管理节点或 NetApp 混合云控制）， <block ref="c9699912aaabdcb92382a886be432271" category="inline-link-macro-rx"></block>。</block>
+  <block id="e1d12d73fac64cd9cae6772ec9a8b658" category="list-text">您可以使用某些类型的节点来构成双节点存储集群。请参见<block ref="53f4b79fcd916257dd772b70db6367a5" category="inline-link-rx"></block>。</block>
+  <block id="72bc06ff4e2b235a52b1bd8ed1e8201b" category="paragraph">您可以手动执行此操作<block ref="51de2eecc77c7894734d39577009251b" category="inline-link-rx"></block> 使用适用于 vCenter Server 的 NetApp Element 插件。您可以根据节点或机箱域选择保护域阈值。</block>
+  <block id="c887aa2abefbdf59345793bdbe530aa6" category="list-text">从机架中物理卸下故障节点。这些步骤取决于您的存储节点类型。请参见 <block ref="22268cae5c79b327558b5acefb524b62" category="inline-link-macro-rx"></block> 和 <block ref="04e6f25ecadf1d5213318ff0863162b7" category="inline-link-macro-rx"></block>。</block>
+  <block id="6b488f4677081a24e52d30be5ea2fe98" category="list-text">使用 NetApp Hybrid Cloud Control 配置您添加的新存储节点。请参见 <block ref="f2feaea5d9b29c0df76acac116f3553b" category="inline-link-macro-rx"></block>。</block>
 </blocks>

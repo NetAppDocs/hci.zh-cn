@@ -47,7 +47,7 @@ NOTE: 您的网络拓扑可能与此处显示的不同。这只是一个示例�
 阅读以下资源：
 
 * 在安装之前，请使用 NetApp HCI 安装发现工作簿 _ 配置网络。
-* 有关详细信息以及其他支持的配置，请参见 https://www.netapp.com/us/media/tr-4820.pdf["_TR-4820 ：《 NetApp HCI 网络快速规划指南》"] 和 https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176["_NetApp HCI 安装和设置说明 _"]。
+* 有关详细信息以及其他支持的配置，请参见 https://www.netapp.com/us/media/tr-4820.pdf["_TR-4820 ：《 NetApp HCI 网络快速规划指南》"^] 和 https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176["_NetApp HCI 安装和设置说明 _"^]。
 * 有关小于四个存储节点的 NetApp HCI 配置的信息，请参见 https://www.netapp.com/us/media/tr-4823.pdf["_TR-4823 ： NetApp HCI 双节点存储集群 _"^]。
 * 有关在每个存储节点所使用的交换机端口上配置链路聚合控制协议（ LACP ）的详细信息，请参见 link:hci_prereqs_LACP_configuration.html["配置 LCAP 以获得最佳存储性能"]。
 
@@ -82,7 +82,7 @@ NOTE: 在 NDE 过程中，所有节点都将分配永久 IP 地址，并且所�
 
 要确保 NetApp HCI 网络就绪，请安装 NetApp Active IQ Config Advisor 5.8.1 或更高版本。此网络验证工具与其他一起提供 link:https://mysupport.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2["NetApp 支持工具"^]。使用此工具可验证连接， VLAN ID ， IP 地址要求，交换机连接等。
 
-有关详细信息，请参见 link:hci_prereqs_task_validate_config_advisor.html["使用 Active IQ Config Advisor 验证您的环境"]
+有关详细信息，请参见 link:hci_prereqs_task_validate_config_advisor.html["使用 Active IQ Config Advisor 验证您的环境"]。
 
 
 
