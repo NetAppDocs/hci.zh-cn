@@ -1110,7 +1110,6 @@
   <block id="7a4dd69b33ba0cb526b3f529660227ed" category="inline-link-macro">更换 SN2010 ， SN2100 和 SN2700 交换机</block>
   <block id="9345b76867dd96005ed1e404ca6e256f" category="list-text"><block ref="9345b76867dd96005ed1e404ca6e256f" category="inline-link-macro-rx"></block></block>
   <block id="7f874a6debff4d8e3670b59ddfdf3bd0" category="inline-link-macro">更换双节点集群中的存储节点</block>
-  <block id="605ec667ea79ce686f82eb8a5a6a3972" category="list-text"><block ref="605ec667ea79ce686f82eb8a5a6a3972" category="inline-link-macro-rx"></block></block>
   <block id="c94f753aa1baf797e0eea49696404564" category="inline-link">_TR-4820 ：《 NetApp HCI 网络快速规划指南》</block>
   <block id="42f1d5fbe05e1bdd25e119b9262b7dbd" category="list-text"><block ref="42f1d5fbe05e1bdd25e119b9262b7dbd" category="inline-link-rx"></block></block>
   <block id="1f9e8829ba3f07efa25b77f1eb0d6c07" category="inline-link">NetApp Configuration Advisor</block>
@@ -6157,4 +6156,5 @@
   <block id="72bc06ff4e2b235a52b1bd8ed1e8201b" category="paragraph">您可以手动执行此操作<block ref="51de2eecc77c7894734d39577009251b" category="inline-link-rx"></block> 使用适用于 vCenter Server 的 NetApp Element 插件。您可以根据节点或机箱域选择保护域阈值。</block>
   <block id="c887aa2abefbdf59345793bdbe530aa6" category="list-text">从机架中物理卸下故障节点。这些步骤取决于您的存储节点类型。请参见 <block ref="22268cae5c79b327558b5acefb524b62" category="inline-link-macro-rx"></block> 和 <block ref="04e6f25ecadf1d5213318ff0863162b7" category="inline-link-macro-rx"></block>。</block>
   <block id="6b488f4677081a24e52d30be5ea2fe98" category="list-text">使用 NetApp Hybrid Cloud Control 配置您添加的新存储节点。请参见 <block ref="f2feaea5d9b29c0df76acac116f3553b" category="inline-link-macro-rx"></block>。</block>
+  <block id="82b3f7ae87bb09e10a73ba2a67846c4f" category="list-text"><block ref="82b3f7ae87bb09e10a73ba2a67846c4f" category="inline-link-macro-rx"></block></block>
 </blocks>
