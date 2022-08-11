@@ -54,6 +54,12 @@ NetApp HCI 1.10包括计算节点的固件更新。 link:rn_relatedrn.html#compu
 
 
 
+=== 支持的VMware vSphere更新版本
+
+在NetApp HCI 1.10中、支持部署和扩展VMware vSphere 7.0。
+
+
+
 === NetApp Hybrid Cloud Control增强功能
 
 NetApp Hybrid Cloud Control在版本1.10中进行了增强。 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["了解更多信息。"^]。
