@@ -11,7 +11,7 @@ keywords: netapp, hci, on premise, cluster, element, compute node
 [role="lead"]
 对于任何 H 系列计算节点，您都可以使用 VMware Update Manager 更新节点上使用的驱动程序。
 
-请参见中适用于您的硬件的固件和驱动程序列表 https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software["此 NetApp 知识库文章"^] （需要登录）。
+请参见中适用于您的硬件的固件和驱动程序列表 https://docs.netapp.com/us-en/hci/docs/firmware_driver_versions.html["支持的固件和ESXi驱动程序版本"^]。
 
 一次仅执行其中一个更新操作。
 
@@ -30,14 +30,12 @@ NOTE: NetApp 驱动程序包包含一个或多个 VMware 脱机捆绑包 ZIP 文
 . 转至 VMware vCenter 中的 * VMware Update Manager* 。
 . 将计算节点的驱动程序脱机捆绑包文件导入到 * 修补程序存储库 * 中。
 +
-** 对于 VMware ESXi 7.0 ， NetApp H610C ， H615C ， H410C 和 Hx00E 计算节点及其内置系统组件的所有必要驱动程序均包含在标准 VMware ESXi 7.0 安装 ISO 映像中。对于运行 VMware ESXi 7.0 （和更新）的 NetApp HCI 计算节点，您不需要其他或更新驱动程序。
-** 对于 VMware ESXi 6.x ，请执行以下步骤以导入驱动程序脱机捆绑包文件：
+对于VMware ESXi 6.x和7.0到7.0 U3、请执行以下步骤导入驱动程序脱机捆绑包文件：
+
 +
-... 选择 * 更新 * 选项卡。
-... 选择 * 从文件上传 * 。
-... 浏览到先前下载的脱机捆绑包并选择 * 导入 * 。
-
-
+.. 选择 * 更新 * 选项卡。
+.. 选择 * 从文件上传 * 。
+.. 浏览到先前下载的脱机捆绑包并选择 * 导入 * 。
 
 
 . 为计算节点创建新的主机基线。

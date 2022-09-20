@@ -3018,7 +3018,6 @@
   <block id="502293ff6f825a4e5ab5a89252e4762e" category="list-text">如果您在虚拟桌面基础架构 (VDI) 环境中使用启用了 vGPU 的桌面，请为 NVIDIA vGPU 软件配置 VMware Horizon View 。</block>
   <block id="f77963c528aa19e59cf9f7c9d5b4a19d" category="summary">在 NetApp HCI 系统升级过程中，您可以升级计算节点驱动程序。</block>
   <block id="0c13e0dd6ebaa11c814ce3c5b29ab7f1" category="paragraph">对于任何 H 系列计算节点，您都可以使用 VMware Update Manager 更新节点上使用的驱动程序。</block>
-  <block id="bab93f378f6cea1ed1024018548e066c" category="inline-link">此 NetApp 知识库文章</block>
   <block id="cae4b286c77e42f24641d126e94e3848" category="paragraph">一次仅执行其中一个更新操作。</block>
   <block id="7f1cb6f883abc23a81f6db00c067e34f" category="paragraph">在尝试升级计算固件之前，应检查当前 ESXi 驱动程序版本。如果此驱动程序已过期，请先升级此驱动程序。然后升级计算节点的计算固件。</block>
   <block id="3e79f2f4eea24dddb8f0e1d175482fea" category="inline-link">NetApp HCI 软件下载</block>
@@ -5641,7 +5640,6 @@
   <block id="f7658c00205041bd6da6d27dbaa7fe7b" category="summary">在 NetApp HCI 系统升级过程中，您可以升级管理节点。</block>
   <block id="303c7d52b5c18e714947ecd4996594a2" category="inline-link">管理节点 ISO</block>
   <block id="b8e3af673664eb79ebe128d1f309bdd6" category="list-text">从 REST API UI 中，选择 * POST /services/reuse-auth* 。</block>
-  <block id="de3741b094be24deccfc553754ce0a3a" category="paragraph">请参见中适用于您的硬件的固件和驱动程序列表<block ref="69b1d186a6529d94f61dae13551aa3aa" category="inline-link-rx"></block> （需要登录）。</block>
   <block id="477a3e44a347d971185a2c3a5140588e" category="list-text">浏览到<block ref="d4caed46ff739416e1ca7149df2744c7" category="inline-link-rx"></block> 页面并选择正确版本的 NetApp HCI 的下载链接。</block>
   <block id="1288b4af7d9b295a0901b8b5e9b2de64" category="list-text">选择 * 修复 * ，然后选择新创建的主机基线。确保已选择基线中包含的驱动程序。</block>
   <block id="ecd715524a148d3d6e20b711f37ce2c3" category="list-text">继续到向导中的 * 准备完成 * 页面，然后选择 * 完成 * 。</block>
@@ -5755,8 +5753,6 @@
   <block id="e795a437c10bf5f507140024b096bd0e" category="list-text">CVE-2020-15436</block>
   <block id="bfbc343f663cd48849da8b3b6240a9c0" category="list-text">CVE-2020-29372</block>
   <block id="c7faa307a21de68e6b2b579eb4dd6238" category="list-text"><block ref="c7faa307a21de68e6b2b579eb4dd6238" category="inline-link-macro-rx"></block></block>
-  <block id="17a3f3fcb25f60a1e4c1a40f1e7eace3" category="list-text">对于 VMware ESXi 7.0 ， NetApp H610C ， H615C ， H410C 和 Hx00E 计算节点及其内置系统组件的所有必要驱动程序均包含在标准 VMware ESXi 7.0 安装 ISO 映像中。对于运行 VMware ESXi 7.0 （和更新）的 NetApp HCI 计算节点，您不需要其他或更新驱动程序。</block>
-  <block id="3df9942375d4c2463d762d41ec77a6e1" category="list-text">对于 VMware ESXi 6.x ，请执行以下步骤以导入驱动程序脱机捆绑包文件：</block>
   <block id="772251791cdb07bc2fc3967b8243ac21" category="list-text">选择 * 更新 * 选项卡。</block>
   <block id="633d466e4a34f3db8d313150633fe669" category="list-text">选择 * 从文件上传 * 。</block>
   <block id="0965e8793c3a408e2c948a5aa3f43df7" category="list-text">浏览到先前下载的脱机捆绑包并选择 * 导入 * 。</block>
@@ -6367,4 +6363,19 @@
   <block id="7f6c7867ac3c62c136dad288b3e3298e" category="paragraph">^1^有关适用于您的硬件的完整固件和驱动程序固件列表、请参见<block ref="70c4c9f03a0e1a210c8e6bdafdb7db30" category="inline-link-rx"></block>。</block>
   <block id="d8288c4d481f3eb3a21b3ee9d3d34f3e" category="list-text">* 有效升级路径 * ：您已检查要升级到的 Element 版本的升级路径信息并验证升级路径是否有效。请参见<block ref="2980f5bfbc85d7c14e3d7a2c57af53b5" category="inline-link-rx"></block></block>
   <block id="3c22f77849e3b66d2e0c9c63419afb53" category="admonition">有关适用于您的硬件的完整固件和驱动程序固件列表，请参见<block ref="70c4c9f03a0e1a210c8e6bdafdb7db30" category="inline-link-rx"></block>。</block>
+  <block id="9671b9c99a15fe8beaa959d54510f7e0" category="paragraph">* VMware ESXi驱动程序版本*</block>
+  <block id="1aa66ef3a8e34a7a538960a80d2e1e31" category="cell">ESXi</block>
+  <block id="48cf24486d9a8e65a142b25682f19949" category="cell">驱动程序</block>
+  <block id="01deebfa87b938c89ecb3dcb4effcbe2" category="cell">7.0</block>
+  <block id="4f467eda35ff78e59bbdb4e520ef904c" category="cell">4.19.71.101 4.19.71.1</block>
+  <block id="e5f63614505322239ff5a403089bbab7" category="cell">7.0 Update 1</block>
+  <block id="e3115a7b25952e2b6ea2fb2bf9cca3b3" category="cell">7.0 Update 2</block>
+  <block id="1391518963f261b2531840ce43ab39d4" category="cell">4.21.71.101 4.21.71.1</block>
+  <block id="ccf0280076b3ef40ee8b72dbd3470d53" category="cell">7.0 Update 3</block>
+  <block id="c3e22f2ae1ddef844509890f97faa80b" category="cell">6 ， 7.</block>
+  <block id="f884cc5c56f9c9a8d4d61568ff64db9c" category="cell">6.5</block>
+  <block id="391bb6060127038cc328796fa4f0b3c5" category="inline-link-macro">VMware vSphere下载</block>
+  <block id="f3d906055e8465bbb09581a2798127ae" category="admonition">可从获取7.0、7.0 U1、7.0 U2和7.0 U3的驱动程序 <block ref="2d30eb2542d74a72bd10b13092aa6d1f" category="inline-link-macro-rx"></block> 页面。</block>
+  <block id="ac4ea0116877e7d9fa4a0111b67b92f1" category="paragraph">请参见中适用于您的硬件的固件和驱动程序列表<block ref="70c4c9f03a0e1a210c8e6bdafdb7db30" category="inline-link-rx"></block>。</block>
+  <block id="6099f1a8115acef9b6c8b5715b669041" category="paragraph">对于VMware ESXi 6.x和7.0到7.0 U3、请执行以下步骤导入驱动程序脱机捆绑包文件：</block>
 </blocks>
