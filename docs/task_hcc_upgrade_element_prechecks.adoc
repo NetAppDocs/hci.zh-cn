@@ -40,13 +40,13 @@ NOTE: 如果您接受EULA、则会在所有未来更新中记录此EULA、并启
 
 您可以使用NetApp Hybrid Cloud Control UI或NetApp Hybrid Cloud Control API运行运行状况检查：
 
-* <<Use NetApp Hybrid Cloud Control to run Element storage health checks prior to upgrading storage>> （首选方法）
-* <<Use API to run Element storage health checks prior to upgrading storage>>
+*  NetApp Hybrid Cloud Control to run Element storage health checks prior to upgrading storage （首选方法）
+*  API to run Element storage health checks prior to upgrading storage
 
 
 您还可以了解有关此服务运行的存储运行状况检查的更多信息：
 
-* <<Storage health checks made by the service>>
+*  health checks made by the service
 
 
 

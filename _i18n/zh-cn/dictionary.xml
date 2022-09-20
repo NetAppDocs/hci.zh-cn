@@ -1125,7 +1125,6 @@
   <block id="c4d41483c4ebb2063097b14712424742" category="doc">升级 Element 软件</block>
   <block id="af97413bfe0fcaebbe8c8bbf7a552c1e" category="list-text">* 管理员权限 * ：您拥有执行升级的存储集群管理员权限。</block>
   <block id="992d266839a579e9b62b9fbb2193d3bf" category="inline-link">NetApp 知识库：运行 NetApp Element 软件的存储集群的升级表</block>
-  <block id="1f530b0c76d9de4275104c651b6d5411" category="list-text">* 有效升级路径 * ：您已检查要升级到的 Element 版本的升级路径信息并验证升级路径是否有效。<block ref="b87eae6ace29db9b17ab7b20ed6745f5" category="inline-link-rx"></block></block>
   <block id="f12957e444375fe5047af820df02fd1a" category="list-text">* 系统时间同步 * ：您已确保所有节点上的系统时间均已同步，并且已为存储集群和节点正确配置 NTP 。必须在每个节点 Web UI （`https://[IP address] ： 442` ）中为每个节点配置一个 DNS 命名服务器，并且不会出现与时间偏差相关的未解决集群故障。</block>
   <block id="7288066bab95a3c45011203ce6806721" category="inline-link-macro">网络端口</block>
   <block id="dfa30feec8b64a244b445bfd33b6271a" category="list-text">* 系统端口 * ：如果您使用 NetApp Hybrid Cloud Control 进行升级，则已确保必要的端口处于打开状态。请参见 <block ref="580a730e8363f1cd8dbb520150bdd1d9" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
@@ -1140,7 +1139,6 @@
   <block id="a544a5293c147dec832e983a6fbad504" category="paragraph">您可以使用 NetApp Hybrid Cloud Control UI 升级存储集群。</block>
   <block id="358a3ff6d008d52e4a816f3c9f4d8d5f" category="inline-link">适用于 NetApp HCI 存储集群的 NetApp HCI 软件包</block>
   <block id="dd76252ea7a50def2a98f218cb1505b4" category="inline-link">知识库文章</block>
-  <block id="2882996895673f16b2fcf0cabfb994f1" category="admonition">有关使用 NetApp Hybrid Cloud Control 升级存储集群时的潜在问题及其解决方法，请参见<block ref="385c83615df1d77fbf0bae3f06fabb3d" category="inline-link-rx"></block>。</block>
   <block id="d64a6336a39c9f27c33956f187d79c87" category="list-text">通过提供存储集群管理员凭据登录到 NetApp Hybrid Cloud Control 。</block>
   <block id="8d2b20731c568a1d9a02267e5d20edb7" category="list-text">在 * 升级 * 页面上，选择 * 存储 * 。</block>
   <block id="eced5161fd4b5a5d98480da44ccabc87" category="paragraph">* 存储 * 选项卡列出了安装过程中的存储集群。如果 NetApp Hybrid Cloud Control 无法访问某个集群，则该集群将不会显示在 * 升级 * 页面上。</block>
@@ -5648,7 +5646,6 @@
   <block id="1288b4af7d9b295a0901b8b5e9b2de64" category="list-text">选择 * 修复 * ，然后选择新创建的主机基线。确保已选择基线中包含的驱动程序。</block>
   <block id="ecd715524a148d3d6e20b711f37ce2c3" category="list-text">继续到向导中的 * 准备完成 * 页面，然后选择 * 完成 * 。</block>
   <block id="0f1940d8b9e51abf4381f9e406fda543" category="summary">在 NetApp HCI 系统升级过程中，您可以升级与存储节点关联的固件。</block>
-  <block id="13c2b42759130af4400c46b2b928dc26" category="admonition">有关适用于您的硬件的固件和驱动程序固件的完整列表，请参见此内容<block ref="919d0da258d2c9346bfb11f078cfd474" category="inline-link-rx"></block> （需要登录）。</block>
   <block id="fc6261a1be6f27091e994d8c8b075b29" category="summary">在 NetApp HCI 系统升级过程中，您可以升级适用于 vCenter Server 的 Element 插件。</block>
   <block id="1e1e7dd8551842ca8c6e4ac3c35cb249" category="admonition">此插件与 HTML5 vSphere Web Client 的 6.7 U2 内部版本 13007421 以及更新 2a （内部版本 13643870 ）之前发布的其他 6.7 U2 内部版本不兼容。有关受支持的 vSphere 版本的详细信息，请参见的发行说明<block ref="52a3661120ba33cd100cafc9c9d568e0" category="inline-link-rx"></block>。</block>
   <block id="c60238cb58d95b456566853e62db1d18" category="list-text">* vCenter Server* ：您的 vCenter 插件 4.x 版已注册到 vCenter Server 。从注册实用程序（`https://[management node IP] ： 9443` ）中，选择 * 注册状态 * ，填写必要字段，然后选择 * 检查状态 * 以验证 vCenter 插件是否已注册以及当前安装的版本号。</block>
@@ -5862,7 +5859,6 @@
   <block id="a0fc274442d4c69dfe575d357ce015e2" category="cell">40到70分钟</block>
   <block id="9b2b1e8f398acbac5493461c590118f6" category="inline-link">完全关闭节点并断开电源</block>
   <block id="2233d6c0637a0dd985141fefd60451a0" category="cell">您还必须花费130到160分钟<block ref="b75cb1417453c96f34f9e695ad57b88f" category="inline-link-rx"></block> 对于每个H610S节点。</block>
-  <block id="6ed1151a1c81c87309cd82c96457f044" category="paragraph">^1^有关适用于您的硬件的完整固件和驱动程序固件列表、请参见此内容<block ref="919d0da258d2c9346bfb11f078cfd474" category="inline-link-rx"></block> （需要登录）。</block>
   <block id="0fe84530e14d6cb77f51c3d2cc85aa18" category="paragraph">^2^如果将写入IOPS负载较重的集群与较长的固件更新时间结合使用、则数据同步时间将会增加。</block>
   <block id="53f59c169b2bb48ac0b8253252a06467" category="list-text">。 <block ref="72c4f5351976259ad654b85496cb20be" category="inline-xref-macro-rx"></block> 第节介绍NetApp HCI 1.10版中的新增功能和更新。</block>
   <block id="2a0ce9a56c6130320cccb8a7f34ec593" category="list-text">。 <block ref="18a6515b1da0f2a2d89c5832cee91752" category="inline-xref-macro-rx"></block> 第节介绍Element 12.5中的新增功能和更新。</block>
@@ -6367,4 +6363,8 @@
   <block id="b757850bdb41a8f86215fd4d7394eeb9" category="paragraph">NetApp HCI 支持的固件和ESXi驱动程序版本以及NetApp HCI 存储节点的固件版本。</block>
   <block id="bf44a0123ec45362af49b3862557cdd8" category="paragraph"><block ref="f4e8c07388940da9080e74e50960909d" category="inline-link-macro-rx"></block>* H610S * H410S</block>
   <block id="a82f3d9d22bfe1382d03945f3377eb65" category="paragraph"><block ref="4fe99558e9030b1914f3007a88f2f74d" category="inline-link-macro-rx"></block>* H615C * H610C * H410C * H300E/H500E/H700E</block>
+  <block id="4b8861a11346d673205d074f862db70a" category="inline-link">支持的固件和ESXi驱动程序版本</block>
+  <block id="7f6c7867ac3c62c136dad288b3e3298e" category="paragraph">^1^有关适用于您的硬件的完整固件和驱动程序固件列表、请参见<block ref="70c4c9f03a0e1a210c8e6bdafdb7db30" category="inline-link-rx"></block>。</block>
+  <block id="d8288c4d481f3eb3a21b3ee9d3d34f3e" category="list-text">* 有效升级路径 * ：您已检查要升级到的 Element 版本的升级路径信息并验证升级路径是否有效。请参见<block ref="2980f5bfbc85d7c14e3d7a2c57af53b5" category="inline-link-rx"></block></block>
+  <block id="3c22f77849e3b66d2e0c9c63419afb53" category="admonition">有关适用于您的硬件的完整固件和驱动程序固件列表，请参见<block ref="70c4c9f03a0e1a210c8e6bdafdb7db30" category="inline-link-rx"></block>。</block>
 </blocks>
