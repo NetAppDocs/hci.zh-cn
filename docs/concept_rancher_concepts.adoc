@@ -42,8 +42,7 @@ Trident 本身是 Kubernetes 本机应用程序，直接在 Kubernetes 集群中
 
 有关详细信息，请访问 https://netapp-trident.readthedocs.io/en/stable-v20.10/introduction.html["Trident 文档"^]。
 
-
-
+[discrete]
 == 了解更多信息
 
 * https://rancher.com/docs/rancher/v2.x/en/overview/architecture/["有关架构的 Rancher 文档"^]

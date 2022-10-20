@@ -18,9 +18,6 @@ keywords: netapp, hci, element, new, whatsnew
 [role="lead"]
 NetApp 会定期更新 NetApp HCI ，为您提供新功能，增强功能和错误修复。NetApp HCI 1.10包括适用于存储集群的Element软件12.5。
 
-
-NOTE: Element软件12.7是最新版本、其中包括安全和系统组件更新、操作改进以及已解决的问题。 https://docs.netapp.com/us-en/element-software/concepts/concept_rn_whats_new_element.html["详细了解Element 12.7中的新增功能"^]。
-
 * 。  HCI 1.10 第节介绍NetApp HCI 1.10版中的新增功能和更新。
 * 。  software 12.5 第节介绍Element 12.5中的新增功能和更新。
 

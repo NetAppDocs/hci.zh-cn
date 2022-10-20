@@ -6370,20 +6370,6 @@
   <block id="7c5ccf80b07d1effc359d2dbc6b965e3" category="cell">* GDC5602Q*</block>
   <block id="32e2e1f8da88327e0f6733fff723309a" category="admonition">下表指定了 SF38410 ， SFG19210 ， SF9605 和 SF4805 的此存储固件捆绑包版本中支持的组件固件版本。但是、这些组件固件不能通过存储固件包进行更新。</block>
   <block id="2a7341cae34c31f19bf7e5068a68845a" category="list-text">导航到<block ref="864249002c2349e2873390db3f84414f" category="inline-link-rx"></block> 并从下拉列表中选择 * Element Software* ：</block>
-  <block id="57f06358fba0b8a8922a0641b09632cd" category="list-text">*升级过程时间*：您已计划足够的时间执行升级。升级到Element软件12.5或更高版本时、升级过程时间会因您当前的Element软件版本和固件更新而异。</block>
-  <block id="dfc6764664999d5ff6cc24317be3ec3f" category="inline-link-macro">NetApp HCI 支持的固件和ESXi驱动程序版本以及NetApp HCI 存储节点的固件版本</block>
-  <block id="ed66ab0c93905c6f580080bcbd749655" category="paragraph">^1^有关适用于您的硬件的完整固件和驱动程序固件列表、请参见 <block ref="80776e776c76da1f21e9e612d2679ddd" category="inline-link-macro-rx"></block>。</block>
-  <block id="de04396568b4d068ad633b9f6d71127c" category="admonition">从Element 12.5开始、Element软件升级不再支持NetApp HealthTools。如果您运行的是Element 11.0或11.1、则必须先执行此操作 <block ref="44a31a9a881af2f85b504df3b697bf3f" category="inline-link-macro-rx"></block> 然后使用NetApp Hybrid Cloud Control升级到Element 12.5或更高版本。</block>
-  <block id="4b1a9ce7f7fbe6c6a81ef1238b7e421a" category="list-text">您已为计划了足够的时间 <block ref="cff6d63ff47747e8e31df90baa037fdf" category="inline-link-macro-rx"></block> 和 <block ref="64ca0a1c0466cb0bbd500939e8f353f3" category="inline-link-macro-rx"></block> 升级。升级到Element软件12.5或更高版本时、升级过程时间因Element软件版本和固件更新而异。</block>
-  <block id="1dc5194bddfa2cc1355dc4c77a729d38" category="admonition">有关适用于您的硬件的完整固件和驱动程序固件列表，请参见 <block ref="80776e776c76da1f21e9e612d2679ddd" category="inline-link-macro-rx"></block>。</block>
-  <block id="7ef561ec74f917ecad309d4001bff056" category="admonition">在将Element软件升级到版本12.5或更高版本之前、您必须升级到最新的管理服务包。如果要将Element软件更新到版本12.5或更高版本、则需要使用管理服务2.21.61或更高版本才能继续。</block>
-  <block id="35903549c7c7279b49512563cf9bfaca" category="admonition">如果您要将H610S系列节点升级到Element 12.5或更高版本、并且此节点运行的Element软件版本早于11.8、则需要执行此中的其他升级步骤<block ref="f89d7bc8c94108aeb49b4fdeac4ce106" category="inline-link-rx"></block> 用于每个存储节点。如果您运行的是Element 11.8或更高版本、则不需要执行其他升级步骤。</block>
-  <block id="2485371e710ec4ea8989c22e13c02067" category="list-text"><block ref="2485371e710ec4ea8989c22e13c02067" category="inline-link-rx"></block></block>
-  <block id="1dea56720635d200a6c7b3a71efca6ab" category="inline-link">《NetApp Element 软件12.7发行说明》</block>
-  <block id="3e51721b09445e45502532be5e6096fc" category="list-text"><block ref="939f531b35412529043c2c302552fa24" category="inline-link-rx"></block> _new_</block>
-  <block id="6a881248d046a90f573e41d5ebe1362e" category="list-text"><block ref="6a881248d046a90f573e41d5ebe1362e" category="inline-link-rx"></block></block>
-  <block id="6f0ce5bfc09a3a4d8737b564d5879f31" category="inline-link">详细了解Element 12.7中的新增功能</block>
-  <block id="f10aa2cb8c994fef24ceca1ee43e4208" category="admonition">Element软件12.7是最新版本、其中包括安全和系统组件更新、操作改进以及已解决的问题。<block ref="d071d61ca9198e87abb60c485f07eada" category="inline-link-rx"></block>。</block>
   <block id="5c77617ea17cd390f132822ac7f42625" category="inline-link-macro">NetApp HCI 1.11的通知</block>
   <block id="20d4e2a80ba0cec87b124d5e3390c44e" category="list-text"><block ref="20d4e2a80ba0cec87b124d5e3390c44e" category="inline-link-macro-rx"></block></block>
   <block id="153627e79a0ffb6d6ade85f68b50611b" category="inline-link-macro">Element软件12.7.</block>
@@ -6394,12 +6380,21 @@
   <block id="551ab23fd5dd0deb11cabe8a8c2f600d" category="list-text"><block ref="551ab23fd5dd0deb11cabe8a8c2f600d" category="inline-link-macro-rx"></block></block>
   <block id="b3fd978e1e630b556afd6edea55c9c64" category="inline-link-macro">存储固件包2.164的通知</block>
   <block id="03f5f4b1e389bcd74f9c1cc6e865637f" category="list-text"><block ref="03f5f4b1e389bcd74f9c1cc6e865637f" category="inline-link-macro-rx"></block></block>
-  <block id="29bba7cbe3dac4ea58cab61272150fe8" category="paragraph">您可以将管理节点从12.3.x或更高版本升级到管理节点12.5或更高版本。</block>
-  <block id="4ff70a8151851ab1e82db6f0eed42808" category="list-text"><block ref="810c9a492c31390e08f0e76e7c298785" category="inline-xref-macro-rx"></block></block>
-  <block id="2a67edcd39483da3b7c2244d1a853ca7" category="section-title">将管理节点从12.3.x或更高版本升级到版本12.5或更高版本</block>
-  <block id="00986f242d79556b370e046857ac478c" category="paragraph">您可以将管理节点从12.3.x或更高版本原位升级到版本12.5或更高版本、而无需配置新的管理节点虚拟机。</block>
-  <block id="162101c4a12e19388bdcdc0495ccc2ae" category="admonition">Element 12.5或更高版本的管理节点是可选的升级。现有部署不需要此功能。</block>
-  <block id="cd847f70c9955e37a7a701eee9f2cd67" category="list-text">您要升级的管理节点为 12.0 版，并使用 IPv4 网络。管理节点版本12.5或更高版本不支持IPv6。</block>
-  <block id="94f146a196ada89ebff337e86bd67dd8" category="list-text">如果要将管理节点更新到版本12.5或更高版本、则需要使用管理服务2.21.61或更高版本继续操作。</block>
-  <block id="b529479350602e9be1d9caa1838edb9b" category="list-text">存储节点正在运行Element 12.3.x或更高版本。</block>
+  <block id="54aa7f2dcdc54ac5abd932a5b6c8b3d7" category="list-text">*升级过程时间*：您已计划足够的时间执行升级。升级到Element软件12.5时、升级过程时间会因您当前的Element软件版本和固件更新而异。</block>
+  <block id="7f6c7867ac3c62c136dad288b3e3298e" category="paragraph">^1^有关适用于您的硬件的完整固件和驱动程序固件列表、请参见<block ref="70c4c9f03a0e1a210c8e6bdafdb7db30" category="inline-link-rx"></block>。</block>
+  <block id="1c0d3ba5e7a44f6ae998504b246b1227" category="admonition">从Element 12.5开始、Element软件升级不再支持NetApp HealthTools。如果您运行的是Element 11.0或11.1、则必须先执行此操作 <block ref="44a31a9a881af2f85b504df3b697bf3f" category="inline-link-macro-rx"></block> 然后使用NetApp Hybrid Cloud Control升级到Element 12.5。</block>
+  <block id="a8c7f4c70c59120de0b33efda8af8aa5" category="list-text">您已为计划了足够的时间 <block ref="cff6d63ff47747e8e31df90baa037fdf" category="inline-link-macro-rx"></block> 和 <block ref="64ca0a1c0466cb0bbd500939e8f353f3" category="inline-link-macro-rx"></block> 升级。升级到Element软件12.5时、升级过程时间因Element软件版本和固件更新而异。</block>
+  <block id="3c22f77849e3b66d2e0c9c63419afb53" category="admonition">有关适用于您的硬件的完整固件和驱动程序固件列表，请参见<block ref="70c4c9f03a0e1a210c8e6bdafdb7db30" category="inline-link-rx"></block>。</block>
+  <block id="7970314795c697c589f52cd629d4a341" category="admonition">在将Element软件升级到版本12.5之前、您必须升级到最新的管理服务包。如果要将Element软件更新到版本12.5、则需要使用管理服务2.20.69或更高版本继续操作。</block>
+  <block id="5698bc375e8d546422c418c82337e349" category="admonition">如果您要将H610S系列节点升级到Element 12.5、并且此节点运行的Element软件版本早于11.8、则需要执行此中的其他升级步骤<block ref="f89d7bc8c94108aeb49b4fdeac4ce106" category="inline-link-rx"></block> 用于每个存储节点。如果您运行的是Element 11.8或更高版本、则不需要执行其他升级步骤。</block>
+  <block id="9203ca429e11584ecc455e2f24e8ab6b" category="list-text"><block ref="2485371e710ec4ea8989c22e13c02067" category="inline-link-rx"></block> _new_</block>
+  <block id="f8e8ebc61e5eb8b12488dfac5a827259" category="list-text"><block ref="6a881248d046a90f573e41d5ebe1362e" category="inline-link-rx"></block> _new_</block>
+  <block id="90c2dc9b8e4f7b029c80f8c7488a4b58" category="paragraph">您可以将管理节点从12.3.x版升级到管理节点12.5.</block>
+  <block id="8802b9126d6080e36bb95641f40cfab3" category="list-text"><block ref="54df05cfe3df35112175e19c0aa861b7" category="inline-xref-macro-rx"></block></block>
+  <block id="e94fb483edf44bcb1d0066bfff1ffe18" category="section-title">将管理节点从12.3.x升级到版本12.5.</block>
+  <block id="e071a52c7e2ea747fe3b237e04bcec11" category="paragraph">您可以将管理节点从12.3.x版原位升级到版本12.5、而无需配置新的管理节点虚拟机。</block>
+  <block id="cd6641a5f66844b15e37f50c79eafa6e" category="admonition">Element 12.5管理节点是一种可选升级。现有部署不需要此功能。</block>
+  <block id="02bd6928c03c8f53c18f8a5143bdd5f4" category="list-text">您要升级的管理节点为 12.0 版，并使用 IPv4 网络。管理节点版本12.5不支持IPv6。</block>
+  <block id="1e92b13cdf15b50caf5e299263e754d4" category="list-text">如果要将管理节点更新到版本12.5、则需要管理服务2.20.69或更高版本才能继续。</block>
+  <block id="dfa645595ef398bf7b6f3c49d39a3426" category="list-text">存储节点正在运行Element 12.3或更高版本。</block>
 </blocks>
