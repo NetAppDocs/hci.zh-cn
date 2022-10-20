@@ -5942,7 +5942,6 @@
   <block id="94accfc9ce60fbdbc6b912533ff89998" category="list-text">重新启动期间、按* F11 *选择启动选项并加载计算固件包。</block>
   <block id="4489a95481ba0e8e951ca2cdc4403b89" category="list-text"><block ref="4489a95481ba0e8e951ca2cdc4403b89" category="inline-link-rx"></block></block>
   <block id="b7fe022e3d13a1a7248fb1583851f437" category="inline-link">《 NetApp Element 软件 11.8.2 发行说明》</block>
-  <block id="96a6137975cbcfe6dbff95b85cf1b6bf" category="list-text"><block ref="5ed2b0be7714cf9bfe94c6d0660549bb" category="inline-link-rx"></block> _new_</block>
   <block id="0f0e809fbd346b6319776f0b02355216" category="inline-link">《 NetApp Element 软件 11.8.1 发行说明》</block>
   <block id="6ae2e484807ab9e500e1e9aa73aa6354" category="list-text"><block ref="6ae2e484807ab9e500e1e9aa73aa6354" category="inline-link-rx"></block></block>
   <block id="7941eda6d75aeac7fd5d3f88cb08cb39" category="list-text"><block ref="7941eda6d75aeac7fd5d3f88cb08cb39" category="inline-link-rx"></block></block>
@@ -5985,7 +5984,6 @@
   <block id="831b7fafcb48c5cdc3232392066936d8" category="inline-link-macro">存储固件包2.150注意事项</block>
   <block id="ce22f95c04c4b1b4db9fa2b54e703681" category="list-text"><block ref="ce22f95c04c4b1b4db9fa2b54e703681" category="inline-link-macro-rx"></block></block>
   <block id="c6b05958d5d84e06da847e5e05b865f8" category="inline-link-macro">计算固件包2.154.4发行说明</block>
-  <block id="4249bb54f0106bb7ec8845d90f3f6dc3" category="list-text"><block ref="75dde1dc17bd100ca4331fd989a91f97" category="inline-link-macro-rx"></block> _new_</block>
   <block id="a4f57cecae9cc51dbe0e706f0c125ec9" category="paragraph">存储固件包版本2.150包含H410S (PE-14168)的严重错误修复。请参见<block ref="864249002c2349e2873390db3f84414f" category="inline-link-rx"></block> 了解更多详细信息。您可以按照中的说明升级存储固件 <block ref="7b278358318478c3f88cee9434341a35" category="inline-link-macro-rx"></block>。</block>
   <block id="04435ca341320fdf8ae3f7ed2b34efab" category="admonition">NetApp Hybrid Cloud Control需要最新的管理服务包。在将计算节点上的固件升级到版本2.154.4之前、您必须升级到最新的管理服务包。如果要将计算节点上的固件升级到版本2.154.4、则需要使用管理服务2.2才能继续。</block>
   <block id="1c1dee2a250a78c000e763a2c9f3c413" category="paragraph">2.154.4版包含常规错误修复。</block>
@@ -6383,4 +6381,6 @@
   <block id="54c78d15a850ddddfc9da22742280908" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.20.69开始、您必须先接受并保存此EULA、然后才能使用NetApp混合云控制UI或API运行Element存储运行状况检查：</block>
   <block id="b1dc794dd924da27c3e3280ab948e305" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.20.69开始、您必须先接受并保存此EULA、然后才能使用NetApp Hybrid Cloud Control UI或API运行计算节点运行状况检查：</block>
   <block id="19675be2a917a2efeeead44ff5060fe2" category="list-text"><block ref="19675be2a917a2efeeead44ff5060fe2" category="inline-link-macro-rx"></block></block>
+  <block id="5ed2b0be7714cf9bfe94c6d0660549bb" category="list-text"><block ref="5ed2b0be7714cf9bfe94c6d0660549bb" category="inline-link-rx"></block></block>
+  <block id="75dde1dc17bd100ca4331fd989a91f97" category="list-text"><block ref="75dde1dc17bd100ca4331fd989a91f97" category="inline-link-macro-rx"></block></block>
 </blocks>
