@@ -6367,7 +6367,6 @@
   <block id="46e87a91de6f38f3b1344d05a59270dd" category="inline-link">NetApp HCI 1.9文档</block>
   <block id="fc55c296a158a74f2203216a080cac11" category="paragraph">对于现有的Rancher部署、从管理服务2.21.61开始、不再支持Rancher。如果您升级到管理服务2.21.61、则无法使用NetApp混合云控制来管理、监控或升级现有部署的Rancher、也无法在NetApp HCI 系统上执行新部署。如果您已在NetApp HCI 系统上部署Rancher并运行管理服务2.20.69或更早版本、则可以继续使用管理、监控和升级Rancher<block ref="366a8df179e5c8339fa05bf5fe38a812" category="inline-link-rx"></block>。</block>
   <block id="2c2631f50f8a871f30b75888dfbcea96" category="inline-link-macro">管理服务2.21.61的通知(适用于VMware vCenter Server的NetApp Element 插件4.10.12)</block>
-  <block id="5a4d1edee05c62a7171ceb8c43afb590" category="list-text"><block ref="5a4d1edee05c62a7171ceb8c43afb590" category="inline-link-macro-rx"></block></block>
   <block id="d6802e127914e53f73aa2f2db8cb5e44" category="paragraph">从管理服务2.20.69开始、您必须先接受并保存最终用户许可协议(EULA)、然后才能使用NetApp Hybrid Cloud Control UI或API升级管理服务：</block>
   <block id="29bba7cbe3dac4ea58cab61272150fe8" category="paragraph">您可以将管理节点从12.3.x或更高版本升级到管理节点12.5或更高版本。</block>
   <block id="4ff70a8151851ab1e82db6f0eed42808" category="list-text"><block ref="810c9a492c31390e08f0e76e7c298785" category="inline-xref-macro-rx"></block></block>
@@ -6383,4 +6382,5 @@
   <block id="edb046160eb6ed03c39de5860e72e509" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.20.69开始、您必须先接受并保存此EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级Rancher部署：</block>
   <block id="54c78d15a850ddddfc9da22742280908" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.20.69开始、您必须先接受并保存此EULA、然后才能使用NetApp混合云控制UI或API运行Element存储运行状况检查：</block>
   <block id="b1dc794dd924da27c3e3280ab948e305" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.20.69开始、您必须先接受并保存此EULA、然后才能使用NetApp Hybrid Cloud Control UI或API运行计算节点运行状况检查：</block>
+  <block id="19675be2a917a2efeeead44ff5060fe2" category="list-text"><block ref="19675be2a917a2efeeead44ff5060fe2" category="inline-link-macro-rx"></block></block>
 </blocks>
