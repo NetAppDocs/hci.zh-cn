@@ -2,14 +2,14 @@
 sidebar: sidebar 
 permalink: docs/task_hcc_upgrade_management_node.html 
 summary: 在 NetApp HCI 系统升级过程中，您可以升级管理节点。 
-keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, 10, 11.0, 11.1, 11.3, 11.5, 11.7, 12.0, 12.2, 12.3, 12.3.1, 12.3.2, 12.3.x, 12.5 
+keywords: netapp, hci, on premise, cluster, management node, mNode, upgrade, 10, 11.0, 11.1, 11.3, 11.5, 11.7, 12.0, 12.2, 12.3, 12.3.1, 12.3.2, 12.3.x, 12.5, 12.7 
 ---
 = 升级管理节点
 :allow-uri-read: 
 
 
 [role="lead"]
-您可以将管理节点从12.3.x版升级到管理节点12.5.
+您可以将管理节点从12.3.x或更高版本升级到管理节点12.5或更高版本。
 
 升级存储集群上的 Element 软件不再需要升级管理节点操作系统。您只需将管理服务升级到最新版本、即可使用NetApp Hybrid Cloud Control执行Element升级。如果您希望出于安全修复等其他原因升级管理节点操作系统，请按照适用于您的方案的管理节点升级操作步骤进行操作。
 
@@ -18,7 +18,7 @@ NOTE: 如果您需要有关升级管理节点12.2或更早版本的信息、请�
 
 选择以下选项之一：
 
-*  a management node to version 12.5 from 12.3.x
+*  a management node to version 12.5 or later from version 12.3.x or later
 *  authentication using the management node REST API
 +
 如果您已按*顺序*更新(1)管理服务版本和(2) Element存储版本、并希望*保留*现有管理节点、请选择此选项：
@@ -30,28 +30,28 @@ NOTE: 如果您未依次更新管理服务和 Element 存储，则无法使用�
 
 
 
-== 将管理节点从12.3.x升级到版本12.5.
+== 将管理节点从12.3.x或更高版本升级到版本12.5或更高版本
 
-您可以将管理节点从12.3.x版原位升级到版本12.5、而无需配置新的管理节点虚拟机。
+您可以将管理节点从12.3.x或更高版本原位升级到版本12.5或更高版本、而无需配置新的管理节点虚拟机。
 
 
-NOTE: Element 12.5管理节点是一种可选升级。现有部署不需要此功能。
+NOTE: Element 12.5或更高版本的管理节点是可选的升级。现有部署不需要此功能。
 
 .您需要什么？ #8217 ；将需要什么
 * 管理节点 VM 的 RAM 为 24 GB 。
-* 您要升级的管理节点为 12.0 版，并使用 IPv4 网络。管理节点版本12.5不支持IPv6。
+* 您要升级的管理节点为 12.0 版，并使用 IPv4 网络。管理节点版本12.5或更高版本不支持IPv6。
 +
 
 TIP: 要检查管理节点的版本，请登录到管理节点并在登录横幅中查看 Element 版本号。
 
 * 您已使用 NetApp Hybrid Cloud Control 将管理服务捆绑包更新为最新版本。您可以从以下 IP 地址访问 NetApp Hybrid Cloud Control ： ` https://<ManagementNodeIP>`
-* 如果要将管理节点更新到版本12.5、则需要管理服务2.20.69或更高版本才能继续。
+* 如果要将管理节点更新到版本12.5或更高版本、则需要使用管理服务2.21.61或更高版本继续操作。
 * 您已按照中的说明配置了一个额外的网络适配器（如果需要） link:task_mnode_install_add_storage_NIC.html["配置其他存储 NIC"]。
 +
 
 NOTE: 如果 eth0 无法路由到 SVIP ，则永久性卷可能需要额外的网络适配器。在 iSCSI 存储网络上配置一个新的网络适配器，以便配置永久性卷。
 
-* 存储节点正在运行Element 12.3或更高版本。
+* 存储节点正在运行Element 12.3.x或更高版本。
 
 
 .步骤
