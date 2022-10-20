@@ -20,7 +20,7 @@ keywords: netapp, compute prechecks, compute node upgrade, netapp hci
 * *管理服务*：您已更新到最新的管理服务包(2.11或更高版本)。
 * *管理节点*：正在运行管理节点11.3或更高版本。
 * * Element Software*：您的存储集群运行的是NetApp Element 软件11.3或更高版本。
-* *最终用户许可协议(EULA)*：从管理服务来看、在使用NetApp混合云控制UI或API运行计算节点运行状况检查之前、您必须接受并保存此EULA：
+* *最终用户许可协议(EULA)*：从管理服务2.20.69开始、您必须先接受并保存此EULA、然后才能使用NetApp Hybrid Cloud Control UI或API运行计算节点运行状况检查：
 +
 .. 在Web浏览器中打开管理节点的IP地址：
 +

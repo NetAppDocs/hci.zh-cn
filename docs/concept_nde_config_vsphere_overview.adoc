@@ -28,7 +28,8 @@ NOTE: 如果您的 vSphere 清单配置使用文件夹将 NetApp HCI 集群存�
 
 如果您安装新的 vCenter Server ，则可以在网络配置期间安装 vSphere 标准交换机或 vSphere 分布式交换机（ vSphere Distributed Switch ， VDS ）。通过 VDS ，可以在部署 NetApp HCI 后对虚拟机网络配置进行简化的集中管理。NetApp HCI 上的云数据服务功能需要使用 VDS ；云数据服务不支持 vSphere 标准交换机。
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/Firmware_and_driver_versions_in_NetApp_HCI_and_NetApp_Element_software["NetApp HCI 和 NetApp Element 软件中的固件和驱动程序版本"^]

@@ -28,35 +28,8 @@
   <block id="7f89ab7caf46679f148781ae0236ae02" category="paragraph">在集群上启用 FIPS 140-2 操作模式后，集群将激活 NetApp 加密安全模块（ NetApp Cryptographic Security Module ， NCSM ），并利用 FIPS 140-2 1 级认证加密通过 HTTPS 与 NetApp Element UI 和 API 进行所有通信。您可以将 `EnableFeature` Element API 与 `FIPS` 参数结合使用，以启用 FIPS 140-2 HTTPS 加密。在具有 FIPS 兼容硬件的存储集群上，您还可以使用 `EnableFeature` Element API 和 `FipsDrives` 参数为空闲数据启用 FIPS 驱动器加密。</block>
   <block id="d640d68c0a9a05863d67fe4c94138264" category="inline-link">创建支持 FIPS 驱动器的集群</block>
   <block id="1c337717d6208a12caf7e07e628a39f2" category="inline-link">EnableFeature Element API</block>
-  <block id="67b5bd6ce3ff9e8f5296cb29c4514bcf" category="summary">在 NetApp HCI 上部署 Rancher 可部署 Rancher 控制平面（也称为 Rancher 服务器），从而可以创建内部 Kubernetes 集群。</block>
   <block id="8211faa645efca9f476617d0cf044b3b" category="doc">NetApp HCI 上的 Rancher 概述</block>
-  <block id="5bcd5219127af1f7d2f06b8de54afece" category="paragraph">Rancher 是一个完整的软件堆栈，适用于采用容器的团队。Rancher 可解决跨不同基础架构管理多个 Kubernetes 集群所面临的操作和安全挑战，同时为 DevOps 团队提供用于运行容器化工作负载的集成工具。</block>
-  <block id="704320638247449bbee9e1ecdeb9d60f" category="paragraph">在 NetApp HCI 上部署 Rancher 可部署 Rancher 控制平面（也称为 _Rancher 服务器 _ ），并可用于创建内部 Kubernetes 集群。您可以使用 NetApp Hybrid Cloud Control 部署 Rancher 控制平台。</block>
-  <block id="efcb39009590c2e3bf5edeed3b5e7064" category="paragraph">部署完成后，使用 Rancher 控制平台配置，管理和监控开发和运营团队使用的 Kubernetes 集群。开发和运营团队可以使用 Rancher 在 NetApp HCI 自身，公有云提供商或 Rancher 支持的任何其他基础架构上的用户集群上执行活动。</block>
-  <block id="529d915c504ffc76809d0188a2e52d2e" category="section-title">Rancher 在 NetApp HCI 上的优势</block>
-  <block id="355d039b17ec418ab6f6394db3946421" category="list-text">易于安装：您无需了解如何安装和配置 Rancher 。您可以部署由 NetApp HCI 和 Rancher 联合开发的基于模板的实施。</block>
-  <block id="27c15032d464f09f9f2e6db5eef75fad" category="list-text">生命周期管理：在手动实施 Rancher 时，不会自动更新 Rancher 服务器应用程序或 Rancher Kubernetes Engine （ RKE） 集群。NetApp HCI 上的 Rancher 可以更新管理集群，包括 Rancher 服务器和 RKE.</block>
-  <block id="76046404f3761cc9f001818453024919" category="section-title">在 NetApp HCI 上使用 Rancher 可以执行的操作</block>
-  <block id="b22d3ad22b682f4170d5e9f0f2c38aec" category="paragraph">借助 NetApp HCI 上的 Rancher ，您可以：</block>
-  <block id="408606ba7d5406efb263f7cb4fd7d087" category="list-text">跨云提供商和私有云部署服务。</block>
-  <block id="cdb33fea39ecf3efbee263f0f42c2409" category="list-text">在混合云架构中移植应用程序和数据，而不受云位置的限制，而不会影响服务级别协议。</block>
-  <block id="be228cc36321b082d5e0db98fb0f64b4" category="list-text">自行启动云原生应用程序。</block>
-  <block id="60695990d81b817604ae6e7ebc486e56" category="list-text">集中管理多个集群（新集群和现有集群）。</block>
-  <block id="0992f98b508a69c37cc88942dee557e5" category="list-text">对基于 Kubernetes 的混合云应用程序执行流程编排。</block>
-  <block id="7923fe89d0387d583dd12446f9e5d967" category="section-title">技术支持选项</block>
-  <block id="c113f6c0ab2794d28923e41c2a1682b8" category="paragraph">在 NetApp HCI 和 Kubernetes 开源软件上使用 Rancher 可以免费部署和使用。不需要许可证密钥。</block>
-  <block id="c00ab41e3a1e2e49cde5e7dce97d1718" category="paragraph">您可以选择 NetApp Rancher 支持选项以获得基于核心的 Rancher 企业级支持。</block>
   <block id="c713fd86796be3114956ca58ac1200bd" category="admonition">您的 NetApp Support Edge 协议不包含 Rancher 支持。有关选项，请联系 NetApp 销售人员或您的经销商。如果您从 NetApp 购买 Rancher 支持，则会收到一封电子邮件，其中包含相关说明。</block>
-  <block id="a4b32bb7d678cb350ba416ef564dae1e" category="section-title">基于 NetApp HCI 架构和组件的 Rancher</block>
-  <block id="16245d4ca56fc5678611c846fd86495e" category="paragraph">下面简要介绍了 NetApp HCI 上的 Rancher 的各种组件：</block>
-  <block id="53661e2aebd7df6c2380d026a49ac1af" category="image-alt">基于 NetApp HCI 架构的 Rancher</block>
-  <block id="555a7df8e9fa21999ac02bfcd9fc7d8b" category="list-text">* NetApp 混合云控制 * ：通过此界面，您可以在 NetApp HCI 和 NetApp Element 软件上部署 Rancher ，这是 NetApp HCI 上的 Rancher 所需的。</block>
-  <block id="f41936761d48d918db1be594571d7214" category="admonition">您还可以使用 NetApp Hybrid Cloud Control 升级管理服务，扩展系统，收集日志和监控安装。</block>
-  <block id="0912b0b3b9eb156b60b7fdeae4ed5ea0" category="list-text">* 管理服务 * ：管理服务在管理节点上运行，使您能够使用 NetApp 混合云控制在 NetApp HCI 上部署 Rancher 。</block>
-  <block id="0018b5eb0142618d0bea60d9d3a1f3c2" category="list-text">* 管理集群 * ： NetApp HCI 上的 Rancher 在 Rancher 管理集群上部署三个虚拟机，您可以使用 NetApp Hybrid Cloud Control ， vCenter Server 或 Rancher 用户界面查看这些虚拟机。管理集群虚拟机托管 Rancher 服务器， Rancher Kubernetes 引擎（ RKEE ）和 Linux 操作系统。</block>
-  <block id="7448e6c787ab3546fad0faf12089d6ed" category="admonition">为了获得最佳性能和更高的安全性，请考虑为 Rancher 管理服务器使用专用的 Kubernetes 集群。您不应在管理集群上运行用户工作负载。</block>
-  <block id="ceb7a6f0a215fdebdc64f7bd19e99874" category="list-text">* 用户集群 * ：下游 Kubernetes 用户集群运行您的应用程序和服务。从 Rancher 部署或导入到 Rancher 的任何集群都是用户集群。</block>
-  <block id="33d830d9999fcaf9e4c8458151f204e0" category="list-text">* Trident 目录： Trident 目录可供 NetApp HCI 上的 Rancher 使用，并在用户集群中运行。包含此目录可简化向用户集群部署 Trident 的过程。</block>
   <block id="9c83e144e5481ac6766f4055e566594d" category="floating-title">了解更多信息</block>
   <block id="9e478628fa694f82e9fea112dfd76711" category="inline-link">有关架构的 Rancher 文档</block>
   <block id="2efdfe14eb05d4ba8b751f047bafaaa5" category="list-text"><block ref="2efdfe14eb05d4ba8b751f047bafaaa5" category="inline-link-rx"></block></block>
@@ -5075,7 +5048,6 @@
   <block id="b823f176b294e16e1fa857ec3ef1c067" category="paragraph">如果您仅为部分 NetApp HCI 计算资源购买了 Rancher 支持，则需要在 VMware vSphere 中采取措施，以确保 NetApp HCI 上的 Rancher 及其受管用户集群仅在您已购买 Rancher 支持的主机上运行。有关如何通过将计算工作负载限制在特定主机上来帮助确保这一点的信息，请参见 VMware vSphere 文档。</block>
   <block id="4890b06e0bef2ccd30ddebf19fa9e652" category="summary">您可以使用 REST API 从管理 ndoe 上运行的服务检索日志。</block>
   <block id="7eada9b3aeba75afea1bb6e56efd98a1" category="paragraph">您可以使用 REST API 从管理节点上运行的服务检索日志。您可以从所有公有服务中提取日志，也可以指定特定服务并使用查询参数更好地定义返回结果。</block>
-  <block id="4ac581155f2c6a4a3a056078e2b122a1" category="list-text">在管理节点上打开 REST API UI ：</block>
   <block id="fe5314e1f2b52008d7c6c1dc49232535" category="list-text">如果尚未填充值，请以 mnode-client 的形式输入客户端 ID 。</block>
   <block id="09cd4d07205bec65818c2a8ba07333f0" category="list-text">选择 * 获取 /logs* 。</block>
   <block id="2f3ef07097248f3764b29f17406b4ac0" category="list-text">指定以下参数：</block>
@@ -5534,7 +5506,6 @@
   <block id="cfe80b2a0cabf734adc7b7c1613cfe4f" category="sidebar">使用 NetApp HCI</block>
   <block id="930dca22f6f735a61fd8f484808fecb3" category="sidebar">使用 NetApp Hybrid Cloud Control 进行管理</block>
   <block id="6cb5dfacb4ee1684b5483221bfcf580c" category="sidebar">使用适用于 vCenter Server 的 NetApp Element 插件</block>
-  <block id="4584c33b1e8065c9dccf2c31d92f9dbf" category="sidebar">使用 Rancher</block>
   <block id="d02b5df8c0bf5a555ea650be898817f7" category="sidebar">展开 NetApp HCI</block>
   <block id="748ace58318ab9d82392d680b07e89e6" category="sidebar">升级 NetApp HCI</block>
   <block id="f7731734f4507319f744fe2c8158536a" category="sidebar">对 NetApp HCI 和 Rancher 进行故障排除</block>
@@ -5756,7 +5727,6 @@
   <block id="772251791cdb07bc2fc3967b8243ac21" category="list-text">选择 * 更新 * 选项卡。</block>
   <block id="633d466e4a34f3db8d313150633fe669" category="list-text">选择 * 从文件上传 * 。</block>
   <block id="0965e8793c3a408e2c948a5aa3f43df7" category="list-text">浏览到先前下载的脱机捆绑包并选择 * 导入 * 。</block>
-  <block id="38be14292d8d278a5d7b04a84bab839d" category="admonition">升级到 VMware vCenter Server 7.0 U3 后，适用于 vCenter Server 的所有版本的 NetApp Element 插件都无法部署。要解决此问题描述 ，请参见<block ref="770c119932f7fa962a47dc0795db1af6" category="inline-link-rx"></block>。</block>
   <block id="abca9e82408ff65627f936784141931b" category="inline-xref">USB 驱动器</block>
   <block id="e06e1c211afdb87bf0364232088b0c36" category="inline-xref">BMC 用户界面</block>
   <block id="7f10e6e99f08f394e823f7104513126a" category="paragraph">在遵循此操作步骤之前，您应了解 <block ref="6f73bacaba2e470844b654fcbffb809f" category="inline-link-macro-rx"></block> 以及是否要使用它们。永久性卷是可选的，但建议在虚拟机（ VM ）丢失时用于管理节点配置数据恢复。</block>
@@ -5785,7 +5755,6 @@
   <block id="f6a63a9052785a40e6a7b718acb627b9" category="list-text">*管理服务*：您已更新到最新的管理服务包(2.11或更高版本)。</block>
   <block id="2ce38f720dba5ff083bfe1933d11eacc" category="list-text">*管理节点*：正在运行管理节点11.3或更高版本。</block>
   <block id="a141fe1c6179ed3e09aa6043ad364ac6" category="list-text">* Element Software*：您的存储集群运行的是NetApp Element 软件11.3或更高版本。</block>
-  <block id="53b9f06d2f4963cb4351ee247eee6fc1" category="list-text">*最终用户许可协议(EULA)*：从管理服务来看、在使用NetApp混合云控制UI或API运行计算节点运行状况检查之前、您必须接受并保存此EULA：</block>
   <block id="c3dfd82361c52d5d3d1551c20c83f1a6" category="list-text">在Web浏览器中打开管理节点的IP地址：</block>
   <block id="be441559765f3e52d513b155b4b59981" category="list-text">此时将弹出EULA。向下滚动、选择*我接受当前更新和所有未来更新*、然后选择*保存*。</block>
   <block id="06194f109ff7ed4270c1e5f89cbe9e74" category="admonition">如果您接受EULA、则会在所有未来更新中记录此EULA、并启用自动下载功能。您将收到有关NetApp软件更新和升级的更新、您可以在方便时自行决定安装这些更新。您可以通过禁用与NetApp联机软件存储库的网络连接来禁用自动下载功能。</block>
@@ -5794,15 +5763,10 @@
   <block id="c36b19231a4d44de8c3649310ba038d9" category="paragraph">计算运行状况检查、无论是通过NetApp Hybrid Cloud Control还是API方法执行、都要对每个节点执行以下检查。根据您的环境，可能会跳过其中一些检查。您应在解决检测到的任何问题后重新运行运行运行运行状况检查。</block>
   <block id="f9ebc0753ac68177e6d0f29d964386bb" category="list-text">在Web浏览器中打开管理节点的IP地址。例如：</block>
   <block id="b7d9a056c7aac680c6cb5b95799e2642" category="list-text">在Web浏览器中打开管理节点的IP地址。</block>
-  <block id="573d529ded9f2b66a55c1d25a9498c72" category="paragraph">从管理服务2.2开始、您必须先接受并保存最终用户许可协议(EULA)、然后才能使用NetApp Hybrid Cloud Control UI或API升级管理服务：</block>
   <block id="c7c27143d481078e23cd4144c0df2f10" category="inline-link">vCenter插件4.9发行说明</block>
-  <block id="07cc0d856c010a1ee3ff9ee8f5157778" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.2开始、您必须先接受并保存EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级存储固件：</block>
-  <block id="0b2f19b801c71ab42a03e5347b8302ee" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.2开始、您必须先接受并保存EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级计算节点固件：</block>
   <block id="62403656f60d86891c7c9ad1ffa2f44f" category="summary">您可以使用NetApp Hybrid Cloud Control UI或REST API UI在管理节点上禁用和启用SSH功能、或者使用REST API UI确定SSH支持连接功能的状态。</block>
-  <block id="de7e6ba1aa5db3f3ecd18e0db7533988" category="paragraph">从管理服务2.2开始、您可以使用NetApp Hybrid Cloud Control UI在管理节点上启用和禁用SSH功能。</block>
   <block id="3c94e6ce915e7526e3d52ade19785a73" category="list-text">* NetApp Hybrid Cloud Control权限*：您拥有管理员权限。</block>
   <block id="ac7ca17dbb21ace6afb8d4dca6cabea3" category="list-text">*管理服务更新*：</block>
-  <block id="b5fac2f2425ddc92784c5c7e5d8d557e" category="list-text">要使用NetApp Hybrid Cloud Control UI、您已更新<block ref="f6e495ec9a99fcd5692d41358780e884" category="inline-link-rx"></block> 到版本2.20。</block>
   <block id="43fe8cb39bfeedc36b52f882e1fa6566" category="list-text">要使用REST API UI、您已更新<block ref="f6e495ec9a99fcd5692d41358780e884" category="inline-link-rx"></block> 到 2.17 版。</block>
   <block id="22b10ea78e232391f766c1d30f89f143" category="list-text"><block ref="ceecdddcb31feb92e45b5238bea4a2dd" category="inline-xref-macro-rx"></block></block>
   <block id="d67941a2c5c95f11d7bc3ffe04663673" category="list-text"><block ref="2a0c666d485e7ff160ef18f3e883e750" category="inline-xref-macro-rx"></block></block>
@@ -5815,11 +5779,8 @@
   <block id="c2ec3d3d7a3c559651551d3d9f14d2b9" category="list-text">完成故障排除后、在*管理节点的支持访问*屏幕中、切换交换机以禁用管理节点SSH。</block>
   <block id="bd1ea3213926ecdb3e25a30ccf5157d9" category="section-title">使用API在管理节点上禁用或启用SSH功能</block>
   <block id="526719701f51876f46433bfa55249a45" category="section-title">使用API确定管理节点上SSH功能的状态</block>
-  <block id="a3affadb8671444f8e45462ea7a0de50" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.2开始、您必须先接受并保存EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级Element软件：</block>
-  <block id="2620c9636e86b36feea9216102a5bec7" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.2开始、您必须先接受并保存EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级Rancher部署：</block>
   <block id="f4926605dca5caffd5d52e790b9eb676" category="list-text">*管理服务*：您已更新到最新的管理服务包(2.10.27或更高版本)。</block>
   <block id="cd87cb364b82cfd7ff555087f3e88e59" category="list-text">* Element Software*：您的集群版本运行的是NetApp Element 软件11.3或更高版本。</block>
-  <block id="84d8587fb67731ba50262a0ffeacb7ac" category="list-text">*最终用户许可协议(EULA)*：从管理服务来看、在使用NetApp混合云控制UI或API运行Element存储运行状况检查之前、您必须接受并保存此EULA：</block>
   <block id="95f27799ddeb01b37a606c94f6349232" category="paragraph">NetApp Hybrid Cloud Control Web UI和API可从NetApp联机软件存储库下载软件包。因此，根据内容交付网络，某些 URL 或 IP 地址可能会解析为其他 URL 或 IP 地址。如果可能，您应与网络工程师合作，使用以下常规步骤将这些 URL 或 IP 地址添加到防火墙规则中：</block>
   <block id="468e2827e5dc0169c965a021b0f015d8" category="list-text">使用wget或cURL实用程序访问URL (例如support-sg-nawest.netapp.com)。</block>
   <block id="887a9d2ae67bb61c76d5d0032a4b7b0f" category="list-text">检查连接、如以下示例所示：</block>
@@ -5832,7 +5793,6 @@
   <block id="a1b1a9120bbc7238c7b6088d7223d194" category="list-text">`https://support-sg-naeast.netapp.com`</block>
   <block id="219033cd316af31663b173765be6dd78" category="list-text">`https://support-sg-nawest.netapp.com`</block>
   <block id="651784e7a6ddc6534201a6e8d1fbf248" category="paragraph">对于已注册适用于vCenter Server的NetApp Element 插件的现有vSphere环境、您可以在首次更新包含此插件服务的管理服务包后更新此插件注册。</block>
-  <block id="fe7edd9e3b4efc71766ba03d23b51c44" category="list-text">您要升级到适用于VMware vCenter Server 4.9、4.8、4.7、4.6、4.5或4.4的Element插件。</block>
   <block id="8eeabd6de4a231c731b82c27ee25bbdb" category="admonition">此插件与适用于VMware vCenter Server 4.6、4.7和4.8的VMware vCenter Server 6.5 for Element插件不兼容。</block>
   <block id="778b8320a31f425d9021c72ba59dd8bd" category="cell">存储节点</block>
   <block id="c4303966c5d95835840cedbb4010f17d" category="cell">当前Element软件版本</block>
@@ -5905,7 +5865,6 @@
   <block id="9676fc811bea74225536cdd128daebc0" category="list-text"><block ref="9676fc811bea74225536cdd128daebc0" category="inline-link-rx"></block></block>
   <block id="875455659aea2dfd3f63e40de150b31c" category="inline-link">《NetApp Element 软件12.5发行说明》</block>
   <block id="9de5606ae9b23ff6651244b85bd5dae8" category="list-text"><block ref="9de5606ae9b23ff6651244b85bd5dae8" category="inline-link-rx"></block></block>
-  <block id="e2b4747c263485de7011e8018c523cdd" category="list-text"><block ref="779aeeb0a67ee84cae70c2361654111d" category="inline-link-rx"></block> _new_</block>
   <block id="fe2bcf6f89f4e1eec12e45df5946ee12" category="admonition">从 Element 12.3.1 开始，系统会自动执行子步骤（ a ）到（ e ）。对于管理节点12.3.1或更高版本、请继续执行 <block ref="e7aead760c231b389589c93842d555c1" category="inline-xref-macro-rx"></block> 以完成时间同步配置。</block>
   <block id="2ee9526aa61dc0808ea0ccf6ccfa2412" category="paragraph">升级存储集群上的 Element 软件不再需要升级管理节点操作系统。您只需将管理服务升级到最新版本、即可使用NetApp Hybrid Cloud Control执行Element升级。如果您希望出于安全修复等其他原因升级管理节点操作系统，请按照适用于您的方案的管理节点升级操作步骤进行操作。</block>
   <block id="659098b38f32597a4df2de3b3c60c8e9" category="inline-link">NetApp HCI 1.9管理节点升级文档</block>
@@ -6380,21 +6339,48 @@
   <block id="551ab23fd5dd0deb11cabe8a8c2f600d" category="list-text"><block ref="551ab23fd5dd0deb11cabe8a8c2f600d" category="inline-link-macro-rx"></block></block>
   <block id="b3fd978e1e630b556afd6edea55c9c64" category="inline-link-macro">存储固件包2.164的通知</block>
   <block id="03f5f4b1e389bcd74f9c1cc6e865637f" category="list-text"><block ref="03f5f4b1e389bcd74f9c1cc6e865637f" category="inline-link-macro-rx"></block></block>
-  <block id="54aa7f2dcdc54ac5abd932a5b6c8b3d7" category="list-text">*升级过程时间*：您已计划足够的时间执行升级。升级到Element软件12.5时、升级过程时间会因您当前的Element软件版本和固件更新而异。</block>
-  <block id="7f6c7867ac3c62c136dad288b3e3298e" category="paragraph">^1^有关适用于您的硬件的完整固件和驱动程序固件列表、请参见<block ref="70c4c9f03a0e1a210c8e6bdafdb7db30" category="inline-link-rx"></block>。</block>
-  <block id="1c0d3ba5e7a44f6ae998504b246b1227" category="admonition">从Element 12.5开始、Element软件升级不再支持NetApp HealthTools。如果您运行的是Element 11.0或11.1、则必须先执行此操作 <block ref="44a31a9a881af2f85b504df3b697bf3f" category="inline-link-macro-rx"></block> 然后使用NetApp Hybrid Cloud Control升级到Element 12.5。</block>
-  <block id="a8c7f4c70c59120de0b33efda8af8aa5" category="list-text">您已为计划了足够的时间 <block ref="cff6d63ff47747e8e31df90baa037fdf" category="inline-link-macro-rx"></block> 和 <block ref="64ca0a1c0466cb0bbd500939e8f353f3" category="inline-link-macro-rx"></block> 升级。升级到Element软件12.5时、升级过程时间因Element软件版本和固件更新而异。</block>
-  <block id="3c22f77849e3b66d2e0c9c63419afb53" category="admonition">有关适用于您的硬件的完整固件和驱动程序固件列表，请参见<block ref="70c4c9f03a0e1a210c8e6bdafdb7db30" category="inline-link-rx"></block>。</block>
-  <block id="7970314795c697c589f52cd629d4a341" category="admonition">在将Element软件升级到版本12.5之前、您必须升级到最新的管理服务包。如果要将Element软件更新到版本12.5、则需要使用管理服务2.20.69或更高版本继续操作。</block>
-  <block id="5698bc375e8d546422c418c82337e349" category="admonition">如果您要将H610S系列节点升级到Element 12.5、并且此节点运行的Element软件版本早于11.8、则需要执行此中的其他升级步骤<block ref="f89d7bc8c94108aeb49b4fdeac4ce106" category="inline-link-rx"></block> 用于每个存储节点。如果您运行的是Element 11.8或更高版本、则不需要执行其他升级步骤。</block>
-  <block id="9203ca429e11584ecc455e2f24e8ab6b" category="list-text"><block ref="2485371e710ec4ea8989c22e13c02067" category="inline-link-rx"></block> _new_</block>
-  <block id="f8e8ebc61e5eb8b12488dfac5a827259" category="list-text"><block ref="6a881248d046a90f573e41d5ebe1362e" category="inline-link-rx"></block> _new_</block>
-  <block id="90c2dc9b8e4f7b029c80f8c7488a4b58" category="paragraph">您可以将管理节点从12.3.x版升级到管理节点12.5.</block>
-  <block id="8802b9126d6080e36bb95641f40cfab3" category="list-text"><block ref="54df05cfe3df35112175e19c0aa861b7" category="inline-xref-macro-rx"></block></block>
-  <block id="e94fb483edf44bcb1d0066bfff1ffe18" category="section-title">将管理节点从12.3.x升级到版本12.5.</block>
-  <block id="e071a52c7e2ea747fe3b237e04bcec11" category="paragraph">您可以将管理节点从12.3.x版原位升级到版本12.5、而无需配置新的管理节点虚拟机。</block>
-  <block id="cd6641a5f66844b15e37f50c79eafa6e" category="admonition">Element 12.5管理节点是一种可选升级。现有部署不需要此功能。</block>
-  <block id="02bd6928c03c8f53c18f8a5143bdd5f4" category="list-text">您要升级的管理节点为 12.0 版，并使用 IPv4 网络。管理节点版本12.5不支持IPv6。</block>
-  <block id="1e92b13cdf15b50caf5e299263e754d4" category="list-text">如果要将管理节点更新到版本12.5、则需要管理服务2.20.69或更高版本才能继续。</block>
-  <block id="dfa645595ef398bf7b6f3c49d39a3426" category="list-text">存储节点正在运行Element 12.3或更高版本。</block>
+  <block id="57f06358fba0b8a8922a0641b09632cd" category="list-text">*升级过程时间*：您已计划足够的时间执行升级。升级到Element软件12.5或更高版本时、升级过程时间会因您当前的Element软件版本和固件更新而异。</block>
+  <block id="dfc6764664999d5ff6cc24317be3ec3f" category="inline-link-macro">NetApp HCI 支持的固件和ESXi驱动程序版本以及NetApp HCI 存储节点的固件版本</block>
+  <block id="ed66ab0c93905c6f580080bcbd749655" category="paragraph">^1^有关适用于您的硬件的完整固件和驱动程序固件列表、请参见 <block ref="80776e776c76da1f21e9e612d2679ddd" category="inline-link-macro-rx"></block>。</block>
+  <block id="47f6196d2c02469142a3352c4f8f17f5" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.20.69开始、您必须先接受并保存此EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级计算节点固件：</block>
+  <block id="cf975bc9efb412ba97aeeb129f06f92a" category="paragraph">从管理服务2.20.69开始、您可以使用NetApp Hybrid Cloud Control UI在管理节点上启用和禁用SSH功能。</block>
+  <block id="742443519c431a58e3020342bebdad42" category="list-text">要使用NetApp Hybrid Cloud Control UI、您已更新<block ref="f6e495ec9a99fcd5692d41358780e884" category="inline-link-rx"></block> 升级到版本2.20.69或更高版本。</block>
+  <block id="de04396568b4d068ad633b9f6d71127c" category="admonition">从Element 12.5开始、Element软件升级不再支持NetApp HealthTools。如果您运行的是Element 11.0或11.1、则必须先执行此操作 <block ref="44a31a9a881af2f85b504df3b697bf3f" category="inline-link-macro-rx"></block> 然后使用NetApp Hybrid Cloud Control升级到Element 12.5或更高版本。</block>
+  <block id="4b1a9ce7f7fbe6c6a81ef1238b7e421a" category="list-text">您已为计划了足够的时间 <block ref="cff6d63ff47747e8e31df90baa037fdf" category="inline-link-macro-rx"></block> 和 <block ref="64ca0a1c0466cb0bbd500939e8f353f3" category="inline-link-macro-rx"></block> 升级。升级到Element软件12.5或更高版本时、升级过程时间因Element软件版本和固件更新而异。</block>
+  <block id="e9dbcfe87022d70bbf15ed6c9f7002e7" category="admonition">升级到VMware vCenter Server 7.0 U3时、Element插件无法部署。要使用Spring Framework 4解决此问题描述 、请参见<block ref="b7be06fbbf9e539cb08ccb11862099e4" category="inline-link-rx"></block>。</block>
+  <block id="b829058e02635e31c81abf49f37e64d2" category="list-text">您要升级到适用于VMware vCenter Server 4.10、4.9、4.8、4.7、4.6的Element插件、 4.5或4.4。</block>
+  <block id="1dc5194bddfa2cc1355dc4c77a729d38" category="admonition">有关适用于您的硬件的完整固件和驱动程序固件列表，请参见 <block ref="80776e776c76da1f21e9e612d2679ddd" category="inline-link-macro-rx"></block>。</block>
+  <block id="2394ff28a38b482ef2918be4c8e7540c" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.20.69开始、您必须先接受并保存此EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级存储固件：</block>
+  <block id="7ef561ec74f917ecad309d4001bff056" category="admonition">在将Element软件升级到版本12.5或更高版本之前、您必须升级到最新的管理服务包。如果要将Element软件更新到版本12.5或更高版本、则需要使用管理服务2.21.61或更高版本才能继续。</block>
+  <block id="62449609bcf95f48fbdbae6dddedcc19" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.20.69开始、您必须先接受并保存此EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级Element软件：</block>
+  <block id="35903549c7c7279b49512563cf9bfaca" category="admonition">如果您要将H610S系列节点升级到Element 12.5或更高版本、并且此节点运行的Element软件版本早于11.8、则需要执行此中的其他升级步骤<block ref="f89d7bc8c94108aeb49b4fdeac4ce106" category="inline-link-rx"></block> 用于每个存储节点。如果您运行的是Element 11.8或更高版本、则不需要执行其他升级步骤。</block>
+  <block id="2485371e710ec4ea8989c22e13c02067" category="list-text"><block ref="2485371e710ec4ea8989c22e13c02067" category="inline-link-rx"></block></block>
+  <block id="1dea56720635d200a6c7b3a71efca6ab" category="inline-link">《NetApp Element 软件12.7发行说明》</block>
+  <block id="3e51721b09445e45502532be5e6096fc" category="list-text"><block ref="939f531b35412529043c2c302552fa24" category="inline-link-rx"></block> _new_</block>
+  <block id="6a881248d046a90f573e41d5ebe1362e" category="list-text"><block ref="6a881248d046a90f573e41d5ebe1362e" category="inline-link-rx"></block></block>
+  <block id="90e7c2277ee69a3d3ecf30fa1fe61ab1" category="inline-link">vCenter插件4.10发行说明</block>
+  <block id="5c6c5d2c88269bcae97dbd93d213851a" category="list-text"><block ref="a9fc1ab89aaaf4e529a9e4251a8b3b33" category="inline-link-rx"></block> _new_</block>
+  <block id="779aeeb0a67ee84cae70c2361654111d" category="list-text"><block ref="779aeeb0a67ee84cae70c2361654111d" category="inline-link-rx"></block></block>
+  <block id="6f0ce5bfc09a3a4d8737b564d5879f31" category="inline-link">详细了解Element 12.7中的新增功能</block>
+  <block id="f10aa2cb8c994fef24ceca1ee43e4208" category="admonition">Element软件12.7是最新版本、其中包括安全和系统组件更新、操作改进以及已解决的问题。<block ref="d071d61ca9198e87abb60c485f07eada" category="inline-link-rx"></block>。</block>
+  <block id="e8c9d31781628048fc356dbb3477278c" category="summary">从管理服务2.21.61开始、现有和新的Rancher部署不再支持Rancher。您可以继续使用早期版本的管理服务管理Rancher。</block>
+  <block id="46e87a91de6f38f3b1344d05a59270dd" category="inline-link">NetApp HCI 1.9文档</block>
+  <block id="fc55c296a158a74f2203216a080cac11" category="paragraph">对于现有的Rancher部署、从管理服务2.21.61开始、不再支持Rancher。如果您升级到管理服务2.21.61、则无法使用NetApp混合云控制来管理、监控或升级现有部署的Rancher、也无法在NetApp HCI 系统上执行新部署。如果您已在NetApp HCI 系统上部署Rancher并运行管理服务2.20.69或更早版本、则可以继续使用管理、监控和升级Rancher<block ref="366a8df179e5c8339fa05bf5fe38a812" category="inline-link-rx"></block>。</block>
+  <block id="2c2631f50f8a871f30b75888dfbcea96" category="inline-link-macro">管理服务2.21.61的通知(适用于VMware vCenter Server的NetApp Element 插件4.10.12)</block>
+  <block id="5a4d1edee05c62a7171ceb8c43afb590" category="list-text"><block ref="5a4d1edee05c62a7171ceb8c43afb590" category="inline-link-macro-rx"></block></block>
+  <block id="d6802e127914e53f73aa2f2db8cb5e44" category="paragraph">从管理服务2.20.69开始、您必须先接受并保存最终用户许可协议(EULA)、然后才能使用NetApp Hybrid Cloud Control UI或API升级管理服务：</block>
+  <block id="29bba7cbe3dac4ea58cab61272150fe8" category="paragraph">您可以将管理节点从12.3.x或更高版本升级到管理节点12.5或更高版本。</block>
+  <block id="4ff70a8151851ab1e82db6f0eed42808" category="list-text"><block ref="810c9a492c31390e08f0e76e7c298785" category="inline-xref-macro-rx"></block></block>
+  <block id="2a67edcd39483da3b7c2244d1a853ca7" category="section-title">将管理节点从12.3.x或更高版本升级到版本12.5或更高版本</block>
+  <block id="00986f242d79556b370e046857ac478c" category="paragraph">您可以将管理节点从12.3.x或更高版本原位升级到版本12.5或更高版本、而无需配置新的管理节点虚拟机。</block>
+  <block id="162101c4a12e19388bdcdc0495ccc2ae" category="admonition">Element 12.5或更高版本的管理节点是可选的升级。现有部署不需要此功能。</block>
+  <block id="cd847f70c9955e37a7a701eee9f2cd67" category="list-text">您要升级的管理节点为 12.0 版，并使用 IPv4 网络。管理节点版本12.5或更高版本不支持IPv6。</block>
+  <block id="94f146a196ada89ebff337e86bd67dd8" category="list-text">如果要将管理节点更新到版本12.5或更高版本、则需要使用管理服务2.21.61或更高版本继续操作。</block>
+  <block id="b529479350602e9be1d9caa1838edb9b" category="list-text">存储节点正在运行Element 12.3.x或更高版本。</block>
+  <block id="5d8cb69408d9a6773459aa0a397a3003" category="list-text">在管理节点上打开REST API UI。</block>
+  <block id="4eed3af07414f10fffdba8a7ff51ca36" category="list-text">从管理服务2.21.61开始：</block>
+  <block id="880c70977a68b1ec897e498bb11c7021" category="list-text">对于管理服务2.20.69或更早版本：</block>
+  <block id="edb046160eb6ed03c39de5860e72e509" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.20.69开始、您必须先接受并保存此EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级Rancher部署：</block>
+  <block id="54c78d15a850ddddfc9da22742280908" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.20.69开始、您必须先接受并保存此EULA、然后才能使用NetApp混合云控制UI或API运行Element存储运行状况检查：</block>
+  <block id="b1dc794dd924da27c3e3280ab948e305" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.20.69开始、您必须先接受并保存此EULA、然后才能使用NetApp Hybrid Cloud Control UI或API运行计算节点运行状况检查：</block>
 </blocks>

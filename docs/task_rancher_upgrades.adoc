@@ -27,7 +27,7 @@ keywords: netapp, hci, rancher, upgrade, hcc
 IMPORTANT: 要使用 Rancher 功能，您必须升级到最新的管理服务包 2.17 或更高版本。
 
 * * 系统端口 * ：如果您使用 NetApp Hybrid Cloud Control 进行升级，则已确保必要的端口处于打开状态。请参见 link:rancher_prereqs_overview.html#required-ports["网络端口"] 有关详细信息 ...
-* *最终用户许可协议(EULA)*：从管理服务2.2开始、您必须先接受并保存EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级Rancher部署：
+* *最终用户许可协议(EULA)*：从管理服务2.20.69开始、您必须先接受并保存此EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级Rancher部署：
 +
 .. 在Web浏览器中打开管理节点的IP地址：
 +
