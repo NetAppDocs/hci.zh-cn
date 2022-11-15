@@ -4478,7 +4478,6 @@
   <block id="2bfb7d51aea637d48bf5bca4afcb46a1" category="list-text">以 vCenter 管理员身份登录到 vSphere Web Client 。如果您已登录到 vSphere Web Client ，则必须先注销，等待两到三分钟，然后重新登录。</block>
   <block id="f523905d48a1db956815565365a5a6ad" category="admonition">此操作将创建一个新数据库并在 vSphere Web Client 中完成安装。</block>
   <block id="9b572df8237d34b7c32142ac15f1325f" category="list-text">在 vSphere Web Client 中，请在任务监控器中查找以下已完成的任务，以确保安装已完成： `download plug-in` 和 `DeDeploy plug-in` 。</block>
-  <block id="c4676996d8b51da422f5ab619c54ae01" category="list-text">验证 NetApp Element 配置和管理扩展点是否显示在 vSphere Web Client 的 * 快捷方式 * 选项卡以及侧面板中。</block>
   <block id="a0abd6db969f497b63a29f8fbd1771df" category="inline-link-macro">适用于 vCenter Server 的 Element 插件</block>
   <block id="b9e50e6a339819ad9d12906b29e978ca" category="list-text">在插件的 * NetApp Element Configuration* 扩展点中的 * 关于 * 选项卡中验证版本更改。</block>
   <block id="a2b39afbde860c9c0fc759f3772e2dd2" category="paragraph">您应看到以下版本详细信息或较新版本的详细信息：</block>
@@ -6431,4 +6430,7 @@
   <block id="307d07425c54bb4aa0778a14487a9a93" category="list-text">使用适用于vCenter Server 4.10及更早版本的NetApp Element 插件从其他vCenter Server管理集群资源<block ref="b9ce345290cb228a35dd424c40eebf37" category="inline-link-rx"></block> 仅限于本地存储集群。</block>
   <block id="ec78c54d60054bc44ae2e26c00313bdb" category="list-text">管理服务2.22.7包括适用于VMware vCenter Server 5.0的NetApp Element 插件、该插件包含远程插件。如果您使用Element插件、则应升级到5.0版、以符合VMware指令、该指令会删除对本地插件的支持。<block ref="3eff1b8505d27ff6caa23fbbb1b7b25c" category="inline-link-rx"></block>。如果不使用此插件、则可以选择进行此升级。</block>
   <block id="9db4acd10c15ec173e6516c347342e25" category="admonition">您应在vCenter中创建新的NetApp HCC角色以添加控制器子资产。这一新的 NetApp HCC 角色会将管理节点服务视图限制为纯 NetApp 资产。请参见 <block ref="8fe5279440ee3c239e840ed9b8e10ddd" category="inline-link-macro-rx"></block>。</block>
+  <block id="d471727ba1fb423986701d5307906d08" category="list-text">验证插件扩展点是否显示在vSphere Web Client的*快捷方式*选项卡和侧面板中。</block>
+  <block id="290b380ec7760347344e9055b68f217d" category="paragraph">从适用于vCenter Server 5.0的Element插件开始、NetApp Element 远程插件扩展点：</block>
+  <block id="7491d78d51f3545fc9fe30d2249bc196" category="paragraph">适用于vCenter Server 4.10或更早版本的Element插件、NetApp Element 配置和管理扩展点：</block>
 </blocks>
