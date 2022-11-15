@@ -115,7 +115,7 @@ Element 12.5包括存储节点的固件更新。 link:https://docs.netapp.com/us
 
 Element 12.5提供了一种缓解方法、可消除Element软件受到Apache Log4j漏洞的影响。启用了虚拟卷(VVol)功能的NetApp SolidFire 存储集群受到Apache Log4j漏洞的影响。有关NetApp Element 软件中Apache Log4j漏洞的临时解决策 的信息、请参见｛url-peak｝｛知识库文章^。
 
-如果您运行的是Element 11.x、12.0或12.2、或者您的存储集群已位于Element 12.3或12.3.1中且已启用VVol功能、则强烈建议升级到12.5。
+如果您运行的是Element 11.x、12.0或12.2、或者存储集群已位于Element 12.3或12.3.1且已启用VVol功能、则应升级到12.5。
 
 Element 12.5还包括120多个CVE安全漏洞修复。
 

@@ -2243,7 +2243,6 @@
   <block id="1c0659a0f3a94997a6e77a2bfee7539d" category="list-text">将导出的报告文件发送给您的 NetApp 专业服务代表。</block>
   <block id="be4cf99b1cc4db841e2a3abc98bf086b" category="summary">在向管理节点添加 vCenter 资产或计算节点之前，您必须在 vCenter 中创建 NetApp HCC 角色。</block>
   <block id="ebb21f9a1a1c0ac53661851a6adcb7ab" category="doc">在 vCenter 中创建 NetApp HCC 角色</block>
-  <block id="0bb0d0aa0675c693d476d55b05ef9167" category="paragraph">建议您在 vCenter 中创建 NetApp HCC 角色，以便在安装后手动将 vCenter 资产（控制器）或计算节点（节点）添加到管理节点，或者修改现有控制器或节点。</block>
   <block id="ed06c949c2b36fa4b24f130e5bb1267b" category="paragraph">此 NetApp HCC 角色会将您的管理节点服务视图限制为纯 NetApp 资产。</block>
   <block id="084f667a768181d2c907c53fa5eba8aa" category="list-text">本操作步骤介绍了 vSphere 6.7 版中提供的步骤。您的 vSphere 用户界面可能与所述略有不同，具体取决于安装的 vSphere 版本。有关其他帮助，请参见 VMware vCenter 文档。</block>
   <block id="86a7adef9801157432daeb81a3a1c70f" category="inline-link-macro">创建新的 NetApp HCC 角色</block>
@@ -2281,7 +2280,6 @@
   <block id="a409b26808477ed8b8f15456cceffd08" category="list-text">顶级 vCenter 。</block>
   <block id="c86b9778e102ce02a566f2a5f745c6e4" category="list-text">处于链接模式时所需的 vCenter 。</block>
   <block id="4c0d90c9ada6ab81f16f3446180ab3a1" category="inline-link-macro">vCenter 链接模式</block>
-  <block id="03474279d3fc9d2a56fdc80404029d49" category="admonition">使用适用于 vCenter Server 的 NetApp Element 插件从其他 vCenter Server 管理集群资源 <block ref="7b02ca43ff4544fd4c29159c11bae6d5" category="inline-link-macro-rx"></block> 仅限于本地存储集群。</block>
   <block id="0086257e9c830b4d9b546228b58d7f0f" category="list-text">在右侧导航窗格中，选择 * 权限 * 。</block>
   <block id="69361a3d23c9cf0e15a6856bbe2ef16f" category="list-text">选择 * + * 图标以添加新用户。</block>
   <block id="48be45545aea0a25445232c0107f6449" category="paragraph">在 * 添加权限 * 窗口中添加以下详细信息：</block>
@@ -4094,7 +4092,6 @@
   <block id="42249c3350dc9e116531e8786238075a" category="list-text">将用于 NetApp HCI 监控（仅限 NetApp HCI 安装）和混合云控制（适用于所有安装）的 vCenter 控制器资产添加到管理节点的已知资产中：</block>
   <block id="1fca2b4a66eca3cc3857ef2cc620c7a4" category="list-text">选择 * 授权 * 或任何锁定图标并完成以下操作：</block>
   <block id="8cfb9a9c7c3001a95af6d09549cdabaa" category="list-text">选择 * POST /assets/ ｛ asset_id ｝ /controllers* 以添加控制器子资产。</block>
-  <block id="f9ff4ba30fde92cbf23c00302a8ac526" category="admonition">建议您在 vCenter 中创建新的 NetApp HCC 角色以添加控制器子资产。这一新的 NetApp HCC 角色会将管理节点服务视图限制为纯 NetApp 资产。请参见 <block ref="8fe5279440ee3c239e840ed9b8e10ddd" category="inline-link-macro-rx"></block>。</block>
   <block id="59cb038ca0d26b60e9eda25d59ec865b" category="list-text">选择 * POST /assets/ ｛ asset_id ｝ /compute-nodes* 以使用计算节点资产的凭据添加计算节点子资产。</block>
   <block id="ea32544c4914661e6b948f2891dd6a83" category="list-text">在有效负载中，输入 " 型号 " 选项卡中定义的所需有效负载值。输入 `ESXi Host` as `type` ，然后输入您在上一步中为 `hardware_tag` 保存的硬件标记。</block>
   <block id="891d7cb5314c1395a5f98467dc959053" category="inline-link-macro">配置存储 NIC</block>
@@ -4461,7 +4458,6 @@
   <block id="c9febdd1cdc631cc150e210af5959338" category="list-text">选择状态为 * 正在运行 * 。</block>
   <block id="344071cf9eae741abef1df0044596a37" category="paragraph">管理节点上运行的服务会在响应正文中指示。</block>
   <block id="e6c04958395a323ddbc02c929b4dfdf0" category="paragraph">您可以使用注册实用程序在 vCenter Server 虚拟设备（ vCSA ）或 Windows 上更新插件注册。您必须在需要使用 vCenter 插件的每个 vCenter Server 上更改此插件的注册。</block>
-  <block id="badb045d93b6de2fe8d2a1a664b92d6f" category="paragraph">此升级操作步骤包括以下升级情形：</block>
   <block id="a6a18366932bfeffc2341cc7aa5fe09d" category="list-text">您要升级到 7.0 ， 6.7 或 6.5 HTML5 vSphere Web Client 。</block>
   <block id="f171584692be059c88cbbda35827f299" category="list-text">您要升级到 6.7 Flash vSphere Web Client 。</block>
   <block id="26f2f1d140c70238a07a5f09e846fd82" category="inline-link">您的插件版本</block>
@@ -4469,8 +4465,6 @@
   <block id="7df6c84beb4c7f9c0109ea10accef1ed" category="list-text">* vSphere 升级 * ：在升级适用于 vCenter Server 的 NetApp Element 插件之前，您已执行任何所需的 vCenter 升级。此操作步骤假定 vCenter 升级已完成。</block>
   <block id="72b0efdaad5d469b43f79c332bb57be4" category="inline-link">管理服务包</block>
   <block id="4c02ebe342ea429a0d2a2a23be2ddd19" category="inline-link-macro">已升级</block>
-  <block id="27c25a67c147529824177fc694e7fd19" category="list-text">* 管理节点升级 * ：您正在运行的管理节点已 <block ref="23cc83378d4b0551eef4ac573737e008" category="inline-link-macro-rx"></block> 到 11.3 或更高版本。vCenter 插件 4.4 或更高版本要求使用 11.3 或更高版本的管理节点，该节点采用可提供单个服务的模块化架构。必须打开管理节点的电源，并配置其 IP 地址或 DHCP 地址。</block>
-  <block id="7d3b6b8e2540bf5435b3b6984ad1f702" category="list-text">* Element 存储升级 * ：您的集群运行的是 NetApp Element 软件 11.3 或更高版本。</block>
   <block id="12a6ece51476e2d3feae5dff01704e58" category="list-text">* vSphere Web Client* ：在开始任何插件升级之前，您已从 vSphere Web Client 中注销。如果您未注销， Web 客户端将无法识别在此过程中对插件所做的更新。</block>
   <block id="c13fa68b55894aaf612067aa7455ac53" category="list-text">在浏览器中输入管理节点的 IP 地址，包括要注册的 TCP 端口： `https://[management node IP] ： 9443` 注册实用程序 UI 将打开至该插件的 * 管理 QoSSIOC 服务凭据 * 页面。</block>
   <block id="26fc450c5cd9b7f28b10cff7659b479d" category="image-alt">描绘了此插件的注册实用程序 UI</block>
@@ -4480,13 +4474,11 @@
   <block id="d5fcc07cbc4a070c18d26103f54f3f58" category="list-text">vCenter 管理员用户名。</block>
   <block id="b1e24f0b2fb8f66a9c2444bf0e385f97" category="admonition">您输入的用户名和密码凭据必须适用于具有 vCenter 管理员角色特权的用户。</block>
   <block id="c2611280cf76890b83743a67ac6478e2" category="list-text">vCenter 管理员密码。</block>
-  <block id="92d3ac74b6d30f321507464dbfb9220d" category="list-text">（对于内部服务器 / 非公开站点）插件 ZIP 的自定义 URL 。</block>
   <block id="14b68e07a69ae90b19c2bd823797ff21" category="paragraph">注册成功后，注册实用程序 UI 中将显示一个横幅。</block>
   <block id="2bfb7d51aea637d48bf5bca4afcb46a1" category="list-text">以 vCenter 管理员身份登录到 vSphere Web Client 。如果您已登录到 vSphere Web Client ，则必须先注销，等待两到三分钟，然后重新登录。</block>
   <block id="f523905d48a1db956815565365a5a6ad" category="admonition">此操作将创建一个新数据库并在 vSphere Web Client 中完成安装。</block>
   <block id="9b572df8237d34b7c32142ac15f1325f" category="list-text">在 vSphere Web Client 中，请在任务监控器中查找以下已完成的任务，以确保安装已完成： `download plug-in` 和 `DeDeploy plug-in` 。</block>
   <block id="c4676996d8b51da422f5ab619c54ae01" category="list-text">验证 NetApp Element 配置和管理扩展点是否显示在 vSphere Web Client 的 * 快捷方式 * 选项卡以及侧面板中。</block>
-  <block id="342171073fda0fd2cec612dc41323bdb" category="image-alt">描述了成功升级或安装后的插件扩展点</block>
   <block id="a0abd6db969f497b63a29f8fbd1771df" category="inline-link-macro">适用于 vCenter Server 的 Element 插件</block>
   <block id="b9e50e6a339819ad9d12906b29e978ca" category="list-text">在插件的 * NetApp Element Configuration* 扩展点中的 * 关于 * 选项卡中验证版本更改。</block>
   <block id="a2b39afbde860c9c0fc759f3772e2dd2" category="paragraph">您应看到以下版本详细信息或较新版本的详细信息：</block>
@@ -5617,7 +5609,6 @@
   <block id="0f1940d8b9e51abf4381f9e406fda543" category="summary">在 NetApp HCI 系统升级过程中，您可以升级与存储节点关联的固件。</block>
   <block id="fc6261a1be6f27091e994d8c8b075b29" category="summary">在 NetApp HCI 系统升级过程中，您可以升级适用于 vCenter Server 的 Element 插件。</block>
   <block id="1e1e7dd8551842ca8c6e4ac3c35cb249" category="admonition">此插件与 HTML5 vSphere Web Client 的 6.7 U2 内部版本 13007421 以及更新 2a （内部版本 13643870 ）之前发布的其他 6.7 U2 内部版本不兼容。有关受支持的 vSphere 版本的详细信息，请参见的发行说明<block ref="52a3661120ba33cd100cafc9c9d568e0" category="inline-link-rx"></block>。</block>
-  <block id="c60238cb58d95b456566853e62db1d18" category="list-text">* vCenter Server* ：您的 vCenter 插件 4.x 版已注册到 vCenter Server 。从注册实用程序（`https://[management node IP] ： 9443` ）中，选择 * 注册状态 * ，填写必要字段，然后选择 * 检查状态 * 以验证 vCenter 插件是否已注册以及当前安装的版本号。</block>
   <block id="73bb2b0d39f901d3bcdddd6b19d7170a" category="list-text">* 管理服务更新 * ：您已更新<block ref="f6e495ec9a99fcd5692d41358780e884" category="inline-link-rx"></block> 到最新版本。vCenter 插件的更新通过在 NetApp HCI 主要产品版本之外发布的管理服务更新进行分发。</block>
   <block id="0bd0c7dc69df55cee394b64eebcd27ab" category="list-text">选择 * vCenter 插件注册 * 。</block>
   <block id="daa4768416116e6634bf75e379507244" category="admonition">如果您使用的是 HTTP 或 HTTPS 服务器（非公开站点）或修改了 ZIP 文件名或网络设置，则可以选择 * 自定义 URL* 自定义 URL 。有关自定义 URL 的其他配置步骤，请参见适用于 vCenter Server 的 Element 插件文档，了解有关修改内部（非公开站点） HTTP 服务器的 vCenter 属性的信息。</block>
@@ -5792,7 +5783,6 @@
   <block id="9fc75d41716cfd46199787dcf77473a1" category="list-text">`https://support-sg-emea.netapp.com`</block>
   <block id="a1b1a9120bbc7238c7b6088d7223d194" category="list-text">`https://support-sg-naeast.netapp.com`</block>
   <block id="219033cd316af31663b173765be6dd78" category="list-text">`https://support-sg-nawest.netapp.com`</block>
-  <block id="651784e7a6ddc6534201a6e8d1fbf248" category="paragraph">对于已注册适用于vCenter Server的NetApp Element 插件的现有vSphere环境、您可以在首次更新包含此插件服务的管理服务包后更新此插件注册。</block>
   <block id="8eeabd6de4a231c731b82c27ee25bbdb" category="admonition">此插件与适用于VMware vCenter Server 4.6、4.7和4.8的VMware vCenter Server 6.5 for Element插件不兼容。</block>
   <block id="778b8320a31f425d9021c72ba59dd8bd" category="cell">存储节点</block>
   <block id="c4303966c5d95835840cedbb4010f17d" category="cell">当前Element软件版本</block>
@@ -5842,7 +5832,6 @@
   <block id="a4377e2a5c151e23b56034c95f4a740c" category="section-title">存储节点固件更新</block>
   <block id="a6c2a34150c9dc72f43456ea478ab625" category="paragraph">Element 12.5包括存储节点的固件更新。 <block ref="eeef2310c9176486cc519bcd07b92743" category="inline-link-macro-rx"></block>。</block>
   <block id="9ae00a023d80f22436817ac40b5dd0e7" category="section-title">增强的安全性</block>
-  <block id="5b9ef84ab53bc8e514e0cea0dbfd914c" category="paragraph">如果您运行的是Element 11.x、12.0或12.2、或者您的存储集群已位于Element 12.3或12.3.1中且已启用VVol功能、则强烈建议升级到12.5。</block>
   <block id="7d22dc13d9443150a483a9d1bcc19811" category="paragraph">Element 12.5还包括120多个CVE安全漏洞修复。</block>
   <block id="0a4e6eb7e62cc9a7906b041a5daa8314" category="section-title">使用Ansible自动升级</block>
   <block id="0f3c5d5fd99d58a3db49e358303b6aa1" category="inline-link">NetApp Ansible存储库</block>
@@ -5915,7 +5904,6 @@
   <block id="ef1e8da076ed36db7d489060adff47fb" category="paragraph">可下载的计算固件包可为所有受支持的NetApp HCI 计算节点提供最新的BIOS和BMC功能增强功能、错误修复以及硬件支持。</block>
   <block id="778f439c373ac0d9448a4607920b1422" category="list-text"><block ref="e2bd782e3d45140e59a9770dafcf72d8" category="inline-xref-macro-rx"></block></block>
   <block id="c94da534f33010d7e118033321a44543" category="admonition">对于非公开站点升级、如果计算固件包和管理节点都位于本地、则可以缩短上传时间。</block>
-  <block id="2285a7aedaa8a3012ac18addc77cb998" category="admonition">不再支持使用 NetApp Hybrid Cloud Control UI 升级 H300E/H500E/H700E 计算节点上的计算固件。要进行升级，建议您使用 <block ref="4d9d1e5487766b88d4d71ed7b5cbc3b9" category="inline-xref-macro-rx"></block> 或 <block ref="1f3fb96b93183df027058d51b91b7971" category="inline-xref-macro-rx"></block> 挂载计算固件包。</block>
   <block id="36b254200cdbd8a07ea5d268a8d6baf6" category="list-text">如果您的管理节点未连接到Internet、则表示您已从下载计算固件包<block ref="3a326a2da6806c2b958ef45116362803" category="inline-link-rx"></block>。</block>
   <block id="191ad55ad4891df96df5fa822849fef0" category="admonition">您应将`TAR.GZ`文件提取到`TAR`文件中、然后将`TAR`文件提取到计算固件包中。</block>
   <block id="59f7535fd87661a1910847bce50d4e47" category="list-text">选择计算固件包。</block>
@@ -6343,8 +6331,6 @@
   <block id="742443519c431a58e3020342bebdad42" category="list-text">要使用NetApp Hybrid Cloud Control UI、您已更新<block ref="f6e495ec9a99fcd5692d41358780e884" category="inline-link-rx"></block> 升级到版本2.20.69或更高版本。</block>
   <block id="de04396568b4d068ad633b9f6d71127c" category="admonition">从Element 12.5开始、Element软件升级不再支持NetApp HealthTools。如果您运行的是Element 11.0或11.1、则必须先执行此操作 <block ref="44a31a9a881af2f85b504df3b697bf3f" category="inline-link-macro-rx"></block> 然后使用NetApp Hybrid Cloud Control升级到Element 12.5或更高版本。</block>
   <block id="4b1a9ce7f7fbe6c6a81ef1238b7e421a" category="list-text">您已为计划了足够的时间 <block ref="cff6d63ff47747e8e31df90baa037fdf" category="inline-link-macro-rx"></block> 和 <block ref="64ca0a1c0466cb0bbd500939e8f353f3" category="inline-link-macro-rx"></block> 升级。升级到Element软件12.5或更高版本时、升级过程时间因Element软件版本和固件更新而异。</block>
-  <block id="e9dbcfe87022d70bbf15ed6c9f7002e7" category="admonition">升级到VMware vCenter Server 7.0 U3时、Element插件无法部署。要使用Spring Framework 4解决此问题描述 、请参见<block ref="b7be06fbbf9e539cb08ccb11862099e4" category="inline-link-rx"></block>。</block>
-  <block id="b829058e02635e31c81abf49f37e64d2" category="list-text">您要升级到适用于VMware vCenter Server 4.10、4.9、4.8、4.7、4.6的Element插件、 4.5或4.4。</block>
   <block id="1dc5194bddfa2cc1355dc4c77a729d38" category="admonition">有关适用于您的硬件的完整固件和驱动程序固件列表，请参见 <block ref="80776e776c76da1f21e9e612d2679ddd" category="inline-link-macro-rx"></block>。</block>
   <block id="2394ff28a38b482ef2918be4c8e7540c" category="list-text">*最终用户许可协议(EULA)*：从管理服务2.20.69开始、您必须先接受并保存此EULA、然后才能使用NetApp Hybrid Cloud Control UI或API升级存储固件：</block>
   <block id="7ef561ec74f917ecad309d4001bff056" category="admonition">在将Element软件升级到版本12.5或更高版本之前、您必须升级到最新的管理服务包。如果要将Element软件更新到版本12.5或更高版本、则需要使用管理服务2.21.61或更高版本才能继续。</block>
@@ -6355,7 +6341,6 @@
   <block id="3e51721b09445e45502532be5e6096fc" category="list-text"><block ref="939f531b35412529043c2c302552fa24" category="inline-link-rx"></block> _new_</block>
   <block id="6a881248d046a90f573e41d5ebe1362e" category="list-text"><block ref="6a881248d046a90f573e41d5ebe1362e" category="inline-link-rx"></block></block>
   <block id="90e7c2277ee69a3d3ecf30fa1fe61ab1" category="inline-link">vCenter插件4.10发行说明</block>
-  <block id="5c6c5d2c88269bcae97dbd93d213851a" category="list-text"><block ref="a9fc1ab89aaaf4e529a9e4251a8b3b33" category="inline-link-rx"></block> _new_</block>
   <block id="779aeeb0a67ee84cae70c2361654111d" category="list-text"><block ref="779aeeb0a67ee84cae70c2361654111d" category="inline-link-rx"></block></block>
   <block id="6f0ce5bfc09a3a4d8737b564d5879f31" category="inline-link">详细了解Element 12.7中的新增功能</block>
   <block id="f10aa2cb8c994fef24ceca1ee43e4208" category="admonition">Element软件12.7是最新版本、其中包括安全和系统组件更新、操作改进以及已解决的问题。<block ref="d071d61ca9198e87abb60c485f07eada" category="inline-link-rx"></block>。</block>
@@ -6397,4 +6382,53 @@
   <block id="55fc3b139c0a126af7257f980acb20c5" category="cell">身份模块</block>
   <block id="c9c5cc2efc04287e6fe8d7feebf032aa" category="cell">N41WC 1.02</block>
   <block id="126078d2e17c3ac2589cca85b30163c7" category="cell">启动设备</block>
+  <block id="93c82fa50530ab1db18373f37f38e453" category="inline-link-macro">管理服务2.22.7通知(适用于VMware vCenter Server 5.0.37的NetApp Element 插件)</block>
+  <block id="7b34a7cbcce764e8d1ad156461cf35c3" category="list-text"><block ref="7b34a7cbcce764e8d1ad156461cf35c3" category="inline-link-macro-rx"></block></block>
+  <block id="8b34c0897e0c5a60826afa840ec4c95f" category="list-text">从适用于vCenter Server 5.0的Element插件开始、使用<block ref="b9ce345290cb228a35dd424c40eebf37" category="inline-link-rx"></block>下、您可以从单独的管理节点为管理NetApp SolidFire 存储集群的每个vCenter Server注册Element插件(建议)。</block>
+  <block id="950d24814b375862c7bba55208f10d8c" category="list-text">使用适用于vCenter Server 4.10及更早版本的Element插件从其他vCenter Server管理集群资源<block ref="b9ce345290cb228a35dd424c40eebf37" category="inline-link-rx"></block> 仅限于本地存储集群。</block>
+  <block id="07800d7fa4e084c955b9006d30b6eed1" category="cell">远程插件</block>
+  <block id="b8ffa41d4e492f0fad2f13e29e1762eb" category="cell">8333</block>
+  <block id="5b3a5766ccd94c0ef0148e61340c831e" category="cell">远程vCenter插件服务</block>
+  <block id="836e51e0f6c3653b09c2a2a467e5d22e" category="paragraph">如果您运行的是Element 11.x、12.0或12.2、或者存储集群已位于Element 12.3或12.3.1且已启用VVol功能、则应升级到12.5。</block>
+  <block id="a362557c8df01a4a86eda6338af59907" category="admonition">不再支持使用 NetApp Hybrid Cloud Control UI 升级 H300E/H500E/H700E 计算节点上的计算固件。要升级、应使用 <block ref="4d9d1e5487766b88d4d71ed7b5cbc3b9" category="inline-xref-macro-rx"></block> 或 <block ref="1f3fb96b93183df027058d51b91b7971" category="inline-xref-macro-rx"></block> 挂载计算固件包。</block>
+  <block id="6b777567daa827d5b0665b94c630539f" category="inline-link">vCenter插件5.0发行说明</block>
+  <block id="6e965491616fff846a7ae36b0c989a99" category="list-text"><block ref="0e051271241f0648ba45a8ad135d030c" category="inline-link-rx"></block> _new_</block>
+  <block id="a9fc1ab89aaaf4e529a9e4251a8b3b33" category="list-text"><block ref="a9fc1ab89aaaf4e529a9e4251a8b3b33" category="inline-link-rx"></block></block>
+  <block id="1291d04b420cee74581d131dee5acf86" category="paragraph">您应升级到适用于vCenter Server 5.0的NetApp Element 插件、以便能够在VMware vCenter 7.0 Update 3中部署此插件、而无需应用临时解决策。</block>
+  <block id="af5fe52fe204cf15311c07d5bf36b9a1" category="paragraph">使用适用于vCenter Server 4.x的Element插件升级到VMware vCenter Server 7.0 Update 3时、此插件无法部署。要使用Spring Framework 4解决此问题描述 、请参见<block ref="770c119932f7fa962a47dc0795db1af6" category="inline-link-rx"></block>。</block>
+  <block id="9b50fd8de96fcf38bc35a026df14fbc4" category="paragraph">对于已注册适用于VMware vCenter Server的NetApp Element 插件的现有vSphere环境、您可以在首次更新包含此插件服务的管理服务包后更新此插件注册。</block>
+  <block id="56f4bca23bb3dd45148dc7171511b7e5" category="paragraph">此升级操作步骤 适用于以下升级情形。</block>
+  <block id="b354494119de7342042bca9b6ac340a2" category="admonition">管理服务2.22.7包括适用于vCenter Server 5.0的NetApp Element 插件、该插件包含远程插件。如果您使用Element插件、则应升级到5.0版、以符合VMware指令、该指令会删除对本地插件的支持。<block ref="3eff1b8505d27ff6caa23fbbb1b7b25c" category="inline-link-rx"></block>。如果不使用此插件、则可以选择进行此升级。</block>
+  <block id="04e630ae5e9700f09b6ca3715246283d" category="open-title">适用于vCenter 5.0及更高版本的Element插件</block>
+  <block id="3d16c26435c33f6aa1426f76dd6d7747" category="paragraph">从适用于vCenter Server 5.0的Element插件开始、此升级操作步骤 涵盖以下升级情形：</block>
+  <block id="ffccf7c96c162cb046e6087e5ff2c25c" category="list-text">您要升级到适用于vCenter Server 5.0的Element插件。</block>
+  <block id="61517793d4523320c7cd75e303ad36ff" category="list-text">您要升级到8.0或7.0 HTML5 vSphere Web Client。</block>
+  <block id="787e0e54cc17d9dd6bbd7cf4c4fbc14d" category="admonition">适用于vCenter 5.0及更高版本的Element插件与vCenter Server 6.7和6.5不兼容。</block>
+  <block id="6243a047f7c7bcc2f2961e8a74f1b5c7" category="admonition">从适用于vCenter Server 4.x的Element插件升级到5.0时、由于无法将数据从vCenter实例复制到远程插件、因此已配置此插件的集群将丢失。您必须将集群重新添加到远程插件。这是从本地插件升级到远程插件时的一次性活动。</block>
+  <block id="f156e2c2564d8d92e0cea1d77dbc95aa" category="open-title">适用于vCenter 4.10及更早版本的Element插件</block>
+  <block id="523b0480434215d8d59b3dce41707a7e" category="paragraph">对于适用于vCenter Server 4.10或更早版本的Element插件、此升级操作步骤 适用于以下升级情形：</block>
+  <block id="524f8acc9609df7272285a19757aefcb" category="list-text">您要升级到适用于vCenter Server 4.10、4.9、4.8、4.7、4.6的Element插件、 4.5或4.4。</block>
+  <block id="c0e80cf197d1adf76fef790848a92f8f" category="list-text">此插件与适用于VMware vCenter Server 4.x的VMware vCenter Server 8.0 Element插件不兼容</block>
+  <block id="b517a2741d878136bff4239360adcaaa" category="list-text">* vCenter Server*：您的vCenter插件4.x或5.x版已注册到vCenter Server。从注册实用程序 <block ref="95eed0d846a235b32511f995c34bae39" prefix="(" category="inline-code"></block>)、选择*注册状态*、填写必要字段、然后选择*检查状态*以验证vCenter插件是否已注册以及当前安装的版本号。</block>
+  <block id="aac8ad795776bcaba9b87cb70791d2d1" category="list-text">*管理节点升级*：</block>
+  <block id="9163ac7fa12bb2150fecf2f1b174db4d" category="list-text">从Element vCenter插件5.0开始、您正在运行的管理节点已经 <block ref="23cc83378d4b0551eef4ac573737e008" category="inline-link-macro-rx"></block> 升级到12.3.x或更高版本。</block>
+  <block id="5e3078320e7b08b85d42398585874ce3" category="list-text">对于Element vCenter插件4.4到4.10、您正在运行的管理节点已经 <block ref="23cc83378d4b0551eef4ac573737e008" category="inline-link-macro-rx"></block> 到 11.3 或更高版本。vCenter插件4.4或更高版本要求使用11.3或更高版本的管理节点、该节点采用可提供单个服务的模块化架构。必须打开管理节点的电源，并配置其 IP 地址或 DHCP 地址。</block>
+  <block id="924861571eeb51fd5eb1d806da0f0e5e" category="list-text">* Element存储升级*：</block>
+  <block id="b9ad9c0000e5c2b012be9c9ba83b7cff" category="list-text">从Element vCenter插件5.0开始、您的集群运行的是NetApp Element 软件12.3.x或更高版本。</block>
+  <block id="02738f63a80a594ad3ab131f3a7298f2" category="list-text">对于Element vCenter插件4.10或更早版本、您的集群运行的是NetApp Element 软件11.3或更高版本。</block>
+  <block id="e8b1bdd38a7601206cf400f05fbdc57d" category="paragraph">从适用于vCenter Server 5：0的Element插件开始：</block>
+  <block id="f1b4824619210c84aa04d2783d1f908e" category="image-alt">描绘了远程插件的注册实用程序UI</block>
+  <block id="05c0e13a813e930c3eab807f98959379" category="paragraph">适用于vCenter Server 4.10或更早版本的Element插件：</block>
+  <block id="cbe647d2b7e55a533fb2f01689441181" category="image-alt">描绘了本地插件的注册实用程序UI</block>
+  <block id="23fa7915a24406758b2d7b2b274fe1f3" category="list-text">(对于内部服务器/非公开站点)根据适用于vCenter的Element插件版本、插件JSON文件或插件ZIP的自定义URL：</block>
+  <block id="1e35767408ad5bd29ecc61c301c556ef" category="list-text">从适用于vCenter Server 5.0的Element插件开始、此插件JSON文件的自定义URL。</block>
+  <block id="b9d11c83e937a9ece9e8b7051bc68606" category="admonition">如果您使用的是HTTP或HTTPS服务器(非公开站点)或已修改JSON文件名或网络设置、则可以选择*自定义URL*自定义URL。有关自定义 URL 的其他配置步骤，请参见适用于 vCenter Server 的 Element 插件文档，了解有关修改内部（非公开站点） HTTP 服务器的 vCenter 属性的信息。</block>
+  <block id="ba85baaa049f62983a89ac7da1647abd" category="list-text">对于适用于vCenter Server 4.10或更早版本的Element插件、此插件ZIP的自定义URL。</block>
+  <block id="a00eed84eaa5a9a20d9aaa7f39c5e19e" category="image-alt">描绘了成功升级或安装Element插件5.10或更高版本后的插件扩展点</block>
+  <block id="85406fb94df2ff523b7477f229b1c9c8" category="image-alt">描述了成功升级或安装Element插件4.10或更早版本之后的插件扩展点</block>
+  <block id="b220ec4e47107c76be4a952b590dce4a" category="paragraph">您应在vCenter中创建NetApp HCC角色、以便在安装后手动向管理节点添加vCenter资产(控制器)或计算节点(节点)、或者修改现有控制器或节点。</block>
+  <block id="89e4c8f92f7c3506781613b3dbd40e89" category="list-text">从适用于vCenter Server 5.0的NetApp Element 插件开始、使用<block ref="b9ce345290cb228a35dd424c40eebf37" category="inline-link-rx"></block>下、您可以从单独的管理节点为管理NetApp SolidFire 存储集群的每个vCenter Server注册Element插件(建议)。</block>
+  <block id="307d07425c54bb4aa0778a14487a9a93" category="list-text">使用适用于vCenter Server 4.10及更早版本的NetApp Element 插件从其他vCenter Server管理集群资源<block ref="b9ce345290cb228a35dd424c40eebf37" category="inline-link-rx"></block> 仅限于本地存储集群。</block>
+  <block id="ec78c54d60054bc44ae2e26c00313bdb" category="list-text">管理服务2.22.7包括适用于VMware vCenter Server 5.0的NetApp Element 插件、该插件包含远程插件。如果您使用Element插件、则应升级到5.0版、以符合VMware指令、该指令会删除对本地插件的支持。<block ref="3eff1b8505d27ff6caa23fbbb1b7b25c" category="inline-link-rx"></block>。如果不使用此插件、则可以选择进行此升级。</block>
+  <block id="9db4acd10c15ec173e6516c347342e25" category="admonition">您应在vCenter中创建新的NetApp HCC角色以添加控制器子资产。这一新的 NetApp HCC 角色会将管理节点服务视图限制为纯 NetApp 资产。请参见 <block ref="8fe5279440ee3c239e840ed9b8e10ddd" category="inline-link-macro-rx"></block>。</block>
 </blocks>
