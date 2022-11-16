@@ -3835,7 +3835,6 @@
   <block id="2aaad98bfcfbd95f21871cf486a3243c" category="inline-link">升级 vSphere ，包括 vCenter Server ， ESXi ， VM 和其他 VMware 组件</block>
   <block id="f23d91ab86d1cf2e82bd86fd860c8585" category="list-text"><block ref="f0107c2e24795b3c47b3466dee69927b" category="inline-link-rx"></block>。</block>
   <block id="42baa5e1ef15c663eada13ad52636d31" category="inline-link">双节点集群</block>
-  <block id="a50b70530b2fe6f9c56d3487c7007ab4" category="admonition">升级计算节点的 ESXi 时<block ref="a0bfaabcd2d25ba0f3411534ca4d26c2" category="inline-link-rx"></block>，一次只升级一个计算节点，以便暂时只有一个见证节点不可用，并且可以保持集群仲裁。</block>
   <block id="0ba7583639a274c434bbe6ef797115a4" category="inline-link">注册</block>
   <block id="81750b82d55f7148c9a0001ed71e7dd4" category="list-text"><block ref="670ccc28c8c6a3ae1c020a0fa12ec195" category="inline-link-rx"></block> 适用于 vCenter Server 的 Element 插件。</block>
   <block id="2984cab36bd51d5446963e671e808f5d" category="inline-link">添加集群</block>
@@ -6415,11 +6414,8 @@
   <block id="924861571eeb51fd5eb1d806da0f0e5e" category="list-text">* Element存储升级*：</block>
   <block id="b9ad9c0000e5c2b012be9c9ba83b7cff" category="list-text">从Element vCenter插件5.0开始、您的集群运行的是NetApp Element 软件12.3.x或更高版本。</block>
   <block id="02738f63a80a594ad3ab131f3a7298f2" category="list-text">对于Element vCenter插件4.10或更早版本、您的集群运行的是NetApp Element 软件11.3或更高版本。</block>
-  <block id="e8b1bdd38a7601206cf400f05fbdc57d" category="paragraph">从适用于vCenter Server 5：0的Element插件开始：</block>
   <block id="f1b4824619210c84aa04d2783d1f908e" category="image-alt">描绘了远程插件的注册实用程序UI</block>
-  <block id="05c0e13a813e930c3eab807f98959379" category="paragraph">适用于vCenter Server 4.10或更早版本的Element插件：</block>
   <block id="cbe647d2b7e55a533fb2f01689441181" category="image-alt">描绘了本地插件的注册实用程序UI</block>
-  <block id="23fa7915a24406758b2d7b2b274fe1f3" category="list-text">(对于内部服务器/非公开站点)根据适用于vCenter的Element插件版本、插件JSON文件或插件ZIP的自定义URL：</block>
   <block id="1e35767408ad5bd29ecc61c301c556ef" category="list-text">从适用于vCenter Server 5.0的Element插件开始、此插件JSON文件的自定义URL。</block>
   <block id="b9d11c83e937a9ece9e8b7051bc68606" category="admonition">如果您使用的是HTTP或HTTPS服务器(非公开站点)或已修改JSON文件名或网络设置、则可以选择*自定义URL*自定义URL。有关自定义 URL 的其他配置步骤，请参见适用于 vCenter Server 的 Element 插件文档，了解有关修改内部（非公开站点） HTTP 服务器的 vCenter 属性的信息。</block>
   <block id="ba85baaa049f62983a89ac7da1647abd" category="list-text">对于适用于vCenter Server 4.10或更早版本的Element插件、此插件ZIP的自定义URL。</block>
@@ -6431,6 +6427,15 @@
   <block id="ec78c54d60054bc44ae2e26c00313bdb" category="list-text">管理服务2.22.7包括适用于VMware vCenter Server 5.0的NetApp Element 插件、该插件包含远程插件。如果您使用Element插件、则应升级到5.0版、以符合VMware指令、该指令会删除对本地插件的支持。<block ref="3eff1b8505d27ff6caa23fbbb1b7b25c" category="inline-link-rx"></block>。如果不使用此插件、则可以选择进行此升级。</block>
   <block id="9db4acd10c15ec173e6516c347342e25" category="admonition">您应在vCenter中创建新的NetApp HCC角色以添加控制器子资产。这一新的 NetApp HCC 角色会将管理节点服务视图限制为纯 NetApp 资产。请参见 <block ref="8fe5279440ee3c239e840ed9b8e10ddd" category="inline-link-macro-rx"></block>。</block>
   <block id="d471727ba1fb423986701d5307906d08" category="list-text">验证插件扩展点是否显示在vSphere Web Client的*快捷方式*选项卡和侧面板中。</block>
-  <block id="290b380ec7760347344e9055b68f217d" category="paragraph">从适用于vCenter Server 5.0的Element插件开始、NetApp Element 远程插件扩展点：</block>
-  <block id="7491d78d51f3545fc9fe30d2249bc196" category="paragraph">适用于vCenter Server 4.10或更早版本的Element插件、NetApp Element 配置和管理扩展点：</block>
+  <block id="14ff77c680c9acb2e3a54c4ea137f642" category="cell">RMCP端口。NetApp Hybrid Cloud Control 计算固件升级需要此功能。</block>
+  <block id="2e4fe9cef5b49ad23180da86877e63cb" category="cell">计算节点BMC/IPMI H410和H600系列</block>
+  <block id="59f1e3a87c5b329f2a5a951d9bf325f8" category="cell">对节点远程控制的HTTPS UI和API访问</block>
+  <block id="1381491a5bb8087f95db0601150c5c28" category="cell">存储节点BMC/IPMI H410和H600系列</block>
+  <block id="291dd45cc603b1047e92bf5a13259357" category="cell">RMCP端口。这是管理启用了IPMI的系统所必需的。</block>
+  <block id="4fc3110ffa80f16c08c41963de559312" category="admonition">升级计算节点的 ESXi 时<block ref="c40679731a13cea0e8ba16410d87ab2b" category="inline-link-rx"></block>，一次只升级一个计算节点，以便暂时只有一个见证节点不可用，并且可以保持集群仲裁。</block>
+  <block id="3ef00ef1af91bf9fe0b72f4052a67f59" category="list-text">适用于vCenter Server 5.0的Element插件的vCenter插件注册页面：</block>
+  <block id="b53963914b8930756b5acf2d4aca8094" category="list-text">适用于vCenter Server 4.x的Element插件的vCenter插件注册页面：</block>
+  <block id="b8b146fd1e1ecdf074536a02bfe40871" category="list-text">(对于内部服务器/非公开站点)根据适用于vCenter的Element插件版本、此插件JSON文件或插件ZIP的自定义URL：</block>
+  <block id="1993643c12bb4ee547f04d8d85f8c4bf" category="list-text">从适用于vCenter Server 5.0的Element插件开始、将显示NetApp Element 远程插件扩展点：</block>
+  <block id="1c63b3cd9a6d3bdf8b9b31aca68672d7" category="list-text">对于适用于vCenter Server 4.10或更早版本的Element插件、将显示NetApp Element 配置和管理扩展点：</block>
 </blocks>
