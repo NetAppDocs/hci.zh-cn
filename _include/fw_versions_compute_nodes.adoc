@@ -1,20 +1,7 @@
----
-sidebar: sidebar 
-permalink: docs/fw_compute_nodes.html 
-keywords: documentation, earlier, previous, versions 
-summary: 计算节点支持的固件和驱动程序版本。 
----
-= 计算节点
-:hardbreaks:
+= H615C
 :allow-uri-read: 
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ../media/
-:keywords: hci, earlier, documentation, versions
 
 
-[role="lead"]
 NetApp HCI 计算节点支持的固件和ESXi驱动程序版本。
 
 * 
