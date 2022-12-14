@@ -11,7 +11,7 @@ keywords: netapp, storage prechecks, element upgrade, sfupgradecheck
 [role="lead"]
 您必须在升级 Element 存储之前运行运行运行状况检查，以确保集群中的所有存储节点均已准备好进行下一次 Element 存储升级。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * *管理服务*：您已更新到最新的管理服务包(2.10.27或更高版本)。
 +
 
@@ -38,15 +38,16 @@ NOTE: 如果您接受EULA、则会在所有未来更新中记录此EULA、并启
 
 
 
+.运行状况检查选项
 您可以使用NetApp Hybrid Cloud Control UI或NetApp Hybrid Cloud Control API运行运行状况检查：
 
-*  NetApp Hybrid Cloud Control to run Element storage health checks prior to upgrading storage （首选方法）
-*  API to run Element storage health checks prior to upgrading storage
+* <<在升级存储之前，请使用 NetApp Hybrid Cloud Control 运行 Element 存储运行状况检查>> （首选方法）
+* <<在升级存储之前，请使用 API 运行 Element 存储运行状况检查>>
 
 
 您还可以了解有关此服务运行的存储运行状况检查的更多信息：
 
-*  health checks made by the service
+* <<服务执行的存储运行状况检查>>
 
 
 
