@@ -6112,4 +6112,6 @@
   <block id="43e34bcd62fca2ef36509ec2613974a0" category="admonition">有关适用于您的硬件的完整固件和驱动程序固件列表，请参见 <block ref="913963bf89b539ef788a8e09cb649658" category="inline-link-macro-rx"></block>。</block>
   <block id="12b23b4c09d649df7ce5a85073a16761" category="inline-link-macro">NetApp HCI 存储节点支持的固件版本</block>
   <block id="70e945411317a488defaf4452814955d" category="admonition">有关适用于您的硬件的完整固件和驱动程序固件列表，请参见 <block ref="5044654178b92d05d74ce63fd089f27a" category="inline-link-macro-rx"></block>。</block>
+  <block id="22e88e4089c8681eb3fe26ebca3e4cc5" category="cell">*计算固件包2.150.4至NetApp HCI 1.10*</block>
+  <block id="a6bbe5a2ef47a653214029cd4a762104" category="cell">*计算固件包2.146.2*</block>
 </blocks>
