@@ -65,5 +65,3 @@ NOTE: 您可以在匿名窗口中运行此命令、以避免稍后从已保存�
 == 了解更多信息
 
 link:firmware_driver_versions.html["NetApp HCI 支持的固件和ESXi驱动程序版本以及NetApp HCI 存储节点的固件版本"]
-
- // 2023-MAR-3, DOC-4661
