@@ -42,5 +42,4 @@ NetApp-HCI-Datastore-[01,02]
 [discrete]
 == 了解更多信息
 
-* link:firmware_driver_versions.html["NetApp HCI 支持的固件和ESXi驱动程序版本以及NetApp HCI 存储节点的固件版本"]
-
+link:firmware_driver_versions.html["NetApp HCI 支持的固件和ESXi驱动程序版本以及NetApp HCI 存储节点的固件版本"]
