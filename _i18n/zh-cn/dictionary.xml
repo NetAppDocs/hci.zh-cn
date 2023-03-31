@@ -5964,7 +5964,6 @@
   <block id="a9fc1ab89aaaf4e529a9e4251a8b3b33" category="list-text"><block ref="a9fc1ab89aaaf4e529a9e4251a8b3b33" category="inline-link-rx"></block></block>
   <block id="af5fe52fe204cf15311c07d5bf36b9a1" category="paragraph">使用适用于vCenter Server 4.x的Element插件升级到VMware vCenter Server 7.0 Update 3时、此插件无法部署。要使用Spring Framework 4解决此问题描述 、请参见<block ref="770c119932f7fa962a47dc0795db1af6" category="inline-link-rx"></block>。</block>
   <block id="9b50fd8de96fcf38bc35a026df14fbc4" category="paragraph">对于已注册适用于VMware vCenter Server的NetApp Element 插件的现有vSphere环境、您可以在首次更新包含此插件服务的管理服务包后更新此插件注册。</block>
-  <block id="56f4bca23bb3dd45148dc7171511b7e5" category="paragraph">此升级操作步骤 适用于以下升级情形。</block>
   <block id="04e630ae5e9700f09b6ca3715246283d" category="open-title">适用于vCenter 5.0及更高版本的Element插件</block>
   <block id="61517793d4523320c7cd75e303ad36ff" category="list-text">您要升级到8.0或7.0 HTML5 vSphere Web Client。</block>
   <block id="787e0e54cc17d9dd6bbd7cf4c4fbc14d" category="admonition">适用于vCenter 5.0及更高版本的Element插件与vCenter Server 6.7和6.5不兼容。</block>
@@ -6077,7 +6076,6 @@
   <block id="8157d1d3bb72f3ce50b0672f12f201dd" category="list-text">选择浏览以找到您保存的软件包并上传它。</block>
   <block id="4ac581155f2c6a4a3a056078e2b122a1" category="list-text">在管理节点上打开 REST API UI ：</block>
   <block id="badb045d93b6de2fe8d2a1a664b92d6f" category="paragraph">此升级操作步骤包括以下升级情形：</block>
-  <block id="0c6a507d40e276c8d0426facc36aaeca" category="list-text">您要升级到适用于vCenter Server 5.0或5.1的Element插件。</block>
   <block id="609cfd925544c2aaccb703dcb95eed4d" category="admonition">从适用于vCenter Server 4.x的Element插件升级到5.x时、由于无法将数据从vCenter实例复制到远程插件、因此已配置此插件的集群将丢失。您必须将集群重新添加到远程插件。这是从本地插件升级到远程插件时的一次性活动。</block>
   <block id="4edf62fd94cfb84b727afbee52aa8128" category="list-text">适用于vCenter Server 5.x的Element插件的vCenter插件注册页面：</block>
   <block id="04bac97a16b610a555c29c398dc04860" category="paragraph">* 存储 * 选项卡列出了安装过程中的存储集群。如果 NetApp Hybrid Cloud Control 无法访问某个集群，则该集群将不会显示在 * 升级 * 页面上。如果您的集群运行的是 Element 12.0 或更高版本，则会看到为这些集群列出的当前固件包版本。如果一个集群中的节点具有不同的固件版本，或者升级过程中，您将在 * 当前固件包版本 * 列中看到 * 多个 * 。您可以选择 * 多个 * 以导航到 * 节点 * 页面以比较固件版本。如果所有集群运行的 Element 版本均早于 12.0 ，则您将看不到有关固件包版本号的任何信息。此信息也可从 * 节点 * 页面获得。请参见 <block ref="4d8bfbcb84a29a1601595359b67752e6" category="inline-link-macro-rx"></block>。</block>
@@ -6103,4 +6101,5 @@
   <block id="e3b4df69e2fe4e8545e5e0240eada6a2" category="list-text"><block ref="e3b4df69e2fe4e8545e5e0240eada6a2" category="inline-link-rx"></block></block>
   <block id="631923a687ff82d68973d99b95597b47" category="inline-link">SolidFire 和 Element 资源页面</block>
   <block id="238c5b123e3473c57e2925edccb205c2" category="list-text"><block ref="238c5b123e3473c57e2925edccb205c2" category="inline-link-rx"></block></block>
+  <block id="3a2bbd221f9a6d667af34b16ef1c1a32" category="list-text">您要升级到适用于vCenter Server 5.1或5.0的Element插件。</block>
 </blocks>
