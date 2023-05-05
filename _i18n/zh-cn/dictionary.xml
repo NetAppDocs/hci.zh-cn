@@ -800,7 +800,6 @@
   <block id="5a5285cbae65a3a4e6d2325887861e01" category="inline-link-macro">利用 Ansible 自动升级计算固件</block>
   <block id="7cb9171d2e41fd487907a91fb38fae31" category="list-text"><block ref="9c1d2a43cd65a3c0eacb2a0469676bce" category="inline-link-macro-rx"></block> 或 <block ref="ea7bc6be827f510faa492af963f76183" category="inline-link-macro-rx"></block>。</block>
   <block id="0c44c4e22a7e5a446ab9db51be083194" category="inline-link">升级 NetApp SolidFire 全闪存存储系统</block>
-  <block id="0a9bb27e26601025f1f2f83ed531e6f2" category="list-text"><block ref="0a9bb27e26601025f1f2f83ed531e6f2" category="inline-link-rx"></block></block>
   <block id="c22d54980e737e20937f0c5ba6b6861f" category="summary">了解如何在 NetApp HCI 部署期间配置 VMware vSphere 。</block>
   <block id="8dbca53f09cf9420f0d8b70c6ea8bbf4" category="doc">配置新的 VMware vSphere 环境</block>
   <block id="4f19202a32506ccdd6c5876f1e97fb13" category="paragraph">您可以在 NetApp HCI 安装过程中通过提供 vSphere 应使用的一些网络信息来部署新的 vSphere 环境。请注意，如果使用 IP 地址配置 vSphere ，则在安装后无法更改此地址。</block>
@@ -1061,7 +1060,6 @@
   <block id="7f874a6debff4d8e3670b59ddfdf3bd0" category="inline-link-macro">更换双节点集群中的存储节点</block>
   <block id="c94f753aa1baf797e0eea49696404564" category="inline-link">_TR-4820 ：《 NetApp HCI 网络快速规划指南》</block>
   <block id="42f1d5fbe05e1bdd25e119b9262b7dbd" category="list-text"><block ref="42f1d5fbe05e1bdd25e119b9262b7dbd" category="inline-link-rx"></block></block>
-  <block id="1f9e8829ba3f07efa25b77f1eb0d6c07" category="inline-link">NetApp Configuration Advisor</block>
   <block id="00415b6fb565410eea76dc891605762c" category="summary">对于 H 系列计算节点， NetApp 提供了 Ansible 角色，可帮助您自动对 BMC ， BIOS 和 NIC 等硬件组件进行固件升级。</block>
   <block id="eacf1eb0cf3662016ce47146687bec73" category="doc">利用 Ansible 自动升级计算节点固件</block>
   <block id="14427a22f723384059c45e3e1e6b5fcd" category="paragraph">您可以使用 NetApp 混合云控制中的工作流更新 NetApp HCI 计算节点上的系统固件，包括 BMC ， BIOS 和 NIC 等组件的固件。对于具有大型计算集群的安装，您可以使用 Ansible 对整个集群执行滚动升级，从而自动执行工作流。</block>
@@ -2699,7 +2697,6 @@
   <block id="6f5983880dad4e85e696acaacf3a185b" category="paragraph">如果在安装或升级期间启用了永久性卷功能，则会自动创建多个卷，并在分配的集群上预先指定 NetApp-HCI-名称 。与任何基于 Element 软件的卷一样，这些卷可以使用 Element 软件 Web UI ，适用于 vCenter Server 的 NetApp Element 插件或 API 进行查看，具体取决于您的首选项和安装。永久性卷必须已启动且正在运行，并与管理节点建立 iSCSI 连接，以维护可用于恢复的当前配置数据。</block>
   <block id="055a5661c230e542ad2a37a3d951d4fd" category="admonition">与管理服务关联的永久性卷会在安装或升级期间创建并分配给新帐户。如果您使用的是永久性卷，请勿修改或删除这些卷或其关联帐户。</block>
   <block id="e2439a8512b353f75391ba9c346bc84d" category="inline-link-macro">管理卷</block>
-  <block id="9e69e35241eb196e84b4b8c5230c84b9" category="list-text"><block ref="9e69e35241eb196e84b4b8c5230c84b9" category="inline-link-macro-rx"></block></block>
   <block id="17486c877c1be358549c349bb034eda1" category="paragraph">要确保成功部署 NetApp HCI 所使用的交换机，需要进行特定配置。有关在您的环境中实施以下每个要求的具体说明，请参见交换机文档。</block>
   <block id="630c5bd4739aa20a3330119d3c5903dc" category="paragraph">NetApp HCI 部署至少需要三个网段，以下每种类型的流量对应一个网段：</block>
   <block id="d86030abdf90a0e463f815e6366bf38e" category="list-text">VMware vMotion</block>
@@ -3168,7 +3165,6 @@
   <block id="c9676e9b030c94e7e828a060b343f3db" category="list-text"><block ref="c9676e9b030c94e7e828a060b343f3db" category="inline-link-macro-rx"></block></block>
   <block id="a5790b06c6321c773eca064d8f8b323a" category="inline-link-macro">从管理服务获取日志</block>
   <block id="b8ce529cfc2b9255a783e211ddb57996" category="list-text"><block ref="b8ce529cfc2b9255a783e211ddb57996" category="inline-link-macro-rx"></block></block>
-  <block id="d422fe7cf0f32ce6c7b8426538c06795" category="list-text"><block ref="d422fe7cf0f32ce6c7b8426538c06795" category="inline-link-macro-rx"></block></block>
   <block id="5fdb538f00d44b4e663cc26d707fee0d" category="doc">计算固件包 2.76.10 发行说明</block>
   <block id="6d87ab8a4146897fc42c7206f9a8e527" category="paragraph">2.76.10 版包含常规错误修复。</block>
   <block id="0f24412e4ffe8570e662187ede29e938" category="cell">NATP3.9</block>
@@ -3755,7 +3751,6 @@
   <block id="85dcef363aee58216fb5391e1fe35922" category="list-text"><block ref="85dcef363aee58216fb5391e1fe35922" category="inline-link-rx"></block></block>
   <block id="da3eb0bd8c882a21931739ac39ce915a" category="inline-link">适用于 vCenter Server 的 NetApp Element 插件文档</block>
   <block id="412377cf78b07a27c835e112fdfa7507" category="list-text"><block ref="412377cf78b07a27c835e112fdfa7507" category="inline-link-rx"></block></block>
-  <block id="d1ba909955f7a2392ac07c215865424a" category="list-text"><block ref="8eb8242e05dec3c7873bd909a6d9def7" category="inline-link-rx"></block> 5.8.1 或更高版本的网络验证工具</block>
   <block id="99a4ec91179b80fd1b6cead13251456a" category="summary">您应更换机箱以修复与 CPU ，主板或未通电相关的计算节点故障。如果运行 NetApp HCI Bootstrap OS 1.6 或更高版本的 H610C 计算节点中的 DIMM 出现故障，则可以更换 DIMM ，而无需更换机箱。对于 H615C 节点，如果 DIMM 发生故障，您无需更换机箱；您只能更换发生故障的 DIMM 。</block>
   <block id="75d325ab74cfada9b103a38f5c856d3e" category="admonition">对于 H610C 和 H615C ，术语 " 节点 " 和 " 机箱 " 可以互换使用，因为节点和机箱并非独立的组件。</block>
   <block id="c75441b3cca2c155de3eee605d34aeb4" category="list-text">您已验证此节点是否出现故障。</block>
@@ -4715,7 +4710,6 @@
   <block id="a4da6a7298a51c03437fe8215d4cd7dc" category="admonition">与管理服务关联的永久性卷会在安装或升级期间分配给新帐户。如果您使用的是永久性卷，请勿修改或删除这些卷或其关联帐户。如果删除这些帐户，则可能会使管理节点不可用。</block>
   <block id="b12641981b1007fecfaf498bd16ae5d5" category="list-text">在表的 * 操作 * 列中，展开帐户的菜单并选择 * 删除 * 。</block>
   <block id="1326a41ad4b26f3395b0f54dd9172b2b" category="inline-link-macro">了解客户信息</block>
-  <block id="469d7f183f29ad292b8937af8903b1dc" category="list-text"><block ref="469d7f183f29ad292b8937af8903b1dc" category="inline-link-macro-rx"></block></block>
   <block id="7e5784de66821e5068bc24c9a5c6d1d6" category="inline-link">使用用户帐户</block>
   <block id="9197cc48c8ddd2d400f10cc220189fb2" category="list-text"><block ref="9197cc48c8ddd2d400f10cc220189fb2" category="inline-link-rx"></block></block>
   <block id="4890b06e0bef2ccd30ddebf19fa9e652" category="summary">您可以使用 REST API 从管理 ndoe 上运行的服务检索日志。</block>
@@ -4926,7 +4920,6 @@
   <block id="eddbea64540d3f03b2661d8ecd4ac2a7" category="list-text">SetProtectionDomainLayout —允许为每个节点分配自定义保护域。</block>
   <block id="03540783615c6f29364ad461ea3aa641" category="paragraph">有关使用自定义保护域的详细信息，请联系 NetApp 支持部门。</block>
   <block id="afc48abd77915d4342bb6d52750ca477" category="inline-link-macro">使用 Element API 管理存储</block>
-  <block id="8e078db9f02bd406ca631ba2825dd629" category="paragraph"><block ref="8e078db9f02bd406ca631ba2825dd629" category="inline-link-macro-rx"></block></block>
   <block id="d1cfb55513d453a2cf4188067d2cf218" category="paragraph">您可以使用 REST API 在管理节点（ mNode ）上禁用，重新启用或确定 SSH 功能的状态。提供的 SSH 功能 <block ref="6bb28df38aa0844e287b2e23fc581879" category="inline-link-macro-rx"></block> 默认情况下，在运行管理服务 2.18 或更高版本的管理节点上处于禁用状态。</block>
   <block id="4a8504402e610045f6f515076b209af8" category="list-text">* Element 软件 * ：集群运行的是 NetApp Element 软件 11.3 或更高版本。</block>
   <block id="4dcaf58a1a6fd3555d9626cfadc42510" category="inline-link-macro">身份验证</block>
@@ -6117,4 +6110,9 @@
   <block id="bc2a79198b157bed1c1eaa43da985e00" category="cell">*计算固件包2.174.0*</block>
   <block id="def5f641ad1584ffe19a578902c863ee" category="cell">2023年4月12日</block>
   <block id="0b67b64b71fa04f23305e691b81ba252" category="cell">07.02.00</block>
+  <block id="ba3433b658d56109d8826f49ee0a8064" category="list-text"><block ref="ba3433b658d56109d8826f49ee0a8064" category="inline-link-rx"></block></block>
+  <block id="d5147898f653b5500d1ba07c4204c743" category="list-text"><block ref="9d6606ad3ff5278801234da0e6746362" category="inline-link-rx"></block> 5.8.1 或更高版本的网络验证工具</block>
+  <block id="c411aac8cf32395c454762934e85315b" category="list-text"><block ref="c411aac8cf32395c454762934e85315b" category="inline-link-macro-rx"></block></block>
+  <block id="3f8636b2ed4be15cc908d52557ffc327" category="list-text"><block ref="3f8636b2ed4be15cc908d52557ffc327" category="inline-link-macro-rx"></block></block>
+  <block id="78997922bf48b612914b49bc22e40752" category="paragraph"><block ref="78997922bf48b612914b49bc22e40752" category="inline-link-rx"></block></block>
 </blocks>
