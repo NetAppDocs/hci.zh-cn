@@ -93,7 +93,8 @@ NOTE: 系统将提示您使用 NetApp 支持站点凭据登录。
 
 == 存储固件
 
-* link:rn_storage_firmware_2.164.0.html["存储固件包2.164.0发行说明"] _new_
+* link:rn_storage_firmware_2.175.0.html["存储固件捆绑包2.175.0发行说明"] _new_
+* link:rn_storage_firmware_2.164.0.html["存储固件包2.164.0发行说明"]
 * link:rn_storage_firmware_2.150.html["存储固件包2.150发行说明"]
 * link:rn_storage_firmware_2.146.html["存储固件包 2.146 发行说明"]
 * link:rn_storage_firmware_2.99.2.html["存储固件包 2.99.2 发行说明"]

@@ -5868,7 +5868,6 @@
   <block id="6099f1a8115acef9b6c8b5715b669041" category="paragraph">对于VMware ESXi 6.x和7.0到7.0 U3、请执行以下步骤导入驱动程序脱机捆绑包文件：</block>
   <block id="e5f0019a70375a2e883b7840f439118a" category="list-text"><block ref="732713df3c4c58fb19fab37e747f6f0d" category="inline-link-macro-rx"></block> _new_</block>
   <block id="eb66a5e31d8328246fdb5497ed40a7a4" category="inline-link-macro">存储固件包2.164.0发行说明</block>
-  <block id="fddb0d91393a6472f9894a9e10c5d3b5" category="list-text"><block ref="05897b3b8549d60a9bbb1bea2303559b" category="inline-link-macro-rx"></block> _new_</block>
   <block id="dd9a6aa21d9f1f41ef6fc5f7516fd509" category="list-text"><block ref="dd9a6aa21d9f1f41ef6fc5f7516fd509" category="inline-link-macro-rx"></block></block>
   <block id="1e27fffa2cb3a38bf6c4f19753e5c750" category="paragraph">从Element 12.0和管理服务版本2.14开始、您可以使用NetApp Hybrid Cloud Control UI和REST API在存储节点上执行纯固件升级。此操作步骤不会升级 Element 软件，您可以通过它在主要 Element 版本之外升级存储固件。</block>
   <block id="ab9c2528be862fe9060ba417c0e4592c" category="paragraph">存储固件包版本2.164.0支持NIC、Mellanox CX3 16.32.1010以及PM9A3驱动器的固件更新。</block>
@@ -6115,4 +6114,15 @@
   <block id="c411aac8cf32395c454762934e85315b" category="list-text"><block ref="c411aac8cf32395c454762934e85315b" category="inline-link-macro-rx"></block></block>
   <block id="3f8636b2ed4be15cc908d52557ffc327" category="list-text"><block ref="3f8636b2ed4be15cc908d52557ffc327" category="inline-link-macro-rx"></block></block>
   <block id="78997922bf48b612914b49bc22e40752" category="paragraph"><block ref="78997922bf48b612914b49bc22e40752" category="inline-link-rx"></block></block>
+  <block id="a35c2c2e602b46918d896beca9bdff98" category="doc">存储固件捆绑包2.175.0发行说明</block>
+  <block id="1b7df2ed7eecb435d51d1cf325f461e2" category="paragraph">存储固件捆绑包2.175.0版包含常规错误修复。</block>
+  <block id="0a60c14a30cc8f85370185da12d36fa3" category="paragraph">此固件包包含以下硬件组件固件版本(以*粗体*文本突出显示)：</block>
+  <block id="7e4edf3ad62acb2971d64634bfc0ec11" category="cell">*3.5*</block>
+  <block id="20ee78f3a553d428f4ca118e67559535" category="cell">*2.17*</block>
+  <block id="a60a89903326c0d44be1974de53bda7d" category="admonition">下表指定了此存储固件包版本中支持的SF38410、SFG19210、SF9605和SF4805存储节点组件固件版本。但是、这些组件固件不能通过存储固件包进行更新。</block>
+  <block id="d47b937e2f74388bd4fd552f0dc64877" category="list-text">在关键字搜索字段中，键入“存储固件包”并选择*New Search*：</block>
+  <block id="165ffb421393136ac7930e23c971a009" category="inline-link-macro">存储固件包2.175.0的注意事项</block>
+  <block id="112f8e7ac3d8ebc58aaf4c3565f340b0" category="list-text"><block ref="112f8e7ac3d8ebc58aaf4c3565f340b0" category="inline-link-macro-rx"></block></block>
+  <block id="0f680f15db273397148c72e656319e45" category="list-text"><block ref="9f2c8b7f9459e99daa861cf963d87ddb" category="inline-link-macro-rx"></block> _new_</block>
+  <block id="05897b3b8549d60a9bbb1bea2303559b" category="list-text"><block ref="05897b3b8549d60a9bbb1bea2303559b" category="inline-link-macro-rx"></block></block>
 </blocks>
