@@ -73,7 +73,6 @@
   <block id="4d41fb1211aa5ce58e5235fb983f1a15" category="list-text">通过提供 NetApp HCI 存储集群管理员凭据登录到 NetApp 混合云控制。</block>
   <block id="9b6c54a62f57f89342aae003cf762345" category="list-text">单击界面右上角的 * 展开 * 。</block>
   <block id="c279fa7b9df4852c4e23caa58f534561" category="paragraph">浏览器将打开 NetApp 部署引擎。</block>
-  <block id="053ab309f18a77ef5149424304d1c86d" category="list-text">通过提供 NetApp HCI 存储集群管理员凭据登录到 NetApp 部署引擎。</block>
   <block id="9c949590f3665d51de542591b1677bea" category="list-text">在 * 欢迎 * 页面上，单击 * 是 * ，然后单击 * 继续 * 。</block>
   <block id="81ca71999d078ea8378ca36814ab29e3" category="list-text">在 * 最终用户许可 * 页面上，阅读 VMware 最终用户许可协议并单击 * 我接受 * 接受条款，然后单击 * 继续 * 。</block>
   <block id="736a8559e93194c56ffc906d359a1fcc" category="list-text">在 * vCenter * 页面上，完成以下步骤：</block>
@@ -5845,8 +5844,6 @@
   <block id="5b1d1e4dbc8cd8e4ec110c7e700e056f" category="section-title">H300E/H500E/H700E</block>
   <block id="f0f15f2c98a9ba8013c265fbf2b1874f" category="paragraph">*型号(系列部分)：* H300E/H500E/H700E</block>
   <block id="a61d8a4fcaa8b59b1d8f1d63aada7783" category="summary">NetApp HCI 和NetApp Element 软件支持的固件和驱动程序版本。</block>
-  <block id="bf44a0123ec45362af49b3862557cdd8" category="paragraph"><block ref="f4e8c07388940da9080e74e50960909d" category="inline-link-macro-rx"></block>* H610S * H410S</block>
-  <block id="a82f3d9d22bfe1382d03945f3377eb65" category="paragraph"><block ref="4fe99558e9030b1914f3007a88f2f74d" category="inline-link-macro-rx"></block>* H615C * H610C * H410C * H300E/H500E/H700E</block>
   <block id="4b8861a11346d673205d074f862db70a" category="inline-link">支持的固件和ESXi驱动程序版本</block>
   <block id="d8288c4d481f3eb3a21b3ee9d3d34f3e" category="list-text">* 有效升级路径 * ：您已检查要升级到的 Element 版本的升级路径信息并验证升级路径是否有效。请参见<block ref="2980f5bfbc85d7c14e3d7a2c57af53b5" category="inline-link-rx"></block></block>
   <block id="9671b9c99a15fe8beaa959d54510f7e0" category="paragraph">* VMware ESXi驱动程序版本*</block>
@@ -6179,4 +6176,8 @@
   <block id="022beb4c9e2bdbe9e3398445a4fad6b2" category="cell">2023年6月15日</block>
   <block id="804066a6a5042090a2a0b25c55f38e72" category="cell">3.5.</block>
   <block id="489901e715cade6fe0efc7e21e194576" category="cell">2.17.</block>
+  <block id="d44403a904c0446f29d8bc5c2ed4770e" category="list-text">通过提供本地NetApp HCI存储集群管理员凭据登录到NetApp部署引擎。</block>
+  <block id="60099f97c4a82ba2ee2d4a4d593b844b" category="admonition">您不能使用轻型目录访问协议凭据登录。</block>
+  <block id="f4e8c07388940da9080e74e50960909d" category="paragraph"><block ref="f4e8c07388940da9080e74e50960909d" category="inline-link-macro-rx"></block></block>
+  <block id="4fe99558e9030b1914f3007a88f2f74d" category="paragraph"><block ref="4fe99558e9030b1914f3007a88f2f74d" category="inline-link-macro-rx"></block></block>
 </blocks>
