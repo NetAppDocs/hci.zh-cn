@@ -27,11 +27,11 @@ NOTE: 管理服务2.22.7包括适用于vCenter Server 5.0的Element插件、该�
 --
 此升级操作步骤包括以下升级情形：
 
-* 您要升级到适用于vCenter Server 5.1或5.0的Element插件。
+* 您正在升级到适用于vCenter Server 5.2、5.1或5.0的Element插件。
 * 您要升级到8.0或7.0 HTML5 vSphere Web Client。
 +
 
-IMPORTANT: 适用于vCenter 5.0及更高版本的Element插件与vCenter Server 6.7和6.5不兼容。
+IMPORTANT: 适用于vCenter 5.0或更高版本的Element插件与vCenter Server 6.7和6.5不兼容。
 
 
 
@@ -139,11 +139,11 @@ NOTE: 此操作将创建一个新数据库并在 vSphere Web Client 中完成安
 +
 ** 从适用于vCenter Server 5.0的Element插件开始、将显示NetApp Element 远程插件扩展点：
 +
-image::vcp_remote_plugin_icons_home_page.png[描绘了成功升级或安装Element插件5.10或更高版本后的插件扩展点]
+image::vcp_remote_plugin_icons_home_page.png[描述了成功升级或安装Element插件5.10或更高版本后的插件扩展点]
 
 ** 对于适用于vCenter Server 4.10或更早版本的Element插件、将显示NetApp Element 配置和管理扩展点：
 +
-image::vcp_shortcuts_page_accessing_plugin.png[描述了成功升级或安装Element插件4.10或更早版本之后的插件扩展点]
+image::vcp_shortcuts_page_accessing_plugin.png[描述了成功升级或安装Element插件4.10或更早版本后的插件扩展点]
 
 +
 [NOTE]
@@ -162,7 +162,7 @@ image::vcp_shortcuts_page_accessing_plugin.png[描述了成功升级或安装Ele
 +
 [listing]
 ----
-NetApp Element Plug-in Version: 5.1
+NetApp Element Plug-in Version: 5.2
 NetApp Element Plug-in Build Number: 12
 ----
 
