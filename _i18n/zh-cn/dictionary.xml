@@ -893,7 +893,6 @@
   <block id="75be5fb98a5e3aff69e3f0e049934221" category="list-text">（可选）禁用 <block ref="b551ebda879d60cf3a0931b9f0e794a7" category="inline-link-macro-rx"></block> 再次重申。</block>
   <block id="88d2fa1cb3e06d29219dc8436ebc814c" category="admonition">如果不禁用 SSH ，它将保持启用状态。启用了 SSH 的配置会通过更新和升级在管理节点上持续存在，直到手动禁用为止。</block>
   <block id="38d2bb23849f828628a170b7814a5b48" category="summary">了解如何在部署 NetApp HCI 后在已配置的交换机上禁用 `lac-individual` 命令。</block>
-  <block id="f51859c5296df69766701d38fc7c8859" category="doc">在已配置的交换机上禁用 lac-individual 命令</block>
   <block id="8b8fcd904806ca441f07a09ee921db7c" category="paragraph">默认情况下， Mellanox switch `lac-individual` 命令和 Cisco switch `lacp suspend-individual` 命令会在部署后保持配置状态。安装后不需要使用此命令；如果仍然配置此命令，则在对交换机进行故障排除或重新启动时可能会出现发生原因卷访问问题。部署后，您应检查每个 Mellanox 交换机和 Cisco 交换机配置，并删除 `lac-individual` 或 `lacp suspend-individual` 命令。</block>
   <block id="7230032f9e3f3d80f5d464534044fa7e" category="list-text">使用 SSH 打开与交换机的会话。</block>
   <block id="ea81d6b9aaa9ef63fd80d7044e4a7dae" category="list-text">显示正在运行的配置：</block>
@@ -6188,4 +6187,5 @@
   <block id="4718467fa890cd0dcf159b3d461cedbe" category="list-text"><block ref="6bd87cf3d55c2ead3ab585e965bea4db" category="inline-link-rx"></block> _new_</block>
   <block id="410ecb079e286058eeb2bc6b56d9379c" category="list-text"><block ref="410ecb079e286058eeb2bc6b56d9379c" category="inline-link-rx"></block></block>
   <block id="732713df3c4c58fb19fab37e747f6f0d" category="list-text"><block ref="732713df3c4c58fb19fab37e747f6f0d" category="inline-link-macro-rx"></block></block>
+  <block id="890975e7736a237c513f38124344fb84" category="list-text"><block ref="890975e7736a237c513f38124344fb84" category="inline-link-macro-rx"></block></block>
 </blocks>
