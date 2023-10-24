@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: docs/concept_rancher_concept.html 
+permalink: docs/concept_rancher_product_overview.html 
 summary: 从管理服务2.21.61开始、现有和新的Rancher部署不再支持Rancher。您可以继续使用早期版本的管理服务管理Rancher。 
 keywords: netapp, hci, rancher, control plane, catalog, cluster, kubernetes 
 ---
