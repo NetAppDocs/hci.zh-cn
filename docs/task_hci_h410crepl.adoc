@@ -58,7 +58,7 @@ NetApp建议使用NetApp部署引擎添加替代计算节点。如果无法继�
 
 * link:task_hci_removewn.html["删除见证节点以释放计算资源"]
 * <<如果您收到的替代节点使用非标准 BMC 密码，请更改此密码>>
-* <<升级节点上的 BMC 固件>>
+* <<Upgrade the BMC firmware on your node>>
 
 
 
@@ -146,6 +146,8 @@ CAUTION: 如果机箱后部的通风孔被缆线或标签挡住，则可能会�
 
 TIP: 确保替代节点的布线方式与机箱中其他节点相同。
 
+. 配置BMC、请参见 link:hci_prereqs_final_prep.html["为每个节点配置 IPMI"] 了解详细信息。
+. 请参见NetApp知识库文章 https://kb.netapp.com/onprem/solidfire/Element_OS/How_to_disable_BMC_web_UI_access_on_HCI_and_SolidFire_H-Series_systems["如何在HCI和SolidFire H系列系统上禁用BMC Web UI访问"^] 确定是否需要禁用BMC Web访问。
 
 
 
@@ -923,29 +925,9 @@ image::bmc pw sticker.png[显示了节点的背面，并在 IPMI 端口下贴上
 
 
 
-== 升级节点上的 BMC 固件
+== 升级节点上的固件
 
-更换计算节点后，您可能需要升级固件版本。您可以从上的下拉菜单下载最新固件文件 link:https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp 支持站点（需要登录）"^]。
-
-.步骤
-. 登录到基板管理控制器（ Baseboard Management Controller ， BMC ） UI 。
-. 选择 * 维护 > 固件更新 * 。
-+
-image::h410c-bmc1.png[显示了用于固件更新的 BMC UI 导航。]
-
-. 在 BMC 控制台中，选择 * 维护 * 。
-+
-image::h410c-bmc2.png[显示了 BMC UI 中的维护屏幕。]
-
-. 在维护选项卡中，从用户界面左侧的导航栏中选择 * 固件更新 * ，然后选择 * 进入更新模式 * 。
-+
-image::h410c-bmc3.png[显示了 BMC UI 中的固件更新屏幕。]
-
-. 在确认对话框中选择 * 是 * 。
-. 选择 * 浏览 * 以选择要上传的固件映像，然后选择 * 上传固件 * 。从节点直接附近的位置加载固件可能会导致发生原因加载时间延长，并可能超时。
-. 允许保留配置检查，然后选择 * 开始升级 * 。升级大约需要 5 分钟。如果上传时间超过 60 分钟，请取消上传并将文件传输到节点附近的本地计算机。如果会话超时，您可能会在尝试重新登录到 BMC UI 的固件更新区域时看到许多警报。如果取消升级，系统会将您重定向到登录页面。
-. 更新完成后，选择 * 确定 * ，然后等待节点重新启动。升级后登录，然后选择 * 系统 * 以验证 * 固件修订版 * 版本是否与您上传的版本匹配。
-
+更换计算节点后，您可能需要升级固件版本。请参见 link:task_hcc_upgrade_compute_node_firmware.html["升级计算节点固件"] 了解详细信息。
 
 
 

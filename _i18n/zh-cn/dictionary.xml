@@ -1462,19 +1462,6 @@
   <block id="aaeb8011e825f6e35c3a11da3b06ae8e" category="list-text">选择 * 出厂默认值 * ，然后选择 * 删除当前设置并将用户默认值设置为 admin/admin* 单选按钮：</block>
   <block id="f77361b272ce81d8275727f7b1a756a8" category="list-text">选择 * 还原 * 。</block>
   <block id="51cb13d5d7f53d14e1177bc7209fd917" category="list-text">注销，然后重新登录以确认凭据现在已更改。</block>
-  <block id="4365aa4d62fcaed8a61f5851f7c63acc" category="section-title">升级节点上的 BMC 固件</block>
-  <block id="e64e1f5e233bff07158f07da3f6f71dc" category="inline-link-macro">NetApp 支持站点（需要登录）</block>
-  <block id="4cd4d7d72d12ae588ded720ce09eb6be" category="paragraph">更换计算节点后，您可能需要升级固件版本。您可以从上的下拉菜单下载最新固件文件 <block ref="abee0fa17807b632b354ed0eee4c1a88" category="inline-link-macro-rx"></block>。</block>
-  <block id="2a0625a35fb4af01157e81573ba8eeda" category="list-text">选择 * 维护 &gt; 固件更新 * 。</block>
-  <block id="447bf1c51f518d302e2efefb20e4f3e5" category="image-alt">显示了用于固件更新的 BMC UI 导航。</block>
-  <block id="5d3ccc6c1013f8038b1f86a92db0c184" category="list-text">在 BMC 控制台中，选择 * 维护 * 。</block>
-  <block id="051af6c885ceb71e22b881985fe7c46c" category="image-alt">显示了 BMC UI 中的维护屏幕。</block>
-  <block id="5f60cd8039f9c554b92de593bbb6a0a2" category="list-text">在维护选项卡中，从用户界面左侧的导航栏中选择 * 固件更新 * ，然后选择 * 进入更新模式 * 。</block>
-  <block id="67c015407a3660cd7c1736c3cbf43dd0" category="image-alt">显示了 BMC UI 中的固件更新屏幕。</block>
-  <block id="0356ec6b4d587e5f4d2782c817a2e96b" category="list-text">在确认对话框中选择 * 是 * 。</block>
-  <block id="7874642886c22920789477d73255c589" category="list-text">选择 * 浏览 * 以选择要上传的固件映像，然后选择 * 上传固件 * 。从节点直接附近的位置加载固件可能会导致发生原因加载时间延长，并可能超时。</block>
-  <block id="9ca6aab24c6382de412d4fb67990fbb9" category="list-text">允许保留配置检查，然后选择 * 开始升级 * 。升级大约需要 5 分钟。如果上传时间超过 60 分钟，请取消上传并将文件传输到节点附近的本地计算机。如果会话超时，您可能会在尝试重新登录到 BMC UI 的固件更新区域时看到许多警报。如果取消升级，系统会将您重定向到登录页面。</block>
-  <block id="fe29f01ceefdfc2a26d419451331a7de" category="list-text">更新完成后，选择 * 确定 * ，然后等待节点重新启动。升级后登录，然后选择 * 系统 * 以验证 * 固件修订版 * 版本是否与您上传的版本匹配。</block>
   <block id="334408f0e511aee8b4f25d23c40c9ff2" category="summary">在 NetApp HCI 系统升级过程中，您需要先运行计算节点运行状况检查，然后再执行固件升级。</block>
   <block id="1627e52c42f9bb2ee66537d3c67b82b5" category="paragraph">您必须在升级计算固件之前运行运行运行状况检查，以确保集群中的所有计算节点均已做好升级准备。只能对一个或多个受管 NetApp HCI 计算节点的计算集群运行计算节点运行状况检查。</block>
   <block id="d843290a4f160eb5d302fe442b7b62f9" category="list-text">您正在运行管理节点 11.3 或更高版本。</block>
@@ -5069,33 +5056,6 @@
   <block id="b7f7f58ec15cebe706964cdc95d8f5cf" category="sidebar">在 NetApp HCI 上使用 Rancher</block>
   <block id="efaccef33aabd635656b681f92a298ea" category="sidebar">维护 H 系列硬件</block>
   <block id="93168a8084b3e838d2932c4734bd234e" category="sidebar">早期版本</block>
-  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">入门</block>
-  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">发行说明</block>
-  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
-  <block id="01064f33f360eefba819bf9542c0486b" category="sidebar">安装维护硬件</block>
-  <block id="147fc8b7d94adc0dceb5978ab928f776" category="sidebar">H 系列硬件安装</block>
-  <block id="09af8dd99d422c917dcb27847056b045" category="sidebar">H 系列硬件维护</block>
-  <block id="bc2592cdeeae26af69f28b4f6a1c8ca0" category="sidebar">安装 NetApp HCI</block>
-  <block id="96e1a5a82d70a24f161f0adb6e19ac8d" category="sidebar">安装和部署概述</block>
-  <block id="8a6e336622cf399a6453e4659f2a6147" category="sidebar">使用 NetApp 部署引擎开始部署</block>
-  <block id="a54d0ac20b8277a267fb90e8c0b05032" category="sidebar">执行部署后任务</block>
-  <block id="cfe80b2a0cabf734adc7b7c1613cfe4f" category="sidebar">使用 NetApp HCI</block>
-  <block id="930dca22f6f735a61fd8f484808fecb3" category="sidebar">使用 NetApp Hybrid Cloud Control 进行管理</block>
-  <block id="6cb5dfacb4ee1684b5483221bfcf580c" category="sidebar">使用适用于 vCenter Server 的 NetApp Element 插件</block>
-  <block id="d02b5df8c0bf5a555ea650be898817f7" category="sidebar">展开 NetApp HCI</block>
-  <block id="748ace58318ab9d82392d680b07e89e6" category="sidebar">升级 NetApp HCI</block>
-  <block id="f7731734f4507319f744fe2c8158536a" category="sidebar">对 NetApp HCI 和 Rancher 进行故障排除</block>
-  <block id="eeabaf7c41bcd50a6a02694c070dbfb4" category="sidebar">重置计算节点上的 BMC</block>
-  <block id="166868e0f588717c1c62116a03c9b979" category="sidebar">更多知识库文章</block>
-  <block id="2a9dbfa4b74c53d7304fc8b79a1874d3" category="sidebar">解决方案</block>
-  <block id="fcf140abed196b8eba71c45f21312bce" category="sidebar">NetApp 解决方案</block>
-  <block id="81a123ccab93cd947289b672b0e50348" category="sidebar">演示教程</block>
-  <block id="45a52e6c046bce2a0f9f5253cc23fbd6" category="sidebar">NetApp HCI 视频库</block>
-  <block id="9135ac6f13de11d3b4b9f2f98ff9bcb8" category="sidebar">NetApp 学习服务</block>
-  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">博客社区</block>
-  <block id="a310588c148d934b9b30c31802d4a30b" category="sidebar">NetApp 社区</block>
-  <block id="213686afc3803be7caa09348765467fe" category="sidebar">如何获取帮助</block>
-  <block id="389672366ff11f72a82c5c495b9b5159" category="sidebar">NetApp HCI 1.8 文档</block>
   <block id="6f4f02cb0bd29a3049ddeee395d21373" category="list-text"><block ref="6f4f02cb0bd29a3049ddeee395d21373" category="inline-link-macro-rx"></block></block>
   <block id="d05f0358394ea81c12e954fa285913b7" category="list-text"><block ref="d05f0358394ea81c12e954fa285913b7" category="inline-link-macro-rx"></block></block>
   <block id="8a522fe0bbb068785db1d7e6a6f8472e" category="list-text"><block ref="8a522fe0bbb068785db1d7e6a6f8472e" category="inline-link-macro-rx"></block></block>
@@ -6190,4 +6150,9 @@
   <block id="4b07d1c342b03364f7120990720b53ef" category="section-title">第5步：为双节点和三节点存储集群重新部署见证节点</block>
   <block id="df0f8acf74958be223bdd3dabcce5038" category="inline-link">由于升级软件包上传错误、SolidFire和HCI升级无法启动</block>
   <block id="b9bbae8efe5c0f15ffba3f05d619b861" category="list-text">从2023年11月开始、您无法使用NetApp混合云控制或REST API启动组件升级、因为签名密钥证书(私有和公共)已于2023年11月5日到期。您可以按照知识库文章中介绍的临时解决策来解决此问题描述<block ref="43e83b9864cac922c7475bad0e74a40f" category="inline-link-rx"></block>。</block>
+  <block id="8daa3151587347980e74b151202ea3b6" category="list-text">配置BMC、请参见 <block ref="785a710f4c6946c37cc4ffd8e78657df" category="inline-link-macro-rx"></block> 了解详细信息。</block>
+  <block id="a0701e6fb9d20d52e56b635ed36b87f5" category="inline-link">如何在HCI和SolidFire H系列系统上禁用BMC Web UI访问</block>
+  <block id="6eacafa95777fb1e6eb8520265b58990" category="list-text">请参见NetApp知识库文章<block ref="241ab5b011155d72deeb18c5d431446f" category="inline-link-rx"></block> 确定是否需要禁用BMC Web访问。</block>
+  <block id="65c8d097794b4f73719e82bebe86d855" category="section-title">升级节点上的固件</block>
+  <block id="08a91b27b8b81bd9d0b64ba51e61dd98" category="paragraph">更换计算节点后，您可能需要升级固件版本。请参见 <block ref="502434424b58174296cfde9ecff2397f" category="inline-link-macro-rx"></block> 了解详细信息。</block>
 </blocks>
