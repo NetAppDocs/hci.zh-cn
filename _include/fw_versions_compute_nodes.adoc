@@ -25,11 +25,17 @@ NetApp HCI 计算节点支持的固件和ESXi驱动程序版本。
 与10/25 GbE NIC兼容的ESXi驱动程序不包含在计算固件包中、它是为参考而指定的。
 
 
+IMPORTANT: 对于VMware ESXi 8.0、请参见以下知识库文章link:https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/What_is_supported_with_NetApp_HCI_and_VMware_ESX_version_8.0_and_beyond["NetApp HCI和VMware ESXi 8.0及更高版本支持哪些功能？"^]以了解详细信息。
+
+
 NOTE: 下表中的短划线(*-*)表示特定硬件组件在给定版本的车辆中不受支持。
 
 [cols="8*"]
 |===
 | 释放车辆 | 发布日期 | BIOS | BMC | 10/25 GbE NIC | VMware ESXi 6.5驱动程序版本 | VMware ESXi 6.7驱动程序版本 | VMware ESXi 7.0驱动程序版本 
+
+
+| *计算固件包2.179.0 * | 2024年10月17日 | 3B14.CO | 4.79.07 | 14.29.1016. | - | - | 4.21.71.1 
 
 
 | *计算固件包2.174.0* | 2023年4月12日 | 3B12.CO | 4.72.07 | 14.29.1016. | 4.16.71.1 | 4.17.71.1 | 4.21.71.1 
@@ -110,11 +116,17 @@ NOTE: 下表中的短划线(*-*)表示特定硬件组件在给定版本的车辆
 与10/25 GbE NIC兼容的ESXi驱动程序不包含在计算固件包中、它是为参考而指定的。
 
 
+IMPORTANT: 对于VMware ESXi 8.0、请参见以下知识库文章link:https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/What_is_supported_with_NetApp_HCI_and_VMware_ESX_version_8.0_and_beyond["NetApp HCI和VMware ESXi 8.0及更高版本支持哪些功能？"^]以了解详细信息。
+
+
 NOTE: 下表中的短划线(*-*)表示特定硬件组件在给定版本的车辆中不受支持。
 
 [cols="8*"]
 |===
 | 释放车辆 | 发布日期 | BIOS | BMC | 10/25 GbE NIC | VMware ESXi 6.5驱动程序版本 | VMware ESXi 6.7驱动程序版本 | VMware ESXi 7.0驱动程序版本 
+
+
+| *计算固件包2.179.0 * | 2024年10月17日 | 3B09 | 4.11.07 | 14.29.1016. | - | - | 4.21.71.1 
 
 
 | *计算固件包2.174.0* | 2023年4月12日 | 2007年3月 | 4.04.07 | 14.29.1016. | 4.16.71.1 | 4.17.71.1 | 4.21.71.1 
@@ -207,11 +219,17 @@ NOTE: 下表中的短划线(*-*)表示特定硬件组件在给定版本的车辆
 与10/25 GbE NIC兼容的ESXi驱动程序不包含在计算固件包中、它是为参考而指定的。
 
 
+IMPORTANT: 对于VMware ESXi 8.0、请参见以下知识库文章link:https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/What_is_supported_with_NetApp_HCI_and_VMware_ESX_version_8.0_and_beyond["NetApp HCI和VMware ESXi 8.0及更高版本支持哪些功能？"^]以了解详细信息。
+
+
 NOTE: 下表中的短划线(*-*)表示特定硬件组件在给定版本的车辆中不受支持。
 
 [cols="8*"]
 |===
 | 释放车辆 | 发布日期 | BIOS | BMC | 10/25 GbE NIC | VMware ESXi 6.5驱动程序版本 | VMware ESXi 6.7驱动程序版本 | VMware ESXi 7.0驱动程序版本 
+
+
+| *计算固件包2.179.0 * | 2024年10月17日 | NATP3.12 | 6.71.26 | 14.29.1016. | - | - | 4.21.71.1 
 
 
 | *计算固件包2.174.0* | 2023年4月12日 | NATP3.10 | 6.71.20 | 14.29.1016. | 4.16.71.1 | 4.17.71.1 | 4.21.71.1 
@@ -310,11 +328,17 @@ NOTE: 下表中的短划线(*-*)表示特定硬件组件在给定版本的车辆
 与10/25 GbE NIC兼容的ESXi驱动程序不包含在计算固件包中、它是为参考而指定的。
 
 
+IMPORTANT: 对于VMware ESXi 8.0、请参见以下知识库文章link:https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/What_is_supported_with_NetApp_HCI_and_VMware_ESX_version_8.0_and_beyond["NetApp HCI和VMware ESXi 8.0及更高版本支持哪些功能？"^]以了解详细信息。
+
+
 NOTE: 下表中的短划线(*-*)表示特定硬件组件在给定版本的车辆中不受支持。
 
 [cols="8*"]
 |===
 | 释放车辆 | 发布日期 | BIOS | BMC | 10/25 GbE NIC | VMware ESXi 6.5驱动程序版本 | VMware ESXi 6.7驱动程序版本 | VMware ESXi 7.0驱动程序版本 
+
+
+| *计算固件包2.179.0 * | 2024年10月17日 | NAT3.6 | 07.02.00 | 14.29.1016. | - | - | 4.21.71.1 
 
 
 | *计算固件包2.174.0* | 2023年4月12日 | NAT3.4 | 07.02.00 | 14.29.1016. | 4.16.71.1 | 4.17.71.1 | 4.21.71.1 

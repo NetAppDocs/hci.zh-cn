@@ -6,12 +6,7 @@ summary: 法律声明提供对版权声明、商标、专利等的访问。
 translate: false 
 ---
 = 法律声明
-:hardbreaks:
 :allow-uri-read: 
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ../media/
 
 
 [role="lead"]
@@ -60,6 +55,8 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 * link:../media/SolidFire_eSDS_12.5.pdf["NetApp SolidFire 企业版SDS 12.5."^]
 * link:../media/mNode_12.5.pdf["管理节点12.5."^]
 * link:../media/ansible-products-notice.pdf["计算升级的 Ansible 角色注意事项"^]
+* link:../media/storage_firmware_bundle_2.182.0_notices.pdf["存储固件包2.182.0的注意事项"^]
+* link:../media/compute_firmware_bundle_2.179.0_notices.pdf["计算固件包2.179.0的通知"^]
 * link:../media/storage_firmware_bundle_2.175.0_notices.pdf["存储固件包2.175.0的注意事项"^]
 * link:../media/compute_firmware_bundle_2.174.0_notices.pdf["计算固件包2.174.0注意事项"^]
 * link:../media/storage_firmware_bundle_2.164.0_notices.pdf["存储固件包2.164的通知"^]
