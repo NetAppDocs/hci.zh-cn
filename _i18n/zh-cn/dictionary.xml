@@ -6133,11 +6133,9 @@
   <block id="08a91b27b8b81bd9d0b64ba51e61dd98" category="paragraph">更换计算节点后，您可能需要升级固件版本。请参见 <block ref="502434424b58174296cfde9ecff2397f" category="inline-link-macro-rx"></block> 了解详细信息。</block>
   <block id="939f531b35412529043c2c302552fa24" category="list-text"><block ref="939f531b35412529043c2c302552fa24" category="inline-link-rx"></block></block>
   <block id="d3c4a89052a32dd9783dd119f30d6d47" category="inline-link">vCenter插件5.3发行说明</block>
-  <block id="0c21440ced3ddae10d1eea32870fdf02" category="list-text"><block ref="ce90fd614158a5c7e0a42a5908fa1cd7" category="inline-link-rx"></block> _new_</block>
   <block id="6bd87cf3d55c2ead3ab585e965bea4db" category="list-text"><block ref="6bd87cf3d55c2ead3ab585e965bea4db" category="inline-link-rx"></block></block>
   <block id="976b368b923346c8ea4ccc71e72749f5" category="inline-link-macro">管理服务2.25.42通知(适用于VMware vCenter Server 5.3.9的NetApp Element插件)</block>
   <block id="f7e890b0a90e234e4df04fc0c6b8c6a7" category="list-text"><block ref="f7e890b0a90e234e4df04fc0c6b8c6a7" category="inline-link-macro-rx"></block></block>
-  <block id="bef71f962ff7a233f3e8439eeb8dac70" category="list-text">您正在升级到适用于vCenter Server 5.3、5.2、5.1或5.0的Element插件。</block>
   <block id="1b72ac6198c042d0bd992d1bb6e9d9bd" category="paragraph">您正在运行的管理节点已运行 <block ref="23cc83378d4b0551eef4ac573737e008" category="inline-link-macro-rx"></block> 升级到12.3.x或更高版本。</block>
   <block id="08f9e70df1fc159dfb7400ec9dea96a4" category="paragraph">您正在运行的管理节点已运行 <block ref="23cc83378d4b0551eef4ac573737e008" category="inline-link-macro-rx"></block> 到 11.3 或更高版本。vCenter插件4.4或更高版本要求使用11.3或更高版本的管理节点、该节点采用可提供单个服务的模块化架构。必须打开管理节点的电源，并配置其 IP 地址或 DHCP 地址。</block>
   <block id="98e5a822cb59ab0389d49ffe93acad7a" category="paragraph">此时将显示vCenter插件注册页面：</block>
@@ -6229,4 +6227,10 @@
   <block id="2dc3efc642d50fd00d3f873b79e8b213" category="cell">*GDC5A02Q*</block>
   <block id="c94f09ee99212129d406ef397dc89885" category="cell">*11093A10*</block>
   <block id="0e6ea2d2094482378f9c9eb3acdf6a9d" category="cell">*110B3A10*</block>
+  <block id="6f00c58e2f26b2ef4542eb663cdb651d" category="inline-link-macro">管理服务2.26.30通知(适用于VMware vCenter Server 5.4.1的NetApp Element插件)</block>
+  <block id="a6797c051ad351f2872ce5ea539ca689" category="list-text"><block ref="a6797c051ad351f2872ce5ea539ca689" category="inline-link-macro-rx"></block></block>
+  <block id="c4891769f65182d5fc5a37494844c496" category="inline-link">vCenter插件5.4发行说明</block>
+  <block id="230e88f97688d3fb971fe1a76f5b2a13" category="list-text"><block ref="912995e99772bb097b2c7b32940725bb" category="inline-link-rx"></block>_new_</block>
+  <block id="ce90fd614158a5c7e0a42a5908fa1cd7" category="list-text"><block ref="ce90fd614158a5c7e0a42a5908fa1cd7" category="inline-link-rx"></block></block>
+  <block id="fdbd44871ecf32ab0e37e9d3c077e28a" category="list-text">您正在升级到适用于vCenter Server 5.4、5.3、5.2、5.1或5.0的Element插件。</block>
 </blocks>
