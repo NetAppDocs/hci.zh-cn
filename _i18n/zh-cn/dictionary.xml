@@ -1658,7 +1658,6 @@
   <block id="a8eb35236338fefbad16baa7af1c75ba" category="cell">67 GB</block>
   <block id="845f62e2611daf20a77cdbef343a155b" category="paragraph">NetApp HCI 仅支持双节点或三节点存储集群中的特定存储节点型号。有关详细信息，请参见适用于您的 NetApp HCI 版本的发行说明。</block>
   <block id="6c92285fa6d3e827b198d120ea3ac674" category="inline-link-macro">此处</block>
-  <block id="edc66b1482b45fd0e89fdbe4ba094191" category="admonition">在 NetApp HCI 安装过程安装见证节点时， VMware vCenter 中会存储一个 VM 模板，您可以使用该模板重新部署见证节点，以防其意外删除，丢失或损坏。如果您需要更换托管见证节点的计算节点出现故障，也可以使用此模板重新部署见证节点。有关说明，请参见 * 重新部署双节点和三节点存储集群的见证节点 * 一节 <block ref="0deb95019659c8847f806617fd301765" category="inline-link-macro-rx"></block>。</block>
   <block id="0e93badeabe261c69b6984cdc67bfc5d" category="summary">了解启动程序以及如何使用它们允许访问卷访问组中的存储。</block>
   <block id="6430db21988dbbdfca7783c89a7710df" category="doc">启动程序</block>
   <block id="80d6153382e70910f8e51a18694440a4" category="paragraph">通过启动程序，外部客户端可以访问集群中的卷，从而充当客户端和卷之间通信的入口点。您可以使用启动程序对存储卷进行基于 CHAP 的访问，而不是基于帐户的访问。添加到卷访问组时，单个启动程序允许卷访问组成员访问添加到组中的所有存储卷，而无需身份验证。一个启动程序只能属于一个访问组。</block>
@@ -2746,7 +2745,6 @@
   <block id="d3ceaee3eba1f3d1dc3dd762d6254a77" category="list-text">单击 * 发布 /assets/ ｛ asset_id ｝ /controllers* 以添加控制器子资产。</block>
   <block id="4fc766d515cef70e327bbefb8f32007e" category="list-text">在 * asset_id* 字段中输入复制到剪贴板的父基本资产 ID 。</block>
   <block id="e2e193a380a16845739e1445cfe23fde" category="list-text">输入类型为 `vCenter` 和 vCenter 凭据的所需有效负载值。</block>
-  <block id="421226b233bd18f9c1f8d179419a2f39" category="list-text">（仅限 NetApp HCI ）将计算节点资产添加到管理节点的已知资产：</block>
   <block id="4b0a80de8336b03c597eb9e339a88503" category="section-title">使用管理节点 REST API 重新配置身份验证</block>
   <block id="3f171b923ed811e8ed015dcad2a9829a" category="paragraph">如果已按顺序升级（ 1 ）个管理服务和（ 2 ）个 Element 存储，则可以保留现有管理节点。如果您遵循了其他升级顺序，请参见原位管理节点升级过程。</block>
   <block id="69f5442caf6936145cd4f73e7c83f2a4" category="list-text">您已按顺序更新管理服务，然后升级 Element 存储。除非按照所述顺序完成升级，否则无法使用此操作步骤重新配置身份验证。</block>
@@ -3762,20 +3760,13 @@
   <block id="7e6093e52119f18464fc862a969c9f6a" category="admonition">如果需要 IPv6 支持，可以使用管理节点 11.1 。</block>
   <block id="9385b032418674e92472a8b4a2ae5cdf" category="list-text">（使用代理服务器的管理节点 12.0 及更高版本）在配置代理服务器之前，您已将 NetApp Hybrid Cloud Control 更新为管理服务版本 2.16 。</block>
   <block id="0406c3e25004e3d1dddbc367d2c4010f" category="paragraph">Element 12.2 管理节点是一种可选升级。现有部署不需要此功能。</block>
-  <block id="d65a2ab43bcac7efebde7effc9d142f8" category="list-text"><block ref="4e8e62755aa10b5d2420c05d87c0085a" category="inline-xref-macro-rx"></block></block>
-  <block id="c92609be7302c756d6d918553df475c1" category="list-text"><block ref="d9e86326331a25418b718094ae602c19" category="inline-xref-macro-rx"></block></block>
-  <block id="0267f7e06220d0fa6fb42578b5746da3" category="list-text"><block ref="b41cb2f7bd156a4035cdf9347b89cebe" category="inline-xref-macro-rx"></block></block>
-  <block id="067315cbc6353502fa36a4f8722badbd" category="inline-xref">（仅限 NetApp HCI ）配置计算节点资产</block>
-  <block id="cc41647231a76da233743c53a496e137" category="list-text"><block ref="fab01553c96541ce7ac54638294897d8" category="inline-xref-macro-rx"></block></block>
   <block id="7b4b2bec7b806d58982537647a92deef" category="list-text">选择 * 下载最新版本 * 并接受 EULA 。</block>
   <block id="4cb04e22051dcc88da6d140ef391aab8" category="list-text">存储适配器类型设置为 LSI Logic Parallel</block>
   <block id="1fde8564c11be0856ccf9a21a1d1430c" category="admonition">管理节点的默认值可能为 LSI Logic SAS 。在 * 新建虚拟机 * 窗口中，选择 * 自定义硬件 * &gt; * 虚拟硬件 * 以验证存储适配器配置。如果需要，请将 LSI Logic SAS 更改为 * LSI Logic Parallel * 。</block>
-  <block id="f894cbc944582e1f10fec4bf2a0639f0" category="section-title">创建管理节点管理员并配置网络</block>
   <block id="148f57c4f729acea3c3d95b35553a056" category="list-text">为要添加的每个默认时间服务器添加一个新行。默认时间服务器必须与要在中使用的存储集群上使用的 NTP 服务器相同 <block ref="1d132a4516f2aafec8e6c256f33f26a5" category="inline-link-macro-rx"></block>。</block>
   <block id="e7538fbaab3148e24ff8ae41d09df5ce" category="list-text">【 substed_f_install_config_time_sync]] 通过虚拟机管理程序禁用与主机的时间同步（以下是 VMware 示例）：</block>
   <block id="2d80cb22364fea2daaca797ae1d938cb" category="inline-link-macro">设置命令</block>
   <block id="a482c646f7f8199c69090c0d13cac33b" category="admonition">完成时间同步配置后，请勿编辑 NTP ，因为它会在运行时影响 NTP <block ref="418ec8b5cff4068b256dfd7e9fc5ded7" category="inline-link-macro-rx"></block> 在管理节点上。</block>
-  <block id="627bbdc5a7179606b85a5d6ccb6f65e1" category="section-title">设置管理节点</block>
   <block id="5a808c62f4f9557c4df556d6a230ba7c" category="list-text">配置并运行管理节点设置命令：</block>
   <block id="fea104dd45bc0e75d821ddd5af2b02d0" category="admonition">命令名称的缩写形式为圆括号（），可替换为全名。</block>
   <block id="3f124867257c579e7ba689baed3d4f45" category="list-text">*-mnode_admin_user （ -mu ） [username]* ：管理节点管理员帐户的用户名。这可能是您用于登录到管理节点的用户帐户的用户名。</block>
@@ -3799,7 +3790,6 @@
   <block id="aabee241823de4ff993b60d0a196a387" category="list-text">（可选）如果需要有关每个参数的追加信息，请使用参数 help ：</block>
   <block id="f89c180fd45cb0275c5ee18e59d2b43d" category="list-text">*-help （ -h ） * ：返回有关每个参数的信息。根据初始部署，参数定义为必需或可选。升级和重新部署参数要求可能有所不同。</block>
   <block id="79032d0c879c3afbbb570dd870eb09e1" category="list-text">运行 `setup-mnode` 命令。</block>
-  <block id="7ea2768c656768f853cd68b9066eba0f" category="section-title">配置控制器资产</block>
   <block id="4240350efa82cb4b2d0dcd00f64f496b" category="list-text">找到安装 ID ：</block>
   <block id="ed4faf2b135a0f2d74eef06f6fd8899e" category="list-text">转至存储 MVIP 并登录。此操作将接受此证书以执行下一步。</block>
   <block id="4e1983f58c81d12130ee2409db704d73" category="list-text">从 REST API UI 中，选择 * 获取​ /Installations * 。</block>
@@ -5793,8 +5783,6 @@
   <block id="6a881248d046a90f573e41d5ebe1362e" category="list-text"><block ref="6a881248d046a90f573e41d5ebe1362e" category="inline-link-rx"></block></block>
   <block id="90e7c2277ee69a3d3ecf30fa1fe61ab1" category="inline-link">vCenter插件4.10发行说明</block>
   <block id="779aeeb0a67ee84cae70c2361654111d" category="list-text"><block ref="779aeeb0a67ee84cae70c2361654111d" category="inline-link-rx"></block></block>
-  <block id="6f0ce5bfc09a3a4d8737b564d5879f31" category="inline-link">详细了解Element 12.7中的新增功能</block>
-  <block id="f10aa2cb8c994fef24ceca1ee43e4208" category="admonition">Element软件12.7是最新版本、其中包括安全和系统组件更新、操作改进以及已解决的问题。<block ref="d071d61ca9198e87abb60c485f07eada" category="inline-link-rx"></block>。</block>
   <block id="e8c9d31781628048fc356dbb3477278c" category="summary">从管理服务2.21.61开始、现有和新的Rancher部署不再支持Rancher。您可以继续使用早期版本的管理服务管理Rancher。</block>
   <block id="46e87a91de6f38f3b1344d05a59270dd" category="inline-link">NetApp HCI 1.9文档</block>
   <block id="fc55c296a158a74f2203216a080cac11" category="paragraph">对于现有的Rancher部署、从管理服务2.21.61开始、不再支持Rancher。如果您升级到管理服务2.21.61、则无法使用NetApp混合云控制来管理、监控或升级现有部署的Rancher、也无法在NetApp HCI 系统上执行新部署。如果您已在NetApp HCI 系统上部署Rancher并运行管理服务2.20.69或更早版本、则可以继续使用管理、监控和升级Rancher<block ref="366a8df179e5c8339fa05bf5fe38a812" category="inline-link-rx"></block>。</block>
@@ -6233,4 +6221,36 @@
   <block id="f0fe2934aa8d8cec985fef2e0c464532" category="list-text"><block ref="f0fe2934aa8d8cec985fef2e0c464532" category="inline-link-macro-rx"></block></block>
   <block id="08c1b18f2bce38d2bceb61af5b8c4c6e" category="list-text"><block ref="08c1b18f2bce38d2bceb61af5b8c4c6e" category="inline-link-macro-rx"></block></block>
   <block id="c1f2aa244c34463b7aea4f2b566f9420" category="list-text"><block ref="c1f2aa244c34463b7aea4f2b566f9420" category="inline-link-macro-rx"></block></block>
+  <block id="9c9a41bc801502e6500c79ea7586ba95" category="inline-link-macro">为双节点和三节点存储集群重新部署见证节点</block>
+  <block id="d0f20378e2595fa7956c455387d1bc5a" category="paragraph">在 NetApp HCI 安装过程安装见证节点时， VMware vCenter 中会存储一个 VM 模板，您可以使用该模板重新部署见证节点，以防其意外删除，丢失或损坏。如果您需要更换托管见证节点的计算节点出现故障，也可以使用此模板重新部署见证节点。有关说明，请参阅<block ref="6fa44f1a6cd8ce6de51cb02b7ae12cc5" category="inline-link-macro-rx"></block>。</block>
+  <block id="3c72afcfca67f187b816a55135a243dd" category="inline-link-macro">升级VM硬件版本</block>
+  <block id="4fff07540e1d83ac9775ec8030cce786" category="paragraph">如果要将现有见证节点原位升级到Element 128、则在升级之前、必须确保见证节点上的VM硬件版本与ESXi 6.7 (VM硬件版本14)或更高版本兼容、具体取决于您的环境。请参阅。 <block ref="d1fe5954ed8bd3e53eba83ab0658a6e0" category="inline-link-macro-rx"></block></block>
+  <block id="6db7dd4182be7a1979ad403111fa8618" category="inline-link">《NetApp Element 软件12.8发行说明》</block>
+  <block id="7d776811219f8ebb17adecaa976bd578" category="list-text"><block ref="53e04163346326834efd61306c0800b5" category="inline-link-rx"></block>_new_</block>
+  <block id="a175ee087381806b642bbcfee91690d5" category="inline-link">详细了解Element 12.8中的新增功能</block>
+  <block id="669c1fb7e11e3bb5ca277eb16b4a55f4" category="admonition">Element软件12.8.是最新版本、其中包括安全性和系统组件更新、操作改进以及已解决的问题。<block ref="4f11681fa65d50fd10f6fc370da0cbe3" category="inline-link-rx"></block>(英文)。</block>
+  <block id="b036ebb7aa6b63db449d4df71f28c3cd" category="section-title">第1步：升级管理节点上的VM硬件版本</block>
+  <block id="6bdecd9b5d3ab973ac36df911f986fc3" category="paragraph">如果要将现有管理节点原位升级到Element 128、则在升级之前、必须确保管理节点上的VM硬件版本与ESXi 6.7 (VM硬件版本14)或更高版本兼容、具体取决于您的环境。</block>
+  <block id="d334c1e547b1e27eae5f50bf46f786cd" category="admonition">您也可以按照以下步骤升级见证节点上的VM硬件版本。</block>
+  <block id="da356a9209429c8cb4f06565d719d2b8" category="list-text">以 vCenter 管理员身份登录到 vSphere Web Client 。</block>
+  <block id="1a331e443f5aee428076dfc1341e09b5" category="list-text">从vSphere Client菜单中、选择*虚拟机*和*模板*。</block>
+  <block id="f42849b7cb77e25b9a5601553a509100" category="list-text">右键单击虚拟机，然后选择*兼容性*&gt;*升级虚拟机兼容性*。</block>
+  <block id="cf8716d5690805e881fbd8fa22fb282a" category="list-text">根据vSphere环境的版本、选择ESXi 6.7或更高版本。</block>
+  <block id="7473f663a4bbad1085e61ed9c976a50a" category="list-text">升级完成后、选择* vSphere客户端刷新*并验证虚拟机兼容性是否为所需版本。</block>
+  <block id="6b17900bf8b7a52b1be75bbe68b2d77e" category="section-title">第2步：将管理节点升级到Element 12.5或更高版本</block>
+  <block id="d5bdcd035d3751961b201dd1c2261aa3" category="paragraph">选择以下升级选项之一：</block>
+  <block id="6d8cd87a85946daeae42cb54aade3baa" category="section-title">第1步：下载ISO或OVA并部署虚拟机</block>
+  <block id="90c4d8ddd76d9f5f86c144316cec5657" category="paragraph">从NetApp支持站点下载相应的ISO或OVA并安装虚拟机。</block>
+  <block id="c6913d34fefabb7329dba971ad99632d" category="section-title">第2步：创建管理节点管理员并配置网络</block>
+  <block id="8e1cc7b20e9f183452b777f8a4fb586d" category="paragraph">虚拟机安装完成后、创建管理节点管理员用户并配置管理节点网络。</block>
+  <block id="5e0472334bca93d0d28d3eeaaf723518" category="section-title">第3步：配置时间同步</block>
+  <block id="6646ab3d83d88b5b34e61e3a58b244e8" category="paragraph">在设置管理节点之前、请同步管理节点和存储集群之间的时间。</block>
+  <block id="ef246c91c687e7d720eb49c5e2a4cd47" category="section-title">第4步：设置管理节点</block>
+  <block id="9f150d20e38589485a1bb878b18c51e2" category="paragraph">使用命令配置管理节点<block ref="73028873f2b0a018096b6a3d871634b5" prefix=" " category="inline-code"></block>。</block>
+  <block id="2cec258fd66ace0725a9af6922c80f3e" category="section-title">第5步：配置控制器资产</block>
+  <block id="b5d27a207b01cd3ca9fef9594d50836f" category="paragraph">找到安装ID并添加vCenter控制器资产。</block>
+  <block id="bd6447e80251856484a25ace239c3873" category="section-title">第6步：(仅限NetApp HCI)配置计算节点资产</block>
+  <block id="64391abac346294811422637c6d0a865" category="paragraph">将计算节点资产添加到管理节点已知资产中</block>
+  <block id="975648a39ca92865d807bc35f02b5984" category="inline-link-macro">Element软件12.8.</block>
+  <block id="d70cd205dfc4339579c798a35dc44462" category="list-text"><block ref="d70cd205dfc4339579c798a35dc44462" category="inline-link-macro-rx"></block></block>
 </blocks>

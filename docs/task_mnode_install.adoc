@@ -18,7 +18,7 @@ keywords: netapp, element, management node, mnode, storage, install
 
 此手动过程适用于未使用NetApp部署引擎安装管理节点的NetApp HCI 管理员。
 
-.您需要的内容
+.开始之前
 * 您的集群版本运行的是 NetApp Element 软件 11.3 或更高版本。
 * 您的安装使用 IPv4 。管理节点 11.3 不支持 IPv6 。
 +
@@ -55,19 +55,13 @@ Element 12.2 管理节点是一种可选升级。现有部署不需要此功能�
 
 在遵循此操作步骤之前，您应了解 link:concept_hci_volumes.html#persistent-volumes["永久性卷"] 以及是否要使用它们。永久性卷是可选的，但建议在虚拟机（ VM ）丢失时用于管理节点配置数据恢复。
 
+
+
+== 第1步：下载ISO或OVA并部署虚拟机
+
+从NetApp支持站点下载相应的ISO或OVA并安装虚拟机。
+
 .步骤
-. <<下载 ISO 或 OVA 并部署虚拟机>>
-. <<创建管理节点管理员并配置网络>>
-. <<配置时间同步>>
-. <<设置管理节点>>
-. <<配置控制器资产>>
-. <<Configure compute node assets,（仅限 NetApp HCI ）配置计算节点资产>>
-
-
-
-
-== 下载 ISO 或 OVA 并部署虚拟机
-
 . 从下载适用于您的安装的 OVA 或 ISO https://mysupport.netapp.com/site/products/all/details/netapp-hci/downloads-tab["NetApp HCI"^] NetApp 支持站点上的页面：
 +
 .. 选择 * 下载最新版本 * 并接受 EULA 。
@@ -112,8 +106,11 @@ NOTE: 使用映像安装管理节点可能会导致在显示启动屏幕之前�
 
 
 
-== 创建管理节点管理员并配置网络
+== 第2步：创建管理节点管理员并配置网络
 
+虚拟机安装完成后、创建管理节点管理员用户并配置管理节点网络。
+
+.步骤
 . 使用终端用户界面（ TUI ）创建管理节点管理员用户。
 +
 
@@ -140,8 +137,11 @@ NOTE: 如果需要使用额外的 NIC 来隔离存储流量，请参见有关配
 
 
 
-== 配置时间同步
+== 第3步：配置时间同步
 
+在设置管理节点之前、请同步管理节点和存储集群之间的时间。
+
+.步骤
 . 确保使用 NTP 在管理节点和存储集群之间同步时间：
 +
 
@@ -219,8 +219,11 @@ NOTE: 完成时间同步配置后，请勿编辑 NTP ，因为它会在运行时
 
 
 
-== 设置管理节点
+== 第4步：设置管理节点
 
+使用命令配置管理节点 `setup-mnode`。
+
+.步骤
 . 配置并运行管理节点设置命令：
 +
 
@@ -282,8 +285,11 @@ NOTE: 为永久性卷使用与集群上任何现有帐户名称不同的唯一�
 
 
 
-== 配置控制器资产
+== 第5步：配置控制器资产
 
+找到安装ID并添加vCenter控制器资产。
+
+.步骤
 . 找到安装 ID ：
 +
 .. 从浏览器登录到管理节点 REST API UI ：
@@ -348,20 +354,20 @@ NOTE: 您应在vCenter中创建新的NetApp HCC角色以添加控制器子资产
 
 
 
-== （仅限 NetApp HCI ）配置计算节点资产
+== 第6步：(仅限NetApp HCI)配置计算节点资产
 
-. （仅限 NetApp HCI ）将计算节点资产添加到管理节点的已知资产：
-+
-.. 选择 * POST /assets/ ｛ asset_id ｝ /compute-nodes* 以使用计算节点资产的凭据添加计算节点子资产。
-.. 选择 * 试用 * 。
-.. 在 * asset_id* 字段中输入复制到剪贴板的父基本资产 ID 。
-.. 在有效负载中，输入 " 型号 " 选项卡中定义的所需有效负载值。输入 `ESXi Host` as `type` ，然后输入您在上一步中为 `hardware_tag` 保存的硬件标记。
-.. 选择 * 执行 * 。
+将计算节点资产添加到管理节点已知资产中
+
+.步骤
+. 选择 * POST /assets/ ｛ asset_id ｝ /compute-nodes* 以使用计算节点资产的凭据添加计算节点子资产。
+. 选择 * 试用 * 。
+. 在 * asset_id* 字段中输入复制到剪贴板的父基本资产 ID 。
+. 在有效负载中，输入 " 型号 " 选项卡中定义的所需有效负载值。输入 `ESXi Host` as `type` ，然后输入您在上一步中为 `hardware_tag` 保存的硬件标记。
+. 选择 * 执行 * 。
 
 
 
 
-[discrete]
 == 了解更多信息
 
 * link:concept_hci_volumes.html#persistent-volumes["永久性卷"]
