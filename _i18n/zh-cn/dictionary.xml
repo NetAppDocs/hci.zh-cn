@@ -44,7 +44,6 @@
   <block id="6b2019a31feeec476725deff1e79ed78" category="inline-link-macro">环境要求</block>
   <block id="9077d0c626c6abe8e5c94e742b66762a" category="inline-link-macro">保护域</block>
   <block id="6bc3cc5c8a1df1f098ef6e35a878f98e" category="inline-link-macro">见证双节点存储集群的节点资源要求</block>
-  <block id="acc25bb29912a0eb99591d6397d5e11d" category="list-text"><block ref="acc25bb29912a0eb99591d6397d5e11d" category="inline-link-rx"></block></block>
   <block id="a881a0468246e93ae6e2c5bccd78758e" category="inline-link">适用于 vCenter Server 的 NetApp Element 插件</block>
   <block id="7cf5cffc3745b8348cdcfb1c3d0d472f" category="list-text"><block ref="7cf5cffc3745b8348cdcfb1c3d0d472f" category="inline-link-rx"></block></block>
   <block id="574816adb261e291d4483d3e7dd93542" category="summary">完成 NetApp HCI 部署后，您可以使用 NetApp 混合云控制扩展和配置 NetApp HCI 存储资源。</block>
@@ -104,8 +103,6 @@
   <block id="0c06b376558e1430024d8a566a84067a" category="paragraph">您可以在 NetApp HCI 添加和配置资源时监控进度。</block>
   <block id="61dfc712d6e3605cfa8c03816883a956" category="list-text">* 可选 * ：验证是否在 VMware vSphere Web Client （适用于计算节点）或适用于 vCenter Server 的 Element 插件（适用于存储节点）中显示任何新节点。</block>
   <block id="f48a06284a0df48dae9a67886037b154" category="inline-link-macro">手动删除</block>
-  <block id="a83404b3b2ca8b3c39459b719d7844d7" category="inline-link">NetApp HCI 资源页面</block>
-  <block id="efb3497df51898324a04d1329dc9b9ae" category="list-text"><block ref="efb3497df51898324a04d1329dc9b9ae" category="inline-link-rx"></block></block>
   <block id="de8f3c57f62ff5861214b8103726109f" category="inline-link">《 NetApp HCI 计算和存储节点安装和设置说明》</block>
   <block id="5eed704594b84518dc6a723520e99cfc" category="list-text"><block ref="5eed704594b84518dc6a723520e99cfc" category="inline-link-rx"></block></block>
   <block id="a3e8bb013b9f2a7fa74453a28fd169f9" category="inline-link">VMware 知识库：增强的 vMotion 兼容性（ EVC ）处理器支持</block>
@@ -6233,10 +6230,7 @@
   <block id="6bdecd9b5d3ab973ac36df911f986fc3" category="paragraph">如果要将现有管理节点原位升级到Element 128、则在升级之前、必须确保管理节点上的VM硬件版本与ESXi 6.7 (VM硬件版本14)或更高版本兼容、具体取决于您的环境。</block>
   <block id="d334c1e547b1e27eae5f50bf46f786cd" category="admonition">您也可以按照以下步骤升级见证节点上的VM硬件版本。</block>
   <block id="da356a9209429c8cb4f06565d719d2b8" category="list-text">以 vCenter 管理员身份登录到 vSphere Web Client 。</block>
-  <block id="1a331e443f5aee428076dfc1341e09b5" category="list-text">从vSphere Client菜单中、选择*虚拟机*和*模板*。</block>
-  <block id="f42849b7cb77e25b9a5601553a509100" category="list-text">右键单击虚拟机，然后选择*兼容性*&gt;*升级虚拟机兼容性*。</block>
   <block id="cf8716d5690805e881fbd8fa22fb282a" category="list-text">根据vSphere环境的版本、选择ESXi 6.7或更高版本。</block>
-  <block id="7473f663a4bbad1085e61ed9c976a50a" category="list-text">升级完成后、选择* vSphere客户端刷新*并验证虚拟机兼容性是否为所需版本。</block>
   <block id="6b17900bf8b7a52b1be75bbe68b2d77e" category="section-title">第2步：将管理节点升级到Element 12.5或更高版本</block>
   <block id="d5bdcd035d3751961b201dd1c2261aa3" category="paragraph">选择以下升级选项之一：</block>
   <block id="6d8cd87a85946daeae42cb54aade3baa" category="section-title">第1步：下载ISO或OVA并部署虚拟机</block>
@@ -6253,4 +6247,10 @@
   <block id="64391abac346294811422637c6d0a865" category="paragraph">将计算节点资产添加到管理节点已知资产中</block>
   <block id="975648a39ca92865d807bc35f02b5984" category="inline-link-macro">Element软件12.8.</block>
   <block id="2d0be4b4ba388979c4f454ae05179965" category="list-text"><block ref="2d0be4b4ba388979c4f454ae05179965" category="inline-link-macro-rx"></block></block>
+  <block id="6e93fbac14e98fd4eee5f4f560e1d580" category="list-text">从vSphere Client菜单中选择*虚拟机和模板*。</block>
+  <block id="be19667c20f2f3c6b932b48a9c488774" category="list-text">右键单击虚拟机(VM)，然后选择*Power*&gt;*关闭子操作系统*。</block>
+  <block id="6f5f678ae471ecc070cea185b3d40ed4" category="paragraph">请等待虚拟机关闭。</block>
+  <block id="b58c4fe6ac8a2dffa0fb94c9d1de7556" category="list-text">右键单击该虚拟机，然后选择*兼容性*&gt;*升级虚拟机兼容性*。</block>
+  <block id="eeb196c0a77fbb85f8908ae3cca16bfc" category="list-text">升级完成后，右键单击该虚拟机，然后选择*Power*&gt;*Power On*。</block>
+  <block id="917268d8045dd1bb18e5f8cc7caf9359" category="list-text">选择*vSphere客户端刷新*并验证虚拟机兼容性是否为所需版本。</block>
 </blocks>
