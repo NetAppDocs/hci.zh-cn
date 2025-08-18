@@ -72,9 +72,6 @@ keywords: netapp, hci, ports, tcp, udp
 | 管理节点 | 存储节点 MVIP | 442 | 通过 UI 和 API 访问存储节点和 Element 软件升级 
 
 
-| 管理节点 | `23.32.54.122` ， `216.240.21.15` | 443. | Element 软件升级 
-
-
 | 管理节点 | 基板管理控制器（ BMC ） | 443. | 硬件监控和清单连接（ Redfish 和 IPMI 命令） 
 
 
