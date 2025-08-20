@@ -20,15 +20,20 @@ keywords: netapp, hci, on premise, cluster, management services
 
 .关于此任务
 * 在升级 Element 软件之前，您必须升级到最新的管理服务包。
++
 
+CAUTION: 管理服务 2.27 捆绑包包含适用于 vCenter Server 5.5 的 Element Plug-in，该插件仅与管理节点 12.8 兼容。当您更新到管理服务 2.27 时，您必须更改升级顺序并在升级到 Element 12.8 之后更新管理服务包，以使管理节点和管理服务之间兼容。
 
++
 [NOTE]
 ====
-* 管理服务2.22.7包括适用于vCenter Server 5.0的Element插件、该插件包含远程插件。如果您使用Element插件、则应升级到管理服务2.22.7或更高版本、以符合取消对本地插件支持的VMware指令。 https://kb.vmware.com/s/article/87880["了解更多信息。"^]。
-* 有关介绍每个服务包的主要服务，新功能，错误修复和解决方法的最新管理服务发行说明，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["管理服务发行说明"^]
+** 管理服务2.22.7包括适用于vCenter Server 5.0的Element插件、该插件包含远程插件。如果您使用Element插件、则应升级到管理服务2.22.7或更高版本、以符合取消对本地插件支持的VMware指令。 https://kb.vmware.com/s/article/87880["了解更多信息。"^]。
+** 有关介绍每个服务包的主要服务，新功能，错误修复和解决方法的最新管理服务发行说明，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["管理服务发行说明"^]
 
 
 ====
+
+
 .您需要的内容
 从管理服务2.20.69开始、您必须先接受并保存最终用户许可协议(EULA)、然后才能使用NetApp Hybrid Cloud Control UI或API升级管理服务：
 

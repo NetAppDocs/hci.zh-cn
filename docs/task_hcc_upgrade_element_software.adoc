@@ -11,21 +11,24 @@ keywords: netapp, hci, cluster, element, H610S upgrade, hcc
 [role="lead"]
 要升级NetApp Element 软件、您可以使用NetApp混合云控制UI或REST API。Element 软件升级期间会禁止某些操作，例如添加和删除节点，添加和删除驱动器以及与启动程序，卷访问组和虚拟网络等关联的命令。
 
+小心：
 
-NOTE: 从Element 12.5开始、Element软件升级不再支持NetApp HealthTools。如果您运行的是Element 11.0或11.1、则必须先执行此操作 link:https://docs.netapp.com/us-en/hci19/docs/task_hcc_upgrade_element_software.html#upgrade-element-software-at-connected-sites-using-healthtools["使用HealthTools升级到Element 12.3"^] 然后使用NetApp Hybrid Cloud Control升级到Element 12.5或更高版本。
+[]
+====
+管理服务 2.27 捆绑包包含适用于 vCenter Server 5.5 的 Element Plug-in，该插件仅与管理节点 12.8 兼容。当您更新到管理服务 2.27 时，您必须更改升级顺序并在升级到 Element 12.8 后更新管理服务包，以确保管理节点和管理服务之间的兼容性。
 
-.您需要的内容
+如果您要更新到管理服务 2.21.61 到 2.26.40，则必须在升级到 Element 12.8 之前更新管理服务包。
+
+====
+.开始之前
 * * 管理员权限 * ：您拥有执行升级的存储集群管理员权限。
 * * 有效升级路径 * ：您已检查要升级到的 Element 版本的升级路径信息并验证升级路径是否有效。请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/What_is_the_upgrade_matrix_for_storage_clusters_running_NetApp_Element_software%3F["NetApp 知识库：运行 NetApp Element 软件的存储集群的升级表"^]
++
+从Element 12.5开始、Element软件升级不再支持NetApp HealthTools。如果您运行的是Element 11.0或11.1、则必须先执行此操作 link:https://docs.netapp.com/us-en/hci19/docs/task_hcc_upgrade_element_software.html#upgrade-element-software-at-connected-sites-using-healthtools["使用HealthTools升级到Element 12.3"^] 然后使用NetApp Hybrid Cloud Control升级到Element 12.5或更高版本。
+
 * * 系统时间同步 * ：您已确保所有节点上的系统时间均已同步，并且已为存储集群和节点正确配置 NTP 。必须在每个节点 Web UI （`https://[IP address] ： 442` ）中为每个节点配置一个 DNS 命名服务器，并且不会出现与时间偏差相关的未解决集群故障。
 * * 系统端口 * ：如果您使用 NetApp Hybrid Cloud Control 进行升级，则已确保必要的端口处于打开状态。请参见 link:hci_prereqs_required_network_ports.html["网络端口"] 有关详细信息 ...
 * * 管理节点 * ：对于 NetApp Hybrid Cloud Control UI 和 API ，您环境中的管理节点运行的是 11.3 版。
-* * 管理服务 * ：您已将管理服务捆绑包更新到最新版本。
-
-
-
-IMPORTANT: 在将Element软件升级到版本12.5或更高版本之前、您必须升级到最新的管理服务包。如果要将Element软件更新到版本12.5或更高版本、则需要使用管理服务2.21.61或更高版本才能继续。
-
 * * 集群运行状况 * ：您已验证集群是否已做好升级准备。请参见 link:task_hcc_upgrade_element_prechecks.html["在升级存储之前，请运行 Element 存储运行状况检查"]。
 * *已更新H610S节点的基板管理控制器(BMC)*：您已升级H610S节点的BMC版本。请参见 link:rn_H610S_BMC_3.84.07.html["发行说明和升级说明"]。
 * *升级过程时间*：您已计划足够的时间执行升级。升级到Element软件12.5或更高版本时、升级过程时间会因您当前的Element软件版本和固件更新而异。
