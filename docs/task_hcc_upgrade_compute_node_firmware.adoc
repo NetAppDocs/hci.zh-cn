@@ -565,4 +565,6 @@ CAUTION: 在启动过程中，大约 5 分钟内， KVM 控制台将显示 * 无
 
 == 了解更多信息
 
-https://docs.netapp.com/us-en/vcp/index.html["适用于 vCenter Server 的 NetApp Element 插件"^]
+* link:https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/vmnic1_and_vmnic4_is_swapped_by_compute_node_firmware_upgrade["计算节点固件升级交换 vmnic1 和 vmnic4"^]
+* link:https://docs.netapp.com/us-en/vcp/index.html["适用于 vCenter Server 的 NetApp Element 插件"^]
+
